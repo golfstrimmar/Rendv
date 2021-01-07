@@ -1,0 +1,21 @@
+section#work.work
+ .work__wrapper
+    .container
+      .row
+        h2.common-Title Для чего предназначен
+          img.Component-2(src="assets/img/work/Component-2.svg",alt="img")
+        ul.work__body.row.justify-lg-content-between.justify-content-center 
+            - 
+              items = [
+                { title: "Оценить возможность ", description: "Применения речевой аналитики в направлении «ГОСТЕПРЕИМСТВО» с помощью Wi-Fi аудиобейджа", img: "assets/img/work/work-1.svg "},
+                { title: "Применить ", description: "Аудиобейджи на регулярной основе в работе сотрудников служб Бронирования и Размещения", img: "assets/img/work/work-2.svg "},
+                { title: "Проанализировать ", description: "Качество распознавания речи, проверить корреляцию результатов анализа с текущими экспертными оценками сотрудников", img: "assets/img/work/work-3.svg "},
+               
+              ]
+
+            each item in items
+              li.work__item.work-item.col-12.col-lg-4.col-md-8
+                .work-item__body
+                  img(src=item.img,alt="img").work-item__img
+                  .work-item__title=item.title
+                  .work-item__description=item.description

@@ -1,0 +1,91 @@
+.slider-main 
+
+  &__wrapper 
+
+  &__body 
+
+  &-js 
+
+  &__item 
+
+  &-item 
+    &__body 
+      margin: 0 0 0 0
+      position: relative
+      width: 100%
+      // padding: 0 0 20% 0	
+      height: 100vh
+      +bg($dark-fone)
+
+  .container-fluid
+    padding: 0 0 0 0	
+
+.slider__content 
+
+
+.slider-content 
+  position: relative
+  z-index: 2
+  &__body 
+    +center
+    padding: 13% 0 0 0
+    +media-breakpoint-down(lg)
+      padding: 23.5% 0 0
+    +media-breakpoint-down(md)
+      padding: 22vh 0 0
+  &__title
+    +font-family(Bebas-font,400,139px,139px,$yellow)
+    +media-breakpoint-down(md)
+      font-size: 80px
+      line-height: 109px
+    span
+      color: $accent
+
+  &__text 
+    +font-family(Montserrat,300,16px,25px,$white)
+    letter-spacing: 1
+    width: 25%
+    text-align: center
+    padding: 11px 0 51px
+    +media-breakpoint-up(md)
+      width: 46%
+    +media-breakpoint-down(sm)
+      width: 93%
+      font-size: 14px
+      line-height: 19px
+      padding: 0px 0 24px
+  &__block-link 
+
+
+.slider-block-link 
+  +alic
+  &__img 
+    width: 50px
+    height: 50px
+    
+  &__txt 
+    +font-family(Bebas-font,400,24px,29px,$white)
+    margin: 0 0 0 12px
+
+.slick-dots
+  +jucb
+  +absolute( 100px, 23px, 86%,  50%, null,-50%,0px)
+  z-index: 2
+.slick-dots li
+  button
+    +bg(transparent)
+    +border(1px,$accent )
+    width: 6px
+    height: 6px
+    font-size: 0
+
+
+.slick-dots li:not(.slick-active)
+    
+    
+    
+li.slick-active
+  button
+    +bg($accent)
+    transform: scale(2)
+    border-radius: 2px

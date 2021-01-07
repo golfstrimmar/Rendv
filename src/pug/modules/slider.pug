@@ -1,0 +1,30 @@
+section#slider.slider-main
+ .slider-main__wrapper
+    .container-fluid
+      .slider-main__body
+        .slider-main-js
+          - 
+            slides = [
+                { text: "Мы посвящаем наш продукт всем компаниям, которые видят потенциал для увеличении продаж в возможности влиять на эффективность каждого «продавца»"},
+                { text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, soluta."},
+                { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam eaque labore ratione eveniet, at numquam!»"},
+                { text: "ipsum dolor sit amet, consectetur adipisicing elit. Iure eius sint molestias possimus saepe. Fuga dicta voluptates non ducimus molestias."},
+                { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam eaque labore ratione eveniet, at numquam!"},
+            ]
+          
+          each slide in slides
+            .slider-main__item.slider-main-item
+              .slider-main-item__body
+                .ibg.bg
+                  img(src="assets/img/top-1.webp",alt="")
+                .slider__content.slider-content
+                  .slider-content__body.flex-column
+                    .slider-content__title Голос
+                      span овик
+                    .slider-content__text=slide.text 
+                    .slider-content__block-link.slider-block-link.row
+                      img.slider-block-link__img.col-3(src="assets/img/slider-1.svg",alt="img") 
+                      .slider-block-link__txt.col-7  Заказать презентацию
+
+
+
