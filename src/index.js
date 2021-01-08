@@ -4,7 +4,7 @@ import $ from "jquery";
 
 import "./js/common";
 import "./js/header";
-import "./js/tabs";
+import "./js/filter";
 
 
 

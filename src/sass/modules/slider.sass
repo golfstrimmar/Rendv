@@ -1,91 +1,89 @@
-.slider-main 
-
-  &__wrapper 
-
-  &__body 
-
-  &-js 
-
-  &__item 
-
-  &-item 
-    &__body 
-      margin: 0 0 0 0
-      position: relative
-      width: 100%
-      // padding: 0 0 20% 0	
-      height: 100vh
-      +bg($dark-fone)
-
-  .container-fluid
-    padding: 0 0 0 0	
-
-.slider__content 
+// .slider-item__body
+//   margin: 0 0 0 0
+//   position: relative
+//   width: 100%
 
 
-.slider-content 
-  position: relative
-  z-index: 2
-  &__body 
-    +center
-    padding: 13% 0 0 0
-    +media-breakpoint-down(lg)
-      padding: 23.5% 0 0
-    +media-breakpoint-down(md)
-      padding: 22vh 0 0
+.slick-slide
+  padding: 0 10px
+.slider__item
+  &_advert
+    .slider-item__body
+      min-height: 293px
+    .slider-item__img
+      padding: 0 0 177px
+    .slider-item__title
+      padding: 23px 20px 0 
+    .slider-item__text
+      margin: 17px 20px 0
+    position: relative
+    .slider-item__plaha
+      @include absolute(60px,27px,23px,null,15px,0%,0%)
+      +bg(white)
+      z-index: 5
+      border-radius: 5px
+      +center
+      span
+        +font-family(  roboto-medium,normal,12px,140%,$dark-1)
+    
+  
+  
+.slider-item
+  &__body
+    background: #FFFFFF
+    border: 1px solid #ECECEC
+    border-radius: 5px
+    padding: 0 0 20px 0
+    min-height: 284px
+  &__img
+    position: relative
+    width: 100%
+    padding: 0 0 150px 0	 
   &__title
-    +font-family(Bebas-font,400,139px,139px,$yellow)
-    +media-breakpoint-down(md)
-      font-size: 80px
-      line-height: 109px
-    span
-      color: $accent
-
+    +font-family(  roboto-medium,500,18px,150%,#586EB6) 
+    padding: 19px 20px 0 
   &__text 
-    +font-family(Montserrat,300,16px,25px,$white)
-    letter-spacing: 1
-    width: 25%
-    text-align: center
-    padding: 11px 0 51px
-    +media-breakpoint-up(md)
-      width: 46%
-    +media-breakpoint-down(sm)
-      width: 93%
-      font-size: 14px
-      line-height: 19px
-      padding: 0px 0 24px
-  &__block-link 
+    +font-family(  roboto-medium,normal,18px,18px,$dark-1)
+    +alic
+    margin: 10px 20px 0 
+  &__notes 
+    +alic
+    margin: 20px 20px 0
+    span
+      +font-family(  roboto-medium,normal,15px,18px,$grey)
+    .notes__text
+      
+      margin: 0 10px 0 0  
+      +font-family(  roboto-medium,normal,15px,18px,$dark-1)
 
-
-.slider-block-link 
+.sale-slider__arrows
+  position: relative
+  +absolute( 100%, 30px, 50%,  0%,  null,0,-50%)
   +alic
-  &__img 
-    width: 50px
-    height: 50px
-    
-  &__txt 
-    +font-family(Bebas-font,400,24px,29px,$white)
-    margin: 0 0 0 12px
+  
+.sale-slider__arrow
+  +center
+  +absolute( 50px, 50px, 0%,  null,  null,null,null)
+  +bg(white)
+  border-radius: 50%
+  font-size: 22px
+  color: $dark-1
+  transition: all 0.2s ease-in-out
+  &:hover
+    cursor: pointer
+    +bg($salat)
+    color: $active
 
-.slick-dots
-  +jucb
-  +absolute( 100px, 23px, 86%,  50%, null,-50%,0px)
-  z-index: 2
-.slick-dots li
-  button
-    +bg(transparent)
-    +border(1px,$accent )
-    width: 6px
-    height: 6px
-    font-size: 0
+.sale-slider__arrow_prev
+  left: -70px
+.sale-slider__arrow_next
+  right: -70px
 
 
-.slick-dots li:not(.slick-active)
-    
-    
-    
-li.slick-active
-  button
-    +bg($accent)
-    transform: scale(2)
-    border-radius: 2px
+.slider-metro
+  margin: 0 10px 0 0  
+
+.slider-bus
+  margin: 0 10px 0 0  
+
+

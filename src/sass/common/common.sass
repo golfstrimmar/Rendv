@@ -23,13 +23,13 @@ body
   @include fdc
   min-height: 100vh
   // background: $main-back 
-.page
-  position: absolute
-  width: 100%
-  min-height: 100%
-  top: 0
-  left: 0
-  @include fdc
+// .page
+//   position: absolute
+//   width: 100%
+//   min-height: 100%
+//   top: 0
+//   left: 0
+//   @include fdc
 .container
   // outline: 1px solid #4164ff
   // background: #BBDEFB
@@ -157,13 +157,14 @@ input
   +absolute( 100%, 100%, 0,  0,  null,0,0)
 
 
-
+h2
+  +font-family(  roboto-medium,normal,32px,37px,$dark-1)
 
 
 // стили для общих блоков
 
 
-// .btn-primary-all_dark
+// .btn--primary-all_dark
 //   background: $f-color
 //   border-radius: 40px
 //   +font-family(Montserrat,500,18px,22px,$f-color)
@@ -183,3 +184,5 @@ input
   // padding: 0 0 3% 0	
   // +media-breakpoint-only(xs)
   //   font-size: calc(20px + (36-20)*((100vw-320px)/(576-320))) 
+.icon-rouble
+  margin: 0 0 0 5px

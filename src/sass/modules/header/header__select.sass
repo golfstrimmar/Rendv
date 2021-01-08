@@ -11,38 +11,36 @@
   +jucc	
   
   .header-select__body 
-    flex: 0 1 56.4%
+    flex: 0 1 57.4%
     padding: 4.8% 0 4.65%
     background: rgba(24, 24, 24, )
   .header-select__title 
     z-index: 2
     position: relative
     +font-family(  roboto-medium,bold,48px,100%,white)
-  .header-select__tabs 
+  .header-select__filter 
     margin: 4.5% 0 0 0
     width: 47.3%
     position: relative
     z-index: 100000
-    
-    	
-  .tabs__body
+  .filter__body
     +bg( #2B3036) 
     border-radius: 5px
     padding: 0 0 0 0
     +jucb
 
-  .tabs__item
+  .filter__item
     flex-grow: 1 
-  .tabs-item 
+  .filter-item 
     box-shadow: none
     border-radius: 5px
     +bg( #2B3036)
     border: none
     max-height: 50px
   .mb-2 
-  .tabs-item__body
+  .filter-item__body
     +center
-  .tabs-item__title
+  .filter-item__title
     padding: 17px 0
     &:hover
       cursor: pointer
@@ -56,32 +54,35 @@
       border-bottom-right-radius: 0
       border-bottom-left-radius: 0
       color: $dark-1
-  .tabsDep-title-js 
-  .tabs-item__img 
-  .icon-chevron-down 
-  .tabsDep-img-js 
+  .filterDep-img-js 
     transition: all 0.2s ease-in-out
-  .tabs__drop
-    
+  .filter__drop
     &_sub
       border-radius: 5px
       border-top-left-radius: 0px
-      .tabs-item
+      .filter-item
         +bg(white)
-      .tabs-item__title
+      .filter-item__title
         +font-family(  roboto-medium,normal,15px,18px,#181818)
         padding: 17px 0 17px 30px
         +pro
-      .tabs-item__img
+      .filter-item__img
         margin: 0 20px 0 auto
         font-size: 18px
-      .tabs-drop
+      .filter-drop
         width: 100%
 
-  .tabs-drop
+  .filter-drop
     display: none
     +absolute( 211%, 50px, 100%,  0%,  null,0,0)
     +bg(white)
+    &__body
+      +jucb
+    &__info
+      flex: 0 1 48.7%
+      padding: 0 30px	
+      +jucb
+      +alic
   .header-select__buttons 
     +juce
     position: relative
@@ -91,17 +92,12 @@
     button
       width: 220px
       height: 50px
-  .btn-light
+  .btn--light
     +font-family(  roboto-medium,500,15px,18px,$dark-1)
     margin: 0 10px 0 0
-  .btn-success
-    +font-family(  roboto-medium,500,15px,18px,white)
-  .tabs-drop__info
-    flex: 0 1 48.7%
-    padding: 0 30px	
-    +jucb
-    +alic
-  .tabs-drop__adress
+
+
+  .filter-drop__adress
     +font-family(  roboto-medium,normal,15px,18px,$grey)
-  .tabs-drop__metro
+  .filter-drop__metro
     +font-family(  roboto-medium,normal,15px,18px,#586EB6)

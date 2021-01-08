@@ -2,12 +2,12 @@ import $ from "jquery";
 // ------------------------------------------------
 
 $(document).ready(function (e) {
-let titleTab = $(".tabsDep-title-js");
+let titleTab = $(".filterDep-title-js");
 
 titleTab.on("click", function () {
-let dropTab = $(this).siblings(".tabsDep-drop-js");
-let imgTab = $(this).find(".tabsDep-img-js");
-let parent = $(this).parent().parent(".tabs__item")
+let dropTab = $(this).siblings(".filterDep-drop-js");
+let imgTab = $(this).find(".filterDep-img-js");
+let parent = $(this).parent().parent(".filter__item")
 
 if($(this).hasClass("act")){
   dropTab.slideUp(200);
@@ -17,11 +17,11 @@ imgTab.css("transform", "rotate(0deg)");
   $(this).addClass("act");
   imgTab.css("transform", "rotate(-180deg)");
   dropTab.slideDown(200);
-    parent.siblings(".tabs__item").find(".tabsDep-drop-js").slideUp(200);
-    parent.siblings(".tabs__item").find(".tabsDep-title-js").removeClass("act");
+    parent.siblings(".filter__item").find(".filterDep-drop-js").slideUp(200);
+    parent.siblings(".filter__item").find(".filterDep-title-js").removeClass("act");
     parent
-      .siblings(".tabs__item")
-      .find(".tabsDep-img-js")
+      .siblings(".filter__item")
+      .find(".filterDep-img-js")
       .css("transform", "rotate(0deg)");
 }
 

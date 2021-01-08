@@ -1,0 +1,50 @@
+section#sale.sale
+  .sale__wrapper
+    .container
+      .sale__body
+        h2 Продажа
+        .sale__filter.sale-filter
+          .sale-filter__body
+            - 
+              items = [
+                  {title: "Жилые комплексы"},
+                  {title: "Квартиры"},
+                  {title: "Комнаты"},
+                  {title: "Загородная"},
+                  {title: "Коммерческая"}
+              ]
+            each item in items
+              .sale-filter__item
+                .sale-filter__title=item.title
+    .container
+      .sale__slider.sale-slider
+        .sale-slider__arrows
+          i.sale-slider__arrow.sale-slider__arrow_prev.sale-slider_prev.icon-chevron-left
+          i.sale-slider__arrow.sale-slider__arrow_next.sale-slider_next.icon-chevron-right
+        .sale-slider__body.slider-js
+          - 
+            slides = [
+                { text:"Город-парк Ясный Берег", img:"assets/img/sale/img-4.webp"},
+                { text:"Расцветай на Ядрицевской", img:"assets/img/sale/img-2.webp"},
+                { text:"Алхимово", img:"assets/img/sale/img-3.webp"},
+                { text:"Алхимово", img:"assets/img/sale/img-2.webp"},
+                { text:"Город-парк Ясный Берег", img:"assets/img/sale/img-4.webp"},
+                { text:"Расцветай на Ядрицевской", img:"assets/img/sale/img-2.webp"},
+                { text:"Алхимово", img:"assets/img/sale/img-3.webp"},
+                { text:"Алхимово", img:"assets/img/sale/img-2.webp"}
+            ]
+          each item in slides
+            .slider__item.slider-item
+              .slider-item__body
+                .slider-item__img 
+                  .ibg.bg
+                    img(src=item.img,alt="img")
+                .slider-item__title=item.text
+                .slider-item__text 
+                  span от 2 350 000 
+                  span.icon-rouble
+                .slider-item__notes
+                  img.slider-metro(src="assets/img/sale/metro.svg",alt="img")
+                  .notes__text Ленинский проспект
+                  img.slider-bus(src="assets/img/sale/bus.svg",alt="img")
+                  span 5 мин.

@@ -1,22 +1,19 @@
 //- подключаем везде
 include ../utils/mixins
 
-//- img.screen(
-//-   src="assets/img/Screenshot.png",alt="img" 
-//-   )
+
 header#header.header
   .header__wrapper
-    .container
-      .header__top.header-top
-        .header-top__body.row
-          .header-top__location.header-top-location
-            a(href="#!").header-top-location__body.row.no-gutters
-              span.icon-location
-                span.path1
-                span.path2
-              .header-top-location__text  Новосибирск
+    .header__top.header-top
+      .container
+        .header-top__body
+          a(href="#!").header-top__location.header-top-location
+            span.icon-location
+              span.path1
+              span.path2
+            .header-top-location__text  Новосибирск
           .header-top__currency.header-top-currency
-            .header-top-currency__body.row
+            .header-top-currency__body
               .header-top-currency__item  
                 span USD   
                 span 73.31 руб. 
@@ -25,31 +22,34 @@ header#header.header
                 span  EUR   
                 span  88.94 руб. 
                 span (-0,26)
-          button.btn.btn-success.header-top__button(type='button') Вход и регистрация
+          .header-top__button
+            +btn--success('Вход и регистрация')
     hr
-    .container
-      .header__main.header-main
-        .header-main__body.row
+    
+    .header__main.header-main
+      .container
+        .header-main__body
           a.header-main__logo(href="#!")
             img(src="assets/img/header/logo-1.svg",alt="img")
-          ul.header-main__menu.header-main-menu.row.no-gutters
+          .header-main__menu.header-main-menu
             .header__menu_overlay
             i.header-close.fa.fa-times
-            - 
-              items = [
-              { title: "Недвижимость "},
-              { title: "Финансы "},
-              { title: "Рейтинг компаний "},
-              { title: "Биржа услуг "},
-              { title: "Новости"},
-              { title: "Блоги"},
-              { title: "Мнение эксперта"},
-              ]
-            each item in items  
-              li.header-main-menu__item
-                a.header-main-menu__link(href="#!")=item.title
+            ul
+              - 
+                items = [
+                { title: "Недвижимость "},
+                { title: "Финансы "},
+                { title: "Рейтинг компаний "},
+                { title: "Биржа услуг "},
+                { title: "Новости"},
+                { title: "Блоги"},
+                { title: "Мнение эксперта"},
+                ]
+              each item in items  
+                li.header-main-menu__item
+                  a.header-main-menu__link(href="#!")=item.title
 
-          button.btn.btn-success.header-main__button(type='button') 
+          button.btn--success.btn--success-icon.header-main__button(type='button') 
             span.icon-plus
             span Разместить объявление
       
@@ -59,8 +59,8 @@ header#header.header
           img(src="assets/img/header/top-img.webp",alt="top-img")
         .header-select__body
           h1.header-select__title Поможем воплотить мечту в реальность
-          .header-select__tabs
-            .tabs__body.row.no-gutters
+          .header-select__filter
+            .filter__body
               - 
                 items = [
                   { title: "Купить",text:"№1 "},
@@ -70,12 +70,12 @@ header#header.header
                 ]
 
               each item in items
-                .tabs__item.tabs-item
-                  .tabs-item__body
-                    .tabs-item__title.tabsDep-title-js=item.title 
+                .filter__item.filter-item
+                  .filter-item__body
+                    .filter-item__title.filterDep-title-js=item.title 
                         //- ---------------------------------------------
-                    .tabs__drop.tabs__drop_sub.tabs-drop.tabsDep-drop-js
-                      .tabs-drop__body.row.no-gutters
+                    .filter__drop.filter__drop_sub.filter-drop.filterDep-drop-js
+                      .filter-drop__body
                         - 
                           items = [
                             { title: "Коммерческую"},
@@ -83,22 +83,20 @@ header#header.header
                             { title: "Стоимость"},
                           ]
                         each item in items
-                          .tabs__item.tabs-item
-                            .tabs-item__body
-                              .tabs-item__title.tabsDep-title-js=item.title 
-                                .tabs-item__img.icon-chevron-down.tabsDep-img-js
-                              .tabs__drop.tabs-drop.tabsDep-drop-js
-                                .tabs-drop__body
+                          .filter__item.filter-item
+                            .filter-item__body
+                              .filter-item__title.filterDep-title-js=item.title 
+                                .filter-item__img.icon-chevron-down.filterDep-img-js
+                              .filter__drop.filter-drop.filterDep-drop-js
+                                .filter-drop__body
                                   p какой-то контент для 
                                   span=item.title
-                        .tabs-drop__info.row.no-gutters
-                          a.tabs-drop__adress(href="#!") Адрес или ЖК
-                          a.tabs-drop__metro(href="#!") Метро 
-
-
+                        .filter-drop__info
+                          a.filter-drop__adress(href="#!") Адрес или ЖК
+                          a.filter-drop__metro(href="#!") Метро 
           .header-select__buttons
-            button.btn.btn-light(type='button') Смотреть на карте
-            button.btn.btn-success(type='button') Показать 155 523
+            +btn--light('Смотреть на карте')
+            +btn--success('Показать 155 523')
 
  
 

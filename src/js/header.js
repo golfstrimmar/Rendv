@@ -54,12 +54,10 @@ window.addEventListener("resize", function (event) {
 // ----- header меняется в размерах и цвете
    window.addEventListener("scroll", function (event) {
      if (window.pageYOffset > 150) {
-       document.querySelector(
-         ".header"
-       ).classList.add("responciveHeader");
+       document.querySelector(".header").classList.add("responcive_header");
        
      } else {
-       document.querySelector(".header").classList.remove("responciveHeader");
+       document.querySelector(".header").classList.remove("responcive_header");
      }
    });
 

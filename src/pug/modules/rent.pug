@@ -1,0 +1,52 @@
+//- повторение блока sale
+
+section#sale.sale
+  .sale__wrapper
+    .container
+      .sale__body
+        h2 Аренда 
+        .sale__filter.sale-filter
+          .sale-filter__body
+            - 
+              items = [
+                  {title: "Жилые комплексы"},
+                  {title: "Квартиры"},
+                  {title: "Комнаты"},
+                  {title: "Загородная"},
+                  {title: "Коммерческая"}
+              ]
+            each item in items
+              .sale-filter__item
+                .sale-filter__title=item.title
+    .container
+      .sale__slider.sale-slider
+        .sale-slider__arrows
+          i.sale-slider__arrow.sale-slider__arrow_prev.rent-slider_prev.icon-chevron-left
+          i.sale-slider__arrow.sale-slider__arrow_next.rent-slider_next.icon-chevron-right
+        .sale-slider__body.slider-rent-js
+          - 
+            slides = [
+                { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},
+                { text:"Комната, 70м²", img:"assets/img/rent/img-5.webp", price: "14 270"},
+                { text:"Комната, 19м²", img:"assets/img/rent/img-6.webp", price: "7000"},
+                { text:"Комната, 70м²", img:"assets/img/rent/img-5.webp", price: "14 270"},
+                { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},
+                { text:"Комната, 70м²", img:"assets/img/rent/img-6.webp", price: "14 270"},
+            ]
+          each item in slides
+            .slider__item.slider-item
+              .slider-item__body
+                .slider-item__img 
+                  .ibg.bg
+                    img(src=item.img,alt="img")
+                .slider-item__title=item.text
+                .slider-item__text 
+                  span=item.price 
+                  span.icon-rouble
+                  span /мес.
+
+                .slider-item__notes
+                  img.slider-metro(src="assets/img/sale/metro.svg",alt="img")
+                  .notes__text Ленинский проспект
+                  img.slider-bus(src="assets/img/sale/bus.svg",alt="img")
+                  span 5 мин.

@@ -1,8 +1,11 @@
-section#slider.slider-main
- .slider-main__wrapper
+//- подключаем везде
+include ../utils/mixins
+
+section#slider.slider
+ .slider__wrapper
     .container-fluid
-      .slider-main__body
-        .slider-main-js
+      .slider__body
+        .slider-js
           - 
             slides = [
                 { text: "Мы посвящаем наш продукт всем компаниям, которые видят потенциал для увеличении продаж в возможности влиять на эффективность каждого «продавца»"},
@@ -13,8 +16,8 @@ section#slider.slider-main
             ]
           
           each slide in slides
-            .slider-main__item.slider-main-item
-              .slider-main-item__body
+            .slider__item.slider-item
+              .slider-item__body
                 .ibg.bg
                   img(src="assets/img/top-1.webp",alt="")
                 .slider__content.slider-content
