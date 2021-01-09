@@ -15,6 +15,7 @@ import "./css/slick.css";
 
 // icomoon
 import "./css/style.css";
+import "./css/polzunki.css";
 
 
 

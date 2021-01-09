@@ -1,0 +1,50 @@
+section#bunners.bunners
+ .bunners__wrapper
+    .container
+      .bunners__body
+        .sale-slider__arrows
+          i.sale-slider__arrow.sale-slider__arrow_prev.bunners-slider_prev.icon-chevron-left
+          i.sale-slider__arrow.sale-slider__arrow_next.bunners-slider_next.icon-chevron-right
+        .slider-bunners-js
+            - 
+                items = [
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ", },
+                ]
+
+            each item in items
+              .slider-bunners__item.slider-bunners-item
+                .slider-bunners-item__body
+                  .ibg.bg
+                    img(src="assets/img/bunners.webp",alt="bunners")
+                  .slider-bunners-item__content
+                    .slider-bunners-item__buttons.slider-bunners-buttons
+                      .slider-bunners-buttons__body
+                        button.button-empty(type='button') Квартиры от 2млн.<span class="icon-rouble"></span>
+                        button.button-empty(type='button')  м² от 130 т.р.
+                        div.flex
+                          button.btn--light(type='button')  Реклама
+                          button.btn--light(type='button')  Скрыть
+                    .slider-bunners-item__small ГК «Самолёт»
+                    .slider-bunners-item__title=item.title 
+                      <span class="icon-rouble"></span> 
+                    .slider-bunners-item__text  
+                      p Старт продаж нового корпуса от 10 млн ₽. Ипотека 5,85%. 
+                      p Рассрочка 0%. Панорамные виды на Останкинскую башню и Москву.
+                    button.btn--success.btn--success-icon.header-main__button.slider-bunners-item__button(type='button') 
+                      span.icon-phone
+                      span Заказать звонок
+
+
+

@@ -1,0 +1,88 @@
+section#calc.news.calc
+  .news__wrapper
+    .container
+      .news__body
+        .news__left.news-left
+          
+          .news-left__body
+            .news-left__calc.news-left-calc
+              .news-left-calc__body
+                h2 Калькулятор ипотеки
+                div.jucb
+                  .news-left-calc__column.news-left-column
+                    .news-left-column__body
+                      
+                      
+                     
+                      section(data-type='slider-group' data-question-id='6')
+                        .news-left-column__title Стоимость недвижимости
+                        p.range
+                          .news-left-column__number
+                            output 
+                            .icon-rouble
+                          input#test1(type='range' min='0' max='5000000' value='100' step='1' name='groep1')
+                     
+                     
+                     
+                      section(data-type='slider-group' data-question-id='7')
+                        .news-left-column__title Первоначальный взнос
+                        p.range
+                          .news-left-column__number
+                            output 
+                            .icon-rouble
+                            span 20%
+                          input#test2(type='range' min='0' max='5000000' value='100' step='1' name='groep2')
+                  .news-left-calc__column.news-left-column
+                    .news-left-column__body
+                      section(data-type='slider-group' data-question-id='8')
+                        .news-left-column__title Ставка
+                        p.range
+                          .news-left-column__number
+                            output
+                            b % 
+                          input#test3(type='range' min='0' max='20' value='1' step='1' name='groep3')
+                      section(data-type='slider-group' data-question-id='9')
+                        .news-left-column__title Ставка
+                        p.range
+                          .news-left-column__number
+                            output
+                            b лет 
+                          input#test4(type='range' min='0' max='20' value='1' step='1' name='groep4')
+                    
+                .news-left-calc__text Сумма кредита
+                .news-left-calc__number 27 170 000 <span class="icon-rouble"></span>
+
+            .news-left__offer.news-left-offer
+              .news-left-offer__body
+                .news-left-offer__line.news-line
+                  .news-line__body.row.no-gutters
+                    img.news-line__icon.col-lg-1(src="assets/img/calc/calc-1.svg",alt="img")
+                    .news-line__text.col-lg-3  ДОМ.РФ
+                    .news-line__number.col-lg-2  8,7%
+                    .news-line__rate.col-lg-4 212 542 <span class="icon-rouble"></span>/мес.
+                .news-left-offer__line.news-line
+                  .news-line__body.row.no-gutters
+                    img.news-line__icon.col-lg-1(src="assets/img/calc/calc-2.svg",alt="img")
+                    .news-line__text.col-lg-3  Банк ВТБ
+                    .news-line__number.col-lg-2  8,9%
+                    .news-line__rate.col-lg-4  216 423 <span class="icon-rouble"></span>/мес.
+                .news-left-offer__line.news-left-offer__line_last.news-line
+                  .news-line__body.row.no-gutters
+                    img.news-line__icon.col-lg-1(src="assets/img/calc/calc-3.svg",alt="img")
+                    .news-line__text.col-lg-3 МТС банк
+                    .news-line__number.col-lg-2 9,1% 
+                    .news-line__rate.col-lg-4  220 332 <span class="icon-rouble"></span>/мес.
+                .news-left-offer__button
+                  button.btn--success.news-left-offer__button(type='button')  Смотреть предложение
+
+            
+        .news__right.news-right
+          .news-right__body
+            .ibg.bg
+              img(src="assets/img/calc/calc.webp",alt="")
+            .news-right__title  2-комнатные квартиры на Горском
+            .news-right__text от 2,5 млн.  <span class="icon-rouble"></span>
+
+
+
+

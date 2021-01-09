@@ -2,77 +2,121 @@
 include ../utils/mixins
 
 section#footer.footer
- .footer__wrapper
-    .container
-      .footer__body.row
-        .col-xs-12.order-2.order-xl-1.col-xl-8.footer__item_left.footer-item
-          .footer-item__body
-            h2.common-Title Контакты 
-            .footer-item__content.footer-item-content
-              .footer-item-content__body.row.no-gutters
-                ul.footer-item-content__left.col-md-6.flex-column.align-items-start
+  .footer__wrapper
+      .footer__body 
+        .footer__top.footer-top
+          .container-fluid
+            .footer-top__body
+              img.footer-top__logo(src="assets/img/header/logo-1.svg",alt="img")
+              .footer-top__nav.footer-top-nav
+                ul.footer-top-nav__body
                   - 
                     items = [
-                      { 
-                        src: "assets/img/Group9.svg ",
-                         text1: "+7 (985) 764-11-03",
-                         text2: "+7 (985) 764-11-03 ",
-                         text3: ""
-                      },
-                      { 
-                        src: "assets/img/footer/img-1.svg", 
-                        text1: "Dentalbeauty@mail.ru",
-                        text2: "",
-                        text3: ""
-                        },
-                      { 
-                        src: "assets/img/footer/img-2.svg", 
-                        text1: "пн-пт: 09:00-21:00",
-                        text2: "сб-вс: 10:00-19:00 ",
-                        text3: "",
-                        },
-                      { 
-                        src: "assets/img/footer/clock.svg", 
-                        text1: "Москва, Ломоносовский",
-                        text2: "проспект, дом 29, ",
-                        text3: "корпус 2 ЖК ",
-                        },
-                    ]
-                  
-                  each index in items
-                    li.nav-item
-                      .nav-item__body.d-flex
-                        img(src=index.src,alt="img").nav-item__icon
-                        .nav-item__text.nav-item-text
-                          .nav-item-text__body.row.no-gutters.flex-column
-                            .nav-item__text=index.text1
-                            .nav-item__text=index.text2
-                            .nav-item__text=index.text3
-
-                
-                .footer-item-content__right.col-12.col-md-4
-                  ul.footer-item-content__icons.row.no-gutters.justify-content-md-between.justify-content-around 
-                    - 
-
-                      items = [
-                        { src: " assets/img/footer/img-1.svg" },
-                        { src: " assets/img/footer/facebook.svg" },
-                        { src: " assets/img/footer/whatsapp.svg" },
-                        { src: "assets/img/footer/youtube.svg " },
+                        { text: "О проекте"},
+                        { text: "Реклама"},
+                        { text: "Пользовательское соглашение"},
+                        { text: "Служба поддержки"},
+                        { text: "Политика конфиденциальности"},
+                        { text: "Контакты"}
                       ]
+                  each item in items
+                    li.footer-top-nav__item
+                      a.footer-top-nav__link(href="#!")=item.text
 
-                    each item in items
-                      li
-                        a(href="#!")  
-                          img(src=item.src,alt="img")
+              .footer-top__social.footer-top-social
+                .footer-top-social__body
+                  - 
+                    items = [
+                      { title: "assets/img/footer/VK.svg"},
+                      { title: "assets/img/footer/insta.svg"},
+                      { title: "assets/img/footer/youtube.svg"},
+                      { title: "assets/img/footer/facebook.svg"},
+                      ]
+                  each item in items
+                    a.footer-top-social__link(href="#!")
+                      img(src=item.title)
+        .footer__main.footer-main
+          .container-fluid
+            .footer-main__body
+              .footer-main__column.footer-main-column
+                .footer-main-column__body
+                  .footer-main-column__title  Новости
+                  - 
+                    items = [
+                     { title: "Новости Pro.Недвижимость"},
+                     { title: "Пресс-релизы"},
+                     { title: "Блоги"},
+                     { title: "Мнение эксперта"},
+                     { title: "Интервью"},
+                     { title: "Исследование и аналитика"},
+                     { title: "Видео"},
+                    ]
+                  each item in items
+                    a.footer-main-column__link(href="#!")=item.title
+              .footer-main__column.footer-main-column
+                .footer-main-column__body
+                  .footer-main-column__title  Недвижимость
+                  - 
+                    items = [
+                     { title: "Апартаменты"},
+                     { title: "Таунхаусы"},
+                     { title: "Коттеджные посёлки"},
+                     { title: "Земельные участки"},
+                     { title: "Спецпредложения"},
+                     { title: "Все компании"},
+                    ]
+                  each item in items
+                    a.footer-main-column__link(href="#!")=item.title
+              .footer-main__column.footer-main-column
+                .footer-main-column__body
+                  .footer-main-column__title  Народный отзыв
+                  - 
+                    items = [
+                     { title: "Отзыв о компаниях"},
+                     { title: "Народный рейтинг ", },
+                     { title: "Вопрос-ответ ", },
+                     { title: "Форум ", },
+                     { title: "Опросы ", },
+                    ]
+                  each item in items
+                    a.footer-main-column__link(href="#!")=item.title
+              .footer-main__column.footer-main-column
+                .footer-main-column__body
+                  .footer-main-column__title  Финансы и право
+                  - 
+                    items = [
+                     { title: "Ипотека и банки"},
+                     { title: "Страхование ", },
+                     { title: "Юристы, оценка и налог ", },
+                     { title: "Ипотечный калькулятор ", },
+                     { title: "Калькулятор страхования ", },
+                     { title: "Законодательство ", },
+                     { title: " ", },
+                    ]
+                  each item in items
+                    a.footer-main-column__link(href="#!")=item.title
+              .footer-main__column.footer-main-column
+                .footer-main-column__body
+                  .footer-main-column__title  Всё для дома
+                  - 
+                    items = [
+                     { title: "Архитектура и дизайн ", },
+                     { title: "Строительство и ремонт ", },
+                     { title: "Всё для дома, дачи, сада ", },
+                     { title: "Полезные советы ", },
+                     { title: "Идеи для дома ", },
+                    ]
+                  each item in items
+                    a.footer-main-column__link(href="#!")=item.title
+        .footer__low.footer-low
+          .container-fluid
+            .footer-low__body
+              .footer-low__text Вся информация на сайте предоставлена   исключительно с целью ознакомления, получена в том числе  из публичных и открытых источников, и ни при каких условиях  не является рекомендацией или публичной офертой, определяемой  положениями Статьи 437 Гражданского кодекса РФ.
+              .footer-low__text
+                p © 2020 Rendv.ru Ревизор недвижимости
+                p Все права защищены
 
 
-
-            .footer-item__description 2020. Клиника «Dental@Beauty» Все права защищены. © ООО «‎ДенталБьюти»  Цены, указанные на сайте, не являются публичной офертой. Уточняйте стоимость в клинике. Есть противопоказания. Необходима консультация специалиста
-        .col-xs-12.order-1.order-xl-2.col-xl-3.footer-map
-          .footer-map__img
-            .ibg.bg
-              img(src="assets/img/footer/map.webp",alt="")
 
 
 //- -------------------------------------------------------------------------------------------------------------
