@@ -111,6 +111,9 @@ color: lighten($color_success, 50%)
 @for $i from 1 through 12
   .col-#{$i}
     background-color: lighten(#0D47A1, $i * 8%)
+    
+-----------------
+background-image: url('img/cat/cat-img-1.webp')
 
 
 

@@ -4,7 +4,6 @@ section#sale.sale
       .sale__body
         h2 Продажа
         .sale__filter.sale-filter
-          .sale-filter__body
             - 
               items = [
                   {title: "Жилые комплексы"},
@@ -16,7 +15,6 @@ section#sale.sale
             each item in items
               .sale-filter__item
                 .sale-filter__title=item.title
-    .container
       .sale__slider.sale-slider
         .sale-slider__arrows
           i.sale-slider__arrow.sale-slider__arrow_prev.sale-slider_prev.icon-chevron-left
@@ -33,9 +31,10 @@ section#sale.sale
                 { text:"Алхимово", img:"assets/img/sale/img-3.webp"},
                 { text:"Алхимово", img:"assets/img/sale/img-2.webp"}
             ]
+            //- здесь поменять на карточку и убрать .ibg.bg
+            //-   img(src="assets/img/.png",alt="")
           each item in slides
             .slider__item.slider-item
-              .slider-item__body
                 .slider-item__img 
                   .ibg.bg
                     img(src=item.img,alt="img")
@@ -44,7 +43,7 @@ section#sale.sale
                   span от 2 350 000 
                   span.icon-rouble
                 .slider-item__notes
-                  img.slider-metro(src="assets/img/sale/metro.svg",alt="img")
-                  .notes__text Ленинский проспект
-                  img.slider-bus(src="assets/img/sale/bus.svg",alt="img")
+                  img.slider-item__property.slider-item__property--metro(src="assets/img/sale/metro.svg",alt="img")
+                  .slider-item__property.slider-item__property--text Ленинский проспект
+                  img.slider-item__property.slider-item__property--bus(src="assets/img/sale/bus.svg",alt="img")
                   span 5 мин.

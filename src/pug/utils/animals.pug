@@ -1,32 +1,73 @@
-                      //- инпут из шапки
-.header-service__search.col-xl-7
-  input.search-input(type='text' placeholder="Поиск")
+===============================================================
+=======/ кнопка квадратная зеленая с белым текстом=============
 
+button.btn.btn--success.btn--success-icon(type='button') Смотреть
+  span.btn__icon.icon-arrow-right
+----------------
+.btn--success
+  +font-family(  roboto-medium,500,15px,18px,white)
+  +bg($active)
+  &:hover
+    +bg(lighten($active,30%))
+    +border(1px , darken($active,10%)!important)
+    box-shadow: 0px 0px 20px lighten($dark-1,60%)!important
+    color: lighten($active,10%)
+  
 
+  &:focus
+    +border(1px , darken($active,10%)!important)
+    +bg(lighten($active,10%))
+    box-shadow: 0px 0px 20px lighten($dark-1,60%)!important
+    color: white
+   
+.btn--success-icon
+  &:hover
+    &>span
+      color: lighten($active,10%)
+  &:focus
+    &>span
+      color: white
 
-    //- плашка с заголовком белая
-.bunner__info.bunner-info.col-md-6.col-lg-4
-  .bunner-info__body
-    .bunner-info__title Отбеливание зубов
-    .bunner-info__text  Отбеливание зубов Phillips Zoom White Speed( Zoo-20000 вместо 27000
-    a(href="#!").bunner-info__link  Подробнее
-      i &#8594;
+===================================================================
+================= карточка пустая.туда можно добавить фот картинкой и завести какой-нибудь бэйдж например====подходит для самых прстых вариантов====================================
 
-//- ryjgrf
-button.btn.btn-primary.btn-primary-all(type="button") расчитать стоимость
+.card--cat
+--------------
+.card--cat
+  border-radius: 5px
+  padding: 17px
+  min-height: 200px
+  transition: all 0.2s ease-in-out
+  &:hover
+    cursor: pointer
+    transform: scale(1.02)
+    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.3)
+=====================================================================
+=====================белый badje ====================================
+.badge
+  .badge__title Загородная
+  .badge__text 
+    span.badge__bye Купить 
+    span.badge__number 3 648
 
+-------------------
 
+.badge
+  background: #FFFFFF
+  border-radius: 5px
+  display: inline-block!important
+  text-wrap: wrap
+  padding: 23px 21px 	
+  &__title
+    margin: 0px 0 19px 0
+    +font-family(  roboto-medium,normal,20px,23px,$dark-1)
+  &__text
+    +font-family(  roboto-medium,normal,15px,18px,$company)
+    margin: 0 0 10px 0
+  &__bye
+    margin: 0 5px 0 0
+  &__number
 
-
-//- кнопка темная
-button.btn.btn-primary.btn-primary-all.proba-item__button(type="button") расчитать стоимость
-
-
-//- иконка-справа текст
-.nav-item
-          .nav-item__body.d-flex.align-items-center
-            .nav-item__icon
-              img(src="assets/img/Group9.svg",alt="img")
-
-//- для шип
-.relative(style="width: 100%; padding: 0 0 20% 0	")
+===========================================================
+.icon-rouble
+  margin: 0 0 0 5px
