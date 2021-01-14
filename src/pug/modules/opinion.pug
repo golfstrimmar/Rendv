@@ -1,51 +1,51 @@
-section#opinion.sale.opinion
-  .sale__wrapper
+section#opinion.sale 
     .container
       .sale__body
-        h2 Мнение эксперта
-        .sale__filter.sale-filter
-          .sale-filter__body
+        h2.title Мнение эксперта
+        ul.sale__filter.sale__filter_opinion.sale-filter
             - 
               items = [
                   {title: "Мнение эксперта"},
                   {title: "Интервью"},
               ]
             each item in items
-              .sale-filter__item
+              li.sale-filter__item
                 .sale-filter__title=item.title
       
-      .opinion__cards.opinion-cards
-        .opinion-cards__body
-          .opinion-cards__card.opinion-cards-card
-            .opinion-cards-card__body
-              .opinion-cards-card__img
-                .ibg.bg
-                  img(src="assets/img/opin/opin-1.webp",alt="opin-1")
-              .opinion-cards-card__right
-                .opinion-cards-card__title Ольга Терентьева
-                .opinion-cards-card__text  Эксперт по операциям с недвижимостью, юрист по   безопасным   сделкам
-                .opinion-cards-card__content Как изменилась работа риелтора во время  самоизоляции
-                .opinion-cards-card__notes 
-                  span 18 часов назад
-                  i.icon-message-square
-                  span 0
-                  i.icon-eye
-                  span 0
-          .opinion-cards__card.opinion-cards-card
-            .opinion-cards-card__body
-              .opinion-cards-card__img
-                .ibg.bg
-                  img(src="assets/img/opin/opin-2.webp",alt="opin-1")
-              .opinion-cards-card__right
-                .opinion-cards-card__title Александр Савкин
-                .opinion-cards-card__text  Методолог и автор книг по продаже недвижимости, тренер  агентов-миллионеров
-                .opinion-cards-card__content Зарплата риелтора - какими навыками должен обладать   агент, чтобы зараба...
-                .opinion-cards-card__notes 
-                  span 18 часов назад
-                  i.icon-message-square
-                  span 0
-                  i.icon-eye
-                  span 0
+      .sale__cards.sale__cards_opinion
+        .sale__card.sale__card_opinion.opinion-card
+          img.opinion-card__img(src="assets/img/opin/opin-1.webp",alt="opin-1")
+          .opinion-card__right
+            .opinion-card__title Ольга Терентьева
+            .opinion-card__text  Эксперт по операциям с недвижимостью, юрист по   безопасным   сделкам
+            .opinion-card__content Как изменилась работа риелтора во время  самоизоляции
+            .opinion-card__notes
+              .opinion-card__note
+                .opinion-card__note-text 18 часов назад
+              .opinion-card__note.opinion-card__note--time
+                i.icon-message-square
+                .opinion-card__note-text 0
+              .opinion-card__note.opinion-card__note--look
+                i.icon-eye
+                .opinion-card__note-text 0
+        .sale__card.sale__card_opinion.opinion-card
+          img.opinion-card__img(src="assets/img/opin/opin-2.webp",alt="opin-1")
+          .opinion-card__right
+            .opinion-card__title Александр Савкин
+            .opinion-card__text  Методолог и автор книг по продаже недвижимости, тренер  агентов-миллионеров
+            .opinion-card__content Зарплата риелтора - какими навыками должен обладать   агент, чтобы зараба...
+            .opinion-card__notes
+              .opinion-card__note
+                .opinion-card__note-text 18 часов назад
+              .opinion-card__note.opinion-card__note--time
+                i.icon-message-square
+                .opinion-card__note-text 0
+              .opinion-card__note.opinion-card__note--look
+                i.icon-eye
+                .opinion-card__note-text 0
+
+      button.btn.btn--success.sale__button-opinion(type='button') Перейти в раздел
+
 
 
 

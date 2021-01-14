@@ -2,14 +2,26 @@
 include ../utils/mixins
 
 section#footer.footer
-  .footer__wrapper
-      .footer__body 
         .footer__top.footer-top
           .container-fluid
-            .footer-top__body
+            .footer-top__body.container-extended
               img.footer-top__logo(src="assets/img/header/logo-1.svg",alt="img")
-              .footer-top__nav.footer-top-nav
-                ul.footer-top-nav__body
+              .footer-top__properties
+                p.footer-top__property.footer-top__property--rights © 2020 Rendv.ru Ревизор недвижимости
+                p.footer-top__property.footer-top__property--explanations Все права защищены
+              .footer-top__social.footer-top__social_small.social-links
+                - 
+                    items = [
+                      { title: "assets/img/footer/VK.svg"},
+                      { title: "assets/img/footer/insta.svg"},
+                      { title: "assets/img/footer/youtube.svg"},
+                      { title: "assets/img/footer/facebook.svg"},
+                      ]
+                each item in items
+                    li.social-links__link
+                      a(href="#!")
+                        img(src=item.title)
+              ul.footer-top__nav.footer-top-nav
                   - 
                     items = [
                         { text: "О проекте"},
@@ -23,8 +35,7 @@ section#footer.footer
                     li.footer-top-nav__item
                       a.footer-top-nav__link(href="#!")=item.text
 
-              .footer-top__social.footer-top-social
-                .footer-top-social__body
+              ul.footer-top__social.social-links
                   - 
                     items = [
                       { title: "assets/img/footer/VK.svg"},
@@ -33,86 +44,110 @@ section#footer.footer
                       { title: "assets/img/footer/facebook.svg"},
                       ]
                   each item in items
-                    a.footer-top-social__link(href="#!")
-                      img(src=item.title)
+                    li.social-links__link
+                      a(href="#!")
+                        img(src=item.title)
         .footer__main.footer-main
           .container-fluid
-            .footer-main__body
+            .footer-main__body.container-extended
               .footer-main__column.footer-main-column
-                .footer-main-column__body
                   .footer-main-column__title  Новости
-                  - 
-                    items = [
-                     { title: "Новости Pro.Недвижимость"},
-                     { title: "Пресс-релизы"},
-                     { title: "Блоги"},
-                     { title: "Мнение эксперта"},
-                     { title: "Интервью"},
-                     { title: "Исследование и аналитика"},
-                     { title: "Видео"},
-                    ]
-                  each item in items
-                    a.footer-main-column__link(href="#!")=item.title
+                  ul.footer-main-column__list
+                    - 
+                      items = [
+                       { title: "Новости Pro.Недвижимость"},
+                       { title: "Пресс-релизы"},
+                       { title: "Блоги"},
+                       { title: "Мнение эксперта"},
+                       { title: "Интервью"},
+                       { title: "Исследование и аналитика"},
+                       { title: "Видео"},
+                      ]
+                    each item in items
+                      li.footer-main-column__list-item
+                        a.footer-main-column__link(href="#!")=item.title
               .footer-main__column.footer-main-column
-                .footer-main-column__body
                   .footer-main-column__title  Недвижимость
-                  - 
-                    items = [
-                     { title: "Апартаменты"},
-                     { title: "Таунхаусы"},
-                     { title: "Коттеджные посёлки"},
-                     { title: "Земельные участки"},
-                     { title: "Спецпредложения"},
-                     { title: "Все компании"},
-                    ]
-                  each item in items
-                    a.footer-main-column__link(href="#!")=item.title
+                  ul.footer-main-column__list
+                  
+                    - 
+                      items = [
+                       { title: "Апартаменты"},
+                       { title: "Таунхаусы"},
+                       { title: "Коттеджные посёлки"},
+                       { title: "Земельные участки"},
+                       { title: "Спецпредложения"},
+                       { title: "Все компании"},
+                      ]
+                    each item in items
+                      li.footer-main-column__list-item
+                        a.footer-main-column__link(href="#!")=item.title
               .footer-main__column.footer-main-column
-                .footer-main-column__body
                   .footer-main-column__title  Народный отзыв
-                  - 
-                    items = [
-                     { title: "Отзыв о компаниях"},
-                     { title: "Народный рейтинг ", },
-                     { title: "Вопрос-ответ ", },
-                     { title: "Форум ", },
-                     { title: "Опросы ", },
-                    ]
-                  each item in items
-                    a.footer-main-column__link(href="#!")=item.title
+                  ul.footer-main-column__list
+                    - 
+                      items = [
+                       { title: "Отзыв о компаниях"},
+                       { title: "Народный рейтинг ", },
+                       { title: "Вопрос-ответ ", },
+                       { title: "Форум ", },
+                       { title: "Опросы ", },
+                      ]
+                    each item in items
+                      li.footer-main-column__list-item
+                        a.footer-main-column__link(href="#!")=item.title
               .footer-main__column.footer-main-column
-                .footer-main-column__body
                   .footer-main-column__title  Финансы и право
-                  - 
-                    items = [
-                     { title: "Ипотека и банки"},
-                     { title: "Страхование ", },
-                     { title: "Юристы, оценка и налог ", },
-                     { title: "Ипотечный калькулятор ", },
-                     { title: "Калькулятор страхования ", },
-                     { title: "Законодательство ", },
-                     { title: " ", },
-                    ]
-                  each item in items
-                    a.footer-main-column__link(href="#!")=item.title
+                  ul.footer-main-column__list
+                    - 
+                      items = [
+                       { title: "Ипотека и банки"},
+                       { title: "Страхование ", },
+                       { title: "Юристы, оценка и налог ", },
+                       { title: "Ипотечный калькулятор ", },
+                       { title: "Калькулятор страхования ", },
+                       { title: "Законодательство ", },
+                       { title: " ", },
+                      ]
+                    each item in items
+                      li.footer-main-column__list-item
+                        a.footer-main-column__link(href="#!")=item.title
               .footer-main__column.footer-main-column
-                .footer-main-column__body
                   .footer-main-column__title  Всё для дома
-                  - 
-                    items = [
-                     { title: "Архитектура и дизайн ", },
-                     { title: "Строительство и ремонт ", },
-                     { title: "Всё для дома, дачи, сада ", },
-                     { title: "Полезные советы ", },
-                     { title: "Идеи для дома ", },
-                    ]
-                  each item in items
-                    a.footer-main-column__link(href="#!")=item.title
+                  ul.footer-main-column__list
+                    - 
+                      items = [
+                       { title: "Архитектура и дизайн ", },
+                       { title: "Строительство и ремонт ", },
+                       { title: "Всё для дома, дачи, сада ", },
+                       { title: "Полезные советы ", },
+                       { title: "Идеи для дома ", },
+                      ]
+                    each item in items
+                      li.footer-main-column__list-item
+                        a.footer-main-column__link(href="#!")=item.title
+              .footer-main__column.footer-main__column-social.footer-main-column
+                  .footer-main-column__title  Соцсети
+                  .footer-main-column__list.social-links
+                    - 
+                      items = [
+                        { title: "assets/img/footer/VK.svg",text: "ВКонтакте"},
+                        { title: "assets/img/footer/insta.svg",text: "Instagram"},
+                        { title: "assets/img/footer/youtube.svg",text: "YouTube"},
+                        { title: "assets/img/footer/facebook.svg",text: "Facebook"}
+                        ]
+                    each item in items
+                      li.social-links__link.social-links__link_main
+                        a(href="#!")  
+                          img(src=item.title)
+                          span=item.text
+
         .footer__low.footer-low
           .container-fluid
-            .footer-low__body
+            .footer-low__body.container-extended
               .footer-low__text Вся информация на сайте предоставлена   исключительно с целью ознакомления, получена в том числе  из публичных и открытых источников, и ни при каких условиях  не является рекомендацией или публичной офертой, определяемой  положениями Статьи 437 Гражданского кодекса РФ.
-              .footer-low__text
+              img.footer-low__logo(src="assets/img/header/logo-1.svg",alt="img")
+              .footer-low__text.footer-low__text_rights
                 p © 2020 Rendv.ru Ревизор недвижимости
                 p Все права защищены
 

@@ -1,103 +1,124 @@
-.container-fluid 
-  padding: 0 0 0 0
+
   
 .header__select 
-  // padding: 0 0 11.3% 0
   position: relative
   width: 100%
-  
+  @include media-breakpoint-down(md) 
+    display: none
   
 .header-select 
   +jucc	
-  
-  .header-select__body 
-    flex: 0 1 57.4%
+  +background-img("/assets/img/header/top-img.webp")
+  &__body 
+    // flex: 0 1 57.4%
+    width: 1070px
     padding: 4.8% 0 4.65%
-    background: rgba(24, 24, 24, )
-  .header-select__title 
+    @include media-breakpoint-down(lg) 
+      width: 960px
+  &__title 
     z-index: 2
     position: relative
     +font-family(  roboto-medium,bold,48px,100%,white)
-  .header-select__filter 
+  &__filter 
     margin: 4.5% 0 0 0
-    width: 47.3%
+    // width: 47.3%
+    width: 500px
+
     position: relative
     z-index: 100000
-  .filter__body
+
+
+
+.filter
+  &__body
     +bg( #2B3036) 
     border-radius: 5px
     padding: 0 0 0 0
     +jucb
-
-  .filter__item
+  &__item
     flex-grow: 1 
-  .filter-item 
-    box-shadow: none
+
+
+.filter-item 
+  box-shadow: none
+  border-radius: 5px
+  +bg( #2B3036)
+  border: none
+  max-height: 50px
+  +center
+  
+.filter-item__title
+  padding: 17px 0
+  &:hover
+    cursor: pointer
+  +pro
+  +center
+  +font-family(  roboto-medium,normal,15px,18px,#ECECEC)
+  transition: all 0.2s ease-in-out
+  &.act
+    +bg(#F4F4F4)
     border-radius: 5px
-    +bg( #2B3036)
-    border: none
-    max-height: 50px
-  .mb-2 
-  .filter-item__body
-    +center
-  .filter-item__title
-    padding: 17px 0
-    &:hover
-      cursor: pointer
-    +pro
-    +center
-    +font-family(  roboto-medium,normal,15px,18px,#ECECEC)
-    transition: all 0.2s ease-in-out
-    &.act
-      +bg(#F4F4F4)
-      border-radius: 5px
-      border-bottom-right-radius: 0
-      border-bottom-left-radius: 0
-      color: $dark-1
-  .filterDep-img-js 
-    transition: all 0.2s ease-in-out
-  .filter__drop
-    &_sub
-      border-radius: 5px
-      border-top-left-radius: 0px
-      .filter-item
-        +bg(white)
-      .filter-item__title
-        +font-family(  roboto-medium,normal,15px,18px,#181818)
-        padding: 17px 0 17px 30px
-        +pro
-      .filter-item__img
-        margin: 0 20px 0 auto
-        font-size: 18px
-      .filter-drop
-        width: 100%
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
+    color: $dark-1
+    
+.filterDep-img-js 
+  transition: all 0.2s ease-in-out
 
-  .filter-drop
-    display: none
-    +absolute( 211%, 50px, 100%,  0%,  null,0,0)
-    +bg(white)
-    &__body
-      +jucb
-    &__info
-      flex: 0 1 48.7%
-      padding: 0 30px	
-      +jucb
-      +alic
-  .header-select__buttons 
-    +juce
-    position: relative
-    z-index: 2
-    margin: 6.7% 0 0
-    z-index: 2
-    button
-      width: 220px
-      height: 50px
-  .btn--light
+  
+  
+  
+  
+.filter__drop
+  &_sub
+    border-radius: 5px
+    border-top-left-radius: 0px
+    .filter-item
+      +bg(white)
+    .filter-item__title
+      +font-family(  roboto-medium,normal,15px,18px,#181818)
+      padding: 17px 0 17px 30px
+      +pro
+    .filter-item__img
+      margin: 0 20px 0 auto
+      font-size: 18px
+    .filter-drop
+      width: 100%
+
+
+.filter-drop
+  display: none
+  +absolute( 1070px, 50px, 100%,  0%,  null,0,0)
+  +bg(white)
+  @include media-breakpoint-down(lg) 
+    width: 960px
+  &__body
+    +jucb
+  &__properties
+    flex: 0 1 48.7%
+    padding: 0 30px	
+    +jucb
+    +alic
+.filter-drop__property
+  +font-family(  roboto-medium,normal,15px,18px,$grey)
+  &--metro
+    color: #586EB6
+
+// --------------------------------------------------------------------------
+.header-select__buttons 
+  +juce
+  position: relative
+  z-index: 2
+  margin: 6.7% 0 0
+  z-index: 2
+.header-select__button
+  width: 220px
+  height: 50px
+  margin: 0 10px 0 0
+  &:last-child
+    margin: 0 0 0 0
+  
+.header-select__button--look
     +font-family(  roboto-medium,500,15px,18px,$dark-1)
-    margin: 0 10px 0 0
 
 
-  .filter-drop__adress
-    +font-family(  roboto-medium,normal,15px,18px,$grey)
-  .filter-drop__metro
-    +font-family(  roboto-medium,normal,15px,18px,#586EB6)

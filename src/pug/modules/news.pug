@@ -1,47 +1,24 @@
 section#news.news
-  .news__wrapper
     .container
-      h2 Последние новости
+      h2.title Последние новости
       .news__body
-        
-        .news__left.news-left
-          .news-left__body
-            
-            .news-left__card.news-left-card
-              .news-left-card__body
-                .ibg.bg
-                  img(src="assets/img/news/news-1.webp",alt="news-1")
-                .news-left-card__text Сад и огород
-                .news-left-card__title  Как правильно черенковать землю?  Советы от Ирины Огурцовой
-                .news-left-card__notes  12 августа 2020 г.
-            .news-left__card.news-left-card
-              .news-left-card__body
-                .ibg.bg
-                  img(src="assets/img/news/news-2.webp",alt="news-1")
-                .news-left-card__text Животные
-                .news-left-card__title  Вы только посмотрите: какие милые щеночки!
-                .news-left-card__notes  12 августа 2020 г.
-            .news-left__card.news-left-card
-              .news-left-card__body
-                .ibg.bg
-                  img(src="assets/img/news/news-3.webp",alt="news-1")
-                .news-left-card__text Ремонт дома
-                .news-left-card__title  В чём сила, брат? В правильном  подборе плинтуса!
-                .news-left-card__notes  12 августа 2020 г.
-            .news-left__card.news-left-card
-              .news-left-card__body
-                .ibg.bg
-                  img(src="assets/img/news/news-4.webp",alt="news-1")
-                .news-left-card__text Сад и огород
-                .news-left-card__title  Ферма лягушек: как лучше разводить земноводных?
+        ul.news__left.news-left
+            - 
+              items = [
+               { text: "Сад и огород",title: "Как правильно черенковать землю?  Советы от Ирины Огурцовой", url:"/assets/img/news/news-1.webp"},
+               { text: "Животные",title: "Вы только посмотрите: какие милые щеночки!", url:"/assets/img/news/news-2.webp"},
+               { text: "Ремонт дома",title: "В чём сила, брат? В правильном  подборе плинтуса!", url:"/assets/img/news/news-3.webp"},
+               { text: "Сад и огород",title: "Ферма лягушек: как лучше разводить земноводных?", url:"/assets/img/news/news-4.webp"},
+              ]
+            each item in items
+              .news-left__card.news-left-card.hover(style=`background-image: url(${item.url})`)
+                .news-left-card__text.news-left-card__text_not-first=item.text 
+                .news-left-card__title=item.title  
                 .news-left-card__notes  12 августа 2020 г.
             
         .news__right.news-right
-          .news-right__body
-            .news-right__img
-              .ibg.bg
-                img(src="assets/img/news/news-5.webp",alt="")
+            img.news-right__img(src="assets/img/news/news-5.webp",alt="")
             .news-right__title  Жилой комплекс Королевский
             .news-right__text Квартиры от 2 300 000 <span class="icon-rouble"></span>
-            button.btn--success.news-right__button(type='button') Смотреть предложения
+            button.btn.btn--success.news-right__button(type='button') Смотреть предложения
 

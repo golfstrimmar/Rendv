@@ -3,72 +3,17 @@
 //   position: relative
 //   width: 100%
 
-
+.slider
+  position: relative
 .slick-slide
-  padding: 0 10px
-.slider__item
-  &_advert
-    .slider-item__body
-      min-height: 293px
-    .slider-item__img
-      padding: 0 0 177px
-    .slider-item__title
-      padding: 23px 20px 0 
-    .slider-item__text
-      margin: 17px 20px 0
-    position: relative
-    .slider-item__plaha
-      @include absolute(60px,27px,23px,null,15px,0%,0%)
-      +bg(white)
-      z-index: 5
-      border-radius: 5px
-      +center
-      span
-        +font-family(  roboto-medium,normal,12px,140%,$dark-1)
-    
-  
-  
-.slider-item
-  background: #FFFFFF
-  border: 1px solid #ECECEC
-  border-radius: 5px
-  padding: 0 0 20px 0
-  min-height: 284px
-  &__img
-    position: relative
-    width: 100%
-    padding: 0 0 150px 0	 
-  &__title
-    +font-family(  roboto-medium,500,18px,150%,#586EB6) 
-    padding: 19px 20px 0 
-  &__text 
-    +font-family(  roboto-medium,normal,18px,18px,$dark-1)
-    +alic
-    margin: 10px 20px 0 
-  &__notes 
-    +alic
-    margin: 20px 20px 0
-    span
-      +font-family(  roboto-medium,normal,15px,18px,$grey)
-    
-    
-.slider-item__property
-  &--text
-    margin: 0 10px 0 0  
-    +font-family(  roboto-medium,normal,15px,18px,$dark-1)
-  &--metro
-    margin: 0 10px 0 0 
-  &--bus
-    margin: 0 10px 0 0
-
-
-
-.sale-slider__arrows
+  margin: 0 10px
+.slider__arrows
   position: relative
   +absolute( 100%, 30px, 50%,  0%,  null,0,-50%)
   +alic
-  
-.sale-slider__arrow
+  @media (max-width: 1500px)
+    display: none 
+.slider__arrow
   +center
   +absolute( 50px, 50px, 0%,  null,  null,null,null)
   +bg(white)
@@ -81,9 +26,9 @@
     +bg($salat)
     color: $active
 
-.sale-slider__arrow_prev
+.slider__arrow_prev
   left: -70px
-.sale-slider__arrow_next
+.slider__arrow_next
   right: -70px
 
 

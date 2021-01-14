@@ -1,6 +1,4 @@
 .look
-  padding: 40px 0 0 0	
-.look__wrapper 
   padding: 50px 0
 .container 
   padding: 0 0 0 0	
@@ -34,3 +32,29 @@
   width: 270px
   height: 50px
   +font-family(  roboto-medium,500,15px,18px,white) 
+
+@include media-breakpoint-down(md)
+  .look
+    padding: 40px 0 
+  .look__left 
+    flex: 1 1 42.5%
+    height: 200px
+  .look__right
+    padding: 0 0 0 54px	
+  .look-right__title
+    +font-family(roboto-medium,500,20px,18px,$dark-1)
+    padding: 0 0 15px
+  .look-right__text_md
+    display: none
+  .look-right-flats__btn
+    order: last
+    width: 223px
+    height: 50px
+    +font-family(roboto-medium,500,15px,18px,$white)
+  .look-right-flats__price,.icon-rouble
+    +font-family(roboto-medium,normal,18px,100%,$dark-1)
+  .look-right-flats__btn
+    margin: 33px 0 0 0
+  .look-right-flats__price
+    .i
+      color: $dark-1

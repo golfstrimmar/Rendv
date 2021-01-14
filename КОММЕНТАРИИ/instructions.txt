@@ -55,7 +55,26 @@ Permanent Marker
   +alistretch
   +alib
   
-   
+
++background-img("/assets/img/sale/img-4.webp")
+
+ @media (min-width: 0px) and (max-width: 1145px)
+ +media-breakpoint-only(sm)
+ +media-breakpoint-up(md)
+ +media-breakpoint-down(lg)
+ include  ./animals/connectForm
+ 
+ @extend %procents
+@extend %s-wrapper
+@extend %ibg
+@extend %card
+
+
+------------------------------------------------------------
+ для each pug 
+each item in items
+    .news-left__card.news-left-card(style=`background-image: url(${item.url})`)
+----------------------------------------------------------
 .relative
    input.form-check-input(type='checkbox')
   darken()
@@ -83,6 +102,7 @@ Permanent Marker
 ------------изображения так
    img(src="assets/img/buscet/buscet-1.webp",alt="") 
 
+ .mdi.mdi-map-marker 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ==SASS======SASS======SASS======SASS======SASS======
@@ -113,7 +133,7 @@ color: lighten($color_success, 50%)
     background-color: lighten(#0D47A1, $i * 8%)
     
 -----------------
-background-image: url('img/cat/cat-img-1.webp')
+background-image: url('img/categories/categories-img-1.webp')
 
 
 
@@ -165,3 +185,31 @@ flex: 0 0 30%
 ------вывод одинаковых блоков в больших количествах
 - for (var x = 0; x < 30; x++)
   li item
+
+
+ для each pug 
+each item in items
+    .news-left__card.news-left-card(style=`background-image: url(${item.url})`)
+
+
+========================botstrap========================
+
+@media (min-width: 1200px) 
+@include media-breakpoint-up(xs) 
+@include media-breakpoint-up(sm) 
+@include media-breakpoint-up(md) 
+@include media-breakpoint-up(lg) 
+@include media-breakpoint-up(xl) 
+
+@include media-breakpoint-down(xs) 
+@include media-breakpoint-down(sm) 
+@include media-breakpoint-down(md) 
+@include media-breakpoint-down(lg) 
+@include media-breakpoint-down(xl) 
+
+
+@include media-breakpoint-only(xs) 
+@include media-breakpoint-only(sm) 
+@include media-breakpoint-only(md) 
+@include media-breakpoint-only(lg) 
+@include media-breakpoint-only(xl) 

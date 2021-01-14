@@ -1,10 +1,8 @@
 section#revieves.sale
-  .sale__wrapper
     .container
       .sale__body
-        h2 Отзывы о компаниях
-        .sale__filter.sale-filter
-          .sale-filter__body
+        h2.title Отзывы о компаниях
+        ul.sale__filter.sale-filter
             - 
               items = [
                   {title: "Банки"},
@@ -13,14 +11,9 @@ section#revieves.sale
                   {title: "Застройщики"},
               ]
             each item in items
-              .sale-filter__item
+              li.sale-filter__item
                 .sale-filter__title=item.title
-    .container
-      .sale__slider.sale-slider
-        .sale-slider__arrows
-          i.sale-slider__arrow.sale-slider__arrow_prev.revieves-slider_prev.icon-chevron-left
-          i.sale-slider__arrow.sale-slider__arrow_next.revieves-slider_next.icon-chevron-right
-        .sale-slider__body.slider-revieves-js
+      ul.sale__scroll.sale-scroll
           - 
             slides = [
                 {
@@ -61,17 +54,81 @@ section#revieves.sale
                 }
               ]
           each item in slides
-            .slider__item.slider-revieves-item
-              .slider-item__body
-                .slider-item__text=item.text
-                .rev__stars
-                  .icon-star-full
-                  .icon-star-full
-                  .icon-star-full
-                  .icon-star-full
-                  .icon-star-full
-                .slider-item__title=item.title
-                .slider-item__rev=item.rev
-                .slider-item__notes
-                  img.slider-avatar(src="assets/img/rev/rev-1.png",alt="img")
-                  .notes__text Chernovskaya19
+            li.sale-scroll__item.card-revieves
+              .card-revieves__text=item.text
+                .card-revieves__stars.card-revieves-stars
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                .card-revieves__title=item.title
+                .card-revieves__rev=item.rev
+                .card-revieves__person
+                  img.card-revieves__avatar(src="assets/img/rev/rev-1.png",alt="img")
+                  .card-revieves__text.card-revieves__text--person Chernovskaya19
+
+
+      .sale__slider.slider
+        .slider__arrows
+          i.slider__arrow.slider__arrow_prev.icon-chevron-left.slider__arrow_prev--revieves
+          i.slider__arrow.slider__arrow_next.icon-chevron-right.slider__arrow_next--revieves
+        ul.slider__body.slider-revieves-js
+          - 
+            slides = [
+                {
+                  text:"Райффайзен Банк", 
+                  title: "Благодарность специалисту Светлане",
+                  rev: "Я хочу выразить благодарность специалисту Светлане, которая работала с моим обращением в чате 23.09.20 примерно в 00:00..."
+                    }, 
+                {
+                   text:"Тинькофф Банк",
+                   title:"Довольна всем", 
+                   rev: "Оперативно и быстро продлили страхование, разъяснили все чётко и понятно. Компанией довольна и буду рекомендовать!"
+                },
+                { text:"ЛокоБанк",
+                title:"Необоснованная блокировка счета! Остановка работы...", 
+                rev: "Добрый вечер. Приобрели готовую компанию с расчетным счетом в Банке «Тинькофф». Переоформили быстро, приехал представитель..."
+                },
+                { text:"ЛокоБанк",
+                title:  "Необоснованная блокировка счета! Остановка работы...",
+                 rev: "Добрый вечер. Приобрели готовую компанию с расчетным счетом в Банке «Тинькофф». Переоформили быстро, приехал представитель..."
+                },
+                {
+                  text:"Райффайзен Банк", 
+                  title: "Благодарность специалисту Светлане",
+                  rev: "Я хочу выразить благодарность специалисту Светлане, которая работала с моим обращением в чате 23.09.20 примерно в 00:00..."
+                    }, 
+                {
+                   text:"Тинькофф Банк",
+                   title:"Довольна всем", 
+                   rev: "Оперативно и быстро продлили страхование, разъяснили все чётко и понятно. Компанией довольна и буду рекомендовать!"
+                },
+                { text:"ЛокоБанк",
+                title:"Необоснованная блокировка счета! Остановка работы...", 
+                rev: "Добрый вечер. Приобрели готовую компанию с расчетным счетом в Банке «Тинькофф». Переоформили быстро, приехал представитель..."
+                },
+                { text:"ЛокоБанк",
+                title:  "Необоснованная блокировка счета! Остановка работы...",
+                 rev: "Добрый вечер. Приобрели готовую компанию с расчетным счетом в Банке «Тинькофф». Переоформили быстро, приехал представитель..."
+                }
+              ]
+          each item in slides
+            li.slider__item.card-revieves
+              .card-revieves__text=item.text
+                .card-revieves__stars.card-revieves-stars
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                .card-revieves__title=item.title
+                .card-revieves__rev=item.rev
+                .card-revieves__person
+                  img.card-revieves__avatar(src="assets/img/rev/rev-1.png",alt="img")
+                  .card-revieves__text.card-revieves__text--person Chernovskaya19
+
+
+
+
+                  

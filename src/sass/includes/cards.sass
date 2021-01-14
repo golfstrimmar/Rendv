@@ -1,0 +1,229 @@
+.task-card
+  min-height: 220px
+  @extend %card
+  padding: 20px	
+  &__title
+    padding: 0 0 8px
+    +font-family(  roboto-medium,500,20px,100%,$dark-1) 
+  &__text
+    padding: 12px 0 0 0
+    +font-family(  roboto-medium,500,15px,18px,$dark-1) 
+  &__notes
+    padding: 9px 9px 0 0
+    +font-family(  roboto-medium,normal,15px,150%,$dark-1)
+    opacity: 1 
+  &__properties
+    margin: 25px 0 0 0
+    padding: 0 0 0 19px
+    +alic 
+  &__property
+    +alic
+  &__property-icon
+    font-size: 20px
+    margin: 0 3px 0 0
+    color: $grey
+  &__property-text 
+    padding: 0 18px 0 3px
+    +font-family(  roboto-medium,normal,15px,150%,$grey)
+  &__property-text--green 
+    color: #7AB764 
+    padding: 0 0 0 5px
+
+
+
+.card--info
+  min-height: 284px
+  &__img
+    width: 100%
+    height: 150px
+  &__title
+    +font-family(  roboto-medium,500,18px,150%,#586EB6) 
+    padding: 19px 20px 0 
+  &__text 
+    +font-family(  roboto-medium,normal,18px,18px,$dark-1)
+    +alic
+    margin: 10px 20px 0 
+  &__notes 
+    +alic
+    margin: 20px 20px 0
+    span
+      +font-family(  roboto-medium,normal,15px,18px,$grey)
+  &__property
+    &--text
+      margin: 0 10px 0 0  
+      +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+    &--metro
+      margin: 0 10px 0 0 
+    &--bus
+      margin: 0 10px 0 0
+
+.card-object
+  min-height: 284px
+  +bg(white)
+  &:hover
+    cursor: pointer
+  &__img
+    height: 150px
+    width: 100%
+
+  &__title
+    margin: 21px 20px 0 
+    +font-family(  roboto-medium,normal,18px,150%,$company)
+  &__text
+    margin: 5px 20px 0 
+    +alic
+    +font-family(  roboto-medium,normal,18px,100%,$dark-1)
+    span
+      +font-family(  roboto-medium,normal,18px,21px,$dark-1)
+  &__properties
+    +jucs
+    +alic
+    margin: 24px 0 0 20px
+    span
+      +font-family(  roboto-medium,normal,15px,18px,$grey)
+
+  &__property
+    +jucs
+    margin: 0 10px 0 0
+
+  &__property--metro  
+  &__property-text
+    +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+    margin: 0 0 0 10px
+    &_grey
+      color: $grey
+  &__property--bus
+
+// advert
+.card-object
+  &_advert
+    min-height: 293px
+    position: relative
+  &__img_advert
+    height: 180px
+  &__title_advert
+    margin: 27px 20px 0
+  &__text_advert
+    margin: 5px 20px 0
+  &__badge
+    +absolute(60px,27px,23px,null,15px,0%,0%)
+    +bg(white)
+    z-index: 5
+    border-radius: 5px
+    +center
+    +font-family(  roboto-medium,normal,12px,140%,$dark-1)
+
+.opinion-card
+  @extend %card
+  
+  padding: 20px	
+  +alic 
+  &__img 
+    flex: 0 1 28%
+  &__right
+    flex: 1 1 49%
+    padding: 0 0 0 34px	
+    // height: 182px
+
+  &__title 
+    +font-family(  roboto-medium,normal,15px,150%,$dark-1)
+  &__text
+    +font-family(  roboto-medium,normal,15px,150%,$grey) 
+    padding: 9px 60px 7px 0
+  &__content 
+    +font-family(  roboto-medium,500,20px,150%,$dark-1) 
+  &__notes
+    +jucs
+    margin: 17px 0 0 0
+  &__note
+    margin: 0 26px 0 0
+    +jucs
+    +alic
+    i
+      font-size: 20px
+      color: $grey
+      margin: 0 10px 0 0
+  &__note-text
+    +font-family(  roboto-medium,normal,15px,150%,$grey)
+
+
+.news-left-card 
+  min-height: 250px
+  @extend %card
+  background-size: cover
+  &__text
+    position: relative 
+    z-index: 2
+    padding: 104px 0 0 20px
+    +font-family(  roboto-medium,normal,18px,100%,$white)
+  &__title
+    position: relative
+    z-index: 2 
+    padding: 14px 20px 8px 20px
+    +font-family(  roboto-medium,normal,24px,130%,$white)
+  &__notes 
+    z-index: 2
+    padding: 9px 0 0px 20px
+    +font-family(  roboto-medium,normal,15px,100%,$white)
+    opacity: 0.5
+
+
+.card-revieves
+  min-height: 309px
+  padding: 10px 25px 0px 20px
+  @extend %card
+  &__stars
+    margin: 11px 0 0 0
+  &__text
+    +font-family(  roboto-medium,normal,15px,18px,$grey)
+    margin: 0 0 0 0
+    padding: 10px 0 0 0
+    &--person
+      color: $dark-1
+      padding: 0 0 0 0	
+  &__title
+    +font-family(  roboto-medium,500,18px,140%,$dark-1)
+    padding: 21px 0 0 0	
+  &__rev
+    +font-family(  roboto-medium,normal,15px,150%,$dark-1)
+    padding: 10px 0 0 0
+  &__person
+    position: absolute
+    bottom: 22px
+    margin: 0 0 0 0
+    +alic
+  &__avatar
+    width: 30px
+    height: 30px
+    margin: 0 10px 0 0
+
+
+.card-revieves-stars
+  +jucs
+  &__star
+    font-size: 18px
+    color: #FBB143
+    margin: 0 7px 0 0
+
+.sale-filter 
+  +jucs
+  background: #FFFFFF
+  border: 1px solid #ECECEC
+  border-radius: 5px
+  height: 50px
+  &__item 
+    padding: 0 29px 
+    border-right: 1px solid #ECECEC
+    transition: all 0.2s ease-in-out
+    &:hover
+      +bg(#DEF1D7) 
+      cursor: pointer 
+      .sale-filter__title
+        color: $dark-1
+    &:last-child
+      border-right: none
+    +center
+  &__title
+    // margin: 0 29px
+    +font-family(  roboto-medium,normal,15px,100%,$grey)
+    transition: all 0.2s ease-in-out

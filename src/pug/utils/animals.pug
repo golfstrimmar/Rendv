@@ -1,26 +1,69 @@
 ===============================================================
 =======/ кнопка квадратная зеленая с белым текстом=============
 
-button.btn.btn--success.btn--success-icon(type='button') Смотреть
-  span.btn__icon.icon-arrow-right
+button.btn.btn--success(type='button')
 ----------------
+.btn 
+  border: 1px solid transparent
+  outline: none!important
+  border-radius: 5px
+  transition: all 0.2s ease-in-out
+  +center
+
 .btn--success
   +font-family(  roboto-medium,500,15px,18px,white)
   +bg($active)
+  width: 220px
+  height: 50px
   &:hover
     +bg(lighten($active,30%))
     +border(1px , darken($active,10%)!important)
     box-shadow: 0px 0px 20px lighten($dark-1,60%)!important
     color: lighten($active,10%)
-  
-
   &:focus
     +border(1px , darken($active,10%)!important)
     +bg(lighten($active,10%))
     box-shadow: 0px 0px 20px lighten($dark-1,60%)!important
     color: white
-   
-.btn--success-icon
+
+
+
+=====================================================================
+button.btn.button--empty(type='button') Квартиры от 2млн.<span class="icon-rouble"></span>
+-------------------------
+.button--empty 
+  padding: 10px 15px	
+  +bg(transparent)
+  +border(1px,white)
+  color: white
+  border-radius: 5px
+  +alic
+  margin: 5px 10px 0 0
+
+
+========================================================================
+button.btn.btn--light(type='button')  Реклама
+-----------------------------
+.btn--light
+  +font-family(  roboto-medium,normal,12px,140%,$dark-1) 
+  width: 60px
+  height: 27px
+  border-radius: 5px
+  font-size: 12px!important
+  +bg(white)
+  margin: 0 0 0 10px
+
+
+===============================================================
+===================иконка рубля================================
+.icon-rouble
+  margin: 0 0 0 5px
+
+
+
+========================================================================
+===================== + еще иконка ==================================
+.btn--success-icon  
   &:hover
     &>span
       color: lighten($active,10%)
@@ -28,46 +71,173 @@ button.btn.btn--success.btn--success-icon(type='button') Смотреть
     &>span
       color: white
 
-===================================================================
-================= карточка пустая.туда можно добавить фот картинкой и завести какой-нибудь бэйдж например====подходит для самых прстых вариантов====================================
 
-.card--cat
---------------
-.card--cat
-  border-radius: 5px
-  padding: 17px
-  min-height: 200px
-  transition: all 0.2s ease-in-out
-  &:hover
-    cursor: pointer
-    transform: scale(1.02)
-    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.3)
-=====================================================================
-=====================белый badje ====================================
-.badge
-  .badge__title Загородная
-  .badge__text 
-    span.badge__bye Купить 
-    span.badge__number 3 648
 
--------------------
 
-.badge
-  background: #FFFFFF
-  border-radius: 5px
-  display: inline-block!important
-  text-wrap: wrap
-  padding: 23px 21px 	
-  &__title
-    margin: 0px 0 19px 0
-    +font-family(  roboto-medium,normal,20px,23px,$dark-1)
-  &__text
-    +font-family(  roboto-medium,normal,15px,18px,$company)
-    margin: 0 0 10px 0
-  &__bye
-    margin: 0 5px 0 0
-  &__number
 
-===========================================================
-.icon-rouble
-  margin: 0 0 0 5px
+=================================================================
+.card-object_advert
+                .card-object__badge Реклама
+                img.card-object__img.card-object__img_advert(src=item.img,alt="img")
+                .card-object__title.card-object__title_advert=item.text
+                .card-object__text.card-object__text_advert Квартиры от 2 млн.
+                  span.icon-rouble
+                  span .
+
+=================================================================
+.slider
+        .slider__arrows
+          i.slider__arrow.slider__arrow_prev.icon-chevron-left.slider__arrow_prev--advert
+          i.slider__arrow.slider__arrow_next.icon-chevron-right.slider__arrow_next--advert
+        ul.slider__body.slider-advert-js
+          - 
+            slides = [
+                { text:"ЖК «Екатериновский»", img:"assets/img/sale/img-4.webp"},
+                { text:"ЖК «На Гаранина»", img:"assets/img/sale/img-2.webp"},
+                { text:"ЖК  «У моря Обского»", img:"assets/img/sale/img-3.webp"},
+                { text:"Алхимово", img:"assets/img/sale/img-2.webp"},
+                { text:"Город-парк Ясный Берег", img:"assets/img/sale/img-4.webp"},
+                { text:"Расцветай на Ядрицевской", img:"assets/img/sale/img-2.webp"},
+                { text:"Алхимово", img:"assets/img/sale/img-3.webp"},
+                { text:"Алхимово", img:"assets/img/sale/img-2.webp"}
+            ]
+          each item in slides
+            li.slider__item.card-object.card-object_advert
+                .card-object__badge Реклама
+                img.card-object__img.card-object__img_advert(src=item.img,alt="img")
+                .card-object__title.card-object__title_advert=item.text
+                .card-object__text.card-object__text_advert Квартиры от 2 млн.
+                  span.icon-rouble
+                  span .
+=================================================================
+.categories-item(style="background-image: url('/assets/img/cat/cat-img-1.webp')")
+            .categories-item__badge
+              .categories-item__title Новостройки
+              .categories-item__text
+                span Купить 
+                span 3 648
+=================================================================
+.social-links
+                  - 
+                    items = [
+                      { title: "assets/img/footer/VK.svg"},
+                      { title: "assets/img/footer/insta.svg"},
+                      { title: "assets/img/footer/youtube.svg"},
+                      { title: "assets/img/footer/facebook.svg"},
+                      ]
+                  each item in items
+                    li.social-links__link
+                      a(href="#!")
+                        img(src=item.title)
+=================================================================
+.sale-filter
+            - 
+              items = [
+                  {title: "Мнение эксперта"},
+                  {title: "Интервью"},
+              ]
+            each item in items
+              li.sale-filter__item
+                .sale-filter__title=item.title
+=================================================================
+.opinion-card
+          img.opinion-card__img(src="assets/img/opin/opin-1.webp",alt="opin-1")
+          .opinion-card__right
+            .opinion-card__title Ольга Терентьева
+            .opinion-card__text  Эксперт по операциям с недвижимостью, юрист по   безопасным   сделкам
+            .opinion-card__content Как изменилась работа риелтора во время  самоизоляции
+            .opinion-card__notes
+              .opinion-card__note
+                .opinion-card__note-text 18 часов назад
+              .opinion-card__note.opinion-card__note--time
+                i.icon-message-square
+                .opinion-card__note-text 0
+              .opinion-card__note.opinion-card__note--look
+                i.icon-eye
+                .opinion-card__note-text 0
+=================================================================
+.card-object
+              img.card-object__img(src=item.img,alt="img")
+              .card-object__title=item.text
+              .card-object__text 
+                span от 2 350 000 
+                span.icon-rouble
+              .card-object__properties
+                .card-object__property.card-object__property--metro
+                  img(src="assets/img/sale/metro.svg",alt="img")
+                  .card-object__property-text Ленинский проспект
+                .card-object__property.card-object__property--bus
+                  img(src="assets/img/sale/bus.svg",alt="img")
+                  .card-object__property-text.card-object__property-text_grey 5 мин.
+=================================================================
+.task-card
+                .task-card__title Перевозка груза из Новосибирска в Калининград
+                .task-card__text Задача
+                .task-card__notes  Необходимо сделать редизайн 2-х страниц сайта ( url - магазин.иномарка18.рф ) в 3-х разрешениях (компьютер, планшет, телефон).  Итого требуется 6 макетов. Суть - добавить новый блок (метку) для товара, чтобы он гармонично вписался в сайт. ТЗ - во вложении.
+                .task-card__properties
+                  .task-card__property.task-card__property--square
+                    .task-card__property-icon.icon-message-square
+                    .task-card__property-text  37 ответов
+                  .task-card__property.task-card__property--eye
+                    .task-card__property-icon.icon-eye
+                    .task-card__property-text  7 просмотров
+                  .task-card__property.task-card__property--answers
+                    .task-card__property-text  15 часов назад
+                  .task-card__property.task-card__property--acctive
+                    .task-card__property-text.task-card__property-text--green Активна
+=================================================================
+.card-revieves
+              .card-revieves__text=item.text
+                .card-revieves__stars.card-revieves-stars
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                  .card-revieves-stars__star.icon-star-full
+                .card-revieves__title=item.title
+                .card-revieves__rev=item.rev
+                .card-revieves__person
+                  img.card-revieves__avatar(src="assets/img/rev/rev-1.png",alt="img")
+                  .card-revieves__text.card-revieves__text--person Chernovskaya19
+
+=================================================================
+.news-right
+            img.news-right__img(src="assets/img/news/news-5.webp",alt="")
+            .news-right__title  Жилой комплекс Королевский
+            .news-right__text Квартиры от 2 300 000 <span class="icon-rouble"></span>
+            button.btn.btn--success.news-right__button(type='button') Смотреть предложения
+
+=================================================================
+.look-right
+            h2.look-right__title ЖК «Алхимово»
+            .look-right__text  
+              p «Алхимово» — яркий район в Новой Москве. 
+              p В домах на берегу Десны вы будете ближе к природе и сможете дышать полной грудью, наслаждаться зелеными пейзажами из окна.
+            .look-right__flats.look-right-flats
+              button.btn.btn--success.look-right-flats__btn(type='button') Смотреть квартиры
+              span.look-right-flats__price от 4 100 000 
+              span.icon-rouble
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+=================================================================
+

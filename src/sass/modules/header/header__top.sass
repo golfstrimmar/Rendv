@@ -1,46 +1,37 @@
 .header__top 
-  padding: 17px 0 
-  // border: 1px solid $bej 
-  .container
-    padding: 0 0 0 0	
-.header-top__body 
-  +alic
   
-.header-top__location 
 
-.header-top-location
-  +jucb
-
-
-.icon-location 
-  font-size: 18px
-
-
-.header-top-location__text 
-  +font-family(  roboto-medium,normal,14px,1.4,$grey)
-  margin: 0 0 0 17px
-.header-top__currency 
-  margin: 0 0 0 6.4%
-
-.header-top-currency
-  &__body
+.header-top
+  border-bottom: 1px solid $bej 
+  padding: 17px 0 
+  &__properties
     +jucb
-
-  &__item
-    margin: 0 27px 0 0 
-    span 
-      +font-family(  roboto-medium,normal,15px,18px,$grey)
-      &:first-child
-        margin: 0 5px 0 0
-
-      &:last-child
-        color: $red
-
-
-.header-top__button
-  margin: 0 0 0 auto
-  &>button
-    display: block 
+    margin: 0 0 0 6.4%
+  &__button
+    margin: 0 0 0 auto
     padding: 11px 24px 
     +bg($salat)
     +font-family(  roboto-medium,normal,15px,18px,$active)
+  &__body
+    +alic
+    +jucs
+
+.top-location
+  +jucb
+  &__icon
+    font-size: 18px
+  &__text 
+    +font-family(  roboto-medium,normal,14px,1.4,$grey)
+    margin: 0 0 0 17px
+
+
+.top-properties
+  &__property
+    margin: 0 27px 0 0 
+    +font-family(  roboto-medium,normal,15px,18px,$grey)
+  &__property-type
+    margin: 0 5px 0 0
+  &__property-difference
+    color: $red
+    margin: 0 0 0 5px
+

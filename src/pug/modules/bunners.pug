@@ -1,50 +1,46 @@
 section#bunners.bunners
- .bunners__wrapper
     .container
       .bunners__body
-        .sale-slider__arrows
-          i.sale-slider__arrow.sale-slider__arrow_prev.bunners-slider_prev.icon-chevron-left
-          i.sale-slider__arrow.sale-slider__arrow_next.bunners-slider_next.icon-chevron-right
-        .slider-bunners-js
+        .bunners__arrows.bunners-arrows
+          i.bunners-arrows__arrow.bunners-arrows__arrow_prev.icon-chevron-left
+          i.bunners-arrows__arrow.bunners-arrows__arrow_next.icon-chevron-right
+        .bunners__slider.slider-bunners-js
             - 
                 items = [
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
-                  { title: "ЖК Горский. От 7,5 млн. ", },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                  { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
                 ]
 
             each item in items
-              .slider-bunners__item.slider-bunners-item
-                .slider-bunners-item__body
-                  .ibg.bg
-                    img(src="assets/img/bunners.webp",alt="bunners")
-                  .slider-bunners-item__content
-                    .slider-bunners-item__buttons.slider-bunners-buttons
-                      .slider-bunners-buttons__body
-                        button.button-empty(type='button') Квартиры от 2млн.<span class="icon-rouble"></span>
-                        button.button-empty(type='button')  м² от 130 т.р.
-                        div.flex
-                          button.btn--light(type='button')  Реклама
-                          button.btn--light(type='button')  Скрыть
-                    .slider-bunners-item__small ГК «Самолёт»
-                    .slider-bunners-item__title=item.title 
-                      <span class="icon-rouble"></span> 
-                    .slider-bunners-item__text  
-                      p Старт продаж нового корпуса от 10 млн ₽. Ипотека 5,85%. 
-                      p Рассрочка 0%. Панорамные виды на Останкинскую башню и Москву.
-                    button.btn--success.btn--success-icon.header-main__button.slider-bunners-item__button(type='button') 
-                      span.icon-phone
-                      span Заказать звонок
+              .bunners__item.slider-bunners-item(style=`background-image: url(${item.url})`)
+                .slider-bunners-item__buttons
+                  button.slider-bunners-item__button.slider-bunners-item__button_empty.btn.button--empty(type='button') Квартиры от 2млн.<span class="icon-rouble"></span>
+                  button.slider-bunners-item__button.slider-bunners-item__button_empty.btn.button--empty(type='button')  м² от 130 т.р.
+                  button.slider-bunners-item__button.slider-bunners-item__button_light(type='button').btn.btn--light  Реклама
+                  button.slider-bunners-item__button.slider-bunners-item__button_cross(type='button').btn.btn--cross 
+                    span Скрыть
+                    i.icon-x
+
+                .slider-bunners-item__small ГК «Самолёт»
+                .slider-bunners-item__title=item.title 
+                  <span class="icon-rouble"></span> 
+                .slider-bunners-item__text  
+                  p Старт продаж нового корпуса от 10 млн ₽. Ипотека 5,85%. 
+                  p Рассрочка 0%. Панорамные виды на Останкинскую башню и Москву.
+                button.btn.btn--success.btn--success-icon.slider-bunners-item__button-order(type='button') 
+                  span.icon-phone
+                  span Заказать звонок
 
 
 

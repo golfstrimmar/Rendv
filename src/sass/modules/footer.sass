@@ -1,42 +1,44 @@
 .footer
-  +absolute( 40px, 20px, 500%,  60%,  null,0,0)
-.footer__wrapper
-  padding: 100px 0 0 0
+  padding: 100px 0 35px 0
   +bg($fone)
-.footer__body
-  +pro
-  
 .footer__top
 
 .footer-top 
   +bg($fone)
+  padding: 0 0 27px 0	
 .footer-top__body
   +alic 
   +jucb
-  width: 79.7%
-  margin: 0 auto
+
 .footer-top__logo 
   flex: 0 1 10%
   margin: 0 7% 0 0
 .footer-top__nav
   flex: 1 1 40%
-.footer-top-nav 
-.footer-top-nav__body
   +jucb 
 .footer-top-nav__item 
 .footer-top-nav__link
+  +font-family(  roboto-medium,normal,15px,18px,$grey)
   &:hover
     cursor: pointer
     color: $active
     transition: all 0.2s ease-in-out 
+
 .footer-top__social
   flex: 0 1 16.8%
-  padding: 0 81px 0 0
   margin: 0 0 0 8.3%
-.footer-top-social 
-.footer-top-social__body 
+  // ----------
+.social-links 
+  padding: 0 81px 0 0
   +jucb
-.footer-top-social__link 
+
+.social-links__link 
+  transition: all 0.2s ease-in-out
+  &:hover
+    cursor: pointer
+    transform: scale(1.1)
+  // -----------------
+
 .footer__main 
 .footer-main 
   +bg(#f4f4f4)
@@ -46,14 +48,28 @@
   width: 79.7%
   margin: 0 auto
 .footer-main__column
-   
+  +fdc
 .footer-main-column 
-.footer-main-column__body
-  +fdc 
+  
+  padding: 68px 0 0 0 
 .footer-main-column__title 
+  +font-family(  roboto-medium,500,18px,21px,$dark-1)
+  margin: 0 0 29px 0
+
+
+.footer-main-column__list
+  +fdc
+.footer-main-column__list-item
+  margin: 0 0 15px 0
+  &:last-child
+    margin: 0 0 0 0
 .footer-main-column__link 
+  +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+
+
+
 .footer__low 
-.footer-low
+  padding: 79px 0 0 0
   +bg(#f4f4f4) 
 .footer-low__body
   +jucb
@@ -62,4 +78,133 @@
   margin: 0 auto
 .footer-low__text
   flex: 0 1 40% 
+  +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+  p
+    margin: 10px 0 0 0
 .up_down_btn 
+
+
+
+
+.footer-main__column-social,.footer-low__logo,.footer-top__properties,.footer-top__social_small
+  display: none
+
+
+
+// ------------------------------------------------------
+@media (max-width: 1830px)
+  .container-extended
+    width: 100%
+    padding: 0 30px
+  .footer-top__social
+    padding: 0 0 0 0	
+    flex: 0 1 12%
+    margin: 0 0 0 1%
+  .footer-top__logo
+    margin: 0 1% 0 0	
+  .footer-main-column__list 
+    padding: 0 0 0 0	
+@include media-breakpoint-down(lg)
+  .footer
+    padding: 0 0 35px
+  .footer-top__nav
+    border-top: 1px solid $grey-1
+    padding: 33px 0 0 0
+  .footer-top__logo,.footer-top__social,.footer-low__text
+    display: none
+  .footer-top-nav__item 
+    flex: 0 1 33.333%
+    margin: 0 0 21px 0
+  .footer-main__column
+    flex: 0 1 33.333%
+    &:nth-child(3n)
+      flex: 0 1 21% 
+  .footer-main__column-social
+    display: flex
+  .social-links__link_main
+    margin: 0 0 15px 0	
+    &:last-child
+      margin: 0 0 0 0
+    span
+      +font-family(  roboto-medium,normal,15px,18px,$grey)
+      margin: 0 0 0 15px
+  .footer-low__logo
+    display: flex
+    width: 12.5%
+  .footer-low__text_rights
+    display: flex
+    flex: 0 1 57% 
+    +fdc
+    p
+      margin: 12px 0 0 0
+  .container-extended
+    padding: 0 30px	
+@media (max-width: 768px)
+  
+  .footer
+    padding:  0 0 0	
+  .footer__top
+    padding: 0 0 0 0	
+  .footer-top__body
+    +bg(white)
+    padding: 30px 15px 0
+    border: none	
+  .footer-top__logo
+    display: flex
+    width: 105px
+    height: 27px
+  .footer-main__column-social,.footer__low
+    display: none
+  .footer-top__social_small
+    flex: 0 1 100%
+    +jucs
+    margin: 0 0 10px
+  .footer-top__properties
+    margin: 20px 0
+    display: flex
+    +jucb
+  .footer-top__property
+    +font-family(  roboto-medium,normal,12px,14px,$grey)
+    padding: 0 0 5px 0
+    flex: 0 1 100%
+    &:last-child
+      padding: 0 0 0 0	
+  .social-links__link
+    margin: 0 15px 0 0
+    &:last-child
+      margin: 0 0 0 0
+  .footer-top-nav__item
+    flex: 0 1 100%
+    margin: 0 0 12px
+  .footer-top-nav__link
+    font-size: 12px
+    display: flex
+    +pro
+  .footer-main-column__title
+    font-size: 14px
+  .footer-main-column__link
+    font-size: 12px
+    display: flex
+    +pro
+  .footer-main-column__list-item
+    margin: 0 0 11px
+  .footer-main__column
+    flex: 0 1 100%
+    padding: 23px 0 18px
+    border-bottom: 1px solid $grey-1
+    &:last-child
+      border-bottom: none
+  .footer-top__nav
+    padding: 25px 0 0 0	
+    border-top: 1px solid $grey-1
+  .footer-main__body
+    padding: 0 15px	
+	
+  .footer-main-column__title
+    margin: 0 0 6px
+
+  .footer__main
+    +bg(transparent)
+  .footer-main__column
+    &:nth-child(3n)
+      flex: 0 1 100%

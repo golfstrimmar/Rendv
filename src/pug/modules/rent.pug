@@ -1,29 +1,55 @@
-//- повторение блока sale
-
 section#rent.sale
-  .sale__wrapper
     .container
       .sale__body
-        h2 Аренда 
-        .sale__filter.sale-filter
-          .sale-filter__body
+        h2.title Аренда
+        ul.sale__filter.sale-filter
+            li.sale-filter__item.sale-filter__item_lg
+              .sale-filter__title ЖК
+            li.sale-filter__item.sale-filter__item_xl
+              .sale-filter__title Жилые комплексы
             - 
               items = [
-                  {title: "Жилые комплексы"},
                   {title: "Квартиры"},
                   {title: "Комнаты"},
                   {title: "Загородная"},
                   {title: "Коммерческая"}
               ]
             each item in items
-              .sale-filter__item
+              li.sale-filter__item
                 .sale-filter__title=item.title
-    .container
-      .sale__slider.sale-slider
-        .sale-slider__arrows
-          i.sale-slider__arrow.sale-slider__arrow_prev.rent-slider_prev.icon-chevron-left
-          i.sale-slider__arrow.sale-slider__arrow_next.rent-slider_next.icon-chevron-right
-        .sale-slider__body.slider-rent-js
+      
+      ul.sale__scroll.sale-scroll
+          - 
+            slides = [
+                { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},
+                { text:"Комната, 70м²", img:"assets/img/rent/img-5.webp", price: "14 270"},
+                { text:"Комната, 19м²", img:"assets/img/rent/img-6.webp", price: "7000"},
+                { text:"Комната, 70м²", img:"assets/img/rent/img-5.webp", price: "14 270"},
+                { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},
+                { text:"Комната, 70м²", img:"assets/img/rent/img-6.webp", price: "14 270"},
+            ]
+
+          each item in slides
+            li.sale-scroll__item.card-object
+                img.card-object__img(src=item.img,alt="img")
+                .card-object__title=item.text
+                .card-object__text 
+                  span от 2 350 000 
+                  span.icon-rouble
+                .card-object__properties
+                  .card-object__property.card-object__property--metro
+                    img(src="assets/img/sale/metro.svg",alt="img")
+                    .card-object__property-text Ленинский проспект
+                  .card-object__property.card-object__property--bus
+                    img(src="assets/img/sale/bus.svg",alt="img")
+                    .card-object__property-text.card-object__property-text_grey 5 мин.
+      
+      
+      .sale__slider.slider
+        .slider__arrows
+          i.slider__arrow.slider__arrow_prev.icon-chevron-left.slider__arrow_prev--rent
+          i.slider__arrow.slider__arrow_next.icon-chevron-right.slider__arrow_next--rent
+        ul.slider__body.slider-rent-js
           - 
             slides = [
                 { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},
@@ -34,19 +60,16 @@ section#rent.sale
                 { text:"Комната, 70м²", img:"assets/img/rent/img-6.webp", price: "14 270"},
             ]
           each item in slides
-            .slider__item.slider-item
-              .slider-item__body
-                .slider-item__img 
-                  .ibg.bg
-                    img(src=item.img,alt="img")
-                .slider-item__title=item.text
-                .slider-item__text 
-                  span=item.price 
+              li.slider__item.card-object
+                img.card-object__img(src=item.img,alt="img")
+                .card-object__title=item.text
+                .card-object__text 
+                  span от 2 350 000 
                   span.icon-rouble
-                  span /мес.
-
-                .slider-item__notes
-                  img.slider-metro(src="assets/img/sale/metro.svg",alt="img")
-                  .notes__text Ленинский проспект
-                  img.slider-bus(src="assets/img/sale/bus.svg",alt="img")
-                  span 5 мин.
+                .card-object__properties
+                  .card-object__property.card-object__property--metro
+                    img(src="assets/img/sale/metro.svg",alt="img")
+                    .card-object__property-text Ленинский проспект
+                  .card-object__property.card-object__property--bus
+                    img(src="assets/img/sale/bus.svg",alt="img")
+                    .card-object__property-text.card-object__property-text_grey 5 мин.

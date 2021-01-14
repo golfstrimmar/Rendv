@@ -1,46 +1,59 @@
 //- подключаем везде
-section#stock.news.stock
-  .news__wrapper
+section#stock.news
     .container
-      h2 Биржа услуг
+      h2.title Биржа услуг
       .news__body
-        
-        .news__left.news-left
-          .news-left__body
-            .news-left__card.news-left-card
-              .news-left-card__body
-                .news-left-card__title Перевозка груза из Новосибирска в Калининград
-                .news-left-card__text Задача
-                .news-left-card__notes  Необходимо сделать редизайн 2-х страниц сайта ( url - магазин.иномарка18.рф ) в 3-х разрешениях (компьютер, планшет, телефон).  Итого требуется 6 макетов. Суть - добавить новый блок (метку) для товара, чтобы он гармонично вписался в сайт. ТЗ - во вложении.
-                .news-left-card__info.news-info
-                  .news-info__body
-                    .news-info__icon.icon-message-square
-                    .news-info__text  37 ответов
-                    .news-info__icon.icon-eye
-                    .news-info__text  7 просмотров
-                    .news-info__text  15 часов назад
-                    .news-info__text_green  Активна
-            .news-left__card.news-left-card
-              .news-left-card__body
-                .news-left-card__title Перевозка груза из Новосибирска в Калининград
-                .news-left-card__text Задача
-                .news-left-card__notes  Необходимо сделать редизайн 2-х страниц сайта ( url - магазин.иномарка18.рф ) в 3-х разрешениях (компьютер, планшет, телефон).  Итого требуется 6 макетов. Суть - добавить новый блок (метку) для товара, чтобы он гармонично вписался в сайт. ТЗ - во вложении.
-                .news-left-card__info.news-info
-                  .news-info__body
-                    .news-info__icon.icon-message-square
-                    .news-info__text  37 ответов
-                    .news-info__icon.icon-eye
-                    .news-info__text  7 просмотров
-                    .news-info__text  15 часов назад
-                    .news-info__text_green  Активна
-            button.btn--success(type='button')  Смотреть все задания
+        ul.news__left.news__left_stock.news-left
+            .news-left__card.news-left__card_stock.task-card
+                .task-card__property-text.task-card__property-text--green   Активна
+                .task-card__title Перевозка груза из Новосибирска в Калининград
+                .task-card__text Задача
+                .task-card__notes  Необходимо сделать редизайн 2-х страниц сайта ( url - магазин.иномарка18.рф ) в 3-х разрешениях (компьютер, планшет, телефон).  Итого требуется 6 макетов. Суть - добавить новый блок (метку) для товара, чтобы он гармонично вписался в сайт. ТЗ - во вложении.
+                .task-card__properties
+                  .task-card__property.task-card__property--square
+                    .task-card__property-icon.icon-message-square
+                    .task-card__property-text  37 ответов
+                  .task-card__property.task-card__property--eye
+                    .task-card__property-icon.icon-eye
+                    .task-card__property-text  7 просмотров
+                  .task-card__property.task-card__property--answers
+                    .task-card__property-text  15 часов назад
+                  .task-card__property.task-card__property--acctive
+                    .task-card__property-text.task-card__property-text--green Активна
+            button.btn.btn--success.news__button.news__button_stock_high(type='button')  Смотреть все задания
+            .news-left__card.news-left__card_stock.task-card
+                .task-card__title Перевозка груза из Новосибирска в Калининград
+                .task-card__text Задача
+                .task-card__notes  Необходимо сделать редизайн 2-х страниц сайта ( url - магазин.иномарка18.рф ) в 3-х разрешениях (компьютер, планшет, телефон).  Итого требуется 6 макетов. Суть - добавить новый блок (метку) для товара, чтобы он гармонично вписался в сайт. ТЗ - во вложении.
+                .task-card__properties
+                  .task-card__property.task-card__property--square
+                    .task-card__property-icon.icon-message-square
+                    .task-card__property-text  37 ответов
+                  .task-card__property.task-card__property--eye
+                    .task-card__property-icon.icon-eye
+                    .task-card__property-text  7 просмотров
+                  .task-card__property.task-card__property--answers
+                    .task-card__property-text  15 часов назад
+                  .task-card__property.task-card__property--acctive
+                    .task-card__property-text.task-card__property-text--green Активна
+                  
+                  
+        .news__right.news-right_stock.news-right.news-right_stock_lg.news-right
+            .news-right__img
+            .news-right__title  Жилой комплекс Королевский
+            .news-right__text Квартиры от 2 300 000 <span class="icon-rouble"></span>
+            a.news-right__reference(href="#!")  
+              span Смотреть
+              i.icon-chevron-right
 
-       
-            
-        .news__right.news-right
-          .news-right__body
-            .ibg.bg
-              img(src="assets/img/stock/stock.webp",alt="stock")
-            .news-right__title  Это реклама
-            .news-right__text А это кресло «Эконика»  всего за 5 700<span class="icon-rouble"></span>
+          
+         
+           
+
+        .news__right.news-right_stock.news-right
+            .news-right__title.news-right__title_stock  Это реклама
+            .news-right__text.news-right__text_stock  
+              span А это кресло «Эконика»  всего за 5 700<span class="icon-rouble"></span>
+
+      button.btn.btn--success.news__button.news__button_stock.news__button_stock_low(type='button')  Смотреть все задания
 

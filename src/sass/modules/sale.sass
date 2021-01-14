@@ -1,48 +1,72 @@
 
-.sale__wrapper 
+.sale
   +bg($fone)
   padding: 54px 0 0 0
 .container 
-  padding: 0 0 0 0	
+
   
 .sale__body
   +jucs
-  h2
-    width: 100%
-.sale__filter 
-  padding: 31px 0 0 0
-  display: inline-flex
-.sale-filter 
-  +jucs
-  background: #FFFFFF
-  border: 1px solid #ECECEC
-  border-radius: 5px
-.sale-filter__item 
-  padding: 0 29px 
-  border-right: 1px solid #ECECEC
-  height: 50px
-  transition: all 0.2s ease-in-out
-  &:hover
-    +bg(#DEF1D7) 
-    cursor: pointer 
-    .sale-filter__title
-      color: $dark-1
-      
 
-  &:last-child
-    border-right: none
-  +center
-.sale-filter__title
-  // margin: 0 29px
-  +font-family(  roboto-medium,normal,15px,100%,$grey)
-  transition: all 0.2s ease-in-out
+
+.sale__filter
+  margin: 31px 0 0 0
+
 
 .sale__slider
-  position: relative
+  margin: 30px -10px  0px
+
+.sale__cards
+  display: flex
+  justify-content: space-between
   margin: 30px 0 0 0
-.sale-slider
-  &__body
-    margin: 0 -10px
+.sale__card
+  flex: 0 1 49.2%
+
+
+.sale__scroll,.sale-filter__item_lg
+  display: none
+
+
+
+
+
+
+  
+@include media-breakpoint-down(lg)
+  .sale
+    padding: 40px 0 0
+  .sale__filter
+    width: 100%
+    margin: 24px 0 0
+  .sale-filter__item
+    flex-grow: 1
+    padding: 0 0 0 0
+  .sale__slider
+    display: none
+  .sale-filter__item_lg
+    display: flex
+  .sale-filter__item_xl
+    display: none
+  
+  .sale__scroll
+    display: flex
+    overflow: scroll
+    justify-content: start
+    // flex-wrap: no-wrap
+    margin: 20px 0  0px
+  .sale-scroll__item
+    min-width: 307px
+    height: 284px
+    margin: 0 20px 0 0
+    position: relative
+    &:last-child
+      margin: 0 0 0 0
+
+
+
+
+
 
 
 

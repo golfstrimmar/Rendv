@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 $(Document).ready(function () {
-  $(".slider-js").slick({
+  $(".slider-sale-js").slick({
     // dots: true,
     // arrows: false,
     slidesToShow: 4,
@@ -14,8 +14,8 @@ $(Document).ready(function () {
     centerMode: false,
     // centerPadding: "0px",
     // slidesToShow: 1,
-    nextArrow: $(".sale-slider_next"),
-    prevArrow: $(".sale-slider_prev"),
+    nextArrow: $(".slider__arrow_next--sale"),
+    prevArrow: $(".slider__arrow_prev--sale"),
 
     // responsive: [
     //   {
@@ -53,8 +53,8 @@ $(Document).ready(function () {
     centerMode: false,
     // centerPadding: "0px",
     // slidesToShow: 1,
-    nextArrow: $(".rent-slider_next"),
-    prevArrow: $(".rent-slider_prev"),
+    nextArrow: $(".slider__arrow_next--rent"),
+    prevArrow: $(".slider__arrow_prev--rent"),
 
     // responsive: [
     //   {
@@ -92,8 +92,47 @@ $(Document).ready(function () {
     centerMode: false,
     // centerPadding: "0px",
     // slidesToShow: 1,
-    nextArrow: $(".advert-slider_next"),
-    prevArrow: $(".advert-slider_prev"),
+    nextArrow: $(".slider__arrow_next--advert"),
+    prevArrow: $(".slider__arrow_prev--advert"),
+
+    // responsive: [
+    //   {
+    //     breakpoint: 1400,
+    //     settings: {
+    //       slidesToShow: 3,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 900,
+    //     settings: {
+    //       slidesToShow: 2,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 500,
+    //     settings: {
+    //       slidesToShow: 1,
+    //     },
+    //   },
+    // ],
+  });
+});
+$(Document).ready(function () {
+  $(".slider-advert-next-js").slick({
+    // dots: true,
+    // arrows: false,
+    slidesToShow: 4,
+    // slideToscroll: 1,
+    speed: 800,
+    easing: "ease",
+    cssEase: "linear",
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    centerMode: false,
+    // centerPadding: "0px",
+    // slidesToShow: 1,
+    nextArrow: $(".slider__arrow_next--advert-next"),
+    prevArrow: $(".slider__arrow_prev--advert-next"),
 
     // responsive: [
     //   {
@@ -131,8 +170,8 @@ $(Document).ready(function () {
     centerMode: false,
     // centerPadding: "0px",
     // slidesToShow: 1,
-    nextArrow: $(".revieves-slider_next"),
-    prevArrow: $(".revieves-slider_prev"),
+    nextArrow: $(".slider__arrow_next--revieves"),
+    prevArrow: $(".slider__arrow_prev--revieves"),
 
     // responsive: [
     //   {
@@ -201,8 +240,8 @@ $(".slider-bunners-js").slick({
   centerMode: false,
   // centerPadding: "0px",
   // slidesToShow: 1,
-  nextArrow: $(".bunners-slider_next"),
-  prevArrow: $(".bunners-slider_prev"),
+  nextArrow: $(".bunners-arrows__arrow_next"),
+  prevArrow: $(".bunners-arrows__arrow_prev"),
 
   customPaging: function (slider, i) {
     var current = i + 1;

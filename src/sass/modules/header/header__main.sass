@@ -1,22 +1,26 @@
 .header__main 
-  .container
-    padding: 0 0 0 0	
+  
 .header-main 
-.header-main__body 
-  +alic
-.header-main__logo 
-  margin: 0 3.2% 0 0
-.header-main__menu
-  flex-grow: 1
-.header__menu_overlay,.header-close 
+  &__body 
+    +alic
+  &__logo 
+    margin: 0 3.2% 0 0
+  &__menu
+    flex-grow: 1
+  
+
+.header-menu
+  &__overlay
+    display: none 
+.header-close 
   display: none 
 
-.header-main-menu ul
+.header-nav
   flex-wrap: nowrap!important
   +jucb 
-  .header-main-menu__item
+  &__item
     display: flex
-  .header-main-menu__link 
+  &__link 
     +font-family(  roboto-medium,normal,15px,18px,$dark-1)
     +pro
     padding: 31px 5px
@@ -30,6 +34,8 @@
       +border(1px , darken($active,20%))
       color: white
       box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.4)  
+
+  
 .header-main__button 
   display: block
   +alic

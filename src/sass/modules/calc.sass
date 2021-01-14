@@ -1,94 +1,104 @@
-.news 
-.calc 
-  .news__wrapper 
-    padding: 54px 0 0
-    
-  .container 
-  .news__body 
-
-  .news__left 
-  .news-left 
-  .news-left__body
-    h2
-      +font-family(  roboto-medium,normal,24px,28px,$dark-1)
-    @extend %card
-    padding: 27px 28px 0
-    +jucb
-    +pro
-  .news-left__calc 
+.news_calc 
+  @extend %s-wrapper
+  padding: 47px 0 0 0
+  @include media-breakpoint-down(lg) 
+    display: none
+.calculator
+  @extend %card
+  padding: 30px 28px 30px
+  +jucb
+  +pro
+  &__sliders
     flex: 1 1 50%
-  .news-left-calc 
-  .news-left-calc__body
-    div.jucb
-  .news-left-calc__column
-    flex: 1 1 50% 
+  &__offer
+    flex: 0 1 46%
+  
+.news__body_calc
+  margin: 0 0 0 0
+.calculator-sliders
+  +jucb
+.title_calc
+  +font-family(  roboto-medium,normal,24px,28px,$dark-1)
+  
+.news__left
+  flex: 1 1 10%
+
+.calculator-sliders
+  &__body
+    +jucb
+    width: 100%
+    margin: 20px 0 0 0
+  &__column
+    flex: 1 1 40%
     padding: 0 30px 0 0
     &:last-child
       flex: 0 1 39% 
-  .news-left-column 
-  .news-left-column__body
-    section
-      padding: 0 0 20px 0
-      &:last-child
-        padding: 0 0 10px 0
-  .news-left-column__title 
-    +font-family(  roboto-medium,normal,15px,18px,$grey)
-  .news-left-column__number
-    +alic
-    +font-family(  roboto-medium,normal,15px,18px,$dark-1)
-    padding: 10px 0 3px
-    span
-      +font-family(  roboto-medium,normal,20px,23px,$grey)
-      display: inline-block
-      margin: 0 0 0 auto!important
-    span.icon-rouble
-      +font-family(  roboto-medium,normal,15px,18px,$dark-1)
-  .news-left-column__range
-     padding: 0 0 0 0	
-  .news-left-calc__text
+  &__text
     flex: 0 1 100% 
     +font-family(  roboto-medium,normal,15px,18px,$grey) 
-  .news-left-calc__number
+  &__number
     flex: 0 1 100% 
     +alic
     +font-family(  roboto-medium,normal,20px,23px,#000000)
-    padding: 12px 0 0 0
-  .news-left__offer
-    flex: 0 1 46% 
-
-  .news-left__offer
-  .news-left-offer 
-  .news-left-offer__body 
+    margin: 12px 0 0 0
     
-  .news-left-offer__line_last
-    .news-line__body
-      border-bottom: 1px solid $bej
-  .news-line 
-  .news-line__body 
+.calculator-section
+  margin: 0 0 18px 0
+  &:last-child
+    margin: 0 0 10px 0
+  &__title 
+    +font-family(  roboto-medium,normal,15px,18px,$grey)
+  &__number
+    +alic
+    +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+    padding: 10px 0 3px
+
+    span.icon-rouble
+      +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+  &__marker
+    +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+    margin: 0 0 0 5px
+  &__marker--twenty
+    +font-family(  roboto-medium,normal,20px,23px,$grey)
+    display: inline-block
+    margin: 0 0 0 auto!important
+
+
+.range
+  padding: 0 0 0 0
+.news-line 
+  &__body 
     padding: 21px 0
     +alic
     +jucb
     border-top: 1px solid $bej
 
-  .news-line__icon 
-    width: 40px
+  &__icon 
+    width: 40px!important
     height: 40px
-    
-  .news-line__text 
+    +jucs
+  &__text 
     // padding: 0 0 0 20px	
     +font-family(  roboto-medium,normal,15px,18px,#000000)
-  .news-line__number
-    padding: 0 0 0 13px
+  &__number
+    // padding: 0 0 0 13px
     +font-family(  roboto-medium,normal,15px,18px,#000000)
-  .news-line__rate
+  &__rate
     +alic
     +font-family(  roboto-medium,normal,15px,18px,#000000)
     +juce
-  .news-left-offer__button 
+
+
+.calculator-offer
+  &__button 
     margin: 18px 0 0 0
     width: 250px
     height: 48px
  
+
+  &__line
+    &_last
+      border-bottom: 1px solid $bej
  
  
  
@@ -96,23 +106,19 @@
  
  
  
- 
-  .news__right 
-  .news-right 
-  .news-right__body 
-    @extend %ibg
-    padding: 0 0 234px
-    .bg
-      border-radius: 10px
-  .news-right__title
-    position: relative
-    z-index: 2 
-    color: $white
-  .news-right__text 
-    position: relative
-    z-index: 2 
-    color: $white
-    +alic
+.news-right_calc
+  margin-bottom: 0
+.news-right_calc  
+  +background-img("/assets/img/calc/calc.webp")
+.news-right__title_calc
+  position: relative
+  z-index: 2 
+  color: $white
+.news-right__text_calc 
+  position: relative
+  z-index: 2 
+  color: $white
+  +alic
 
 
 

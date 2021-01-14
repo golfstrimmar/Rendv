@@ -1,11 +1,12 @@
 
   
 *
-  outline: 1px solid green
-  
+  // outline: 1px solid green
+.container
+  // outline: 1px solid #4164ff
 
 [class*="col-"]
-  // padding: 0 0 0 0
+  padding: 0 0 0 0
 
 
 // .font-main
@@ -31,24 +32,22 @@ body
 //   left: 0
 //   @include fdc
 .container
-  outline: 2px solid #4164ff
-  // background: #BBDEFB
-  // width: 80%
-  // width: 100%
-  // width: 1170px
-  // margin: 0 auto 
-  // position: relative
-  // z-index: 2
-  // display: flex
-  // flex-flow: row wrap
-
-  // @media  (max-width: 1170px)
-    // width: 80%
-    // width: 100%
-    // padding: 0 15px 	
-  +media-breakpoint-only(xl)
+  
+  padding: 0 0 0 0
+  @media (min-width: 1361px)
     max-width: 1300px!important
- 
+  @media (max-width: 1360px)
+    padding: 0 6px
+  @include media-breakpoint-down(sm) 
+    padding: 0 0 0 0	
+.container-fluid 
+  padding: 0 0 0 0
+.container-extended
+  width: 79.7%
+  margin: 0 auto
+  @media (max-width: 1360px)
+    width: 100%
+    padding: 0 30px	
 
 .ibg
   background-repeat: no-repeat
@@ -112,6 +111,31 @@ input
   visibility: visible
   display: block
 
+
+.plyr
+  +absolute( 100%, 100%, 0,  0,  null,0,0)
+
+
+
+.icon-rouble
+  margin: 0 0 0 5px
+button
+  display: block
+.hover
+  transition: all 0.2s ease-in-out
+  &:hover
+    cursor: pointer
+    transform: scale(1.02)
+    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.3)
+
+
+.title
+  width: 100%
+  +font-family(  roboto-medium,500,32px,37px,$dark-1)
+  @include media-breakpoint-down(lg)
+    +font-family(  roboto-medium,500,24px,140%,$dark-1)
+
+
 .up_down_btn
   position: fixed
   background: -o-linear-gradient(357.31deg, #87CEFA 0, #4169E1 100%)
@@ -146,45 +170,3 @@ input
       display: none
 
 
-.relative
-  position: relative
-
-.pro
-  width: 100%
-  height: 100%
-
-.plyr
-  +absolute( 100%, 100%, 0,  0,  null,0,0)
-
-
-h2
-  +font-family(  roboto-medium,normal,32px,37px,$dark-1)
-
-
-// стили для общих блоков
-
-
-// .btn--primary-all_dark
-//   background: $f-color
-//   border-radius: 40px
-//   +font-family(Montserrat,500,18px,22px,$f-color)
-//   color: white!important
-//   text-transform: uppercase 
-//   white-space: nowrap
-//   box-sizing: border-box
-//   padding: 18px 20px	
-//   +media-breakpoint-only(xs)
-//     font-size: calc(12px + (18-12)*((100vw-320px)/(567-320)))!important
-.common-Title
-  +font-family(Courier-reg,700,64px,55px,$dark-1)
-  // font-size: 36px
-  // font-weight: normal
-  // line-height: 43px
-  // text-transform: uppercase
-  // padding: 0 0 3% 0	
-  // +media-breakpoint-only(xs)
-  //   font-size: calc(20px + (36-20)*((100vw-320px)/(576-320))) 
-.icon-rouble
-  margin: 0 0 0 5px
-button
-  display: block
