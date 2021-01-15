@@ -5,6 +5,7 @@ import $ from "jquery";
 import "./js/common";
 import "./js/header";
 import "./js/filter";
+import "./js/select";
 
 
 
@@ -16,6 +17,7 @@ import "./css/slick.css";
 // icomoon
 import "./css/style.css";
 import "./css/polzunki.css";
+import "./css/select.css";
 
 
 

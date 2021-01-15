@@ -1,0 +1,30 @@
+
+
+.container
+  padding: 0 0 0 0
+  @media (min-width: 1361px)
+    max-width: 1300px!important
+  @media (max-width: 1360px)
+    padding: 0 6px
+  @include media-breakpoint-down(sm) 
+    padding: 0 10px	
+.container-fluid 
+  padding: 0 0 0 0
+
+  
+.container--extended
+  width: 79.7%
+  margin: 0 auto
+  @media (max-width: 1360px)
+    width: 100%
+    padding: 0 31px	
+
+@include media-breakpoint-down(lg)
+  .container--sale
+    min-width: 100%
+    padding: 0 31px	
+
+@include media-breakpoint-down(sm) 
+  .container--sale
+    min-width: 100%
+    padding: 0 10px

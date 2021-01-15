@@ -1,0 +1,73 @@
+.filter-lap 
+  +bg($fone)
+  padding: 31px 0 0 0
+  @include media-breakpoint-up(xl) 
+    display: none
+.filter-lap__title 
+  +font-family(roboto-medium,500,32px,130%,$dark-1)
+.filter-lap__body
+   @extend %card
+   padding: 20px
+   margin: 20px 0 0 0	
+.filter-lap__filter 
+.sale-filter 
+.sale-filter__item 
+.sale-filter__title 
+.filter-lap__line 
+  margin: 30px 0 0 0
+  
+.filter-lap-line
+  +jucb 
+.filter-lap-line__column 
+  flex: 0 1 45.5%
+  +fdc
+  margin: 0 20px 0 0
+  &:last-child
+    flex-grow: 1
+    margin: 0 0 0 0
+.filter-lap-line__title 
+  margin: 0 0 10px 0
+.filter-lap-line__select
+  position: relative
+
+
+
+.filter-lap-line__number 
+.filter-lap-line__range
+  +jucb
+  border-radius: 5px
+  @extend %card
+
+.filter-lap-line__input 
+  flex: 0 1 50%
+  position: relative
+  border-radius: 0
+  &:first-child
+    border-right: 1px solid $bej
+  input
+    +pro
+    height: 50px
+    padding: 0 20px	
+  i
+    +absolute( 18px, 18px, 50%,null, 20px,0,-50%)
+    +font-family(roboto-medium,normal,15px,18px,$grey)
+.filter-lap-line__adress 
+.filter-lap__buttons
+  +juce
+  +alic
+  margin: 20px 0 0 0
+.filter-lap__link
+  font-weight: normal
+  color: $company
+  margin: 0 20px 0 0 
+.filter-lap__button 
+  width: 223px
+  height: 50px
+.filter-lap-line__input_metro
+  @extend %card
+  border-radius: 5px!important
+  input
+    border-radius: 5px
+.filter-lap-line__metro
+  +absolute( auto, 18px, 50%,null, 20px,0,-50%)
+  +font-family(roboto-medium,normal,15px,18px,$company)

@@ -1,8 +1,8 @@
 section#revieves.sale
-    .container
+    .container.container--sale
       .sale__body
         h2.title Отзывы о компаниях
-        ul.sale__filter.sale-filter
+        ul.sale__filter.sale-filter.sale__filter--revieves
             - 
               items = [
                   {title: "Банки"},
@@ -13,60 +13,66 @@ section#revieves.sale
             each item in items
               li.sale-filter__item
                 .sale-filter__title=item.title
+        .sale__select.sale__select--revieves
+          select.select
+            option( value='Квартира' disabled ) Квартира
+            option(value='Комната') Комната
+            option(value='Загородная') Загородная
+            option(value='Коммерческая') Коммерческая
       ul.sale__scroll.sale-scroll
           - 
             slides = [
                 {
                   text:"Райффайзен Банк", 
                   title: "Благодарность специалисту Светлане",
-                  rev: "Я хочу выразить благодарность специалисту Светлане, которая работала с моим обращением в чате 23.09.20 примерно в 00:00..."
+                  rev: "Я хочу вые, которая работала с моим обращением в чате 23.09.20 примерно в 00:00..."
                     }, 
                 {
                    text:"Тинькофф Банк",
                    title:"Довольна всем", 
-                   rev: "Оперативно и быстро продлили страхование, разъяснили все чётко и понятно. Компанией довольна и буду рекомендовать!"
+                   rev: "Операт разъяснили все чётко и понятно. Компанией довольна и буду рекомендовать!"
                 },
                 { text:"ЛокоБанк",
                 title:"Необоснованная блокировка счета! Остановка работы...", 
-                rev: "Добрый вечер. Приобрели готовую компанию с расчетным счетом в Банке «Тинькофф». Переоформили быстро, приехал представитель..."
+                rev: "Я хочу выраветлане, которая работала с моим обращением в чате 23.09.20 примерно в 00:00... "
                 },
                 { text:"ЛокоБанк",
                 title:  "Необоснованная блокировка счета! Остановка работы...",
-                 rev: "Добрый вечер. Приобрели готовую компанию с расчетным счетом в Банке «Тинькофф». Переоформили быстро, приехал представитель..."
+                 rev: "Я  выразитветлане, которая работала с моим обращением в чате 23.09.20 примерно в 00:00..."
                 },
                 {
                   text:"Райффайзен Банк", 
                   title: "Благодарность специалисту Светлане",
-                  rev: "Я хочу выразить благодарность специалисту Светлане, которая работала с моим обращением в чате 23.09.20 примерно в 00:00..."
+                  rev: "Я хочу выраз, которая работала с моим обращением в чате 23.09.20 примерно в 00:00..."
                     }, 
                 {
                    text:"Тинькофф Банк",
                    title:"Довольна всем", 
-                   rev: "Оперативно и быстро продлили страхование, разъяснили все чётко и понятно. Компанией довольна и буду рекомендовать!"
+                   rev: "Оперативно и быстро продлили страхование, разъяснили все чётко и понятрекомендовать!"
                 },
                 { text:"ЛокоБанк",
                 title:"Необоснованная блокировка счета! Остановка работы...", 
-                rev: "Добрый вечер. Приобрели готовую компанию с расчетным счетом в Банке «Тинькофф». Переоформили быстро, приехал представитель..."
+                rev: "Я хочу выразить етлане, которая работала с моим обращением в чате 23.09.20 примерно в 00:00..."
                 },
                 { text:"ЛокоБанк",
                 title:  "Необоснованная блокировка счета! Остановка работы...",
-                 rev: "Добрый вечер. Приобрели готовую компанию с расчетным счетом в Банке «Тинькофф». Переоформили быстро, приехал представитель..."
+                 rev: "Я хочу выразить благодарность специалисту Светлане, которая рабимерно в 00:00..."
                 }
               ]
           each item in slides
             li.sale-scroll__item.card-revieves
               .card-revieves__text=item.text
-                .card-revieves__stars.card-revieves-stars
+              .card-revieves__stars.card-revieves-stars
                   .card-revieves-stars__star.icon-star-full
                   .card-revieves-stars__star.icon-star-full
                   .card-revieves-stars__star.icon-star-full
                   .card-revieves-stars__star.icon-star-full
                   .card-revieves-stars__star.icon-star-full
-                .card-revieves__title=item.title
-                .card-revieves__rev=item.rev
-                .card-revieves__person
-                  img.card-revieves__avatar(src="assets/img/rev/rev-1.png",alt="img")
-                  .card-revieves__text.card-revieves__text--person Chernovskaya19
+              .card-revieves__title=item.title
+              .card-revieves__rev=item.rev
+              .card-revieves__person
+                img.card-revieves__avatar(src="assets/img/rev/rev-1.png",alt="img")
+                .card-revieves__text.card-revieves__text--person Chernovskaya19
 
 
       .sale__slider.slider

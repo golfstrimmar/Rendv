@@ -1,5 +1,4 @@
 .task-card
-  min-height: 220px
   @extend %card
   padding: 20px	
   &__title
@@ -24,7 +23,10 @@
     color: $grey
   &__property-text 
     padding: 0 18px 0 3px
+    +alic
     +font-family(  roboto-medium,normal,15px,150%,$grey)
+    span
+      margin: 0 0 0 5px
   &__property-text--green 
     color: #7AB764 
     padding: 0 0 0 5px
@@ -193,9 +195,10 @@
     margin: 0 0 0 0
     +alic
   &__avatar
-    width: 30px
-    height: 30px
+    width: 31px
+    height: 31px
     margin: 0 10px 0 0
+
 
 
 .card-revieves-stars

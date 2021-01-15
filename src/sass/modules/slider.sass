@@ -9,10 +9,9 @@
   margin: 0 10px
 .slider__arrows
   position: relative
-  +absolute( 100%, 30px, 50%,  0%,  null,0,-50%)
+  +absolute( 100%, 31px, 50%,  0%,  null,0,-50%)
   +alic
-  @media (max-width: 1500px)
-    display: none 
+
 .slider__arrow
   +center
   +absolute( 50px, 50px, 0%,  null,  null,null,null)
@@ -31,6 +30,7 @@
 .slider__arrow_next
   right: -70px
 
-
-
+@media (max-width: 1500px)
+  .slider__arrows
+    display: none 
 

@@ -14,12 +14,12 @@
 
 
 .sale__slider
-  margin: 30px -10px  0px
+  margin: 31px -10px  0px
 
 .sale__cards
   display: flex
   justify-content: space-between
-  margin: 30px 0 0 0
+  margin: 31px 0 0 0
 .sale__card
   flex: 0 1 49.2%
 
@@ -32,13 +32,14 @@
 
 
 
-  
+
 @include media-breakpoint-down(lg)
   .sale
     padding: 40px 0 0
+    position: relative
+
   .sale__filter
     width: 100%
-    margin: 24px 0 0
   .sale-filter__item
     flex-grow: 1
     padding: 0 0 0 0
@@ -48,24 +49,20 @@
     display: flex
   .sale-filter__item_xl
     display: none
-  
-  .sale__scroll
-    display: flex
-    overflow: scroll
-    justify-content: start
-    // flex-wrap: no-wrap
-    margin: 20px 0  0px
-  .sale-scroll__item
-    min-width: 307px
-    height: 284px
-    margin: 0 20px 0 0
+  .sale__filter
+    margin: 24px 0 410px 0
+
+  .container--sale
+    min-width: 100%
+    padding: 0 31px	
+
+@include media-breakpoint-down(sm) 
+  .sale__select
     position: relative
-    &:last-child
-      margin: 0 0 0 0
 
-
-
-
+  .container--sale
+    min-width: 100%
+    padding: 0 10px!important
 
 
 

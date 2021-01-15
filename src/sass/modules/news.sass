@@ -1,14 +1,13 @@
 .news
   @extend %s-wrapper
-  padding: 54px 0 30px 0
-  @include media-breakpoint-down(lg)
-    padding: 40px 0 30px 0
+  padding: 50px 0 0 0
+    
 .news__body
   @extend %s-body 
   +jucb
-  margin: 30px 0 0 0
-  @include media-breakpoint-down(lg)
-    margin: 18px 0 0 0
+  flex-wrap: nowrap
+  margin: 24px 0 0 0
+
 .news__left 
   flex: 1 1 40%
 .news-left 
@@ -29,11 +28,11 @@
   &__img 
     width: 100%
   &__title 
-    +font-family(  roboto-medium,normal,24px,130%,$dark-1)
-    padding: 29px 30px 19px
+    +font-family(roboto-medium,normal,24px,130%,$dark-1)
+    padding: 29px 31px 19px
   &__text
-    +font-family(  roboto-medium,normal,18px,100%,$dark-1) 
-    padding: 0 30px 0 
+    +font-family(roboto-medium,normal,18px,100%,$dark-1) 
+    padding: 0 31px 0 
     text-align: left
   &__button 
     width: 250px
@@ -51,9 +50,13 @@
 
 
 @include media-breakpoint-down(lg) 
+  .news
+    padding: 31px 0 0 0
+  .news__body
+    margin: 15px 0 0 0
   .news-left__card
-    min-height: 200px!important
-    max-height: 200px!important
+    // min-height: 200px!important
+    // max-height: 200px!important
     &:first-child
       flex: 0 1 100%
     &:not(:first-child)

@@ -1,4 +1,5 @@
 
+
 .sale__card_opinion
   min-height: 222px
 
@@ -19,7 +20,7 @@
     display: none
   .sale__cards_opinion
     overflow: scroll
-    flex-wrap: no-wrap
+    flex-wrap: nowrap
     justify-content: start
   .sale__card_opinion
     min-width: 635px
@@ -31,4 +32,43 @@
     width: 243px
     height: 50px
     margin: 20px 0 40px 0
+@include media-breakpoint-down(sm) 
+  .sale__card_opinion
+    min-width: 100%!important
+    padding: 15px	
+  .opinion-card__title
+    +font-family(roboto-medium,500,12px,100%,$dark-1)
+  .opinion-card__text
+    +font-family(roboto-medium,normal,12px,150%,$grey)
+  .opinion-card__content
+    +font-family(roboto-medium,500,18px,150%,$dark-1)
+    margin: 5px 0 0 0
+  .opinion-card__note-text
+    +font-family(roboto-medium,normal,12px,150%,$grey)
+  .opinion-card__note
+    i
+      font-size: 12px
+  .sale__card_opinion
+    position: relative
+    margin: 0 0 10px 0!important
+    &:last-child
+      margin: 0 0 0 0!important
+  .opinion-card__img
+    flex: 0 1 50px
+    height: 50px
+    border-radius: 50%
+    +absolute( 50px, 50px, 15px, 15px,null,0,0)
+  .opinion-card__right
+    padding: 0 0 0 0	
+  .opinion-card__text 
+    padding: 0 0 0 70px
+  .opinion-card__title
+    padding: 0 0 10px 70px
+  .sale__button-opinion
+    width: 100%!important
+  .sale__cards_opinion
+    flex-wrap: wrap!important
 
+ 
+
+    

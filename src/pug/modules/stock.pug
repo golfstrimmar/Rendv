@@ -1,26 +1,27 @@
 //- подключаем везде
-section#stock.news
-    .container
-      h2.title Биржа услуг
+section#stock.news.news--stock
+    .container.container--sale
+      h2.title.title--stock Биржа услуг
       .news__body
         ul.news__left.news__left_stock.news-left
             .news-left__card.news-left__card_stock.task-card
-                .task-card__property-text.task-card__property-text--green   Активна
-                .task-card__title Перевозка груза из Новосибирска в Калининград
-                .task-card__text Задача
-                .task-card__notes  Необходимо сделать редизайн 2-х страниц сайта ( url - магазин.иномарка18.рф ) в 3-х разрешениях (компьютер, планшет, телефон).  Итого требуется 6 макетов. Суть - добавить новый блок (метку) для товара, чтобы он гармонично вписался в сайт. ТЗ - во вложении.
+                .task-card__property-text--stock.task-card__property-text--green   Активна
+                .task-card__title.task-card__title--stock Перевозка груза из Новосибирска в Калининград
+                .task-card__text.task-card__text--stock Задача
+                .task-card__notes.task-card__notes--stock  Необходимо сделать редизайн 2-х страниц сайта ( url - магазин.иномарка18.рф ) в 3-х разрешениях (компьютер, планшет, телефон).  Итого требуется 6 макетов. Суть - добавить новый блок (метку) для товара, чтобы он гармонично вписался в сайт. ТЗ - во вложении.
                 .task-card__properties
                   .task-card__property.task-card__property--square
-                    .task-card__property-icon.icon-message-square
-                    .task-card__property-text  37 ответов
+                    .task-card__property-icon.icon-message-square.task-card__property-icon--stock
+                    .task-card__property-text  37<span class="task-card__property-text--stock">ответов</span>
+                      
                   .task-card__property.task-card__property--eye
-                    .task-card__property-icon.icon-eye
-                    .task-card__property-text  7 просмотров
+                    .task-card__property-icon.icon-eye.task-card__property-icon--stock
+                    .task-card__property-text  7 <span class="task-card__property-text--stock">просмотров</span>
                   .task-card__property.task-card__property--answers
                     .task-card__property-text  15 часов назад
-                  .task-card__property.task-card__property--acctive
+                  .task-card__property.task-card__property--active
                     .task-card__property-text.task-card__property-text--green Активна
-            button.btn.btn--success.news__button.news__button_stock_high(type='button')  Смотреть все задания
+            button.btn.btn--success.news__button.news__button--stock_high(type='button')  Смотреть все задания
             .news-left__card.news-left__card_stock.task-card
                 .task-card__title Перевозка груза из Новосибирска в Калининград
                 .task-card__text Задача
@@ -28,13 +29,13 @@ section#stock.news
                 .task-card__properties
                   .task-card__property.task-card__property--square
                     .task-card__property-icon.icon-message-square
-                    .task-card__property-text  37 ответов
+                    .task-card__property-text  37 <span class="task-card__property-text--stock"> ответов</span>
                   .task-card__property.task-card__property--eye
                     .task-card__property-icon.icon-eye
-                    .task-card__property-text  7 просмотров
+                    .task-card__property-text  7 <span class="task-card__property-text--stock">просмотров</span>
                   .task-card__property.task-card__property--answers
                     .task-card__property-text  15 часов назад
-                  .task-card__property.task-card__property--acctive
+                  .task-card__property.task-card__property--active
                     .task-card__property-text.task-card__property-text--green Активна
                   
                   
@@ -55,5 +56,5 @@ section#stock.news
             .news-right__text.news-right__text_stock  
               span А это кресло «Эконика»  всего за 5 700<span class="icon-rouble"></span>
 
-      button.btn.btn--success.news__button.news__button_stock.news__button_stock_low(type='button')  Смотреть все задания
+      button.btn.btn--success.news__button.news__button--stock.news__button--stock_low(type='button')  Смотреть все задания
 

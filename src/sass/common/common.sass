@@ -31,23 +31,14 @@ body
 //   top: 0
 //   left: 0
 //   @include fdc
-.container
-  
-  padding: 0 0 0 0
-  @media (min-width: 1361px)
-    max-width: 1300px!important
-  @media (max-width: 1360px)
-    padding: 0 6px
-  @include media-breakpoint-down(sm) 
-    padding: 0 0 0 0	
-.container-fluid 
-  padding: 0 0 0 0
-.container-extended
-  width: 79.7%
-  margin: 0 auto
-  @media (max-width: 1360px)
-    width: 100%
-    padding: 0 30px	
+
+
+
+
+
+
+
+
 
 .ibg
   background-repeat: no-repeat
@@ -89,20 +80,27 @@ a
 input
   +bg( #FFFFFF)
   padding: 0 0 0 15px
-  transition: all 0.3s ease-in-out
+  transition: all 0.2s ease-in-out
+  +border(1px,transparent)
+  // border-radius: 5px
+  &~span
+    transition: all 0.2s ease-in-out
   &::placeholder
   & + i
+    // transform: translate(0,-50%) rotate(0deg)
   &:focus
     +bg($fone!important)
-    +border(2px,#1976D2)
+    border: 1px solid darken($bej,20%)
+    border-radius: 5px
     &::placeholder
       opacity: 0
       z-index: -1
     & + i
-      +bg(#E3F2FD!important)
-      color: darken($green, 50%)
-
-
+      opacity: 0
+      z-index: -1
+    &~span
+      opacity: 0
+      z-index: -1
 .lock
   overflow: hidden
 
@@ -134,7 +132,8 @@ button
   +font-family(  roboto-medium,500,32px,37px,$dark-1)
   @include media-breakpoint-down(lg)
     +font-family(  roboto-medium,500,24px,140%,$dark-1)
-
+  @include media-breakpoint-down(sm)
+    font-size: 18px!important
 
 .up_down_btn
   position: fixed

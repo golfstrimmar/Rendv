@@ -1,28 +1,42 @@
 .present
   display: none
-  padding: 40px 0 0 0
+
   +bg($fone)
-  @include media-breakpoint-down(lg) 
-    display: flex
+
   &__body
     +jucb
   &__item
     flex: 1 1 10%
     margin: 0 20px 0 0
-
     &:last-child
       margin: 0 0 0 0
-.present-item
-  background-repeat: no-repeat
-  background-size: cover
-  padding: 18px	18px 140px
-  border-radius:  10px
+@include media-breakpoint-down(lg)
+  .present-item
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 23px 18px 133px
+    border-radius:  10px
 
-  &__text
-    +font-family(roboto-medium,500,18px,150%,$white)
-    +alic
-    &:last-child
-      margin: 14px 0 0 0
-    .icon-rouble
-      color: $white
+    &__text
+      +font-family(roboto-medium,500,18px,150%,$white)
+      +alic
+      &:last-child
+        margin: 14px 0 0 0
+      .icon-rouble
+        color: $white
+  .present
+    display: flex
+    padding: 35px 0 0 0
+  .present__body
+    margin: 0 auto
 
+
+@include media-breakpoint-down(sm)
+  .present
+    padding: 29px 0 0!important
+  .present__body
+    flex-wrap: nowrap
+    overflow: scroll
+  .present__item
+    min-width: 250px
+    height: 180px

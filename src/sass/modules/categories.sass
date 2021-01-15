@@ -1,11 +1,6 @@
 .categories
   padding: 40px 0 35px
   +bg($fone)
-  .container
-    padding: 0 0 0 0	
-
-// h2
-//     +font-family(  roboto-medium,normal,32px,37px,$dark-1)
 
 .categories__body
   margin: 30px 0 0 0
@@ -55,7 +50,7 @@
   @media (min-width: 1200px)
     flex-wrap: wrap
   @media (max-width: 1200px)
-    flex-wrap: no-wrap!important 
+    flex-wrap: nowrap!important 
 @include media-breakpoint-down(lg) 
   .categories__item
     min-width: 415px!important
@@ -65,5 +60,5 @@
   .categories__body
     overflow: scroll
     justify-content: start
-    // flex-wrap: no-wrap!important
+    // flex-wrap: nowrap!important
     margin: 20px 0 0

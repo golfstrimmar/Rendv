@@ -93,9 +93,7 @@
 
 // ------------------------------------------------------
 @media (max-width: 1830px)
-  .container-extended
-    width: 100%
-    padding: 0 30px
+
   .footer-top__social
     padding: 0 0 0 0	
     flex: 0 1 12%
@@ -104,7 +102,13 @@
     margin: 0 1% 0 0	
   .footer-main-column__list 
     padding: 0 0 0 0	
-@include media-breakpoint-down(lg)
+
+
+
+
+
+
+@media (max-width:  1650px )
   .footer
     padding: 0 0 35px
   .footer-top__nav
@@ -112,9 +116,18 @@
     padding: 33px 0 0 0
   .footer-top__logo,.footer-top__social,.footer-low__text
     display: none
+ 
+ 
+ 
   .footer-top-nav__item 
-    flex: 0 1 33.333%
+    flex: 1 1 30%
     margin: 0 0 21px 0
+    &:nth-child(1)
+      flex: 0 1 26.3%
+    &:nth-child(4)
+      flex: 0 1 26.3%
+
+
   .footer-main__column
     flex: 0 1 33.333%
     &:nth-child(3n)
@@ -137,17 +150,20 @@
     +fdc
     p
       margin: 12px 0 0 0
-  .container-extended
-    padding: 0 30px	
+
+
+
+
+
+
 @media (max-width: 768px)
-  
   .footer
     padding:  0 0 0	
   .footer__top
     padding: 0 0 0 0	
   .footer-top__body
     +bg(white)
-    padding: 30px 15px 0
+    padding: 31px 15px 0
     border: none	
   .footer-top__logo
     display: flex
