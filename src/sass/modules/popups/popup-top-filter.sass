@@ -1,0 +1,118 @@
+//-------------.filter-lap--modal--------------------------------
+.popup-top-filter
+  +fdc
+  +none
+  +sm-flex
+  +xs-flex
+  position: fixed
+  width: 100%
+  min-height: 100%
+  min-height: 100vh
+  overflow: auto
+  top: 60px
+  left: 0
+  +bg(white)
+  z-index: 10
+  // -------------
+  display: none
+  // ----------------
+  @include media-breakpoint-up(sm)
+    display: none
+//---------------------------------------------
+//-------------.filter-lap--modal--------------------------------
+.filter-lap--modal
+  +bg(white)
+  @include media-breakpoint-down(xs)
+    display:  flex
+    padding: 24px 0 0
+//---------------------------------------------
+//-------------.filter-lap__title--modal--------------------------------
+.filter-lap__title--modal
+  @include media-breakpoint-down(xs)
+    font-size: 20px
+//---------------------------------------------
+//-------------.filter-lap__filter--modal--------------------------------
+.filter-lap__filter--modal
+  @include media-breakpoint-down(xs)
+    margin: 28px 0 0 0
+  .new-select
+      height: 38px
+      font-size: 14px
+  .new-select__item
+      span
+        font-size: 14px
+  .new-select__list 
+    top: 40px
+//---------------------------------------------
+
+//-------------.filter-lap-line__select--modal--------------------------------
+.filter-lap-line__select--modal
+  @include media-breakpoint-down(xs)
+    .new-select
+      height: 38px
+      font-size: 14px
+    .new-select__item
+      span
+        font-size: 14px
+    .new-select__list 
+      top: 40px
+//---------------------------------------------
+//-------------.filter-lap__line--modal--------------------------------
+.filter-lap__line--modal
+  @include media-breakpoint-down(xs)
+    margin: 18px 0 0
+    flex-direction: column
+//---------------------------------------------
+
+//-------------.filter-lap-line__title--modal--------------------------------
+.filter-lap-line__title--modal
+  @include media-breakpoint-down(sm)
+    font-size: 14px
+//---------------------------------------------
+//-------------.filter-lap-line__number--modal--------------------------------
+.filter-lap-line__number--modal
+  @include media-breakpoint-down(sm)
+    height:  40px
+
+//---------------------------------------------
+//-------------filter-lap-line__column--------------------------------
+.filter-lap-line__column
+  @include media-breakpoint-down(sm)
+    margin: 0 0 0 0
+//---------------------------------------------
+
+//-------------.filter-lap-line__input--modal--------------------------------
+.filter-lap-line__input--modal
+  input
+    @include media-breakpoint-down(sm)
+      height: 40px!important
+      font-size: 14px
+//---------------------------------------------
+
+//-------------.filter-lap-line__metro--modal--------------------------------
+.filter-lap-line__metro--modal
+  @include media-breakpoint-down(xs)
+    font-size: 14px
+//---------------------------------------------
+
+//--------------.filter-lap__link--modal-------------------------------
+.filter-lap__link--modal,.filter-lap__button--modal
+  @include media-breakpoint-down(xs)
+    margin: 0 0 0 0
+    flex: 0 1 100%
+    +jucc		
+//---------------------------------------------
+//-------------.filter-lap-line__column--modal--------------------------------
+.filter-lap-line__column--modal
+  @include media-breakpoint-down(xs)
+    margin: 0 0 16px 0
+//---------------------------------------------
+//-------------.filter-lap__button--modal--------------------------------
+.filter-lap__button--modal
+  @include media-breakpoint-down(xs)
+    height: 40px
+//---------------------------------------------
+//-------------.filter-lap__link--modal
+.filter-lap__link--modal
+  @include media-breakpoint-down(xs)
+    margin: 22px 0 0 0

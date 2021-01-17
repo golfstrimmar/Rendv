@@ -1,0 +1,42 @@
+.container-fluid 
+      .header__select.header-select
+        .header-select__body 
+          h1.header-select__title Поможем воплотить мечту в реальность
+          
+          
+          .header-select__filter.filter
+            .filter__body
+              - 
+                items = [
+                  { title: "Купить",text:"№1 "},
+                  { title: "Снять",text:"№2"},
+                  { title: "Посуточно",text:"№3"},
+                  { title: "Новостройки",text:"№4"},
+                ]
+
+              each item in items
+                .filter__item.filter-item
+                    .filter-item__title.filterDep-title-js=item.title 
+                        //- ---------------------------------------------
+                    .filter__drop.filter__drop_sub.filter-drop.filterDep-drop-js
+                      .filter-drop__body
+                        - 
+                          items = [
+                            { title: "Коммерческую"},
+                            { title: "Комнат"},
+                            { title: "Стоимость"},
+                          ]
+                        each item in items
+                          .filter__item.filter-item
+                              .filter-item__title.filterDep-title-js=item.title 
+                                .filter-item__img.icon-chevron-down.filterDep-img-js
+                              .filter__drop.filter-drop.filterDep-drop-js
+                                .filter-drop__body
+                                  p какой-то контент для 
+                                  span=item.title
+                        .filter-drop__properties
+                          a.filter-drop__property.filter-drop__property--adress(href="#!") Адрес или ЖК
+                          a.filter-drop__property.filter-drop__property--metro(href="#!") Метро 
+          .header-select__buttons
+            button.btn.btn--light.header-select__button.header-select__button--look(type='button')  Смотреть на карте
+            button.btn.btn--success.header-select__button.header-select__button--show(type='button')  Показать 155 523

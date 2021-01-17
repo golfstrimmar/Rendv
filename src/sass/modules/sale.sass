@@ -2,24 +2,22 @@
 .sale
   +bg($fone)
   padding: 54px 0 0 0
-.container 
-
   
 .sale__body
   +jucs
 
 
 .sale__filter
-  margin: 31px 0 0 0
+  margin: 30px 0 0 0
 
 
 .sale__slider
-  margin: 31px -10px  0px
+  margin: 30px -10px  0px
 
 .sale__cards
   display: flex
   justify-content: space-between
-  margin: 31px 0 0 0
+  margin: 30px 0 0 0
 .sale__card
   flex: 0 1 49.2%
 
@@ -27,44 +25,73 @@
 .sale__scroll,.sale-filter__item_lg
   display: none
 
+.sale-scroll__item
+  min-height: 284px
 
 
-
-
-
+.sale__select
+    display: none
 
 @include media-breakpoint-down(lg)
   .sale
-    padding: 40px 0 0
+    padding: 33px 0 0
     position: relative
+  .sale__slider
+    display: none
 
   .sale__filter
     width: 100%
+    margin: 20px 0 345px
   .sale-filter__item
     flex-grow: 1
     padding: 0 0 0 0
-  .sale__slider
-    display: none
+    
   .sale-filter__item_lg
     display: flex
   .sale-filter__item_xl
     display: none
+
+  .sale-scroll
+    +absolute( 100%,345px,115px,0,null,0,0)
+    display: flex
+    overflow: scroll
+    justify-content: start
+    flex-wrap: nowrap 
+    margin: 20px 0  0px 0px
+    // box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1 )
+    align-items: center
+  .sale-scroll__item
+    min-width: 307px
+    min-height: 284px
+    margin: 0 20px 0 0
+
+@include media-breakpoint-down(sm)
+  .sale
+    +bg(white)
+    padding: 0
   .sale__filter
-    margin: 24px 0 410px 0
+    display: none
 
-  .container--sale
-    min-width: 100%
-    padding: 0 31px	
-
-@include media-breakpoint-down(sm) 
   .sale__select
-    position: relative
+    display:  flex
+    margin: 15px 0 310px
+    	
+    width: 100%
 
-  .container--sale
-    min-width: 100%
-    padding: 0 10px!important
-
-
+  .sale
+    .new-select
+      height: 40px
+  .sale-scroll
+    margin: 0 0  0px 0px
+    height: 310px
+    top: 80px
+    align-items: center
+    &__item
+      min-width: 220px
+      min-height: 255px
+      margin: 0 20px 0 0
+      &:last-child
+        margin: 0 0 0 0
 
 
 

@@ -1,7 +1,7 @@
 section#rent.sale
-    .container
+    .container.container--sale
       .sale__body
-        h2.title Аренда
+        h2.title Аренда 
         ul.sale__filter.sale-filter
             li.sale-filter__item.sale-filter__item_lg
               .sale-filter__title ЖК
@@ -17,8 +17,13 @@ section#rent.sale
             each item in items
               li.sale-filter__item
                 .sale-filter__title=item.title
-      
-      ul.sale__scroll.sale-scroll
+        .sale__select
+          select.select
+            option( value='Квартиры' disabled ) Квартиры
+            option(value='Комнаты') Комнаты
+            option(value='Загородная') Загородная
+            option(value='Коммерческая') Коммерческая
+        ul.sale__scroll.sale-scroll
           - 
             slides = [
                 { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},

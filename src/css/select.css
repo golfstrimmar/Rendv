@@ -22,15 +22,15 @@
     position: absolute;
     top: 45px;
     left: 0;
-    border: 2px solid #00BFA5;
+    border: 2px solid #9E9E9E;
     cursor: pointer;
     width: 100%;
     z-index: 2;
-    background: #A5D6A7;
+    background: #f8f8f8;
     user-select: none;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    color: #00897B;
+    color: #9E9E9E;
 }
 
 .new-select__list.on {

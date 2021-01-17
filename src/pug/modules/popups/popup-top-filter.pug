@@ -1,0 +1,65 @@
+section#popup-top-filter.popup-top-filter
+  //- .header-main
+  //-   .container.container--sale
+  //-     .header-main__body
+  //-       a.header-main__logo(href="#!")
+  //-         img(src="assets/img/header/logo-1.svg",alt="img")
+  //-       button.btn.btn--success.btn--success-icon.header-main__button(type='button') 
+  //-         span.icon-plus
+  //-         span Разместить объявление
+  //-       .header-main__like.icon-heart
+  //-       .header-main__burger.icon-align-justify
+    
+
+
+  .filter-lap.filter-lap--modal
+    .container.container--sale
+      .filter-lap__title.filter-lap__title--modal  Поиск недвижимости
+      form
+        .filter-lap__filter.filter-lap__filter--modal
+                select.select
+                  option( value='Купить' disabled ) Купить
+                  option(value='Снять') Снять
+                  option(value='Посуточно') Посуточно
+                  option(value='Новостройки') Новостройки
+
+        .filter-lap__line.filter-lap__line--modal.filter-lap-line
+            .filter-lap-line__column.filter-lap-line__column--modal
+              .filter-lap-line__title.filter-lap-line__title--modal Тип объекта
+              .filter-lap-line__select.filter-lap-line__select--modal
+                select.select
+                  option( value='Квартира' disabled ) Квартира
+                  option(value='Комната') Комната
+                  option(value='Загородная') Загородная
+                  option(value='Коммерческая') Коммерческая
+            .filter-lap-line__column.filter-lap-line__column--modal
+              .filter-lap-line__title.filter-lap-line__title--modal Кол-во комнат
+              .filter-lap-line__number.filter-lap-line__number--modal.sale-filter
+                - 
+                  items = [
+                      {title: "1"},
+                      {title: "2"},
+                      {title: "3"},
+                      {title: "4"},
+                      {title: "+5"},
+                  ]
+                each item in items
+                  li.sale-filter__item
+                    .sale-filter__title=item.title
+        .filter-lap__line.filter-lap__line--modal.filter-lap-line
+            .filter-lap-line__column.filter-lap-line__column--modal
+              .filter-lap-line__title.filter-lap-line__title--modal Стоимость
+              .filter-lap-line__range
+                .filter-lap-line__input.filter-lap-line__input--modal
+                  input(type='text'  placeholder='oт')
+                .filter-lap-line__input.filter-lap-line__input--modal
+                  input(type='text'  placeholder='до')
+                  i.icon-rouble
+            .filter-lap-line__column.filter-lap-line__column--modal
+              .filter-lap-line__title.filter-lap-line__title--modal Адрес
+              .filter-lap-line__input.filter-lap-line__input--modal.filter-lap-line__input_metro
+                  input(type='text'  placeholder='Введите')
+                  span.filter-lap-line__metro.filter-lap-line__metro--modal Метро
+        .filter-lap__buttons.row.no-gutters
+            a.filter-lap__link.filter-lap__link--modal.order-last(href="#!") Смотреть на карте
+            button.btn.btn--success.filter-lap__button.filter-lap__button--modal(type='button') Показать 155 523

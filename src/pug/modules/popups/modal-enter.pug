@@ -1,0 +1,36 @@
+section#modal-enter.modal-enter
+      form.modal-enter__body
+        h2.modal-enter__title Вход в личный кабинет
+        
+        .modal-enter__input.modal-enter-input
+            label(for="login").modal-enter-input__label Логин
+            input#login(type="text" placeholder="Введите логин" name="login").modal-enter-input__input
+        .modal-enter__input.modal-enter-input
+            label(for="login").modal-enter-input__label Пароль
+            input#password(type="text" placeholder="Введите пароль" name="password").modal-enter-input__input
+        .modal-enter__buttons
+          button.btn.btn--success.modal-enter__button.modal-enter__button--continue(type='button') Продолжить
+          button.btn.btn--success.modal-enter__button.modal-enter__button--registration(type='button') Регистрация
+        .modal-enter__or или
+        ul.modal-enter__social.modal-enter-social
+          - 
+            items = [
+                { class: "icon-vk ", },
+                { class: "icon-odnoklassniki ", },
+                { class: "icon-twitter ", },
+                { class: "icon-facebook ", },
+                { class: "icon-email ", },
+                { class: "icon-google ", },
+              ]
+
+          each item in items
+            li
+              a(href="#!").modal-enter-social__item
+                i(class=item.class)
+          
+        .modal-enter-item__forget Забыли пароль?
+        .modal-enter-item__conditions 
+          span При входе и регистрации, вы принимаете условия 
+          a.modal-enter-item__condition.modal-enter-item__condition--agreement(href="#!")  Пользовательского соглашения
+          span и 
+          a.modal-enter-item__condition.modal-enter-item__condition--politics(href="#!")  Политики конфиденциальности

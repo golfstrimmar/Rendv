@@ -3,17 +3,22 @@
 .header-main 
   &__body 
     +alic
-  &__logo 
-    margin: 0 3.2% 0 0
+ 
   &__menu
     flex-grow: 1
   
 
-.header-menu
-  &__overlay
-    display: none 
-.header-close 
-  display: none 
+.header-main__logo
+  width: 115px
+  height: 30px
+  margin: 0 3.2% 0 0
+  @media (min-width:  1201px) and (max-width:  1330px )
+    margin: 0 2% 0 0
+  @include media-breakpoint-down(sm)
+    width: 105px
+    height: 27px
+
+
 
 .header-nav
   flex-wrap: nowrap!important
@@ -23,7 +28,7 @@
   &__link 
     +font-family(  roboto-medium,normal,15px,18px,$dark-1)
     +pro
-    padding: 31px 5px
+    padding: 30px 5px
     +border(1px , transparent)
     &:hover
       +bg(lighten($active,30%))
@@ -34,13 +39,13 @@
       +border(1px , darken($active,20%))
       color: white
       box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.4)  
-
   
 .header-main__button 
   display: block
   +alic
   border-radius: 5px
-  padding: 10px
+  width: 234px
+  height: 40px
   margin: 0 0 0 5.3%
   +font-family(  roboto-medium,normal,15px,18px,white)	
   .icon-plus
@@ -48,3 +53,154 @@
     color: white
 
 
+.header-main__section
+  +fdc
+  +alis
+  border-bottom: 1px solid $bej
+  padding: 30px 0 
+  @include media-breakpoint-down(sm)
+    padding: 15px 0 
+
+.header-main__bot
+  flex: 0 1 50%
+  +jucs
+  +alic
+  &:active  > .top-location__text
+    color: $orange
+
+.header-main__line
+  margin: 0 0 16px 0
+  width: 100%
+  +alic
+  +jucs
+  &:active > .top-location__text
+    color: $orange
+  &:last-child
+    margin: 0 0 0 0
+
+
+.header-main__like
+  color: $active
+  font-size: 22px
+  @include media-breakpoint-down(lg)
+    margin: 0 35px
+  @include media-breakpoint-down(sm) 
+    font-size: 20px
+    margin: 0 25px 0 auto!important
+
+.header-main__burger,.header-main__close
+  display: flex
+  font-size: 28px 
+  @include media-breakpoint-down(sm)
+    font-size: 24px 
+
+.top-location__icon--sidebar
+  @include media-breakpoint-down(sm)
+    font-size: 18px
+
+.header-main__button
+  @media (min-width:  1201px) and (max-width:  1330px )
+    margin: 0 0 0 2.3%
+  @include media-breakpoint-down(lg)
+    margin: 0 0 0 auto
+
+.header__sidebar
+  position: fixed
+  top: 0
+  left: -100vw
+  // left: 0
+  width: 100vw
+  height: 100%
+  min-height: 100vh
+  +fdc
+  +jucs
+  +bg(white)
+  overflow: auto
+  transition: all 0.2s ease-in-out
+.header__sidebar_act
+  left: 0
+
+.top-location__text--sidebar
+  +font-family(roboto-medium,normal,15px,140%,dark-1)
+  color: #181818
+  margin: 0 0 0 20px
+  @include media-breakpoint-down(sm) 
+    font-size: 14px
+    margin: 0 0 0 20px
+
+.top-location__icon--sidebar
+  font-size: 22px
+  @include media-breakpoint-down(sm)
+
+
+.header__sidebar
+  +xl-none
+
+.header-main__burger
+  +xl-none
+  +lg-flex
+  +md-flex
+  +sm-flex
+  +xs-flex
+
+.header-main__line_sm
+  +none
+  +xs-flex
+  +sm-flex
+.header-main__line_md
+  +none
+  +md-flex
+  +lg-flex
+.header-main__bot_md
+  +none
+  +md-flex
+  +lg-flex
+.header-main__button
+  +sm-none
+  +xs-none
+.header-main__like
+  +xl-none
+
+
+
+@include media-breakpoint-down(lg)
+  .header-main
+    border-bottom: 1px solid $bej
+  .header-main__menu
+    display: none
+  .header-main__body
+    padding: 20px 0 
+  .top-location__icon--sidebar_red
+    color: #F05650!important
+  .top-location__icon--sidebar_dark
+    color: #181818
+  .top-location__icon--sidebar_green
+    color: $active
+  .header-main__section_top
+    +jucb
+    flex-direction: row
+
+@include media-breakpoint-down(sm)
+  .header
+    margin: 0 0 25px 0
+  .header-main__body
+    padding: 16px 0 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

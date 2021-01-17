@@ -1,20 +1,11 @@
 
-.sale__select--revieves
-  display: none 
-@media (max-width: 1360px)
-  .sale-scroll__item
-    min-height: 380px
+
   
   
 @include media-breakpoint-down(lg) 
-  .sale-scroll
-    +absolute( 100%, 380px,140px,0,null,0,0)
-    display: flex
-    overflow: scroll
-    justify-content: start
-    // flex-wrap: nowrap
-    margin: 20px 0  0px 31px
-  .sale-scroll__item
+  .sale--revieves
+    +bg(white)
+  .sale-scroll__item--revieves
     min-width: 307px
     min-height: 284px
     margin: 0 20px 0 0
@@ -22,17 +13,12 @@
     &:last-child
       margin: 0 0 0 0
   .sale__filter--revieves
-    margin: 24px 0 410px 0
+    margin: 24px 0 350px 0
 
 
 @media (max-width:  767px )
   
-  .sale-scroll
-    margin: 20px 0  0px 10px
-    height: 284px
-    &__item
-      min-width: 250px
-      min-height: 285px!important
+
   .card-revieves__text
     display: none
   .card-revieves-stars__star
@@ -47,9 +33,14 @@
     display:  flex 
     +font-family(roboto-medium,normal,14px,16px,$dark-1)
 
-  .sale__select--revieves
-    display:  flex
-    margin: 24px 0 297px
-    width: 100%
+
   .sale-filter.sale__filter--revieves
     display: none
+
+  .sale--revieves
+    +bg(white)
+  .sale-scroll__item--revieves
+    min-width: 250px
+    min-height: 285px
+  .sale__scroll--revieves  
+    min-height: 285px

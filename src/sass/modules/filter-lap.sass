@@ -1,8 +1,14 @@
-.filter-lap 
+//-------------.filter-lap--------------------------------
+.filter-lap
   +bg($fone)
-  padding: 31px 0 0 0
+  padding: 30px 0 0 0
   @include media-breakpoint-up(xl) 
     display: none
+  @include media-breakpoint-down(sm)
+    display: none
+//---------------------------------------------
+
+
 .filter-lap__title 
   +font-family(roboto-medium,500,32px,130%,$dark-1)
 .filter-lap__body
@@ -71,3 +77,8 @@
 .filter-lap-line__metro
   +absolute( auto, 18px, 50%,null, 20px,0,-50%)
   +font-family(roboto-medium,normal,15px,18px,$company)
+
+
+
+
+

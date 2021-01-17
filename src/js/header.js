@@ -5,36 +5,37 @@ import $ from "jquery";
 
 let wrapper = document.querySelector(".wrapper");
 let headerOverlay = document.querySelector(".header__menu_overlay");
-let burger = document.querySelector(".header-burger");
+let burger = document.querySelector(".header-main__burger");
 let body = document.body;
 let header = document.querySelector(".header__body");
-let menu = document.querySelector("#header__menu");
+let menu = document.querySelector(".header__sidebar");
 let service = document.querySelector(".header__service");
+
 wrapper.addEventListener("click", function (event) {
   
   
   if (event.target == burger) {
-    menu.classList.add("header__menu_act");
+    menu.classList.add("header__sidebar_act");
     // menu.appendChild(service);
     // service.classList.add("header-service_act");
     body.classList.add("lock");
 
-  } else {
-  if (
-    headerOverlay !== event.target &&
-    document.querySelector("input") !== event.target &&
-    document.querySelector("i") !== event.target &&
-    document.querySelector(".bg") !== event.target
-  ) {
-    menu.classList.remove("header__menu_act");
+  // } else {
+  // if (
+  //   headerOverlay !== event.target &&
+  //   document.querySelector("input") !== event.target &&
+  //   document.querySelector("i") !== event.target &&
+  //   document.querySelector(".bg") !== event.target
+  // ) {
+    // menu.classList.remove("header__menu_act");
     // service.classList.remove("header-service_act");
     // header.appendChild(service);
+    // body.classList.remove("lock");
+  // }
+  }
+  if (event.target == document.querySelector(".header-main__close")) {
+    menu.classList.remove("header__sidebar_act");
     body.classList.remove("lock");
-  }
-  }
-  if (event.target == document.querySelector(".header-close")) {
-     menu.classList.remove("header__menu_act");
-     body.classList.remove("lock");
   }
   
 });

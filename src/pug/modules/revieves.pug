@@ -1,4 +1,4 @@
-section#revieves.sale
+section#revieves.sale.sale--revieves
     .container.container--sale
       .sale__body
         h2.title Отзывы о компаниях
@@ -19,7 +19,7 @@ section#revieves.sale
             option(value='Комната') Комната
             option(value='Загородная') Загородная
             option(value='Коммерческая') Коммерческая
-      ul.sale__scroll.sale-scroll
+      ul.sale__scroll.sale__scroll--revieves.sale-scroll
           - 
             slides = [
                 {
@@ -60,7 +60,7 @@ section#revieves.sale
                 }
               ]
           each item in slides
-            li.sale-scroll__item.card-revieves
+            li.sale-scroll__item.sale-scroll__item--revieves.card-revieves
               .card-revieves__text=item.text
               .card-revieves__stars.card-revieves-stars
                   .card-revieves-stars__star.icon-star-full

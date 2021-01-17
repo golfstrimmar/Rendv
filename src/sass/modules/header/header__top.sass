@@ -1,5 +1,6 @@
 .header__top 
-  
+  @include media-breakpoint-down(lg)
+    display: none
 
 .header-top
   border-bottom: 1px solid $bej 
@@ -20,6 +21,7 @@
   +jucb
   &__icon
     font-size: 18px
+    color: $grey
   &__text 
     +font-family(  roboto-medium,normal,14px,1.4,$grey)
     margin: 0 0 0 17px

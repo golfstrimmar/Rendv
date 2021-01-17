@@ -1,0 +1,37 @@
+.garden-sm
+  display: none
+  margin: 30px 0 
+.garden-sm__body
+  border-radius: 5px
+  padding: 20px	
+  +background-img("/assets/img/look-1.webp")
+  position: relative
+
+.garden-sm-item__mask
+  +absolute( 100%, 100%, 0,  0,  null,0,0)
+  +bg(rgba(0,0,0,.5))
+  border-radius: 5px
+.garden-sm-item__title
+  +font-family(roboto-medium,500,18px,21px,white)
+  z-index: 2
+  position: relative
+.garden-sm-item__text
+  +font-family(roboto-medium,normal,14px,16px,white)
+  +alic
+  position: relative
+  z-index: 2
+  padding: 5px 0 0 0	
+  .icon-rouble
+    font-size: 14px
+    color: white
+.garden-sm-item__button
+  position: relative
+  z-index: 2
+  +font-family(roboto-medium,normal,14px,16px,white)
+  +alic
+  padding: 21px 0 0 0
+          
+
+@include media-breakpoint-down(sm) 
+  .garden-sm
+    display:  flex

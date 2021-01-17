@@ -27,15 +27,18 @@
     flex: 0 1 635px
     min-height: 222px
     margin: 0 20px 0 0
-  .sale__button-opinion
+  .sale__button--opinion
     display: block
     width: 243px
     height: 50px
     margin: 20px 0 40px 0
 @include media-breakpoint-down(sm) 
+  .sale--opinion 
+    margin: 8px 0 0 0
   .sale__card_opinion
     min-width: 100%!important
     padding: 15px	
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
   .opinion-card__title
     +font-family(roboto-medium,500,12px,100%,$dark-1)
   .opinion-card__text
@@ -64,11 +67,16 @@
     padding: 0 0 0 70px
   .opinion-card__title
     padding: 0 0 10px 70px
-  .sale__button-opinion
+  .sale__button--opinion
     width: 100%!important
+    height: 40px
+    margin: 20px 0 0 0
   .sale__cards_opinion
     flex-wrap: wrap!important
-
- 
+    margin: 20px 0 0
+  .sale--opinion
+    +bg(white!important)
+  .sale__cards_opinion
+    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.08)
 
     

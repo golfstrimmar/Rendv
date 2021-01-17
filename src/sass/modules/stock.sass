@@ -16,7 +16,7 @@
   margin: 0 0 0 20px
   min-height: 460px
 .news-right__title_stock
-  +font-family(  roboto-medium,500,31px,35px,$white)
+  +font-family(  roboto-medium,500,30px,35px,$white)
 .news-right__text_stock
   color: $white
 .news__button--stock_high,.news-right_stock_lg,.task-card__property-text--stock
@@ -37,11 +37,10 @@
     display: none 
   .news-right_stock
     min-height: 404px
+    flex: 0 1 31.5%
   .news__left_stock
     position: relative
-
-  .news-right_stock
-    flex: 0 1 31.5%
+ 
   .task-card__property--active
     display: none
 
@@ -102,10 +101,11 @@
 @media (max-width: 767px)
   .news--stock
     +bg(white) 
+    margin: 30px 0 0 0
   .title--stock
     +font-family(  roboto-medium,500,15px,18px,$dark-1)
   .task-card__title--stock
-    +font-family(  roboto-medium,500,15px,150%,$dark-1)
+    +font-family(  roboto-medium,500,18px,150%,$dark-1)
   .task-card__text--stock
     +font-family(  roboto-medium,500,15px,150%,$dark-1)
   .news-right_stock
@@ -129,4 +129,7 @@
     width: 100%
     height: 40px
   .news-left__card_stock
-    box-shadow: 0px 0px 31px rgba(0, 0, 0, 0.05)
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
+  .news__button--stock_high
+    width: 100%!important
+    height: 40px

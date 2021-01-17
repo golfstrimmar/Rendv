@@ -2,10 +2,13 @@
 
 .container
   padding: 0 0 0 0
-  @media (min-width: 1361px)
+  @media (min-width: 1360px)
     max-width: 1300px!important
   @media (max-width: 1360px)
-    padding: 0 6px
+    min-width: 100%
+    padding: 0 30px
+  @include media-breakpoint-down(lg)
+    padding: 0 30px
   @include media-breakpoint-down(sm) 
     padding: 0 10px	
 .container-fluid 
@@ -17,14 +20,14 @@
   margin: 0 auto
   @media (max-width: 1360px)
     width: 100%
-    padding: 0 31px	
+    padding: 0 30px	
 
 @include media-breakpoint-down(lg)
   .container--sale
     min-width: 100%
-    padding: 0 31px	
+    padding: 0 30px	
 
 @include media-breakpoint-down(sm) 
   .container--sale
     min-width: 100%
-    padding: 0 10px
+    padding: 0 10px!important

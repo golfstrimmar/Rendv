@@ -1,5 +1,5 @@
 section#sale.sale
-    .container
+    .container.container--sale
       .sale__body
         h2.title Продажа
         ul.sale__filter.sale-filter
@@ -17,7 +17,13 @@ section#sale.sale
             each item in items
               li.sale-filter__item
                 .sale-filter__title=item.title
-      ul.sale__scroll.sale-scroll
+        .sale__select
+          select.select
+            option( value='Квартиры' disabled ) Квартиры
+            option(value='Комнаты') Комнаты
+            option(value='Загородная') Загородная
+            option(value='Коммерческая') Коммерческая
+        ul.sale__scroll.sale-scroll
           - 
             slides = [
                 { text:"Город-парк Ясный Берег", img:"assets/img/sale/img-4.webp"},

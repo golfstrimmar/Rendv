@@ -1,9 +1,9 @@
-section#advert.sale
-    .container
-      .sale__body
-        h2.title Реклама от застройщиков
+section#advert.sale.sale--advert
+    .container.container--sale
+      .sale__body.sale__body--advert
+        h2.title.title--advert Реклама от застройщиков
       
-      ul.sale__scroll.sale-scroll
+      ul.sale__scroll.sale__scroll--advert.sale-scroll
           - 
             slides = [
                 { text:"ЖК «Екатериновский»", img:"assets/img/sale/img-4.webp"},
@@ -16,13 +16,16 @@ section#advert.sale
                 { text:"Алхимово", img:"assets/img/sale/img-2.webp"}
             ]
           each item in slides
-            li.sale-scroll__item.card-object.card-object_advert
-                .card-object__badge Реклама
-                img.card-object__img.card-object__img_advert(src=item.img,alt="img")
-                .card-object__title.card-object__title_advert=item.text
-                .card-object__text.card-object__text_advert Квартиры от 2 млн.
-                  span.icon-rouble
-                  span .
+            li.sale-scroll__item.sale-scroll__item--advert.card-object.card-object--advert
+              .card-object__badge Реклама
+              img.card-object__img.card-object__img--advert(src=item.img,alt="img")
+              .card-object__title.card-object__title--advert=item.text
+              .card-object__text.card-object__text--advert Квартиры от 2 млн.
+                span.icon-rouble
+                span .
+     
+     
+     
       .sale__slider.slider
         .slider__arrows
           i.slider__arrow.slider__arrow_prev.icon-chevron-left.slider__arrow_prev--advert
@@ -40,7 +43,7 @@ section#advert.sale
                 { text:"Алхимово", img:"assets/img/sale/img-2.webp"}
             ]
           each item in slides
-            li.slider__item.card-object.card-object_advert
+            li.slider__item.card-object
                 .card-object__badge Реклама
                 img.card-object__img.card-object__img_advert(src=item.img,alt="img")
                 .card-object__title.card-object__title_advert=item.text
