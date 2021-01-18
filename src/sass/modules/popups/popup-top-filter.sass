@@ -11,9 +11,10 @@
   overflow: auto
   top: 60px
   // left: 0
-  left: 100vh
+  left: -100vh
   +bg(white)
   z-index: 10
+  transition: all 0.3s ease-in-out
   // -------------
   display: none
   // ----------------
@@ -119,3 +120,18 @@
 .filter-lap__link--modal
   @include media-breakpoint-down(sm)
     margin: 22px 0 0 0
+
+//-------------.filter-lap__close--------------------------------
+.filter-lap__close
+  // +alic
+  // +jucs
+  // +jucb
+  width:200px
+  height:40px
+  font-weight: 400
+  font-size: 14px
+  color:$grey
+  +bg($fone)   
+  // flex: 0 1 100%
+  margin: 40px auto
+  // padding: 0 0 0 0
