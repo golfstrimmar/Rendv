@@ -1,0 +1,485 @@
+//-------------.modal-enter--main--------------------------------
+.modal-enter--main
+  display: none
+
+  @include media-breakpoint-down(lg)
+    box-shadow: none
+    border: none
+    border-radius: 0px
+    width: 100%
+    // padding: 20px 151px
+    display:  flex!important
+    +bg($fone)
+    +fdc
+  @include media-breakpoint-down(md)
+    padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    +bg(white)
+    +fdc
+    padding: 0 0 0 0
+
+//-------------.modal-enter__body--main--------------------------------
+.modal-enter__body--main
+  @include media-breakpoint-down(lg)
+    +bg($fone)
+    padding: 20px 151px 125px
+  @include media-breakpoint-down(sm)
+    +bg(white)
+    padding: 0 15px
+    margin:  0 0 25px
+
+//---------------------------------------------
+//-------------.modal-enter__or--main--------------------------------
+.modal-enter__or--main
+  position: relative
+  &:after
+    content: ""
+    background-color: $bej
+    position: absolute
+    width: 100%
+    height: 1px
+    top: 50%
+    left: 0%
+    z-index: 2
+    transform: translate(0,-50%)
+    
+  @include media-breakpoint-down(lg)
+    span
+      position: relative
+      z-index: 20
+      padding: 0 20px
+      +bg($fone)
+  @include media-breakpoint-down(sm)
+    margin: 14px 0 0 0
+    span
+      +bg(white)
+//---------------------------------------------
+
+
+//-------------.modal-enter__social--main--------------------------------
+.modal-enter__social--main
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    margin: 13px 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
+//-------------.modal-enter-social__item--main--------------------------------
+.modal-enter-social__item--main
+  @include media-breakpoint-down(lg)
+    width: 68px
+    height: 50px
+  @include media-breakpoint-down(sm)
+    width:40px!important
+    height:40px!important
+    margin: 0 0 0 0
+    i
+      font-size: 18px
+
+//---------------------------------------------
+//-------------.modal-enter-item__forget--main--------------------------------
+.modal-enter-item__forget--main
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    font-size: 14px
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
+//-------------.modal-enter-item__condition--main--------------------------------
+.modal-enter-item__conditions--main
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    font-size: 14px
+ 
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+  span 
+    @include media-breakpoint-down(sm)
+      font-size: 14px
+//---------------------------------------------
+//-------------.modal-enter__buttons--main--------------------------------
+.modal-enter__buttons--main
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    margin: 7px 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
+//-------------.modal-enter__button--continue_main--------------------------------
+.modal-enter__button--main
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    flex: 1 1 40%
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    flex: 0 1 100%
+    margin: 0 0 13px 0
+    // padding: 0 0 0 0
+    height:40px
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
+//-------------.modal-enter__title--main--------------------------------
+.modal-enter__title--main
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    margin: 5px 0 0 0
+    padding: 0 0 10px 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    margin: 0 0 0 0
+    font-size: 20px
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+
+//-------------.modal-enter__input--main--------------------------------
+.modal-enter__input--main
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    margin: 5px 0 0 0
+    // padding: 0 0 0 0
+
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
+
+//-------------.modal-enter-input__label--main--------------------------------
+.modal-enter-input__label--main
+ 
+  @include media-breakpoint-down(lg)
+    +font-family(roboto-medium,normal,15px,18px,dark-1)
+  @include media-breakpoint-down(sm)
+
+    font-size: 14px
+
+//---------------------------------------------
+//-------------.modal-enter-input__input--main --------------------------------
+.modal-enter-input__input--main 
+  
+  
+  &::-webkit-input-placeholder
+    @include media-breakpoint-down(lg)
+      +font-family(roboto-medium,normal,15px,18px,$grey)
+
+  @include media-breakpoint-down(sm)
+    height:40px
+    font-size: 14px
+    margin: 5px 0 15px
+
+//---------------------------------------------
+//-------------.modal-enter-item__condition--main--------------------------------
+.modal-enter-item__condition--main
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    font-size: 14px
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
+//-------------.modal-enter-footer__copy--main--------------------------------
+.modal-enter-footer__copy--main
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    color: $grey!important
+    font-weight: 400
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
+//-------------.modal-enter__footer--------------------------------
+//---------------------------------------------
+//---------------------------------------------
+//-------------.modal-enter-footer--------------------------------
+.modal-enter-footer
+  @include media-breakpoint-down(lg)
+    +alic
+    +jucc
+    +fdc
+    background: #F4F4F4
+    margin: 0 0 0 
+    padding: 60px 0 60px
+  @include media-breakpoint-down(sm)
+    +alic
+    +jucc
+    +fdc
+    padding: 32px 0 30px
+
+//---------------------------------------------
+//-------------.modal-enter-footer__social--------------------------------
+.modal-enter-footer__social
+  +alic
+  +jucb
+  @include media-breakpoint-down(lg)
+    margin: 30px 0 0 0
+  @include media-breakpoint-down(sm)
+    margin: 26px 0 0 0
+//---------------------------------------------
+//-------------.modal-enter-footer__item--------------------------------
+.modal-enter-footer__item
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(lg)
+    margin: 0 26px 0 0
+    width: 24px
+    height: 24px
+    &:last-child
+      margin: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    margin: 0 26px 0 0
+    &:last-child
+      margin: 0 0 0 0
+    // padding: 0 0 0 0
+    width: 20px
+    height: 20px
+//---------------------------------------------
+//-------------.modal-enter-footer__link--------------------------------
+.modal-enter-footer__link
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    margin: 28px 0 0 0
+    color: $company
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    margin: 28px 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.modal-enter-footer__link-social--------------------------------
+.modal-enter-footer__link-social
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // width: 30px
+  // height: 30px
+  +pro
+  display:  flex
+  i
+    font-size: 22px
+    +pro
+  img
+    +pro
+  @include media-breakpoint-down(lg)
+    color: $grey
+//---------------------------------------------
+//-------------.modal-enter-footer__copy--------------------------------
+.modal-enter-footer__copy
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    font-size: 15px
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    color: $grey
+
+//---------------------------------------------
+//-------------.modal-enter-footer__link--------------------------------
+.modal-enter-footer__link
+  @include media-breakpoint-down(lg)
+    font-weight: 400
+
+  @include media-breakpoint-down(sm)
+ 

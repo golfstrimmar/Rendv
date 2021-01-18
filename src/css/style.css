@@ -32,41 +32,8 @@
 
 
 
-.icon-google:before {
-  content: "\ea88";
-}
-.icon-twitter:before {
-  content: "\ea96";
-}
-.icon-location2:before {
-  content: "\e948";
-}
-.icon-phone:before {
-  content: "\e942";
-}
-.icon-star-full:before {
-  content: "\e9d9";
-}
-.icon-heart:before {
-  content: "\e9da";
-}
-.icon-email:before {
-  content: "\e900";
-}
-.icon-facebook:before {
-  content: "\f09a";
-}
-.icon-facebook-f:before {
-  content: "\f09a";
-}
-.icon-odnoklassniki:before {
-  content: "\f263";
-}
-.icon-vk:before {
-  content: "\f189";
-}
-.icon-rouble:before {
-  content: "\e90f";
+.icon-instagram:before {
+  content: "\e911";
 }
 .icon-plus-circle:before {
   content: "\e901";
@@ -113,6 +80,43 @@
 .icon-home:before {
   content: "\e910";
 }
+.icon-google:before {
+  content: "\ea88";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-star-full:before {
+  content: "\e9d9";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-email:before {
+  content: "\e900";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-odnoklassniki:before {
+  content: "\f263";
+}
+.icon-vk:before {
+  content: "\f189";
+}
+.icon-rouble:before {
+  content: "\e90f";
+}
+
 
 
 

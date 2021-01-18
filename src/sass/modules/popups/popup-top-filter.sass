@@ -10,7 +10,8 @@
   min-height: 100vh
   overflow: auto
   top: 60px
-  left: 0
+  // left: 0
+  left: 100vh
   +bg(white)
   z-index: 10
   // -------------
@@ -19,21 +20,23 @@
   @include media-breakpoint-up(sm)
     display: none
 //---------------------------------------------
+.popup-top-filter_active
+  left: 0!important
 //-------------.filter-lap--modal--------------------------------
 .filter-lap--modal
   +bg(white)
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     display:  flex
     padding: 24px 0 0
 //---------------------------------------------
 //-------------.filter-lap__title--modal--------------------------------
 .filter-lap__title--modal
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     font-size: 20px
 //---------------------------------------------
 //-------------.filter-lap__filter--modal--------------------------------
 .filter-lap__filter--modal
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     margin: 28px 0 0 0
   .new-select
       height: 38px
@@ -47,7 +50,7 @@
 
 //-------------.filter-lap-line__select--modal--------------------------------
 .filter-lap-line__select--modal
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     .new-select
       height: 38px
       font-size: 14px
@@ -59,7 +62,7 @@
 //---------------------------------------------
 //-------------.filter-lap__line--modal--------------------------------
 .filter-lap__line--modal
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     margin: 18px 0 0
     flex-direction: column
 //---------------------------------------------
@@ -91,28 +94,28 @@
 
 //-------------.filter-lap-line__metro--modal--------------------------------
 .filter-lap-line__metro--modal
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     font-size: 14px
 //---------------------------------------------
 
 //--------------.filter-lap__link--modal-------------------------------
 .filter-lap__link--modal,.filter-lap__button--modal
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     margin: 0 0 0 0
     flex: 0 1 100%
     +jucc		
 //---------------------------------------------
 //-------------.filter-lap-line__column--modal--------------------------------
 .filter-lap-line__column--modal
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     margin: 0 0 16px 0
 //---------------------------------------------
 //-------------.filter-lap__button--modal--------------------------------
 .filter-lap__button--modal
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     height: 40px
 //---------------------------------------------
 //-------------.filter-lap__link--modal
 .filter-lap__link--modal
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     margin: 22px 0 0 0

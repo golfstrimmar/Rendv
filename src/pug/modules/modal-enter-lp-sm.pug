@@ -1,0 +1,52 @@
+section#modal-enter.modal-enter.modal-enter--main
+      form.modal-enter__body.modal-enter__body--main
+        h2.modal-enter__title.modal-enter__title--main Вход в личный кабинет
+        
+        .modal-enter__input.modal-enter__input--main.modal-enter-input
+            label(for="login").modal-enter-input__label.modal-enter-input__label--main Логин
+            input#login(type="text" placeholder="Введите логин" name="login").modal-enter-input__input.modal-enter-input__input--main 
+        .modal-enter__input.modal-enter__input--main.modal-enter-input
+            label(for="login").modal-enter-input__label.modal-enter-input__label--main Пароль
+            input#password(type="text" placeholder="Введите пароль" name="password").modal-enter-input__input.modal-enter-input__input--main 
+        .modal-enter__buttons.modal-enter__buttons--main
+          button.btn.btn--success.modal-enter__button.modal-enter__button--main.modal-enter__button--continue(type='button') Продолжить
+          button.btn.btn--success.modal-enter__button.modal-enter__button--main.modal-enter__button--registration(type='button') Регистрация
+        .modal-enter__or.modal-enter__or--main
+          span или
+        ul.modal-enter__social.modal-enter__social--main.modal-enter-social
+          - 
+            items = [
+                { class: "icon-vk ", },
+                { class: "icon-odnoklassniki ", },
+                { class: "icon-twitter ", },
+                { class: "icon-facebook ", },
+                { class: "icon-email ", },
+                { class: "icon-google ", },
+              ]
+
+          each item in items
+            li.modal-enter-social__item.modal-enter-social__item--main
+              a.modal-enter-social__link--main(href="#!")
+                i(class=item.class)
+          
+        .modal-enter-item__forget.modal-enter-item__forget--main Забыли пароль?
+        .modal-enter-item__conditions.modal-enter-item__conditions--main 
+          span При входе и регистрации, вы принимаете условия 
+          a.modal-enter-item__condition.modal-enter-item__condition--main.modal-enter-item__condition--agreement(href="#!")  Пользовательского соглашения
+          span &nbsp;и&nbsp; 
+          a.modal-enter-item__condition.modal-enter-item__condition--main.modal-enter-item__condition--politics(href="#!")  Политики конфиденциальности
+      
+      //- здесь завелся футер и везде остался одинаковым. отступ регулируется маржином формы
+      .modal-enter__footer.modal-enter-footer
+            .modal-enter-footer__copy.modal-enter-footer__copy--main ©2020 RENDV.RU
+            a(href="#!").modal-enter-footer__link Полная версия
+            ul.modal-enter-footer__social
+                li.modal-enter-footer__item.modal-enter-footer__facebook--main
+                  a(href="#!").modal-enter-footer__link-social
+                    img(src="assets/img/modal-enter-main/footer-facebook.svg",alt="img")
+                li.modal-enter-footer__item
+                  a(href="#!").modal-enter-footer__link-social
+                    img(src="assets/img/modal-enter-main/insta.svg",alt="img")
+                li.modal-enter-footer__item
+                  a(href="#!").modal-enter-footer__link-social
+                    img(src="assets/img/modal-enter-main/vk-footer.svg",alt="img")
