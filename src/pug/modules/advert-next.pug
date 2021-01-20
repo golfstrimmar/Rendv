@@ -6,7 +6,7 @@ section#advert.sale.sale--advert-next
         .slider__arrows
           i.slider__arrow.slider__arrow_prev.icon-chevron-left.slider__arrow_prev--advert-next
           i.slider__arrow.slider__arrow_next.icon-chevron-right.slider__arrow_next--advert-next
-        ul.slider__body.slider-advert-next-js
+        ul.slider__body.slider-advert-next-js.sale-scroll.sale__scroll
           - 
             slides = [
                 { text:"ЖК «Екатериновский»", img:"assets/img/sale/img-4.webp"},
@@ -19,7 +19,8 @@ section#advert.sale.sale--advert-next
                 { text:"Алхимово", img:"assets/img/sale/img-2.webp"}
             ]
           each item in slides
-            li.slider__item.card-object.card-object_advert
+            li.slider__item.card-object.card-object_advert.sale-scroll__item
+                a.cover-link(href="#!")
                 .card-object__badge Реклама
                 img.card-object__img.card-object__img_advert(src=item.img,alt="img")
                 .card-object__title.card-object__title_advert=item.text

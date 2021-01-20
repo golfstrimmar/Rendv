@@ -1,7 +1,8 @@
 
 .sale
   +bg($fone)
-  padding: 54px 0 0 0
+  padding: 54px 0 0 0  
+  position: relative
   
 .sale__body
   +jucs
@@ -22,48 +23,58 @@
   flex: 0 1 49.2%
 
 
-.sale__scroll,.sale-filter__item_lg
+.sale__select
   display: none
 
-.sale-scroll__item
+// один слайд .card-object
+.slider__item
+  min-width: 307px
   min-height: 284px
+  padding: 0 0 20px 0	
+  margin: 0 10px
+.sale-filter__item_lg
+  display: none
 
 
-.sale__select
-    display: none
+
+@media (min-width:  1200px) and (max-width:  1350px )
+  .slider__item
+    min-width: 280px
+
 
 @include media-breakpoint-down(lg)
+
+  .sale
+    margin: 0 0 346px 0
+  .sale__slider
+    margin: 0 0 0 0
   .sale
     padding: 33px 0 0
     position: relative
-  .sale__slider
-    display: none
-
   .sale__filter
     width: 100%
-    margin: 20px 0 345px
+    margin: 20px 0 0px
   .sale-filter__item
     flex-grow: 1
     padding: 0 0 0 0
-    
-  .sale-filter__item_lg
-    display: flex
-  .sale-filter__item_xl
-    display: none
-
+  .sale__scroll
+    +absolute( 100vw,345px,0,-30px,null,0,0)
   .sale-scroll
-    +absolute( 100%,345px,115px,0,null,0,0)
     display: flex
     overflow: scroll
     justify-content: start
     flex-wrap: nowrap 
-    margin: 20px 0  0px 0px
-    // box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1 )
     align-items: center
+    +bg($fone)
+
   .sale-scroll__item
-    min-width: 307px
+    min-width: 308px
     min-height: 284px
     margin: 0 20px 0 0
+  .sale-filter__item_lg
+    display: flex
+  .sale-filter__item_xl
+    display: none
 
 @include media-breakpoint-down(sm)
   .sale
@@ -74,18 +85,24 @@
 
   .sale__select
     display:  flex
-    margin: 15px 0 310px
+    margin: 15px 0 0
     	
     width: 100%
 
   .sale
     .new-select
       height: 40px
-  .sale-scroll
-    margin: 0 0  0px 0px
+      &::after
+        right: 27px
+  .sale__scroll
+    // +absolute( 100vw,345px,0,-30px,null,0,0)
     height: 310px
-    top: 80px
+    top: 0px
+    left: -10px
+    margin: 0 0  0px 0px
+  .sale-scroll
     align-items: center
+    +bg(white)
     &__item
       min-width: 220px
       min-height: 255px

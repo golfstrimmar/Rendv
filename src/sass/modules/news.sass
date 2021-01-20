@@ -13,18 +13,19 @@
 .news-left 
   +jucb
 .news-left__card 
-  flex: 0 1 48.8%
+  flex: 0 1 49%
   margin: 0 0 20px 0	
 
 
 
 .news__right 
   flex: 0 1 24%
-  margin: 0 0 20px 20px
+  margin: 0 0 20px 17px
 
 .news-right 
   @extend %card
   border-radius: 10px
+  position: relative
   &__img 
     width: 100%
   &__title 
@@ -51,7 +52,7 @@
 
 @include media-breakpoint-down(lg) 
   .news
-    padding: 55px 0 0 0
+    padding: 20px 0 0
   .news__body
     margin: 15px 0 0 0
   .news-left__card
@@ -82,6 +83,9 @@
     flex: 0 1 100%!important
     position: relative
     min-height: 292px!important
+    margin: 0 0 10px 0
+    &:last-child
+      margin: 0 0 0 0
   .news-left-card__text
     +font-family(roboto-medium,normal,15px,100%,white)
     padding: 110px 0 0 15px!important
@@ -95,8 +99,8 @@
     display:  block
     opacity: .5
     +font-family(roboto-medium,normal,11px,150%,white)
-    +absolute( 40px, 15px,null,  null,  10px,0,0)
-    bottom: 10px
+    +absolute( 40px, 15px,null,  null,  7px,0,0)
+    bottom: 17px
     +alic
     i
       margin: 0 10px 0 0

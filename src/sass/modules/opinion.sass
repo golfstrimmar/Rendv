@@ -1,14 +1,18 @@
-
+.sale--opinion 
+  padding: 50px 0 0
 
 .sale__card_opinion
   min-height: 222px
 
 
-
-.sale__button-opinion
+.sale__button--opinion
   display: none
 
+.sale__filter--opinion
+  margin: 28px 0 0
 
+.sale-filter__item--opinion
+  width: 183px
 
 @include media-breakpoint-only(lg)
   .opinion-card__right
@@ -16,7 +20,7 @@
   // .sale__filter_opinion
   //   display: none
 @include media-breakpoint-down(lg)    
-  .sale__filter_opinion
+  .sale__filter--opinion
     display: none
   .sale__cards_opinion
     overflow: scroll
@@ -32,9 +36,10 @@
     width: 243px
     height: 50px
     margin: 20px 0 40px 0
+  .sale--opinion
+    margin: 0 0 0 0
 @include media-breakpoint-down(sm) 
-  .sale--opinion 
-    margin: 8px 0 0 0
+ 
   .sale__card_opinion
     min-width: 100%!important
     padding: 15px	
@@ -73,9 +78,10 @@
     margin: 20px 0 0 0
   .sale__cards_opinion
     flex-wrap: wrap!important
-    margin: 20px 0 0
+    margin: 15px 0 0
   .sale--opinion
     +bg(white!important)
+    margin: 16px 0 0
   .sale__cards_opinion
     box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.08)
 

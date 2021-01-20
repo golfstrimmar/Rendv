@@ -1,7 +1,17 @@
-.news-left__card_stock
+.news-left__card--stock
   flex: 0 1 100%
   &:last-child
     margin: 0 0 0 0
+
+.cover-link--stock
+  
+
+//-------------.cover-link--stock--------------------------------
+.cover-link--stock
+  padding: 20px 34px 0 18px
+  @include media-breakpoint-down(sm)
+    padding: 20px 25px 15px 18px
+//---------------------------------------------
 
 
 
@@ -19,21 +29,51 @@
   +font-family(  roboto-medium,500,30px,35px,$white)
 .news-right__text_stock
   color: $white
-.news__button--stock_high,.news-right_stock_lg,.task-card__property-text--stock
+.news__button--stock_high,.news-right_stock_lg,.task-card__property-text--stock-green
   display: none
 
 
+//-------------.task-card__properties--stock--------------------------------
+.task-card__properties--stock
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
 
 
 
 
 
 @include media-breakpoint-down(lg)
-  .task-card__property-text--stock
-    display: flex
-  .news-left__card_stock
+  .news--stock
+    padding: 40px 0 
+  .cover-link--stock
+    padding: 20px 25px 0 18px
+  .news-left__card--stock
     margin: 0 0 70px
-  .news-left__card_stock:not(:first-child)
+  .news-left__card--stock:not(:first-child)
     display: none 
   .news-right_stock
     min-height: 404px
@@ -65,11 +105,13 @@
     padding: 0 0 0 0	
     color: $active!important
     font-weight: normal
+  .task-card__property-text--stock-green
+    display:  flex
   .news-right_stock
     background-image: none
     display: none
   .news-right_stock_lg
-    display: block
+    display: block  
     width: 30%!important
     background: #FFFFFF
     border: 1px solid #ECECEC
@@ -125,11 +167,14 @@
     font-weight: normal
   .task-card__property-text--stock
     display: none
-  .news__button--stock_low
-    width: 100%
-    height: 40px
-  .news-left__card_stock
+
+  .news-left__card--stock
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
+    padding: 0 0 0 0	
   .news__button--stock_high
+    display: none
+  .news__button--stock_low
+    display: flex
     width: 100%!important
     height: 40px
+    margin: 10px 0 0 0!important

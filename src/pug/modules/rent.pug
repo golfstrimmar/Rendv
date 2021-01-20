@@ -23,38 +23,39 @@ section#rent.sale
             option(value='Комнаты') Комнаты
             option(value='Загородная') Загородная
             option(value='Коммерческая') Коммерческая
-        ul.sale__scroll.sale-scroll
-          - 
-            slides = [
-                { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},
-                { text:"Комната, 70м²", img:"assets/img/rent/img-5.webp", price: "14 270"},
-                { text:"Комната, 19м²", img:"assets/img/rent/img-6.webp", price: "7000"},
-                { text:"Комната, 70м²", img:"assets/img/rent/img-5.webp", price: "14 270"},
-                { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},
-                { text:"Комната, 70м²", img:"assets/img/rent/img-6.webp", price: "14 270"},
-            ]
+        //- ul.sale__scroll.sale-scroll
+        //-   - 
+        //-     slides = [
+        //-         { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},
+        //-         { text:"Комната, 70м²", img:"assets/img/rent/img-5.webp", price: "14 270"},
+        //-         { text:"Комната, 19м²", img:"assets/img/rent/img-6.webp", price: "7000"},
+        //-         { text:"Комната, 70м²", img:"assets/img/rent/img-5.webp", price: "14 270"},
+        //-         { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},
+        //-         { text:"Комната, 70м²", img:"assets/img/rent/img-6.webp", price: "14 270"},
+        //-     ]
 
-          each item in slides
-            li.sale-scroll__item.card-object
-                img.card-object__img(src=item.img,alt="img")
-                .card-object__title=item.text
-                .card-object__text 
-                  span от 2 350 000 
-                  span.icon-rouble
-                .card-object__properties
-                  .card-object__property.card-object__property--metro
-                    img(src="assets/img/sale/metro.svg",alt="img")
-                    .card-object__property-text Ленинский проспект
-                  .card-object__property.card-object__property--bus
-                    img(src="assets/img/sale/bus.svg",alt="img")
-                    .card-object__property-text.card-object__property-text_grey 5 мин.
+        //-   each item in slides
+        //-     li.sale-scroll__item.card-object
+        //-         a.cover-link(href="#!")
+        //-         img.card-object__img(src=item.img,alt="img")
+        //-         .card-object__title=item.text
+        //-         .card-object__text 
+        //-           span от 2 350 000 
+        //-           span.icon-rouble
+        //-         .card-object__properties
+        //-           .card-object__property.card-object__property--metro
+        //-             img(src="assets/img/sale/metro.svg",alt="img")
+        //-             .card-object__property-text Ленинский проспект
+        //-           .card-object__property.card-object__property--bus
+        //-             img(src="assets/img/sale/bus.svg",alt="img")
+        //-             .card-object__property-text.card-object__property-text_grey 5 мин.
       
       
       .sale__slider.slider
         .slider__arrows
           i.slider__arrow.slider__arrow_prev.icon-chevron-left.slider__arrow_prev--rent
           i.slider__arrow.slider__arrow_next.icon-chevron-right.slider__arrow_next--rent
-        ul.slider__body.slider-rent-js
+        ul.slider__body.slider-rent-js.sale-scroll.sale__scroll
           - 
             slides = [
                 { text:"Комната, 19м²", img:"assets/img/rent/img-1.webp", price: "7000"},
@@ -65,7 +66,8 @@ section#rent.sale
                 { text:"Комната, 70м²", img:"assets/img/rent/img-6.webp", price: "14 270"},
             ]
           each item in slides
-              li.slider__item.card-object
+              li.slider__item.card-object.sale-scroll__item
+                a.cover-link(href="#!")
                 img.card-object__img(src=item.img,alt="img")
                 .card-object__title=item.text
                 .card-object__text 

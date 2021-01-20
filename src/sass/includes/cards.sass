@@ -1,6 +1,8 @@
 .task-card
   @extend %card
   padding: 20px	
+  position: relative
+
   &__title
     padding: 0 0 8px
     +font-family(  roboto-medium,500,20px,100%,$dark-1) 
@@ -31,8 +33,6 @@
     color: #7AB764 
     padding: 0 0 0 5px
 
-
-
 .card--info
   min-height: 284px
   &__img
@@ -58,14 +58,13 @@
       margin: 0 10px 0 0 
     &--bus
       margin: 0 10px 0 0
-
   
 .card-object
   @extend %card
-  min-height: 284px
   +fdc
-  
   position: relative
+
+
   &:hover
     cursor: pointer
   &__img
@@ -109,9 +108,8 @@
     +center
     +font-family(  roboto-medium,normal,12px,140%,$dark-1)
 
-@media (min-width:  1201px) and (max-width:  1290px )
+@media (min-width:  1200px) and (max-width:  1290px )
   .card-object
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5)
     &__property
       flex: 0 1 100%
       margin: 0 0 10px 0
@@ -120,8 +118,6 @@
 
 @include media-breakpoint-down(lg)
   .card-object
-    min-width: 307px
-    min-height: 284px
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
 @include media-breakpoint-down(sm)
   .card-object
@@ -148,13 +144,11 @@
     span
       font-size: 14px
 
-
-
 .opinion-card
   @extend %card
-  
   padding: 20px	
   +alic 
+  position: relative
   &__img 
     flex: 0 1 28%
   &__right
@@ -183,32 +177,29 @@
   &__note-text
     +font-family(  roboto-medium,normal,15px,150%,$grey)
 
-
 .news-left-card 
   min-height: 250px
   @extend %card
   background-size: cover
+  position: relative
   &__text
     position: relative 
-    z-index: 2
     padding: 104px 0 0 20px
     +font-family(  roboto-medium,normal,18px,100%,$white)
   &__title
     position: relative
-    z-index: 2 
-    padding: 14px 20px 8px 20px
+    padding: 11px 39px 8px  20px
     +font-family(  roboto-medium,normal,24px,130%,$white)
   &__notes 
-    z-index: 2
     padding: 9px 0 0px 20px
     +font-family(  roboto-medium,normal,15px,100%,$white)
     opacity: 0.5
 
-
 .card-revieves
-  min-height: 309px
-  padding: 10px 25px 0px 20px
+  
+  
   @extend %card
+  position: relative
   &__stars
     margin: 11px 0 0 0
   &__text
@@ -226,15 +217,13 @@
     padding: 10px 0 0 0
   &__person
     position: absolute
-    bottom: 22px
+    bottom: 35px
     margin: 0 0 0 0
     +alic
   &__avatar
     width: 30px
     height: 30px
     margin: 0 10px 0 0
-
-
 
 .card-revieves-stars
   +jucs
@@ -265,3 +254,107 @@
     // margin: 0 29px
     +font-family(  roboto-medium,normal,15px,100%,$grey)
     transition: all 0.2s ease-in-out
+
+
+
+//-------------.categories-item--------------------------------
+//-------------.categories-item--------------------------------
+//-------------.categories-item--------------------------------
+.categories-item
+  // min-height: 200px
+  border-radius: 5px
+  transition: all 0.2s ease-in-out
+  position: relative
+  background-repeat: no-repeat
+  display: flex
+  &:hover
+    cursor: pointer
+    transform: scale(1.02)
+    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.1)
+  @include media-breakpoint-down(lg)
+    min-width: 415px!important
+    margin: 0 20px 0 0
+    &:last-child
+      margin: 0 0 0 0
+  @include media-breakpoint-down(sm)
+  &:focus
+    transform: scale(1.02)
+  a
+    padding: 21px 0 0 20px
+  span
+    margin: 0 5px 0 0
+  //-------------.categories-item__badge--------------------------------
+.categories-item__badge
+  background: #FFFFFF
+  border-radius: 5px
+  display: inline-block!important
+  padding: 21px 14px 10px 19px 
+  @include media-breakpoint-down(lg)
+  @include media-breakpoint-down(sm)
+//-------------.categories-item__title--------------------------------
+.categories-item__title
+  margin: 0px 0 19px 0
+  +font-family(  roboto-medium,normal,20px,23px,$dark-1)  // +alic
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//-------------.categories-item__text--------------------------------
+.categories-item__text
+  +font-family(  roboto-medium,normal,15px,18px,$company)
+  margin: 0 0 10px 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//-------------.categories-item__btn--------------------------------
+.categories-item__btn
+  width: 216.68px
+  height: 44px
+  span
+      margin: 0 0 0 15px
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
+

@@ -49,8 +49,14 @@ body.compensate-for-scrollbar {
     overflow-y: auto;
 }
 
+
+
+
+
+/* ------------------------------------------------------------------------------------------- */
 .fancybox-bg {
     background: rgb(30, 30, 30);
+    /* background: green; */
     opacity: 0;
     transition-duration: inherit;
     transition-property: opacity;
@@ -58,9 +64,19 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-is-open .fancybox-bg {
-    opacity: .9;
+    opacity: .85;
     transition-timing-function: cubic-bezier(.22, .61, .36, 1);
 }
+/* ---------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
 
 .fancybox-infobar,
 .fancybox-toolbar,
@@ -165,19 +181,38 @@ body.compensate-for-scrollbar {
 .fancybox-slide--html {
     padding: 6px;
 }
-
+/* ---------------------------------------------- */
 .fancybox-content {
-    background: #fff;
     display: inline-block;
-    margin: 0;
+    /* margin: 0; */
+     /* display: flex; */
+  /* justify-content: start; */
     max-width: 100%;
-    overflow: auto;
+      /* width:30%; */
+  /* min-height:30%; */
+    overflow: visible;
     -webkit-overflow-scrolling: touch;
-    padding: 44px;
+    /* padding: 44px; */
     position: relative;
     text-align: left;
     vertical-align: middle;
+    background: #FFFFFF;
+border: 1px solid #ECECEC;
+box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+border-radius: 10px;
 }
+/* ------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
 
 .fancybox-slide--image .fancybox-content {
     animation-timing-function: cubic-bezier(.5, 0, .14, 1);
@@ -394,7 +429,7 @@ body.compensate-for-scrollbar {
 
 /* Close button on the top right corner of html content */
 
-.fancybox-close-small {
+/* .fancybox-close-small {
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -406,7 +441,37 @@ body.compensate-for-scrollbar {
     right: -12px;
     top: -44px;
     z-index: 401;
+} */
+
+.fancybox-close-small {
+	width: 20px;
+	height: 20px;
+    right: -47px!important;
+    top: 34px!important;
+	position: relative;
+	position: absolute;
 }
+
+.fancybox-close-small:after, .fancybox-close-small:before {
+	content: "";
+	background-color: white;
+	position: absolute;
+	width: 120%;
+	height: 3px;
+	bottom: 50%;
+	left: 0;
+	z-index: 2;
+	border-radius: 2px;
+}
+
+.fancybox-close-small:after {
+	transform: translate(0, 50%) rotate(45deg);
+}
+
+.fancybox-close-small:before {
+	transform: translate(0, 50%) rotate(-45deg);
+}
+
 
 .fancybox-close-small:hover {
     color: #fff;

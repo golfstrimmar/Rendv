@@ -12,6 +12,7 @@ section#news.news
               ]
             each item in items
               .news-left__card.news-left-card.hover(style=`background-image: url(${item.url})`)
+                a.cover-link(href="#!")
                 .news-left-card__text.news-left-card__text_not-first=item.text 
                 .news-left-card__title=item.title  
                 .news-left-card__notes  12 августа 2020 г.

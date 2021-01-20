@@ -1,69 +1,38 @@
+//-------------.categories--------------------------------
 .categories
   padding: 40px 0 35px
   +bg($fone)
   position: relative
   display: flex
+  @include media-breakpoint-down(sm)
+    display: none
+//---------------------------------------------
+
+//-------------.categories__body--------------------------------
 .categories__body
   margin: 30px 0 0 0
-  +pro
   display: flex
   flex-wrap: wrap 
   justify-content: space-between 
-.categories__item
-  flex: 0 1 32.2%
-  margin: 0 0 20px 0
-.categories-item
-  padding: 17px 
-  height: 200px
-  border-radius: 5px
-  transition: all 0.2s ease-in-out
-  &:last-child
-    .categories-item__badge
-      padding: 23px 21px 	23px
-  &:hover
-    cursor: pointer
-    transform: scale(1.02)
-    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.3)
-  &__badge
-    background: #FFFFFF
-    border-radius: 5px
-    display: inline-block!important
-    // text-wrap: wrap
-    padding: 23px 21px 	8px 
-  &__title
-    margin: 0px 0 19px 0
-    +font-family(  roboto-medium,normal,20px,23px,$dark-1)
-  &__text
-    +font-family(  roboto-medium,normal,15px,18px,$company)
-    margin: 0 0 10px 0
-  span
-    margin: 0 5px 0 0
-.categories-item__btn
-  width: 216.68px
-  height: 44px
-  span
-    margin: 0 0 0 15px
-
-.categories-item
-  background-repeat: no-repeat
-
-
-
-@include media-breakpoint-down(lg) 
-  .categories__item
-    min-width: 415px!important
-    margin: 0 20px 0 0
-    &:last-child
-      margin: 0 0 0 0
-  .categories__body
+  @include media-breakpoint-down(lg)
     overflow-x: scroll
     display: flex
     justify-content: start
     flex-wrap: nowrap
-    // margin: 20px 0 0
     +absolute( 100%, 200px, 60px,  0,  null,0,0)
-  .title--categories
+
+//----------------.categories__item-----------------------------
+.categories__item
+  // .categories-item---- cards.sass
+  flex: 0 1 32.2%
+  margin: 0 0 20px 0
+  min-height: 200px
+ 
+// --------------------.title--categories-----------------------------
+.title--categories
+  @include media-breakpoint-down(lg)
     margin: 0 0 223px 0
-@include media-breakpoint-down(sm)
-  .categories
-    display: none
+    
+// --------------------------------------------------------------
+.categories-item__badge--last
+  padding: 23px 21px 	23px

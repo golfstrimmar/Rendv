@@ -9,10 +9,12 @@
 .footer-top__body
   +alic 
   +jucb
-
+  padding: 0 80px 0 0	
 .footer-top__logo 
-  flex: 0 1 10%
-  margin: 0 7% 0 0
+  // flex: 0 1 10%
+  width: 170px
+  height: 44px
+  margin: 0 6.2% 0 0
 .footer-top__nav
   flex: 1 1 40%
   +jucb 
@@ -25,11 +27,10 @@
     transition: all 0.2s ease-in-out 
 
 .footer-top__social
-  flex: 0 1 16.8%
+  flex: 0 1 12.3%
   margin: 0 0 0 8.3%
   // ----------
 .social-links 
-  padding: 0 81px 0 0
   +jucb
 
 .social-links__link 
@@ -50,8 +51,7 @@
 .footer-main__column
   +fdc
 .footer-main-column 
-  
-  padding: 68px 0 0 0 
+  padding: 36px 0 0 
 .footer-main-column__title 
   +font-family(  roboto-medium,500,18px,21px,$dark-1)
   margin: 0 0 29px 0
@@ -64,6 +64,8 @@
   &:last-child
     margin: 0 0 0 0
 .footer-main-column__link 
+  +pro
+  display:  flex
   +font-family(  roboto-medium,normal,15px,18px,$dark-1)
 
 
@@ -77,13 +79,15 @@
   width: 79.7%
   margin: 0 auto
 .footer-low__text
-  flex: 0 1 40% 
+  flex: 0 1 42% 
   +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+
   p
     margin: 10px 0 0 0
 .up_down_btn 
 
-
+.footer-low__text_rights
+  flex: 0 1 37.3% 
 
 
 .footer-main__column-social,.footer-low__logo,.footer-top__properties,.footer-top__social_small
@@ -97,28 +101,32 @@
   .footer-top__social
     padding: 0 0 0 0	
     flex: 0 1 12%
-    margin: 0 0 0 1%
+    margin: 0 0 0 2%
   .footer-top__logo
     margin: 0 1% 0 0	
   .footer-main-column__list 
     padding: 0 0 0 0	
+  .footer-top__body
+    padding: 0 0 0 0	
+ 
 
 
 
 
 
-
-@media (max-width:  1650px )
+@media  (min-width: 768px) and  (max-width:  1650px )
   .footer
     padding: 0 0 35px
+  .footer-main__body
+    padding-top: 36px!important
   .footer-top__nav
     border-top: 1px solid $grey-1
     padding: 33px 0 0 0
   .footer-top__logo,.footer-top__social,.footer-low__text
     display: none
  
- 
- 
+  .footer-main-column__title 
+    margin: 0 0 18px
   .footer-top-nav__item 
     flex: 1 1 30%
     margin: 0 0 21px 0
@@ -130,6 +138,8 @@
 
   .footer-main__column
     flex: 0 1 33.333%
+    padding: 0 0 0 0
+    margin: 0 0 30px 0	
     &:nth-child(3n)
       flex: 0 1 21% 
   .footer-main__column-social
@@ -143,42 +153,66 @@
       margin: 0 0 0 15px
   .footer-low__logo
     display: flex
-    width: 12.5%
+    width: 120px
+    height: 30px
   .footer-low__text_rights
     display: flex
     flex: 0 1 57% 
     +fdc
     p
       margin: 12px 0 0 0
+  .footer-main-column__link 
+    font-size: 14px
+
+  .footer__low
+    padding: 10px 0 0 0
+  .footer-low__body
+    +alic
 
 
 
 
 
-
-@media (max-width: 768px)
+@media (max-width: 767px)
   .footer
-    padding:  0 0 0	
+    padding: 30px 0 0 0
+    +bg(white)
   .footer__top
     padding: 0 0 0 0	
   .footer-top__body
     +bg(white)
-    padding: 31px 15px 0
-    border: none	
+    // padding: 31px 15px 0
+    border: none
+    	
   .footer-top__logo
-    display: flex
-    width: 105px
-    height: 27px
-  .footer-main__column-social,.footer__low
-    display: none
-  .footer-top__social_small
     flex: 0 1 100%
     +jucs
-    margin: 0 0 10px
+    img
+      width: 105px
+      height: 27px
+
+  .footer-main__column-social,.footer__low
+    display: none
+  .footer-top__social
+    display: none
+  
+  
+  
+  
+  
+  .footer-top__social_small
+    flex: 0 1 100%!important
+    +jucs
+    margin: 0 0 18px 0!important
   .footer-top__properties
-    margin: 20px 0
     display: flex
     +jucb
+    flex: 0 1 100%
+    margin: 6px 0 20px
+  .footer-top__nav
+    flex: 0 1 100%
+    padding: 18px 0 0
+    border-top: 1px solid $grey-1
   .footer-top__property
     +font-family(  roboto-medium,normal,12px,14px,$grey)
     padding: 0 0 5px 0
@@ -210,9 +244,7 @@
     border-bottom: 1px solid $grey-1
     &:last-child
       border-bottom: none
-  .footer-top__nav
-    padding: 25px 0 0 0	
-    border-top: 1px solid $grey-1
+
   .footer-main__body
     padding: 0 15px	
 	

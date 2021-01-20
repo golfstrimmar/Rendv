@@ -53,14 +53,14 @@ window.addEventListener("resize", function (event) {
 });
 
 // ----- header меняется в размерах и цвете
-   window.addEventListener("scroll", function (event) {
-     if (window.pageYOffset > 150) {
-       document.querySelector(".header").classList.add("responcive_header");
+  //  window.addEventListener("scroll", function (event) {
+  //    if (window.pageYOffset > 150) {
+  //      document.querySelector(".header").classList.add("responcive_header");
        
-     } else {
-       document.querySelector(".header").classList.remove("responcive_header");
-     }
-   });
+  //    } else {
+  //      document.querySelector(".header").classList.remove("responcive_header");
+  //    }
+  //  });
 
    // ============кнопка на начало если вдруг не понравится 
    // $(document).ready(function (e) {

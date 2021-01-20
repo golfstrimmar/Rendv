@@ -5,6 +5,8 @@ const webpack = require("webpack");
 const merge = require("webpack-merge");
 const baseWebpackConfig = require("./webpack.base.conf");
 
+
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: "development",
   devtool: "cheap-module-eval-source-map",
@@ -19,7 +21,17 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   plugins: [
     new webpack.SourceMapDevToolPlugin({
       filename: "[file].map"
-    })
+    }),
+
+  new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+    }),
+
+
+
+
   ]
 });
 
