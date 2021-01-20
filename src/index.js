@@ -14,7 +14,7 @@ import "./css/select.css";
 // fancybox;
 
 import "./css/jquery.fancybox.css";
-// import "./js/myFancybox.js";
+import "./js/myFancybox.js";
 
 // slick;
 import "slick-carousel";

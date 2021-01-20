@@ -1,0 +1,26 @@
+.header__main.header-main.header-main--page-sale
+      .container-fluid
+        .header-main__body.container--page-sale
+          a.header-main__logo(href="#!")
+            img(src="assets/img/header/logo-1.svg",alt="img")
+          .header-main__menu.header-menu
+            ul.header-main__nav.header-nav
+              - 
+                items = [
+                { title: "Недвижимость "},
+                { title: "Финансы "},
+                { title: "Рейтинг компаний "},
+                { title: "Биржа услуг "},
+                { title: "Новости"},
+                { title: "Блоги"},
+                { title: "Мнение эксперта"},
+                ]
+              each item in items  
+                li.header-nav__item
+                  a.header-nav__link.header-nav__link.header-nav__link--page-sale(href="#!")=item.title
+          button.btn.btn--success.btn--success-icon.header-main__button.header-main__button--success--page-sale(type='button') 
+            span.icon-plus
+            span Разместить объявление
+          button.btn.btn--success.header-main__button--page-sale.fancybox(type='button' href="#modal-enter") Вход и регистрация
+          .header-main__like.icon-heart
+          .header-main__burger.icon-align-justify

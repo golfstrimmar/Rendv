@@ -140,6 +140,11 @@ module.exports = {
       template: "src/pug/pages/safe-lp-sm.pug",
       filename: "./safe-lp-sm.html",
     }),
+    new HtmlWebpackPlugin({
+      // hash: false,
+      template: "src/pug/pages/sale.pug",
+      filename: "./sale.html",
+    }),
 
     new CopyWebpackPlugin({
       patterns: [
