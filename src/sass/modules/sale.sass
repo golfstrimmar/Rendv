@@ -1,8 +1,28 @@
 
+//-------------.sale--------------------------------
 .sale
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
   +bg($fone)
   padding: 54px 0 0 0  
   position: relative
+  @include media-breakpoint-down(lg)
+    padding: 33px 0 0
+  @include media-breakpoint-down(sm)
+    +bg(white)
+    padding: 0!important
+    .new-select
+      height: 40px
+      &::after
+        right: 27px
+//---------------------------------------------
+
   
 .sale__body
   +jucs
@@ -36,6 +56,26 @@
   display: none
 
 
+//-------------.sale-scroll--------------------------------
+.sale-scroll
+  @include media-breakpoint-down(lg)
+    align-items: center
+    +bg($fone)
+ 
+  @include media-breakpoint-down(sm)
+    align-items: center
+    +bg(white!important)
+    
+// -----------------------------------------------
+//-------------.sale__scroll--------------------------------
+.sale__scroll
+  @include media-breakpoint-down(lg)
+    padding: 20px 0 0px
+  @include media-breakpoint-down(sm)
+    padding: 20px 0  27px!important
+    
+//---------------------------------------------
+
 
 @media (min-width:  1200px) and (max-width:  1350px )
   .slider__item
@@ -43,29 +83,16 @@
 
 
 @include media-breakpoint-down(lg)
-
-  .sale
-    margin: 0 0 346px 0
   .sale__slider
     margin: 0 0 0 0
-  .sale
-    padding: 33px 0 0
-    position: relative
+
   .sale__filter
     width: 100%
     margin: 20px 0 0px
   .sale-filter__item
     flex-grow: 1
     padding: 0 0 0 0
-  .sale__scroll
-    +absolute( 100vw,345px,0,-30px,null,0,0)
-  .sale-scroll
-    display: flex
-    overflow: scroll
-    justify-content: start
-    flex-wrap: nowrap 
-    align-items: center
-    +bg($fone)
+
 
   .sale-scroll__item
     min-width: 308px
@@ -78,37 +105,24 @@
 
 @include media-breakpoint-down(sm)
   .sale
-    +bg(white)
-    padding: 0
+
   .sale__filter
     display: none
 
   .sale__select
     display:  flex
     margin: 15px 0 0
-    	
     width: 100%
 
-  .sale
-    .new-select
-      height: 40px
-      &::after
-        right: 27px
-  .sale__scroll
-    // +absolute( 100vw,345px,0,-30px,null,0,0)
-    height: 310px
-    top: 0px
-    left: -10px
-    margin: 0 0  0px 0px
-  .sale-scroll
-    align-items: center
-    +bg(white)
-    &__item
-      min-width: 220px
-      min-height: 255px
-      margin: 0 20px 0 0
-      &:last-child
-        margin: 0 0 0 0
+
+
+  .sale-scroll__item
+    min-width: 220px!important
+    min-height: 255px!important
+    margin: 0 10px 0 0!important
+    padding: 0 0 15px!important
+    &:last-child
+      margin: 0 0 0 0!important
 
 
 

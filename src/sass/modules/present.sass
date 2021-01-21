@@ -28,12 +28,13 @@
     display: flex
     padding: 35px 0 0 0
   .present__body
-    margin: 0 auto
+    // margin: 0 auto
 
 
 @include media-breakpoint-down(sm)
   .present
-    padding: 29px 0 0!important
+    padding:  0!important
+    +bg(white)
   .present__body
     flex-wrap: nowrap
     overflow: scroll

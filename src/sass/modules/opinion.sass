@@ -1,8 +1,7 @@
 .sale--opinion 
   padding: 50px 0 0
 
-.sale__card_opinion
-  min-height: 222px
+
 
 
 .sale__button--opinion
@@ -13,6 +12,16 @@
 
 .sale-filter__item--opinion
   width: 183px
+
+
+//---------------------------------------------
+
+    // flex-wrap: wrap!important
+
+//---------------------------------------------
+
+
+
 
 @include media-breakpoint-only(lg)
   .opinion-card__right
@@ -26,11 +35,7 @@
     overflow: scroll
     flex-wrap: nowrap
     justify-content: start
-  .sale__card_opinion
-    min-width: 635px
-    flex: 0 1 635px
-    min-height: 222px
-    margin: 0 20px 0 0
+
   .sale__button--opinion
     display: block
     width: 243px
@@ -40,10 +45,7 @@
     margin: 0 0 0 0
 @include media-breakpoint-down(sm) 
  
-  .sale__card_opinion
-    min-width: 100%!important
-    padding: 15px	
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
+
   .opinion-card__title
     +font-family(roboto-medium,500,12px,100%,$dark-1)
   .opinion-card__text
@@ -56,11 +58,7 @@
   .opinion-card__note
     i
       font-size: 12px
-  .sale__card_opinion
-    position: relative
-    margin: 0 0 10px 0!important
-    &:last-child
-      margin: 0 0 0 0!important
+
   .opinion-card__img
     flex: 0 1 50px
     height: 50px
@@ -75,14 +73,74 @@
   .sale__button--opinion
     width: 100%!important
     height: 40px
-    margin: 20px 0 0 0
+    margin:  0 0 0!important
   .sale__cards_opinion
     flex-wrap: wrap!important
-    margin: 15px 0 0
+    padding: 20px 0 20px
+    margin:  0!important
   .sale--opinion
     +bg(white!important)
     margin: 16px 0 0
-  .sale__cards_opinion
-    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.08)
+    padding: 0 0 0 0!important	
 
-    
+
+
+
+//-------------.sale__card_opinion--------------------------------
+.sale__card_opinion
+  min-height: 222px
+  @include media-breakpoint-down(lg)
+    min-width: 635px
+    flex: 0 1 635px
+    min-height: 222px
+    margin: 0 20px 0 0
+  @include media-breakpoint-down(sm)
+    max-width: 100%!important
+    min-width: 200px!important
+    padding: 0!important
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08)
+    position: relative
+    margin: 0 10px 10px 10px!important
+    &:last-child
+      margin: 0 10px 0px 10px!important
+//---------------------------------------------
+
+.scroll-lg--opinion
+  @include media-breakpoint-down(sm)
+    margin-left:  -10px !important
+    margin-right:  -10px !important
+
+
+
+
+//-------------.cover-link--opinion--------------------------------
+.cover-link--opinion
+  // +alic
+  // +jucs
+  +jucb
+  width:100%
+  height:100%
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    padding: 15px
+
+//---------------------------------------------
+//---------------------------------------------
+
+
+
+
+

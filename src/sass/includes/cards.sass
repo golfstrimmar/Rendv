@@ -63,8 +63,6 @@
   @extend %card
   +fdc
   position: relative
-
-
   &:hover
     cursor: pointer
   &__img
@@ -87,11 +85,9 @@
     margin: 24px 0 0 20px
     span
       +font-family(  roboto-medium,normal,15px,18px,$grey)
-
   &__property
     +jucs
     margin: 0 10px 0 0
-
   &__property--metro  
   &__property-text
     +font-family(  roboto-medium,normal,15px,18px,$dark-1)
@@ -99,7 +95,6 @@
     &_grey
       color: $grey
   &__property--bus
-
   &__badge
     +absolute(60px,27px,15px,null,15px,0%,0%)
     +bg(white)
@@ -117,10 +112,11 @@
         margin: 0 0 20px 0
 
 @include media-breakpoint-down(lg)
-  .card-object
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
+
+    
 @include media-breakpoint-down(sm)
   .card-object
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
     &__img
       height: 118px
     &__title  

@@ -1,16 +1,16 @@
 .news-left__card--stock
   flex: 0 1 100%
+  padding: 0 0 0 0	!important
   &:last-child
     margin: 0 0 0 0
 
-.cover-link--stock
   
 
 //-------------.cover-link--stock--------------------------------
 .cover-link--stock
-  padding: 20px 34px 0 18px
+  padding: 20px 34px 15px 18px
   @include media-breakpoint-down(sm)
-    padding: 20px 25px 15px 18px
+    padding: 20px 25px 15px 18px!important
 //---------------------------------------------
 
 
@@ -62,13 +62,69 @@
     // flex: 0 1 100%
 //---------------------------------------------
 
+//-------------.task-card__notes--stock--------------------------------
+.task-card__notes--stock
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding: 12px 9px 0 0
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
 
-
-
+//-------------.news-left__card--stock--------------------------------
+.news-left__card--stock
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  &:last-of-type
+    margin: 0 0 0 0!important
+  @include media-breakpoint-down(xl)
+  @include media-breakpoint-down(lg)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(md)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(sm)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @include media-breakpoint-down(xs)
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // flex: 0 1 100%
+//---------------------------------------------
 
 @include media-breakpoint-down(lg)
   .news--stock
-    padding: 40px 0 
+    padding: 40px 0 0px
   .cover-link--stock
     padding: 20px 25px 0 18px
   .news-left__card--stock
@@ -170,7 +226,8 @@
 
   .news-left__card--stock
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
-    padding: 0 0 0 0	
+    padding: 0 0 0 0
+    margin: 0 0 0 0!important
   .news__button--stock_high
     display: none
   .news__button--stock_low

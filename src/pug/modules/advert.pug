@@ -2,36 +2,11 @@ section#advert.sale.sale--advert
     .container.container--sale
       .sale__body.sale__body--advert
         h2.title.title--advert Реклама от застройщиков
-      
-      //- ul.sale__scroll.sale__scroll--advert.sale-scroll
-      //-     - 
-      //-       slides = [
-      //-           { text:"ЖК «Екатериновский»", img:"assets/img/sale/img-4.webp"},
-      //-           { text:"ЖК «На Гаранина»", img:"assets/img/sale/img-2.webp"},
-      //-           { text:"ЖК  «У моря Обского»", img:"assets/img/sale/img-3.webp"},
-      //-           { text:"Алхимово", img:"assets/img/sale/img-2.webp"},
-      //-           { text:"Город-парк Ясный Берег", img:"assets/img/sale/img-4.webp"},
-      //-           { text:"Расцветай на Ядрицевской", img:"assets/img/sale/img-2.webp"},
-      //-           { text:"Алхимово", img:"assets/img/sale/img-3.webp"},
-      //-           { text:"Алхимово", img:"assets/img/sale/img-2.webp"}
-      //-       ]
-      //-     each item in slides
-      //-       li.sale-scroll__item.sale-scroll__item--advert.card-object.card-object--advert
-      //-         a.cover-link(href="#!")
-      //-         .card-object__badge Реклама
-      //-         img.card-object__img.card-object__img--advert(src=item.img,alt="img")
-      //-         .card-object__title.card-object__title--advert=item.text
-      //-         .card-object__text.card-object__text--advert Квартиры от 2 млн.
-      //-           span.icon-rouble
-      //-           span .
-     
-     
-     
       .sale__slider.slider
         .slider__arrows
           i.slider__arrow.slider__arrow_prev.icon-chevron-left.slider__arrow_prev--advert
           i.slider__arrow.slider__arrow_next.icon-chevron-right.slider__arrow_next--advert
-        ul.slider__body.slider-advert-js.sale-scroll.sale__scroll
+        ul.slider__body.slider-advert-js.sale-scroll.sale__scroll.scroll-lg
           - 
             slides = [
                 { text:"ЖК «Екатериновский»", img:"assets/img/sale/img-4.webp"},
@@ -44,7 +19,7 @@ section#advert.sale.sale--advert
                 { text:"Алхимово", img:"assets/img/sale/img-2.webp"}
             ]
           each item in slides
-            li.slider__item.card-object.sale-scroll__item
+            li.slider__item.card-object.sale-scroll__item.sale-scroll__item--advert
                 a.cover-link(href="#!")
                 .card-object__badge Реклама
                 img.card-object__img.card-object__img_advert(src=item.img,alt="img")

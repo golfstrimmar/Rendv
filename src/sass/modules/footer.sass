@@ -1,5 +1,5 @@
 .footer
-  padding: 100px 0 35px 0
+  padding: 100px 0 0 0
   +bg($fone)
 .footer__top
 
@@ -41,6 +41,7 @@
   // -----------------
 
 .footer__main 
+  padding: 0 0 80px 0	
 .footer-main 
   +bg(#f4f4f4)
 .footer-main__body
@@ -70,9 +71,25 @@
 
 
 
-.footer__low 
-  padding: 79px 0 0 0
+
+
+//-------------.footer__low--------------------------------
+.footer__low
   +bg(#f4f4f4) 
+  border-top: 1px solid $bej
+  padding: 40px 0 30px 0
+  @include media-breakpoint-down(lg)
+    padding: 0
+    border: none
+    margin: -17px 0 0 0
+    hr
+      border-top: 1px solid $bej
+      margin: 0 30px
+  @include media-breakpoint-down(sm)
+// -----------------------
+
+
+
 .footer-low__body
   +jucb
   +pro
@@ -108,15 +125,13 @@
     padding: 0 0 0 0	
   .footer-top__body
     padding: 0 0 0 0	
- 
-
-
-
 
 
 @media  (min-width: 768px) and  (max-width:  1650px )
   .footer
-    padding: 0 0 35px
+    padding: 0 
+  .footer-main
+    padding: 0 
   .footer-main__body
     padding-top: 36px!important
   .footer-top__nav
@@ -124,7 +139,6 @@
     padding: 33px 0 0 0
   .footer-top__logo,.footer-top__social,.footer-low__text
     display: none
- 
   .footer-main-column__title 
     margin: 0 0 18px
   .footer-top-nav__item 
@@ -134,8 +148,6 @@
       flex: 0 1 26.3%
     &:nth-child(4)
       flex: 0 1 26.3%
-
-
   .footer-main__column
     flex: 0 1 33.333%
     padding: 0 0 0 0
@@ -164,13 +176,16 @@
   .footer-main-column__link 
     font-size: 14px
 
-  .footer__low
-    padding: 10px 0 0 0
   .footer-low__body
     +alic
+    // border-top: 1px solid $bej
+    padding-top: 30px!important
+    padding-bottom: 30px!important
 
-
-
+  .footer-low__text 
+    p
+      &:first-child
+        margin: 0 0 0 0
 
 
 @media (max-width: 767px)
@@ -183,23 +198,16 @@
     +bg(white)
     // padding: 31px 15px 0
     border: none
-    	
   .footer-top__logo
     flex: 0 1 100%
     +jucs
     img
       width: 105px
       height: 27px
-
   .footer-main__column-social,.footer__low
     display: none
   .footer-top__social
     display: none
-  
-  
-  
-  
-  
   .footer-top__social_small
     flex: 0 1 100%!important
     +jucs
@@ -244,15 +252,13 @@
     border-bottom: 1px solid $grey-1
     &:last-child
       border-bottom: none
-
   .footer-main__body
     padding: 0 15px	
-	
   .footer-main-column__title
     margin: 0 0 6px
-
   .footer__main
-    +bg(transparent)
+    +bg($fone)
+    padding: 0 0 0 0	
   .footer-main__column
     &:nth-child(3n)
       flex: 0 1 100%

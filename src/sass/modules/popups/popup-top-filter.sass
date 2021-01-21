@@ -11,10 +11,11 @@
   overflow: auto
   top: 60px
   // left: 0
-  left: -100vh
+  // left: -100vw
   +bg(white)
   z-index: 10
   transition: all 0.3s ease-in-out
+  transform: translate(-100%,0)
   // -------------
   display: none
   // ----------------
@@ -22,7 +23,7 @@
     display: none
 //---------------------------------------------
 .popup-top-filter_active
-  left: 0!important
+  transform: translate(0%,0)!important
 //-------------.filter-lap--modal--------------------------------
 .filter-lap--modal
   +bg(white)
