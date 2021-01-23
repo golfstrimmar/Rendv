@@ -1,75 +1,20 @@
-
-  
-  
-  
-.sale-scroll__item--advert
+.cover-link--advert
   min-height: 293px
-
+  @media (max-width: 768px)
+    min-height: auto
 
 //-------------.card-object__img_advert--------------------------------
 .card-object__img_advert
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
   height:180px
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
-  // padding: 0 0 0 0
-  @include media-breakpoint-down(xl)
-  @include media-breakpoint-down(lg)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(md)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(sm)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(xs)
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-    // flex: 0 1 100%
-//---------------------------------------------
 
 //-------------.card-object__title_advert--------------------------------
 .card-object__title_advert
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
   margin: 30px 20px  0
-  // padding: 0 0 0 0
-  @include media-breakpoint-down(xl)
-  @include media-breakpoint-down(lg)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(md)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(sm)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(xs)
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-    // flex: 0 1 100%
-//---------------------------------------------
 
 
-@include media-breakpoint-down(lg)
+@media (max-width: 1199px)
   .card-object__img--advert
     height: 180px
-  // .sale__body--advert
-    // padding: 0 0 305px 0	
   .sale--advert-next
     display: none
   .card-object__title--advert
@@ -79,18 +24,12 @@
   .sale__scroll--advert
     top: 65px
   .sale-scroll__item--advert
-    min-height: 293px!important
+    min-height: 293px
     min-width: 309px
 
-@media (max-width:  767px )
+@media (max-width: 767px )
   .sale__scroll--advert
     top: 15px
     height: 245px
-  .card-object--advert
-    min-height: 193px !important
-    height: 193px !important
-  // .sale__body--advert
-    // padding: 0 0 245px
   .sale-scroll__item--advert
-    min-height: 194px!important
-    min-width: 309px
+    min-height: 194px

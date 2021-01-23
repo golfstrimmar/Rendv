@@ -1,12 +1,12 @@
 
   
 *
-  // outline: 1px solid green
+  outline: 1px solid green
   box-sizing: border-box
 
 
 .container
-  // outline: 1px solid #4164ff
+  outline: 1px solid #4164ff
 
 [class*="col-"]
   padding: 0 0 0 0
@@ -135,11 +135,15 @@ button
 
 .title
   width: 100%
-  +font-family(  roboto-medium,500,32px,37px,$dark-1)
-  @include media-breakpoint-down(lg)
-    +font-family(  roboto-medium,500,24px,140%,$dark-1)
-  @include media-breakpoint-down(sm)
-    font-size: 18px!important
+  font-size: 32px
+  line-height: 37px
+  font-weight: 500
+  @media (max-width: 1199px)
+    font-size: 24px
+    line-height: 140%
+  @media (max-width: 767px)
+    font-size: 18px
+
 
 .up_down_btn
   position: fixed
@@ -181,12 +185,29 @@ button
     display: flex
     justify-content: start
     flex-wrap: nowrap
-    margin-left:  -30px !important
-    margin-right:  -30px !important
-  @media (max-width: 767px)
+    margin-left:  -30px 
+    margin-right:  -30px 
+  @media (max-width: 768px)
     overflow-x: scroll
     display: flex
     justify-content: start
     flex-wrap: nowrap
     margin-left:  -10px 
     margin-right:  -10px 
+
+
+.icon-like-green
+  color: #7ab764
+  font-size: 20px
+
+.icon-location-red
+  color: #F05650
+  font-size: 20px
+
+.icon-cross
+  color: #181818
+  font-size: 20px
+
+.icon-link
+  color: #181818
+  font-size: 20px

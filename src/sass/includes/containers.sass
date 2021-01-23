@@ -3,13 +3,13 @@
 .container
   padding: 0 0 0 0
   @media (min-width: 1360px)
-    max-width: 1300px!important
+    max-width: 1300px
   @media (max-width: 1360px)
     min-width: 100%
     padding: 0 30px
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     padding: 0 30px
-  @include media-breakpoint-down(sm) 
+  @media (max-width: 768px) 
     padding: 0 10px	
 .container-fluid 
   padding: 0  0 0
@@ -22,18 +22,18 @@
   @media  (min-width: 1201px) and (max-width: 1650px)
     width: 100%!important
     padding: 0 30px!important
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     width: 100%!important
     padding: 0 30px	0 30px!important
-  @include media-breakpoint-down(sm)
+  @media (max-width: 768px)
     padding: 0 10px!important
 
-@include media-breakpoint-down(lg)
+@media (max-width: 1199px)
   .container--sale
     min-width: 100%
     padding: 0 30px	
 
-@include media-breakpoint-down(sm) 
+@media (max-width: 768px) 
   .container--sale
     min-width: 100%
     padding: 0 10px!important
@@ -41,30 +41,20 @@
 
 //-------------.container--page-sale--------------------------------
 .container--page-sale
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
   width: 79.6%
   margin: 0 auto
-  @include media-breakpoint-down(xl)
-  @include media-breakpoint-down(lg)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(md)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(sm)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(xs)
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-    // flex: 0 1 100%
+//---------------------------------------------
+
+//-------------.container--page-sale--------------------------------
+.container--content-page-sale
+  padding: 0 0 0 0
+  @media (min-width: 1350px)
+    max-width: 1290px
+  @media (max-width: 1350px)
+    min-width: 100%
+    padding: 0 30px
+  @media (max-width: 1199px)
+    padding: 0 30px
+  @media (max-width: 768px) 
+    padding: 0 10px	
 //---------------------------------------------

@@ -3,7 +3,7 @@
 .header__select 
   position: relative
   width: 100%
-  @include media-breakpoint-down(lg) 
+  @media (max-width: 1199px) 
     display: none
   
 .header-select 
@@ -13,21 +13,22 @@
     // flex: 0 1 57.4%
     width: 1070px
     padding: 4.8% 0 4.65%
-    @include media-breakpoint-down(lg) 
+    @media (max-width: 1199px) 
       width: 960px
   &__title 
     z-index: 2
     position: relative
-    +font-family(  roboto-medium,bold,48px,100%,white)
+    // +font-family(  roboto-medium,bold,48px,100%,white)
+    font-weight: bold
+    font-size: 48px
+    line-height: 100%
+    color: white
   &__filter 
     margin: 4.5% 0 0 0
     // width: 47.3%
     width: 500px
-
     position: relative
     z-index: 100000
-
-
 
 .filter
   &__body
@@ -53,7 +54,9 @@
     cursor: pointer
   +pro
   +center
-  +font-family(  roboto-medium,normal,15px,18px,#ECECEC)
+  // +font-family(  roboto-medium,normal,15px,18px,#ECECEC)
+  font-weight: normal
+  color: $bej
   transition: all 0.2s ease-in-out
   &.act
     +bg(#F4F4F4)
@@ -66,7 +69,8 @@
   transition: all 0.2s ease-in-out
 
   
-  
+.filter-item__title--sub
+  color: $dark-1
   
   
 .filter__drop
@@ -76,7 +80,8 @@
     .filter-item
       +bg(white)
     .filter-item__title
-      +font-family(  roboto-medium,normal,15px,18px,#181818)
+      // +font-family(  roboto-medium,normal,15px,18px,#181818)
+      font-weight: normal
       padding: 17px 0 17px 30px
       +pro
     .filter-item__img
@@ -90,7 +95,7 @@
   display: none
   +absolute( 1070px, 50px, 100%,  0%,  null,0,0)
   +bg(white)
-  @include media-breakpoint-down(lg) 
+  @media (max-width: 1199px) 
     width: 960px
   &__body
     +jucb
@@ -100,7 +105,9 @@
     +jucb
     +alic
 .filter-drop__property
-  +font-family(  roboto-medium,normal,15px,18px,$grey)
+  // +font-family(  roboto-medium,normal,15px,18px,$grey)
+  font-weight: normal
+  color: $grey
   &--metro
     color: #586EB6
 
@@ -119,6 +126,6 @@
     margin: 0 0 0 0
   
 .header-select__button--look
-    +font-family(  roboto-medium,500,15px,18px,$dark-1)
+    // +font-family(  roboto-medium,500,15px,18px,$dark-1)
 
 

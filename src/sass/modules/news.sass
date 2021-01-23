@@ -28,11 +28,18 @@
   position: relative
   &__img 
     width: 100%
+
   &__title 
-    +font-family(roboto-medium,normal,24px,130%,$dark-1)
+    //   +font-family(roboto-medium,normal,24px,130%,$dark-1)
+    font-weight: normal
+    font-size: 24px
+    line-height: 130%
     padding: 29px 30px 19px
   &__text
-    +font-family(roboto-medium,normal,18px,100%,$dark-1) 
+    // +font-family(roboto-medium,normal,18px,100%,$dark-1) 
+    font-weight: normal
+    font-size: 18px
+    line-height: 100%
     padding: 0 30px 0 
     text-align: left
   &__button 
@@ -50,7 +57,7 @@
     padding: 18px 20px 19px
 
 
-@include media-breakpoint-down(lg) 
+@media (max-width: 1199px) 
   .news
     padding: 54px 0 0
   .news__body
@@ -58,8 +65,7 @@
     padding: 0px 0 15px 0
 
   .news-left__card
-    // min-height: 200px!important
-    // max-height: 200px!important
+    min-height: 200px
     &:first-child
       flex: 0 1 100%
     &:not(:first-child)
@@ -70,6 +76,8 @@
 
   .news__right
     display: none
+  .news-right__text
+    font-size: 15px
   .news-left-card__text 
     padding: 51px 0 0 20px
   .news-left-card__title 
@@ -77,30 +85,48 @@
   .news-left-card__notes 
     padding: 9px 0 26px 20px
 
-@include media-breakpoint-down(sm) 
+@media (max-width: 767px) 
   .news
     +bg(white)
-    padding: 0 0 0 0!important	
+    padding: 0 0 0 0	
   .news-left__card
-    flex: 0 1 100%!important
+    flex: 0 1 100%
     position: relative
-    min-height: 292px!important
+    min-height: 292px
     margin: 0 0 10px 0
     &:last-child
       margin: 0 0 0 0
+    &:not(:first-child)
+      .news-left-card__text_not-first
+        padding: 110px 0 0 15px
   .news-left-card__text
-    +font-family(roboto-medium,normal,15px,100%,white)
-    padding: 110px 0 0 15px!important
+    font-weight: normal
+    font-size: px
+    line-height: 100%
+    color: white
+    padding: 110px 0 0 15px
   .news-left-card__title
-    +font-family(roboto-medium,500,20px,130%,white)
+    // +font-family(roboto-medium,500,20px,130%,white)
+    font-weight: normal
+    font-size: 20px
+    line-height: 130%
+    color: white
   .news-left-card__notes
-    +font-family(roboto-medium,normal,11px,150%,white)
+    // +font-family(roboto-medium,normal,11px,150%,white)
+    font-weight: normal
+    font-size: 11px
+    line-height: 150%
+    color: white
     opacity: .5
-    padding: 9px 0 19px 20px!important
-  .news-left-card__comments-sm
+    padding: 9px 0 19px 20px
     display:  block
     opacity: .5
-    +font-family(roboto-medium,normal,11px,150%,white)
+  .news-left-card__comments-sm
+    opacity: .5
+    font-weight: normal
+    font-size: 11px
+    line-height: 150%
+    color: white
     +absolute( 40px, 15px,null,  null,  7px,0,0)
     bottom: 17px
     +alic

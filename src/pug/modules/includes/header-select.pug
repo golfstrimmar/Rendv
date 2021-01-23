@@ -2,8 +2,6 @@
       .header__select.header-select
         .header-select__body 
           h1.header-select__title Поможем воплотить мечту в реальность
-          
-          
           .header-select__filter.filter
             .filter__body
               - 
@@ -28,7 +26,7 @@
                           ]
                         each item in items
                           .filter__item.filter-item
-                              .filter-item__title.filterDep-title-js=item.title 
+                              .filter-item__title.filter-item__title--sub.filterDep-title-js=item.title 
                                 .filter-item__img.icon-chevron-down.filterDep-img-js
                               .filter__drop.filter-drop.filterDep-drop-js
                                 .filter-drop__body

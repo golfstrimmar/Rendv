@@ -1,20 +1,14 @@
 .news-left__card--stock
   flex: 0 1 100%
-  padding: 0 0 0 0	!important
+  padding: 0 0 0 0
   &:last-child
     margin: 0 0 0 0
-
-  
-
 //-------------.cover-link--stock--------------------------------
 .cover-link--stock
   padding: 20px 34px 15px 18px
-  @include media-breakpoint-down(sm)
-    padding: 20px 25px 15px 18px!important
+  @media (max-width: 768px)
+    padding: 20px 18px 15px 18px
 //---------------------------------------------
-
-
-
 .news__button--stock
   width: 330px
   height: 50px
@@ -26,103 +20,34 @@
   margin: 0 0 0 20px
   min-height: 460px
 .news-right__title_stock
-  +font-family(  roboto-medium,500,30px,35px,$white)
+  font-size: 30px
+  line-height: 35px
+  color: $white
 .news-right__text_stock
   color: $white
 .news__button--stock_high,.news-right_stock_lg,.task-card__property-text--stock-green
   display: none
-
-
 //-------------.task-card__properties--stock--------------------------------
 .task-card__properties--stock
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
   padding: 0 0 0 0
-  @include media-breakpoint-down(xl)
-  @include media-breakpoint-down(lg)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(md)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(sm)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(xs)
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-    // flex: 0 1 100%
+
 //---------------------------------------------
 
 //-------------.task-card__notes--stock--------------------------------
 .task-card__notes--stock
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
   padding: 12px 9px 0 0
-  @include media-breakpoint-down(xl)
-  @include media-breakpoint-down(lg)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(md)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(sm)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(xs)
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-    // flex: 0 1 100%
+
 //---------------------------------------------
 
 //-------------.news-left__card--stock--------------------------------
 .news-left__card--stock
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
-  // padding: 0 0 0 0
   &:last-of-type
-    margin: 0 0 0 0!important
-  @include media-breakpoint-down(xl)
-  @include media-breakpoint-down(lg)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(md)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(sm)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(xs)
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-    // flex: 0 1 100%
+    margin: 0 0 0 0
+
 //---------------------------------------------
 
-@include media-breakpoint-down(lg)
+@media (max-width: 1199px)
+
   .news--stock
     padding: 40px 0 0px
   .cover-link--stock
@@ -136,30 +61,44 @@
     flex: 0 1 31.5%
   .news__left_stock
     position: relative
- 
   .task-card__property--active
     display: none
-
   .news__button--stock_low
     display: none
   .news__button--stock_high
     display: flex
     +absolute( 240px, 50px, null,  0,  null,0,0)
     bottom: 0
+  .task-card__title--stock
+    padding: 11px 0 8px
+    font-size: 20px
+    line-height: 150%
+  .task-card__notes--stock
+    padding: 7px 9px 0 0	
+  
   .task-card__properties
     padding: 0
     margin: 22px 0 0
 
-  .task-card__title
-    +font-family(  roboto-medium,500,20px,150%,$dark-1)
     padding: 5px 0 8px
+
+  .task-card__property-text--stock
+    font-size: 15px
+    line-height: 150%
+
+
+
+
   .task-card__text
-    +font-family(roboto-medium,500,15px,150%,$dark-1)
+    font-size: 15px
+    line-height: 150%
   .task-card__notes
-    +font-family(roboto-medium,normal,15px,150%,$dark-1)
+    font-weight: normal
+    font-size: 15px
+    line-height: 150%
   .task-card__property-text--green
     padding: 0 0 0 0	
-    color: $active!important
+    color: $active
     font-weight: normal
   .task-card__property-text--stock-green
     display:  flex
@@ -168,7 +107,7 @@
     display: none
   .news-right_stock_lg
     display: block  
-    width: 30%!important
+    width: 30%
     background: #FFFFFF
     border: 1px solid #ECECEC
     border-bottom-right-radius: 5px
@@ -180,9 +119,12 @@
     +background-img("/assets/img/news/news-5.webp")
   .news-right__title
     +font-family(roboto-medium,500,18px,150%,$dark-1)
+    font-size: 18px
+    line-height: 150%
     padding: 19px 17px 19px
   .news-right__text
-    +font-family(  roboto-medium,normal,15px,100%,$dark-1)
+    font-weight: normal
+    line-height: 100%
     padding: 0 17px	
     span
       font-size: 15px
@@ -190,7 +132,9 @@
     +alic
     padding: 19px 0 0 18px
     span
-      +font-family(  roboto-medium,normal,15px,150%,$company)
+      font-weight: normal
+      line-height: 150%
+      color: $company
     i
       color: $company
       font-size: 20px
@@ -201,11 +145,12 @@
     +bg(white) 
     margin: 30px 0 0 0
   .title--stock
-    +font-family(  roboto-medium,500,15px,18px,$dark-1)
   .task-card__title--stock
-    +font-family(  roboto-medium,500,18px,150%,$dark-1)
+    line-height: 150%
+    font-size: 18px
   .task-card__text--stock
-    +font-family(  roboto-medium,500,15px,150%,$dark-1)
+    line-height: 150%
+
   .news-right_stock
     display: none
   .task-card__property-text--stock
@@ -213,25 +158,31 @@
   .task-card__property--active
     display:  flex
   .task-card__notes--stock
-    +font-family(  roboto-medium,normal,14px,140%,$dark-1)
+    font-weight: normal
+    font-size: 14px
+    line-height: 140%
   .task-card__property-text
-    +font-family(  roboto-medium,normal,12px,14px,$grey)
+    font-weight: normal
+    font-size: 12px
+    line-height: 14px
+    color: $grey
   .task-card__property-icon--stock 
     font-size: 14px
   .task-card__property-text--green 
-    color: $active!important
+    color: $active
     font-weight: normal
   .task-card__property-text--stock
     display: none
-
   .news-left__card--stock
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
     padding: 0 0 0 0
-    margin: 0 0 0 0!important
+    margin: 0 0 0 0
   .news__button--stock_high
     display: none
   .news__button--stock_low
     display: flex
-    width: 100%!important
+    width: 100%
     height: 40px
-    margin: 10px 0 0 0!important
+    margin: 10px 0 0 0
+  .task-card__property-text--stock-green
+    display: none

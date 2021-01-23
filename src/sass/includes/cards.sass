@@ -2,16 +2,16 @@
   @extend %card
   padding: 20px	
   position: relative
-
   &__title
     padding: 0 0 8px
-    +font-family(  roboto-medium,500,20px,100%,$dark-1) 
+    font-size: 20px
+    line-height: 100%
   &__text
     padding: 12px 0 0 0
-    +font-family(  roboto-medium,500,15px,18px,$dark-1) 
   &__notes
     padding: 9px 9px 0 0
-    +font-family(  roboto-medium,normal,15px,150%,$dark-1)
+    font-weight: normal
+    line-height: 150%
     opacity: 1 
   &__properties
     margin: 25px 0 0 0
@@ -26,7 +26,9 @@
   &__property-text 
     padding: 0 18px 0 3px
     +alic
-    +font-family(  roboto-medium,normal,15px,150%,$grey)
+    font-weight: normal
+    line-height: 150%
+    color: $grey
     span
       margin: 0 0 0 5px
   &__property-text--green 
@@ -39,21 +41,26 @@
     width: 100%
     height: 150px
   &__title
-    +font-family(  roboto-medium,500,18px,150%,#586EB6) 
+    font-weight: normal
+    font-size: 18px
+    line-height: 150%
+    color: #586EB6
     padding: 19px 20px 0 
   &__text 
-    +font-family(  roboto-medium,normal,18px,18px,$dark-1)
+    font-weight: normal
+    font-size: 18px
     +alic
     margin: 10px 20px 0 
   &__notes 
     +alic
     margin: 20px 20px 0
     span
-      +font-family(  roboto-medium,normal,15px,18px,$grey)
+      font-weight: normal
+      color: $grey
   &__property
     &--text
       margin: 0 10px 0 0  
-      +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+      font-weight: normal
     &--metro
       margin: 0 10px 0 0 
     &--bus
@@ -72,36 +79,39 @@
     border-top-left-radius: 5px
   &__title
     margin: 21px 20px 0 
-    +font-family(  roboto-medium,normal,18px,150%,$company)
+    font-weight: normal
+    font-size: 18px
+    line-height: 150%
+    color: $company
   &__text
     margin: 5px 20px 0 
     +alic
-    +font-family(  roboto-medium,normal,18px,100%,$dark-1)
+    font-weight: normal
+    font-size: 18px
+    line-height: 100%
     span
-      +font-family(  roboto-medium,normal,18px,21px,$dark-1)
+      font-weight: normal
+      font-size: 18px
+      line-height: 21px
   &__properties
     +jucs
     +alic
     margin: 24px 0 0 20px
     span
-      +font-family(  roboto-medium,normal,15px,18px,$grey)
+      font-weight: normal
+      color: $grey
   &__property
     +jucs
     margin: 0 10px 0 0
   &__property--metro  
   &__property-text
-    +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+    font-weight: normal
     margin: 0 0 0 10px
     &_grey
       color: $grey
   &__property--bus
   &__badge
-    +absolute(60px,27px,15px,null,15px,0%,0%)
-    +bg(white)
-    z-index: 5
-    border-radius: 5px
-    +center
-    +font-family(  roboto-medium,normal,12px,140%,$dark-1)
+
 
 @media (min-width:  1200px) and (max-width:  1290px )
   .card-object
@@ -111,10 +121,10 @@
       &:last-child
         margin: 0 0 20px 0
 
-@include media-breakpoint-down(lg)
+@media (max-width: 1199px)
 
     
-@include media-breakpoint-down(sm)
+@media (max-width: 768px)
   .card-object
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
     &__img
@@ -140,6 +150,23 @@
     span
       font-size: 14px
 
+
+.card-object-badge
+  +absolute(60px,27px,15px,null,15px,0%,0%)
+  +bg(white)
+  z-index: 5
+  border-radius: 5px
+  +center
+  font-weight: normal
+  font-size: 12px
+  line-height: 140%
+  @media (max-width: 768px)
+    +absolute(70px,24px,10px,null,10px,0%,0%)
+
+
+
+
+
 .opinion-card
   @extend %card
   padding: 20px	
@@ -150,15 +177,18 @@
   &__right
     flex: 1 1 49%
     padding: 0 0 0 34px	
-    // height: 182px
 
   &__title 
-    +font-family(  roboto-medium,normal,15px,150%,$dark-1)
+    font-weight: normal
+    line-height: 150%
   &__text
-    +font-family(  roboto-medium,normal,15px,150%,$grey) 
+    font-weight: normal
+    line-height: 150%
+    color: $grey
     padding: 9px 60px 7px 0
   &__content 
-    +font-family(  roboto-medium,500,20px,150%,$dark-1) 
+    font-size: 20px
+    line-height: 150%
   &__notes
     +jucs
     margin: 17px 0 0 0
@@ -171,7 +201,9 @@
       color: $grey
       margin: 0 10px 0 0
   &__note-text
-    +font-family(  roboto-medium,normal,15px,150%,$grey)
+    font-weight: normal
+    line-height: 150%
+    color: $grey
 
 .news-left-card 
   min-height: 250px
@@ -181,35 +213,44 @@
   &__text
     position: relative 
     padding: 104px 0 0 20px
-    +font-family(  roboto-medium,normal,18px,100%,$white)
+    font-weight: normal
+    font-size: 18px
+    line-height: 100%
+    color: $white
   &__title
     position: relative
     padding: 11px 39px 8px  20px
-    +font-family(  roboto-medium,normal,24px,130%,$white)
+    font-weight: normal
+    font-size: 24px
+    line-height: 130%
+    color: $white
   &__notes 
     padding: 9px 0 0px 20px
-    +font-family(  roboto-medium,normal,15px,100%,$white)
+    font-weight: normal
+    line-height: 100%
+    color: $white
     opacity: 0.5
 
 .card-revieves
-  
-  
   @extend %card
   position: relative
   &__stars
     margin: 11px 0 0 0
   &__text
-    +font-family(  roboto-medium,normal,15px,18px,$grey)
+    font-weight: normal
+    color: $grey
     margin: 0 0 0 0
     padding: 10px 0 0 0
     &--person
       color: $dark-1
       padding: 0 0 0 0	
   &__title
-    +font-family(  roboto-medium,500,18px,140%,$dark-1)
+    font-size: 18px
+    line-height: 140%
     padding: 21px 0 0 0	
   &__rev
-    +font-family(  roboto-medium,normal,15px,150%,$dark-1)
+    font-weight: normal
+    line-height: 150%
     padding: 10px 0 0 0
   &__person
     position: absolute
@@ -247,8 +288,9 @@
       border-right: none
     +center
   &__title
-    // margin: 0 29px
-    +font-family(  roboto-medium,normal,15px,100%,$grey)
+    font-weight: normal
+    line-height: 100%
+    color: $grey
     transition: all 0.2s ease-in-out
 
 
@@ -257,7 +299,6 @@
 //-------------.categories-item--------------------------------
 //-------------.categories-item--------------------------------
 .categories-item
-  // min-height: 200px
   border-radius: 5px
   transition: all 0.2s ease-in-out
   position: relative
@@ -267,12 +308,12 @@
     cursor: pointer
     transform: scale(1.02)
     box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.1)
-  @include media-breakpoint-down(lg)
-    min-width: 415px!important
+  @media (max-width: 1199px)
+    min-width: 415px
     margin: 0 20px 0 0
     &:last-child
       margin: 0 0 0 0
-  @include media-breakpoint-down(sm)
+  @media (max-width: 768px)
   &:focus
     transform: scale(1.02)
   a
@@ -283,74 +324,569 @@
 .categories-item__badge
   background: #FFFFFF
   border-radius: 5px
-  display: inline-block!important
+  display: inline-block
   padding: 21px 14px 10px 19px 
-  @include media-breakpoint-down(lg)
-  @include media-breakpoint-down(sm)
 //-------------.categories-item__title--------------------------------
 .categories-item__title
   margin: 0px 0 19px 0
-  +font-family(  roboto-medium,normal,20px,23px,$dark-1)  // +alic
-  @include media-breakpoint-down(xl)
-  @include media-breakpoint-down(lg)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(md)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(sm)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(xs)
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-    // flex: 0 1 100%
+  font-weight: normal
+  font-size: 20px
+  line-height: 23px
+ 
 //-------------.categories-item__text--------------------------------
 .categories-item__text
-  +font-family(  roboto-medium,normal,15px,18px,$company)
+  font-weight: normal
+  color: $company
   margin: 0 0 10px 0
-  @include media-breakpoint-down(xl)
-  @include media-breakpoint-down(lg)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(md)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(sm)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(xs)
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-    // flex: 0 1 100%
+
 //-------------.categories-item__btn--------------------------------
 .categories-item__btn
   width: 216.68px
   height: 44px
   span
-      margin: 0 0 0 15px
-  @include media-breakpoint-down(xl)
-  @include media-breakpoint-down(lg)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(md)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(sm)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @include media-breakpoint-down(xs)
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-    // flex: 0 1 100%
+    margin: 0 0 0 15px
+
 //---------------------------------------------
 
+//-------------.content-sale-card--------------------------------
+//-------------.content-sale-card--------------------------------
+//-------------.content-sale-card--------------------------------
+//-------------.content-sale-card--------------------------------
+//-------------.content-sale-card--------------------------------
+.content-sale-card
+  // +alic
+  // +jucs
+  +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  
+  @extend %card
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+
+
+//-------------.content-sale-card__slider--------------------------------
+.content-sale-card__slider
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  flex: 0 1 20%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__right--------------------------------
+.content-sale-card__right
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  flex: 1 1 40%
+  // margin: 0 0 0 0
+  padding: 18px 86px 20px 30px
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__slider--------------------------------
+.content-sale-card__slider
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  flex: 0 1 34.3%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------  
+
+//-------------.content-sale-card__right--------------------------------
+.content-sale-card__right
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  flex: 1 1 40%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__head-line--------------------------------
+.content-sale-card__head-line
+  // +alic
+  // +jucs
+  +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__header--------------------------------
+.content-sale-card__header
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  font-size: 20px
+  line-height: 23px
+  color: #586EB6
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__price--------------------------------
+.content-sale-card__price
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  font-size: 20px
+  line-height: 23px
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__price-per--------------------------------
+.content-sale-card__price-per
+  +alic
+  +juce
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding:  3px 0 0 0
+  font-weight: normal
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__adress--------------------------------
+.content-sale-card__adress
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding: 0 0 9px 0
+  font-weight: normal
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__properties--------------------------------
+.content-sale-card__properties
+  +alic
+  +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  margin: 0 0 30px
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card-properties__property--------------------------------
+.content-sale-card-properties__property
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  margin: 0 10px 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+
+  
+//-------------.content-sale-card-properties__property--metro-text--------------------------------
+.content-sale-card-properties__property--metro-text
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  font-weight: normal
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card-properties__property--time-text--------------------------------
+.content-sale-card-properties__property--time-text
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  font-weight: normal
+  font-size: 15px
+  line-height: 18px
+  color: #9E9E9E
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card-properties__property--count--------------------------------
+.content-sale-card-properties__property--count
+  // +alic
+  // +jucs
+  +center
+  width: 34px
+  height:24px
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  font-weight: normal
+  font-size: 12px
+  line-height: 14px
+  background: #ECECEC
+  border-radius: 5px
+  color: #000000
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__text--------------------------------
+.content-sale-card__text
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  font-weight: normal
+  font-size: 15px
+  line-height: 140%
+  color: #9E9E9E
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__person--------------------------------
+.content-sale-card__person
+  +alic
+  +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  margin: 18px 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__avatar--------------------------------
+.content-sale-card__avatar
+  // +alic
+  // +jucs
+  // +jucb
+  width:40px
+  height:40px
+  border-radius: 50%
+  // flex: 0 1 100%
+  margin: 0  10px 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__name--------------------------------
+.content-sale-card__name
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  font-weight: normal
+  line-height: 140%
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card__time--------------------------------
+.content-sale-card__time
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  margin: 0 20px 0 auto
+  // padding: 0 0 0 0
+  font-weight: normal
+  line-height: 140%
+  color: #9E9E9E
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+
+//-------------.content-sale-card__info--------------------------------
+.content-sale-card__info
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  margin: 20px 0 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+  
+//-------------.content-sale-card-info--------------------------------
+.content-sale-card-info
+  +alic
+  +jucs
+  +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card-info__location--------------------------------
+.content-sale-card-info__location
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card-info__property--------------------------------
+.content-sale-card-info__property
+  +alic
+  +center
+  // +jucb
+  // width:
+  min-height: 38px
+  // flex: 0 1 100%
+  // margin: 0 5px 0 12px
+  
+  border: 1px solid #ECECEC
+  border-radius: 5px
+  &:first-of-type
+    padding: 0 7px  0 5px
+  &:not(:first-of-type)
+    padding: 0 10px	
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card-info__text--------------------------------
+.content-sale-card-info__text
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  margin: 0 0 0 15px
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.content-sale-card-info__button--------------------------------
+.content-sale-card-info__button
+  // +alic
+  // +jucs
+  // +jucb
+  width:190px
+  height:38px
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0 
+  font-weight: normal
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------

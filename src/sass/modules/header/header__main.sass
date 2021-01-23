@@ -15,10 +15,10 @@
   height: 40px
   @media (min-width:  1201px) and (max-width:  1330px )
     margin: 0 2% 0 0
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     width: 115px
     height: 30px
-  @include media-breakpoint-down(sm)
+  @media (max-width: 768px)
     width: 105px
     height: 27px
 
@@ -30,7 +30,8 @@
   &__item
     display: flex
   &__link 
-    +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+    // +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+    font-weight: normal
     +pro
     padding: 30px 5px
     +border(1px , transparent)
@@ -51,7 +52,9 @@
   height: 40px
   width: 229px
   margin: 0 0 0 63px
-  +font-family(  roboto-medium,normal,15px,18px,white)	
+  // +font-family(  roboto-medium,normal,15px,18px,white)	
+  font-weight: normal
+  color: $white
   .icon-plus
     margin: 0 15px 0 0
     color: white
@@ -62,7 +65,7 @@
   +alis
   border-bottom: 1px solid $bej
   padding: 30px 0 
-  @include media-breakpoint-down(sm)
+  @media (max-width: 768px)
     padding: 15px 0 
 
 .header-main__bot
@@ -86,26 +89,26 @@
 .header-main__like
   color: $active
   font-size: 22px
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     margin: 0 35px
-  @include media-breakpoint-down(sm) 
+  @media (max-width: 767px) 
     font-size: 20px
-    margin: 0 25px 0 auto!important
+    margin: 0 25px 0 auto
 
 .header-main__burger,.header-main__close
   display: flex
   font-size: 28px 
-  @include media-breakpoint-down(sm)
+  @media (max-width: 768px)
     font-size: 24px 
 
 .top-location__icon--sidebar
-  @include media-breakpoint-down(sm)
+  @media (max-width: 768px)
     font-size: 18px
 
 .header-main__button
   @media (min-width:  1201px) and (max-width:  1330px )
     margin: 0 0 0 2.3%
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     margin: 0 0 0 auto
 
 .header__sidebar
@@ -125,16 +128,18 @@
   left: 0
 
 .top-location__text--sidebar
-  +font-family(roboto-medium,normal,15px,140%,dark-1)
+  // +font-family(roboto-medium,normal,15px,140%,dark-1)
+  font-weight: normal
+  line-height: 140%
   color: #181818
   margin: 0 0 0 20px
-  @include media-breakpoint-down(sm) 
+  @media (max-width: 768px) 
     font-size: 14px
     margin: 0 0 0 20px
 
 .top-location__icon--sidebar
   font-size: 22px
-  @include media-breakpoint-down(sm)
+  @media (max-width: 768px)
 
 
 
@@ -177,7 +182,7 @@
 
 
 
-@include media-breakpoint-down(lg)
+@media (max-width: 1199px)
   .header-main
     border-bottom: 1px solid $bej
   .header-main__menu
@@ -185,7 +190,7 @@
   .header-main__body
     padding: 20px 0 
   .top-location__icon--sidebar_red
-    color: #F05650!important
+    color: #F05650
   .top-location__icon--sidebar_dark
     color: #181818
   .top-location__icon--sidebar_green
@@ -194,11 +199,11 @@
     +jucb
     flex-direction: row
 
-@include media-breakpoint-down(sm)
+@media (max-width: 767px)
   .header
     margin: 0 0 25px 0
   .header-main__body
-    padding: 16px 0 
+    padding: 13px 0 
 
 
 

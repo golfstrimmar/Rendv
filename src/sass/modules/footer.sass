@@ -1,5 +1,6 @@
 .footer
   padding: 100px 0 0 0
+  margin: 1000px 0 0 0
   +bg($fone)
 .footer__top
 
@@ -20,7 +21,8 @@
   +jucb 
 .footer-top-nav__item 
 .footer-top-nav__link
-  +font-family(  roboto-medium,normal,15px,18px,$grey)
+  font-weight: normal
+  color: $grey
   &:hover
     cursor: pointer
     color: $active
@@ -54,7 +56,7 @@
 .footer-main-column 
   padding: 36px 0 0 
 .footer-main-column__title 
-  +font-family(  roboto-medium,500,18px,21px,$dark-1)
+  line-height: 21px
   margin: 0 0 29px 0
 
 
@@ -67,7 +69,7 @@
 .footer-main-column__link 
   +pro
   display:  flex
-  +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+  font-weight: normal
 
 
 
@@ -78,14 +80,14 @@
   +bg(#f4f4f4) 
   border-top: 1px solid $bej
   padding: 40px 0 30px 0
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     padding: 0
     border: none
     margin: -17px 0 0 0
     hr
       border-top: 1px solid $bej
       margin: 0 30px
-  @include media-breakpoint-down(sm)
+  @media (max-width: 768px)
 // -----------------------
 
 
@@ -97,7 +99,9 @@
   margin: 0 auto
 .footer-low__text
   flex: 0 1 42% 
-  +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+  // +font-family(  roboto-medium,normal,15px,18px,$dark-1)
+  font-weight: normal
+
 
   p
     margin: 10px 0 0 0
@@ -161,7 +165,8 @@
     &:last-child
       margin: 0 0 0 0
     span
-      +font-family(  roboto-medium,normal,15px,18px,$grey)
+      font-weight: normal
+      color: $grey
       margin: 0 0 0 15px
   .footer-low__logo
     display: flex
@@ -175,20 +180,17 @@
       margin: 12px 0 0 0
   .footer-main-column__link 
     font-size: 14px
-
   .footer-low__body
     +alic
-    // border-top: 1px solid $bej
     padding-top: 30px!important
     padding-bottom: 30px!important
-
   .footer-low__text 
     p
       &:first-child
         margin: 0 0 0 0
 
 
-@media (max-width: 767px)
+@media (max-width: 768px)
   .footer
     padding: 30px 0 0 0
     +bg(white)
@@ -196,7 +198,6 @@
     padding: 0 0 0 0	
   .footer-top__body
     +bg(white)
-    // padding: 31px 15px 0
     border: none
   .footer-top__logo
     flex: 0 1 100%
@@ -206,12 +207,16 @@
       height: 27px
   .footer-main__column-social,.footer__low
     display: none
+    
   .footer-top__social
     display: none
+
   .footer-top__social_small
-    flex: 0 1 100%!important
     +jucs
-    margin: 0 0 18px 0!important
+    width: 100%
+    flex: 0 1 100%
+    margin: 0 0 18px 0
+
   .footer-top__properties
     display: flex
     +jucb
@@ -222,7 +227,10 @@
     padding: 18px 0 0
     border-top: 1px solid $grey-1
   .footer-top__property
-    +font-family(  roboto-medium,normal,12px,14px,$grey)
+    font-weight: normal
+    font-size: 12px
+    line-height: 14px
+    color: $grey
     padding: 0 0 5px 0
     flex: 0 1 100%
     &:last-child

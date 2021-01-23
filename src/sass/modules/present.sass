@@ -10,7 +10,7 @@
     margin: 0 20px 0 0
     &:last-child
       margin: 0 0 0 0
-@include media-breakpoint-down(lg)
+@media (max-width: 1199px)
   .present-item
     background-repeat: no-repeat
     background-size: cover
@@ -18,7 +18,10 @@
     border-radius:  10px
 
     &__text
-      +font-family(roboto-medium,500,18px,150%,$white)
+      // +font-family(roboto-medium,500,18px,150%,$white)
+      font-size: 18px
+      line-height: 150%
+      color: $white
       +alic
       &:last-child
         margin: 14px 0 0 0
@@ -31,9 +34,9 @@
     // margin: 0 auto
 
 
-@include media-breakpoint-down(sm)
+@media (max-width: 767px)
   .present
-    padding:  0!important
+    padding: 0
     +bg(white)
   .present__body
     flex-wrap: nowrap

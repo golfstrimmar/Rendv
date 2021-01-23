@@ -1,7 +1,7 @@
 .bunners
   +bg($fone)
   padding: 50px 0 0 0	
-  @include media-breakpoint-down(sm) 
+  @media (max-width: 768px) 
     display: none
   &__body
     position: relative 
@@ -18,49 +18,46 @@
   position: relative 
   &__buttons
     +jucs
-
   &__button_empty 
     margin: 5px 10px 0 0
-
   &__button_light
     margin: 0 0 0 10px
-    +font-family(  roboto-medium,normal,12px,140%,$dark-1) 
+    font-weight: normal
+    font-size: 12px
+    line-height: 140%
     +bg(white)
-    // width: 60px
     height: 27px
     padding: 0 5px
   &__button-order
     width: 188px
     height: 40px
-    margin: 20px 0 0 0!important
+    margin: 20px 0 0 0
     .icon-phone 
       margin: 0 13px 0 0
       font-size: 16px
-  
   &__button
     &:nth-child(3)
       margin: 0 0 0 auto 
-
   &__small
     padding: 18px 0 0 0
-    +font-family(  roboto-medium,normal,15px,18px,$white)
-  
+    font-weight: normal
+    color: $white
   &__title
     padding: 12px 0 0 0
     +alic 
-    +font-family(  roboto-medium,bold,36px,42px,$white)
-  
+    font-weight: bold
+    font-size: 36px
+    line-height: 42px
+    color: $white
   &__text
     padding: 12px 0 0
-    +font-family(  roboto-medium,normal,15px,140%,$white)
-
-
-
+    font-weight: normal
+    line-height: 140%
+    color: $white
   // --------------------------------
 .bunners
   .slick-slide
     margin: 0 0 0 0
-
   .slick-dots li:not(.slick-active)
     display: none
   .slick-active
@@ -70,10 +67,15 @@
     bottom: 35px
 
   .slick-dots-current
-    +font-family(  roboto-medium,normal,24px,140%,$white)
+    font-weight: normal
+    font-size: 24px
+    line-height: 140%
+    color: $white
   .slick-dots-total
     z-index: 2
-    +font-family(  roboto-medium,300,15px,140%,$white)
+    font-weight: 300
+    line-height: 140%
+    color: $white
     margin: 0 0 3px 0
     +alie
   .slick-dots-separator
@@ -109,7 +111,7 @@
 @media (max-width:  1650px )
   .bunners
     padding: 25px 0 40px
-@include media-breakpoint-down(lg)
+@media (max-width: 1199px)
   .bunners
     padding: 40px 0 
     .slick-active 
@@ -147,7 +149,7 @@
     width: 40px
     height: 40px
   .slider-bunners-item__button-order
-    margin: 28px 0 0!important
+    margin: 28px 0 0
   .bunners__item
     padding: 15px 14px 20px 40px
   .slider-bunners-item__title

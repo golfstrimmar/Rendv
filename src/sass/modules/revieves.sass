@@ -1,57 +1,31 @@
 
  //-------------.sale--revieves--------------------------------
  .sale--revieves
-   // +alic
-   // +jucs
-   // +jucb
-   // width:
-   // height:
-   // flex: 0 1 100%
-   // margin: 0 0 0 0
    padding: 50px 0 0 0
-   @include media-breakpoint-down(xl)
-   @include media-breakpoint-down(lg)
-     // flex: 0 1 100%
-     // margin: 0 0 0 0
-     // padding: 0 0 0 0
-   @include media-breakpoint-down(md)
-     // flex: 0 1 100%
-     // margin: 0 0 0 0
-     // padding: 0 0 0 0
-   @include media-breakpoint-down(sm)
-     // flex: 0 1 100%
-     // margin: 0 0 0 0
-     // padding: 0 0 0 0
-   @include media-breakpoint-down(xs)
-     // margin: 0 0 0 0
-     // padding: 0 0 0 0
-     // flex: 0 1 100%
+  
  //--------------------------------------------- 
   
 //-------------.sale-scroll.sale__scroll--revieves--------------------------------
 .sale-scroll.sale__scroll--revieves
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     top: 10px
 //--------------------------------------------- 
-  
-  
-  
   //-------------.sale-scroll__item--revieves--------------------------------
 .sale-scroll__item--revieves
   min-height: 309px
   @media (min-width: 1201px) and (max-width: 1360px)
     min-height: 365px
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     min-width: 308px
     min-height: 307px
     margin: 0 20px 0 0
     position: relative
     &:last-child
       margin: 0 0 0 0
-  @include media-breakpoint-down(sm)
-    min-width: 248px!important
-    min-height: 283px!important
-    padding: 0 0 0 0	!important
+  @media (max-width: 767px)
+    min-width: 248px
+    min-height: 283px
+    padding: 0 0 0 0
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08)
   
 
@@ -60,33 +34,23 @@
   display:  flex
   +fdc
   padding: 0px 25px 39px 20px
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     padding: 10px 15px 24px 15px
-//---------------------------------------------
-  
-
-
-
-
-
-
-
-
 //---------------------------------------------
 //-------------.card-revieves__text--------------------------------
 .card-revieves__text
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     display: none
 //---------------------------------------------
 //----------------.card-revieves__stars-----------------------------
 .card-revieves__stars
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     margin: 5px 0 0
 
 //---------------------------------------------
 //-------------------.card-revieves-stars__star--------------------------
 .card-revieves-stars__star
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     width: 12px
     height: 12px
     font-size: 12px
@@ -98,7 +62,7 @@
 
 //-------------.card-revieves__title--------------------------------
 .card-revieves__title
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     // display: none
     padding: 0 0 0 0	
     margin: 16px 0 0 0
@@ -106,41 +70,43 @@
 //---------------------------------------------
 //-------------.card-revieves__rev--------------------------------
 .card-revieves__rev
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     font-size: 14px
 //---------------------------------------------
 
 //-------------card-revieves__person--------------------------------
 .card-revieves__person
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     bottom: 14px
  
 //---------------------------------------------
 //-------------.card-revieves__text--person--------------------------------
 .card-revieves__text--person
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     display:  flex 
-    +font-family(roboto-medium,normal,14px,16px,$dark-1)
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
 
 // ------------------------------------------------------------
 //-------------.sale-filter.sale__filter--revieves--------------------------------
 .sale__filter--revieves
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     margin: 24px 0 0 0
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     display: none
 //---------------------------------------------
 //-------------.sale--revieves--------------------------------
 .sale--revieves
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     +bg(white)
 //---------------------------------------------
 //-------------.sale__scroll--revieves--------------------------------
 .sale__scroll--revieves
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     +bg(white)
     padding: 30px 0 42px
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     min-height: 285px
 //---------------------------------------------
 

@@ -12,11 +12,17 @@
   +bg(rgba(0,0,0,.5))
   border-radius: 5px
 .garden-sm-item__title
-  +font-family(roboto-medium,500,18px,21px,white)
+  font-weight: normal
+  font-size: 18px
+  line-height: 21px
+  color: white
   z-index: 2
   position: relative
 .garden-sm-item__text
-  +font-family(roboto-medium,normal,14px,16px,white)
+  font-weight: normal
+  font-size: 14px
+  line-height: 16px
+  color: white
   +alic
   position: relative
   z-index: 2
@@ -27,11 +33,14 @@
 .garden-sm-item__button
   position: relative
   z-index: 2
-  +font-family(roboto-medium,normal,14px,16px,white)
+  font-weight: normal
+  font-size: 14px
+  line-height: 16px
+  color: white
   +alic
   padding: 21px 0 0 0
           
 
-@include media-breakpoint-down(sm) 
+@media (max-width: 768px) 
   .garden-sm
     display:  flex

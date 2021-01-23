@@ -202,9 +202,9 @@ each item in items
 @include media-breakpoint-up(xl) 
 
 @include media-breakpoint-down(xs) 
-@include media-breakpoint-down(sm) 
+@media (max-width: 768px) 
 @include media-breakpoint-down(md) 
-@include media-breakpoint-down(lg) 
+@media (max-width: 1199px) 
 @include media-breakpoint-down(xl) 
 
 

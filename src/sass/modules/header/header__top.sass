@@ -1,5 +1,5 @@
 .header__top 
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     display: none
 
 .header-top
@@ -12,7 +12,9 @@
     margin: 0 0 0 auto
     padding: 11px 24px 
     +bg($salat)
-    +font-family(  roboto-medium,normal,15px,18px,$active)
+    font-weight: normal
+    color: $active
+
   &__body
     +alic
     +jucs
@@ -23,14 +25,19 @@
     font-size: 18px
     color: $grey
   &__text 
-    +font-family(  roboto-medium,normal,14px,1.4,$grey)
+    font-weight: normal
+    font-size: 14px
+    line-height: 1.4
+    color: $grey
     margin: 0 0 0 17px
 
 
 .top-properties
   &__property
     margin: 0 27px 0 0 
-    +font-family(  roboto-medium,normal,15px,18px,$grey)
+    // +font-family(  roboto-medium,normal,15px,18px,$grey)
+    font-weight: normal
+    color: $grey
   &__property-type
     margin: 0 5px 0 0
   &__property-difference

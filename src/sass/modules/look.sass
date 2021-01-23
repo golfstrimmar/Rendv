@@ -17,19 +17,23 @@
   
 .look-right
   &__title
-    // padding: 0px 0 26px 0
-    +font-family(  roboto-medium,normal,32px,100%,$dark-1) 
+    font-weight: normal
+    font-size: 32px
+    line-height: 100%
   &__text
     padding: 19px 0 32px 0
-    +font-family(  roboto-medium,normal,20px,150%,$dark-1) 
+    font-weight: normal
+    font-size: 20px
+    line-height: 150%
   &__flats
     +alic
-    +font-family(  roboto-medium,500,20px,100%,$dark-1) 
+    font-size: 20px
+    line-height: 100%
 .look-right-flats__btn
   width: 270px
   height: 50px
   margin: 0 31px 0 0
-  +font-family(  roboto-medium,500,15px,18px,white) 
+  color: white
 
 @include media-breakpoint-down(md)
   .look
@@ -40,7 +44,8 @@
   .look__right
     padding: 0 0 0 54px	
   .look-right__title
-    +font-family(roboto-medium,500,20px,18px,$dark-1)
+    font-size: 20px
+    color: grey
     padding: 0 0 15px
   .look-right__text_md
     display: none
@@ -48,9 +53,11 @@
     order: last
     width: 223px
     height: 50px
-    +font-family(roboto-medium,500,15px,18px,$white)
+    font-weight: normal
+    color: $white
   .look-right-flats__price,.icon-rouble
-    +font-family(roboto-medium,normal,18px,100%,$dark-1)
+    font-weight: normal
+    line-height: 100%
   .look-right-flats__btn
     margin: 33px 0 0 0
   .look-right-flats__price

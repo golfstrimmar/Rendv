@@ -1,22 +1,14 @@
 
 //-------------.sale--------------------------------
 .sale
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
-  // padding: 0 0 0 0
   +bg($fone)
   padding: 54px 0 0 0  
   position: relative
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     padding: 33px 0 0
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     +bg(white)
-    padding: 0!important
+    padding: 0
     .new-select
       height: 40px
       &::after
@@ -50,7 +42,7 @@
 .slider__item
   min-width: 307px
   min-height: 284px
-  padding: 0 0 20px 0	
+  	
   margin: 0 10px
 .sale-filter__item_lg
   display: none
@@ -58,42 +50,47 @@
 
 //-------------.sale-scroll--------------------------------
 .sale-scroll
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     align-items: center
     +bg($fone)
  
-  @include media-breakpoint-down(sm)
+  @media (max-width: 767px)
     align-items: center
-    +bg(white!important)
+    +bg(white)
     
 // -----------------------------------------------
 //-------------.sale__scroll--------------------------------
 .sale__scroll
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     padding: 20px 0 0px
-  @include media-breakpoint-down(sm)
-    padding: 20px 0  27px!important
+  @media (max-width: 767px)
+    padding: 20px 0  27px
+    
     
 //---------------------------------------------
-
+//-------------.cover-link--sale--------------------------------
+.cover-link--sale
+  padding: 0 0 20px 0
+  @media (max-width: 1199px)
+    padding: 0 0 20px 0
+  @media (max-width: 767px)
+    padding: 0 0 15px
+//---------------------------------------------
 
 @media (min-width:  1200px) and (max-width:  1350px )
   .slider__item
     min-width: 280px
 
 
-@include media-breakpoint-down(lg)
+@media (max-width: 1199px)
   .sale__slider
     margin: 0 0 0 0
-
   .sale__filter
     width: 100%
     margin: 20px 0 0px
   .sale-filter__item
     flex-grow: 1
     padding: 0 0 0 0
-
-
   .sale-scroll__item
     min-width: 308px
     min-height: 284px
@@ -103,26 +100,20 @@
   .sale-filter__item_xl
     display: none
 
-@include media-breakpoint-down(sm)
+@media (max-width: 767px)
   .sale
-
   .sale__filter
     display: none
-
   .sale__select
     display:  flex
     margin: 15px 0 0
     width: 100%
-
-
-
   .sale-scroll__item
-    min-width: 220px!important
-    min-height: 255px!important
-    margin: 0 10px 0 0!important
-    padding: 0 0 15px!important
+    min-width: 220px
+    min-height: 255px
+    margin: 0 10px 0 0
     &:last-child
-      margin: 0 0 0 0!important
+      margin: 0 0 0 0
 
 
 

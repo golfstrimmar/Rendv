@@ -4,7 +4,7 @@
   +bg($fone)
   position: relative
   display: flex
-  @include media-breakpoint-down(sm)
+  @media (max-width: 768px)
     display: none
 //---------------------------------------------
 
@@ -14,23 +14,16 @@
   display: flex
   flex-wrap: wrap 
   justify-content: space-between 
-  // @include media-breakpoint-down(lg)
-  //   overflow-x: scroll
-  //   display: flex
-  //   justify-content: start
-  //   flex-wrap: nowrap 
-  //   margin: 0 -30px
 
 //----------------.categories__item-----------------------------
 .categories__item
-  // .categories-item---- cards.sass
   flex: 0 1 32.2%
   margin: 0 0 20px 0
   min-height: 200px
  
 // --------------------.title--categories-----------------------------
 .title--categories
-  @include media-breakpoint-down(lg)
+  @media (max-width: 1199px)
     margin: 0 0 20px
     
 // --------------------------------------------------------------
