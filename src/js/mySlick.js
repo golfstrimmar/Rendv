@@ -131,6 +131,157 @@ $(".slider-bunners-js").slick({
     );
   },
 });
+$(".extended-slider-1-js").slick({
+  dots: true,
+  arrows: true,
+  slidesToShow: 1,
+  speed: 800,
+  easing: "ease",
+  cssEase: "linear",
+  centerMode: false,
+  nextArrow: $(".extended-slider-1-arrows__arrow_next"),
+  prevArrow: $(".extended-slider-1-arrows__arrow_prev"),
+
+  customPaging: function (slider, i) {
+    var current = i + 1;
+    current = current < 10 ? "" + current : current;
+
+    var total = slider.slideCount;
+    total = total < 10 ? "" + total : total;
+
+    return (
+      '<button type="button" role="button" tabindex="0" class="slick-dots-button">\
+  		<span class="slick-dots-current">' +
+      current +
+      '</span>\
+  		<span class="slick-dots-separator">из</span>\
+  		<span class="slick-dots-total">' +
+      total +
+      "</span></button>"
+    );
+  },
+});
+$(".extended-slider-2-js").slick({
+  dots: true,
+  arrows: true,
+  slidesToShow: 1,
+  speed: 800,
+  easing: "ease",
+  cssEase: "linear",
+  centerMode: false,
+  nextArrow: $(".extended-slider-2-arrows__arrow_next"),
+  prevArrow: $(".extended-slider-2-arrows__arrow_prev"),
+
+  customPaging: function (slider, i) {
+    var current = i + 1;
+    current = current < 10 ? "" + current : current;
+
+    var total = slider.slideCount;
+    total = total < 10 ? "" + total : total;
+
+    return (
+      '<button type="button" role="button" tabindex="0" class="slick-dots-button">\
+  		<span class="slick-dots-current">' +
+      current +
+      '</span>\
+  		<span class="slick-dots-separator">из</span>\
+  		<span class="slick-dots-total">' +
+      total +
+      "</span></button>"
+    );
+  },
+});
+$(".extended-slider-3-js").slick({
+  dots: true,
+  arrows: true,
+  slidesToShow: 1,
+  speed: 800,
+  easing: "ease",
+  cssEase: "linear",
+  centerMode: false,
+  nextArrow: $(".extended-slider-3-arrows__arrow_next"),
+  prevArrow: $(".extended-slider-3-arrows__arrow_prev"),
+
+  customPaging: function (slider, i) {
+    var current = i + 1;
+    current = current < 10 ? "" + current : current;
+
+    var total = slider.slideCount;
+    total = total < 10 ? "" + total : total;
+
+    return (
+      '<button type="button" role="button" tabindex="0" class="slick-dots-button">\
+  		<span class="slick-dots-current">' +
+      current +
+      '</span>\
+  		<span class="slick-dots-separator">из</span>\
+  		<span class="slick-dots-total">' +
+      total +
+      "</span></button>"
+    );
+  },
+});
+$(".extended-slider-4-js").slick({
+  dots: true,
+  arrows: true,
+  slidesToShow: 1,
+  speed: 800,
+  easing: "ease",
+  cssEase: "linear",
+  centerMode: false,
+  nextArrow: $(".extended-slider-4-arrows__arrow_next"),
+  prevArrow: $(".extended-slider-4-arrows__arrow_prev"),
+
+  customPaging: function (slider, i) {
+    var current = i + 1;
+    current = current < 10 ? "" + current : current;
+
+    var total = slider.slideCount;
+    total = total < 10 ? "" + total : total;
+
+    return (
+      '<button type="button" role="button" tabindex="0" class="slick-dots-button">\
+  		<span class="slick-dots-current">' +
+      current +
+      '</span>\
+  		<span class="slick-dots-separator">из</span>\
+  		<span class="slick-dots-total">' +
+      total +
+      "</span></button>"
+    );
+  },
+});
+
+$(".extended-slider-5-js").slick({
+  dots: true,
+  arrows: true,
+  slidesToShow: 1,
+  speed: 800,
+  easing: "ease",
+  cssEase: "linear",
+  centerMode: false,
+  nextArrow: $(".extended-slider-5-arrows__arrow_next"),
+  prevArrow: $(".extended-slider-5-arrows__arrow_prev"),
+
+  customPaging: function (slider, i) {
+    var current = i + 1;
+    current = current < 10 ? "" + current : current;
+
+    var total = slider.slideCount;
+    total = total < 10 ? "" + total : total;
+
+    return (
+      '<button type="button" role="button" tabindex="0" class="slick-dots-button">\
+  		<span class="slick-dots-current">' +
+      current +
+      '</span>\
+  		<span class="slick-dots-separator">из</span>\
+  		<span class="slick-dots-total">' +
+      total +
+      "</span></button>"
+    );
+  },
+});
 
 
 

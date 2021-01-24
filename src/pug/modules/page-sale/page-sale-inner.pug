@@ -1,50 +1,90 @@
 section#content-sale.content-sale
+
       .content-sale__body.container.container--content-page-sale
-        .content-sale__left 
+        .content-sale__left
+          .content-sale__filters
+            include filters 
           .content-sale__info
-            .content-sale__selector По актуальности
+            .content-sale__selector
+                select.select
+                  option(value='По актуальности' disabled ) По актуальности
+                  option(value='По актуальности' ) По актуальности
+                  option(value='По возрастанию цены') По возрастанию цены
+                  option(value='По убыванию цены') По убыванию цены
+                  option(value='По количеству комнат') По количеству комнат
+                  option(value='Этаж') Этаж
+             
             .content-sale__numbers  145 523 объявлений
           .content-sale__cards
-            .content-sale__card.content-sale-card
-                .content-sale-card__slider  .content-sale-card__slider
-                .content-sale-card__right
-                  .content-sale-card__head-line
-                    .content-sale-card__header  1-комнатная, 36м²
-                    .content-sale-card__price 14 900 000 <span class="icon-rouble"></span>
-                  .content-sale-card__price-per 108 285&nbsp; <span class="icon-rouble"></span> &nbsp; за м²
-                  .content-sale-card__adress  Улица Серафимовича, 18
-                  .content-sale-card__adress  13 этаж из 17
-                  .content-sale-card__properties.content-sale-card-properties
-                      img(src="assets/img/sale/metro.svg",alt="metro").content-sale-card-properties__property.content-sale-card-properties__property--metro-icon
-
-                      .content-sale-card-properties__property.content-sale-card-properties__property--metro-text Сибирская
-
-                      img(src="assets/img/sale/bus.svg",alt="img").content-sale-card-properties__property.content-sale-card-properties__property--time-icon
-
-                      .content-sale-card-properties__property.content-sale-card-properties__property--time-text 5 мин.
-                      .content-sale-card-properties__property.content-sale-card-properties__property--count +2
-                  .content-sale-card__text   
-                    | Cдам ЛИЧHO уютную квартиру на 13 этаже с современным
-                    | ремонтом, техникой и мебелью. Цена: 17000 руб. Адрес:
-                    | улица Добролюбова 162/1 5 минут от метро Золотая
-                    | Нива
-                  .content-sale-card__person
-                    img.content-sale-card__avatar(src="assets/img/content-sale/team_02.webp",alt="team_02")
-                    .content-sale-card__name  Ксения
-                    .content-sale-card__time  5 часов назад
-
-                  .content-sale-card__info.content-sale-card-info
-                    button.btn.btn--success.btn--success-icon.content-sale-card-info__button(type='button')
-                      span.icon-phone
-                      span +7 (913) 834-22-45
-                    .content-sale-card-info__property
-                      i.content-sale-card-info__like.icon-like-green.icon-heart1
-                      .content-sale-card-info__text В избранное
-                    .content-sale-card-info__property
-                      i.content-sale-card-info__location.icon-location-red.icon-location2
-                    .content-sale-card-info__property
-                      i.content-sale-card-info__cross.icon-cross.icon-x
-                    .content-sale-card-info__property
-                      i.content-sale-card-info__link.icon-link.icon-copy
-
+            include card-1
+            include card-2
         include vidgets
+      section#bunners-page-sale.bunners.bunners--page-sale
+            .container.container--sale.container--content-page-sale
+              .bunners__body
+                .bunners__arrows.bunners-arrows
+                  i.bunners-arrows__arrow.bunners-arrows__arrow_prev.icon-chevron-left
+                  i.bunners-arrows__arrow.bunners-arrows__arrow_next.icon-chevron-right
+                .bunners__slider.slider-bunners-js
+                    - 
+                        items = [
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                          { title: "ЖК Горский. От 7,5 млн. ",url:"assets/img/bunners.webp" },
+                        ]
+        
+                    each item in items
+                      .bunners__item.slider-bunners-item(style=`background-image: url(${item.url})`)
+                        .slider-bunners-item__buttons
+                          button.slider-bunners-item__button.slider-bunners-item__button_empty.btn.button--empty(type='button') Квартиры от 2млн.<span class="icon-rouble"></span>
+                          button.slider-bunners-item__button.slider-bunners-item__button_empty.btn.button--empty(type='button')  м² от 130 т.р.
+                          button.slider-bunners-item__button.slider-bunners-item__button_light(type='button').btn.btn--light  Реклама
+                          button.slider-bunners-item__button.slider-bunners-item__button_cross--bunners(type='button').btn.btn--cross 
+                            span Скрыть
+                            i.icon-x
+        
+                        .slider-bunners-item__small ГК «Самолёт»
+                        .slider-bunners-item__title=item.title 
+                          <span class="icon-rouble"></span> 
+                        .slider-bunners-item__text  
+                          p Старт продаж нового корпуса от 10 млн ₽. Ипотека 5,85%. 
+                          p Рассрочка 0%. Панорамные виды на Останкинскую башню и Москву.
+                        button.btn.btn--success.btn--success-icon.slider-bunners-item__button-order(type='button') 
+                          span.icon-phone
+                          span Заказать звонок
+
+      .content-sale__body.container.container--content-page-sale
+        .content-sale__left 
+          .content-sale__cards
+            include card-3
+            include card-4
+            include card-5
+        .content-sale__vidgets 
+      .content-sale__body.container.container--content-page-sale
+        .content-sale__left 
+          .content-sale__pagination.content-sale-pagination
+              ul.content-sale-pagination__items
+                li.content-sale-pagination__item
+                  button.btn.btn--light.button-active(type='button' )  1
+                li.content-sale-pagination__item
+                  button.btn.btn--light(type='button')  2
+                li.content-sale-pagination__item
+                  button.btn.btn--light(type='button')  3
+                li.content-sale-pagination__item
+                  button.btn.btn--light(type='button')  4
+                li.content-sale-pagination__item
+                  button.btn.btn--light(type='button')  5
+              button.btn.btn--light(type='button').content-sale-pagination__button-next Следующая
+              button.btn.btn--success.content-sale-pagination__button(type='button')  Показать еще 32 объекта
+        .content-sale__vidgets
+

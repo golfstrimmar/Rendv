@@ -1,0 +1,32 @@
+section#page-sale-filters.page-sale-filters
+    .page-sale-filters__item.page-sale-filters-item
+          .page-sale-filters-item__part.sale-filter.sale-filter--page-sale
+            - 
+              items = [
+                  {title: "Купить"},
+                  {title: "Снять"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--page-sale-left 
+                .sale-filter__title=item.title
+          .page-sale-filters-item__part.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Квартиру"},
+                  {title: "Комнату"},
+                  {title: "Дом"},
+                  {title: "Коммерческая недвижимость"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale
+                .sale-filter__title=item.title
+        
+//- .page-sale-filters__
+//- .page-sale-filters__
+//- .page-sale-filters__
+//- .page-sale-filters__
+//- .page-sale-filters__
+//- .page-sale-filters-item__
+//- .page-sale-filters-item__
+//- .page-sale-filters-item__
+//- .page-sale-filters-item__
