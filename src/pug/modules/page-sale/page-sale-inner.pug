@@ -1,8 +1,20 @@
-section#content-sale.content-sale
+section#sale-nav.sale-nav
+  .sale-nav__item.sale-nav__item--filters-search 
+    i.icon-search
+    span Фильтры
+  .sale-nav__item.sale-nav__item--keep 
+    i.icon-heart1
+    span Сохранить
+  .sale-nav__item.sale-nav__item--location
+    i.icon-location2
+    span На карте
 
+
+
+section#content-sale.content-sale
       .content-sale__body.container.container--content-page-sale
         .content-sale__left
-          .content-sale__filters
+          .content-sale__filters.content-sale__filters_active
             include filters 
           .content-sale__info
             .content-sale__selector

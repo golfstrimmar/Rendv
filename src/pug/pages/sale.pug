@@ -1,6 +1,7 @@
 extends ../layout/main
 block header
   include ../modules/includes/header-page-sale
+  include ../modules/includes/header-sidebar
 block content
  
 
@@ -9,4 +10,18 @@ block content
 
 
 block footer
-  include ../modules/footer
+  footer.page-sale-footer
+    include ../modules/footer
+  footer.modal-enter__footer.modal-enter__footer--sale.modal-enter-footer
+            .modal-enter-footer__copy.modal-enter-footer__copy--main ©2020 RENDV.RU
+            a(href="#!").modal-enter-footer__link Полная версия
+            ul.modal-enter-footer__social
+                li.modal-enter-footer__item.modal-enter-footer__facebook--main
+                  a(href="#!").modal-enter-footer__link-social
+                    img(src="assets/img/modal-enter-main/footer-facebook.svg",alt="img")
+                li.modal-enter-footer__item
+                  a(href="#!").modal-enter-footer__link-social
+                    img(src="assets/img/modal-enter-main/insta.svg",alt="img")
+                li.modal-enter-footer__item
+                  a(href="#!").modal-enter-footer__link-social
+                    img(src="assets/img/modal-enter-main/vk-footer.svg",alt="img")

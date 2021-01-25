@@ -7,8 +7,29 @@
   // height:
   // flex: 0 1 100%
   // margin: 0 0 0 0
-  padding: 16px 17px 0 20px
+  // padding: 16px 17px 0 20px
+  padding: 16px 0 0 0
   @extend %card
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    padding: 0 0 0 0
+
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.page-sale-filters__form--------------------------------
+.page-sale-filters__form
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding: 0 17px 0 20px
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -18,24 +39,32 @@
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //---------------------------------------------
-//-------------.page-sale-filters-item--------------------------------
-.page-sale-filters-item
+//-------------.page-sale-filters__item--------------------------------
+.page-sale-filters__item
   // +alic
-  +jucs
+  // +jucs
   // +jucb
   // width:
   // height:
   // flex: 0 1 100%
   // margin: 0 0 0 0
   // padding: 0 0 0 0
+  // position: relative
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
+
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.page-sale-filters-item--------------------------------
+.page-sale-filters-item
+  +jucs
+  
 //---------------------------------------------
 // sale-filter__item--page-sale--------------------------------
 .sale-filter__item--page-sale
@@ -46,7 +75,7 @@
   // height:
   // flex: 0 1 100%
   // margin: 0 0 0 0
-  padding: 0 20px
+  padding: 0 19px
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -131,6 +160,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -171,6 +201,7 @@
   .new-select
     padding: 9px  70px 9px 20px	
     border: none
+    border-right: 1px solid #ECECEC
   .new-select__list
     top:50px
   @media (max-width: 1199px)
@@ -258,6 +289,8 @@
   // flex: 0 1 100%
   // margin: 0 0 0 0
   // padding: 0 0 0 0
+  border-top-left-radius: 0px
+  border-bottom-left-radius: 0px
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -278,6 +311,8 @@
   // flex: 0 1 100%
   margin: 50px 0 0 0
   // padding: 0 0 0 0
+  &:last-of-type
+    margin: 50px 0 50px 0
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -319,8 +354,10 @@
   // width:
   // height:
   flex: 0 1 100%
-  margin: 0 0 32px
+  margin: 0 0 30px
   // padding: 0 0 0 0
+  &:last-child
+    margin: 0 0 0 0
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -465,13 +502,15 @@
   // margin: 0 0 0 0
   // padding: 0 0 0 0
   position: relative
+  border-right: 1px solid #ECECEC
   &:not(:first-child)
     flex: 1 1 42%
-
+    border-right: none
   input
     font-weight: normal
     color: #9E9E9E
-    +pro  
+    +pro 
+    border-radius: 5px 
   span
     font-weight: normal
     +absolute( 20px, 20px, 50%,  80%,  null,0,-50%)
@@ -514,6 +553,8 @@
   @extend %card
   margin: 0 10px 0 0
   // padding: 0 0 0 0
+  &:last-child
+    margin: 0 0 0 0
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -531,9 +572,10 @@
   // width:
   // height:
   // flex: 0 1 100%
-  // margin: 0 0 0 0
+  margin: 10px 0 0 0
   // padding: 0 0 0 0
   border: none
+  
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -543,8 +585,444 @@
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //---------------------------------------------
+//-------------------.sale-filter__title--------------------------
+.flat-line__title
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  font-weight: normal
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+
+//-------------__divide--------------------------------
+.flat-line__divide
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  margin: 0 20px 0 0
+  &:last-child
+    margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.sale-filter__item--flat--------------------------------
+.sale-filter__item--flat
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  &:last-child
+    border-right: 1px solid #ECECEC
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+
+//-------------.flat-divide__input--house--------------------------------
+.flat-line__input
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  height:36px
+  // flex: 0 1 100%
+  margin: 17px 0 0 0
+  // padding: 0 0 0 0
+  border: 1px solid #ECECEC
+  border-radius: 5px
+  position: relative
+  input
+    border: none
+    +pro
+    border-radius: 5px
+    &::-webkit-input-placeholder
+      color: #9E9E9E
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.flat-line__divide--house--------------------------------
+.flat-line__divide--house
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  flex: 0 1 45.5%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+
+//-------------.flat-line__img--------------------------------
+.flat-line__img
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  +absolute( 36px, 100%, 0%,  null,  0,0,0)
+  +center
+  +bg($bej)
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+
+//-------------.flat__flor_house--------------------------------
+.flat__flor_house
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  border: 1px solid #ECECEC
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.filters-footer--------------------------------
+.filters-footer
+  +alic
+  // +jucs
+  +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding: 22px 17px  20px 20px
+  border-top: 1px solid #ECECEC
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.filters-footer__rollup--------------------------------
+.filters-footer__rollup
+  +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  font-weight: normal
+  font-size: 16px
+  line-height: 19px
+  color: #586EB6
+  i
+    margin: 0 0 0 10px
+    font-size: 20px
+  &:hover
+    cursor: pointer
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.filters-footer__discharge--------------------------------
+.filters-footer__discharge
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding: 0 5px
+  font-weight: normal
+  font-size: 16px
+  line-height: 19px
+  color: #9E9E9E
+  &:hover
+    cursor: pointer
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.filters-footer__save--------------------------------
+.filters-footer__save
+  +center
+  width:140px
+  height:38px
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @extend %card
+  font-weight: normal
+  .icon-heart1
+    color: #7ab764
+    font-size: 24px
+    margin: 0 20px 0 0
+  &:hover
+    cursor: pointer
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.filters-footer__look--------------------------------
+.filters-footer__look
+  +center
+  width:200px
+  height:38px
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @extend %card
+  font-weight: normal
+  &:hover
+    cursor: pointer
+  .icon-location2
+    font-size: 20px
+    color: #f05650
+    margin: 0 20px 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.filters-footer__button--------------------------------
+.filters-footer__button
+  // +alic
+  // +jucs
+  // +jucb
+  width:237px
+  height:38px
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+
+
+//-------------.page-sale-filters__form-lp--------------------------------
+.page-sale-filters__form-lp
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  display: none
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  +jucb
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.sale-form-lp--------------------------------
+.sale-form-lp
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.sale-form-lp__text--------------------------------
+.sale-form-lp__text
+  // +alic
+  +jucc
+  // +jucb
+  // width:
+  // height:
+  flex: 0 1 100%
+  padding: 20px 0 20px 0
+  position: relative
+  font-weight: normal
+  color: #000000
+  border-bottom: 1px solid #ECECEC
+  i
+    font-size: 24px
+    +absolute( 20px, 20px, 50%,  null,  34px,0,-50%)
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+
+//-------------.sale-form-lp__buttons--------------------------------
+.sale-form-lp__buttons
+  // +alic
+  // +jucs
   
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  @media (max-width: 1199px)
+    flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    +jucb
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.sale-form-lp__button--------------------------------
+.sale-form-lp__button
+  // +alic
+  // +jucs
+  // +jucb
 
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    width:408px
+    height:50px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------
+//-------------.sale-form-lp__look--------------------------------
+.sale-form-lp__look
+  // +alic
+  // +jucs
+  
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
 
-
-
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    +center
+    width: 270px
+    height: 50px
+    border: 1px solid #ECECEC
+    border-radius: 5px
+    span
+      font-weight: normal
+      font-size: 16px
+      line-height: 19px
+    i
+      color: #f05650
+      font-size: 20px
+      margin: 0 16px 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------------------------------

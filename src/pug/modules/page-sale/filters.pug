@@ -1,5 +1,91 @@
 section#page-sale-filters.page-sale-filters
-  form
+  .page-sale-filters__form-lp.sale-form-lp
+    .sale-form-lp__text Поиск
+      i.icon-x
+    form.sale-form-lp__form.flat
+      
+      .flat-line
+        .flat-line__divide
+          .flat-line__title Количество комнат
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "1"},
+                  {title: "2"},
+                  {title: "3"},
+                  {title: "4"},
+                  {title: "5+"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title 
+      .flat__line
+        .flat__divide.flat-divide
+          .flat-divide__title Стоимость
+          .flat-divide__inputs
+            .flat-divide__input
+              input(type='text'  placeholder='от')
+            .flat-divide__input
+              input(type='text'  placeholder='до')
+              span.icon-rouble
+        ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "За все"},
+                  {title: "За м²"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+      .flat__line.flat-line
+        .flat-line__divide
+          .flat-line__title Продавец
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Застройщики и агенты"},
+                  {title: "Застройщики"},
+                  {title: "Агенты и частные лица"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+
+      .flat__line
+        .flat__divide.flat-divide
+          .flat-divide__title Площадь
+          .flat-divide__inputs
+            .flat-divide__input
+              input(type='text'  placeholder='от')
+            .flat-divide__input
+              input(type='text'  placeholder='до м²')
+              span.icon-rouble
+        .flat__divide.flat-divide
+          .flat-divide__title Расположение
+          .flat-divide__inputs
+            .flat-divide__input.filters-selects-adress
+              input(type='text'  placeholder='Адрес или ЖК')
+              span.filters-selects-metro Метро
+      .sale-form-lp__buttons
+        button.btn.btn--success.sale-form-lp__button(type='button') Показать 13 400 объектов
+        a(href="#!").sale-form-lp__look
+          i.icon-location2
+          span Смотреть на карте 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  form.page-sale-filters__form
     .page-sale-filters__item.page-sale-filters-item
           ul.page-sale-filters-item__part.sale-filter.sale-filter--page-sale
             - 
@@ -21,7 +107,6 @@ section#page-sale-filters.page-sale-filters
             each item in items
               li.sale-filter__item.sale-filter__item--page-sale
                 .sale-filter__title=item.title
-        
     .page-sale-filters__selects.filters-selects
       .filters-selects__select
         select.select
@@ -41,7 +126,7 @@ section#page-sale-filters.page-sale-filters
           input(type='text'  placeholder='Адрес или ЖК')
           span.filters-selects-metro Метро
       button.btn.btn--success(type='button').filters-selects__button Показать 155 524 
-    #flat.flat
+    section#flat.flat
       .flat__title Квартира 
       .flat__line
         .flat__divide.flat-divide
@@ -87,77 +172,212 @@ section#page-sale-filters.page-sale-filters
             each item in items
               li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
                 .sale-filter__title=item.title
-        //- .flat__radiobuttons
-        //-   input(type='radio' name="flor" value="Последний"  id="last")
-        //-   label(for="last") Последний
+      .flat__line.flat-line
+        .flat-line__divide
+          .flat-line__title В квартире
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "1 комната"},
+                  {title: "2 комнаты"},
+                  {title: "3 комнаты"},
+                  {title: "4+ комнаты"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+        .flat-line__divide
+          .flat-line__title Планировка
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Смежная"},
+                  {title: "Изолированная"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
 
-        //-   input(type='radio' name="flor" value="Не последний" id="notlast")
-        //-   label(for="notlast") Не последний
+      .flat__line.flat-line
+        .flat-line__divide
+          .flat-line__title Ремонт
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Косметический"},
+                  {title: "Дизайнерский"},
+                  {title: "Капитальный"},
+                  {title: "Нужен ремонт"},
+                  {title: "Нет ремонта"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
 
-        //-   input(type='radio' name="flor" value="Не первый"  id="notfirst")
-        //-   label(for="notfirst") Не первый
+      .flat__line.flat-line
+        .flat-line__divide
+          .flat-line__title Тип отделки
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Черновая"},
+                  {title: "Подчистовая"},
+                  {title: "Чистовая"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+        .flat-line__divide
+          .flat-line__title Апартаменты
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Апартаменты"},
+                  {title: "Нет апартаментов"},
+                  {title: "Балкон/лоджия"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+    section#house.flat
+      .flat__title Дом 
+      .flat__line
+        .flat__divide.flat__divide_short.flat-divide
+          .flat-divide__title Год посторойки
+          .flat-divide__inputs
+            .flat-divide__input.flat-divide__input_long
+              input(type='text'  placeholder='с')
+            .flat-divide__input
+              input(type='text'  placeholder='по')
+        .flat__divide.flat__divide_short.flat-divide
+          .flat-divide__title Количество этажей в доме
+          .flat-divide__inputs
+            .flat-divide__input.flat-divide__input_long
+              input(type='text'  placeholder='от')
+            .flat-divide__input
+              input(type='text'  placeholder='до')
+
+      .flat__line.flat-line
+        .flat-line__divide
+          .flat-line__title Тип дома
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Кирпичный"},
+                  {title: "Монолитный"},
+                  {title: "Кирпично-монолитный"},
+                  {title: "Панельный"},
+                  {title: "Блочный"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+      .flat__line.flat-line
+        .flat-line__divide
+          .flat-line__title Тип парковки
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Открытая"},
+                  {title: "Закрытая"},
+                  {title: "Подземная"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+        .flat-line__divide
+          .flat-line__title Класс жилья
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Эконом"},
+                  {title: "Комфорт"},
+                  {title: "Бизнес"},
+                  {title: "Премиум"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+      .flat__line.flat-line
+        .flat-line__divide
+          .flat-line__title Срок сдачи
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Дом сдан"},
+                  {title: "2020г."},
+                  {title: "2021г."},
+                  {title: "2022г."},
+                  {title: "2023г."},
+                  {title: "2024г."},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+    section#add.flat
+      .flat__title Дополнительно 
+      .flat__line.flat-line
+        .flat-line__divide.flat-line__divide--house
+          .flat-line__title Содержит слова в объявлении
+          .flat-line__input
+            input(type='text'  placeholder='Например: срочно')
+            .flat-line__img
+              i.icon-plus
+        .flat-line__divide.flat-line__divide--house
+          .flat-line__title Исключить слова в объявлении
+          .flat-line__input
+            input(type='text'  placeholder='Например: переуступка')
+            .flat-line__img
+              i.icon-plus
+      .flat__line.flat-line
+        .flat-line__divide
+          .flat-line__title Тип объявления
+          ul.flat__flor.flat__flor_house.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "От застройщиков"},
+                  {title: "От агентов и частных лиц"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale
+                .sale-filter__title=item.title
+        .flat-line__divide
+          .flat-line__title Статус строительства
+          ul.flat__flor.flat__flor_house.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Строится"},
+                  {title: "Сдан"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale
+                .sale-filter__title=item.title
+      .flat__line.flat-line
+        .flat-line__divide
+          .flat-line__title Удобства
+          ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "От собственника"},
+                  {title: "Без залога"},
+                  {title: "Без комиссии"},
+                  {title: "Только с фото"},
+                  {title: "Проверенные в ЕГРН"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+  .page-sale-filters__footer.filters-footer
+      .filters-footer__rollup Свернуть
+        i.icon-chevron-up
+      .filters-footer__discharge Сбросить фильтры
+      a(href="#!").filters-footer__save
+        .icon-heart1
+        span Сохранить
+      a(href="#!").filters-footer__look
+        .icon-location2
+        span Смотреть на карте
+      button.btn.btn--success(type='button').filters-footer__button Показать 16 500 объявлений
 
 
-
-        //- .flat__divide.flat-divide.flat-divide_notitle
-        //-     .flat-divide__input
-        //-       input(type='text'  placeholder='Последний')
-        //- .flat__divide.flat-divide.flat-divide_notitle
-        //-     .flat-divide__input
-        //-       input(type='text'  placeholder='Не последний')
-        //- .flat__divide.flat-divide.flat-divide_notitle
-        //-     .flat-divide__input
-        //-       input(type='text'  placeholder='Не первый')
-      //- .flat__line
-      //-   .flat__divide.flat-divide
-      //-     .flat-divide__title В квартире
-      //-     .flat-divide__inputs
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='1 комната')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='2 комнаты')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='3 комнаты')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='4+ комнаты')
-      //-   .flat__divide.flat-divide
-      //-     .flat-divide__title Планировка
-      //-     .flat-divide__inputs
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Смежная')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Изолированная')
-
-      //- .flat__line
-      //-   .flat__divide.flat-divide
-      //-     .flat-divide__title Ремонт
-      //-     .flat-divide__inputs
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Косметический')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Дизайнерский')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Капитальный')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Нужен ремонт')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Нет ремонта')
-      //- .flat__line
-      //-   .flat__divide.flat-divide
-      //-     .flat-divide__title Тип отделки
-      //-     .flat-divide__inputs
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Черновая')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Подчистовая')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Чистовая')
-      //-   .flat__divide.flat-divide
-      //-     .flat-divide__title Апартаменты
-      //-     .flat-divide__inputs
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Апартаменты')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Нет апартаментов')
-      //-       .flat-divide__input
-      //-         input(type='text'  placeholder='Балкон/лоджия')
+ 
