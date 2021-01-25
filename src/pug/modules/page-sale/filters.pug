@@ -1,6 +1,7 @@
 section#page-sale-filters.page-sale-filters
+  form
     .page-sale-filters__item.page-sale-filters-item
-          .page-sale-filters-item__part.sale-filter.sale-filter--page-sale
+          ul.page-sale-filters-item__part.sale-filter.sale-filter--page-sale
             - 
               items = [
                   {title: "Купить"},
@@ -9,7 +10,7 @@ section#page-sale-filters.page-sale-filters
             each item in items
               li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--page-sale-left 
                 .sale-filter__title=item.title
-          .page-sale-filters-item__part.sale-filter.sale-filter--page-sale 
+          ul.page-sale-filters-item__part.sale-filter.sale-filter--page-sale 
             - 
               items = [
                   {title: "Квартиру"},
@@ -21,12 +22,142 @@ section#page-sale-filters.page-sale-filters
               li.sale-filter__item.sale-filter__item--page-sale
                 .sale-filter__title=item.title
         
-//- .page-sale-filters__
-//- .page-sale-filters__
-//- .page-sale-filters__
-//- .page-sale-filters__
-//- .page-sale-filters__
-//- .page-sale-filters-item__
-//- .page-sale-filters-item__
-//- .page-sale-filters-item__
-//- .page-sale-filters-item__
+    .page-sale-filters__selects.filters-selects
+      .filters-selects__select
+        select.select
+          option(value='Комнат' disabled ) Комнат
+          option(value='1' ) 1
+          option(value='2') 2
+          option(value='3') 3
+          option(value='4') 4
+      .filters-selects__select
+        select.select
+          option(value='Стоимость' disabled ) Стоимость
+          option(value='1 000 000' ) до 1 000 000
+          option(value='5 000 000') до 5 000 000
+          option(value='10 000 000') до 10 000 000
+          option(value='> 10 000 000 ') выше 10 000 000
+      .filters-selects__adress.filters-selects-adress
+          input(type='text'  placeholder='Адрес или ЖК')
+          span.filters-selects-metro Метро
+      button.btn.btn--success(type='button').filters-selects__button Показать 155 524 
+    #flat.flat
+      .flat__title Квартира 
+      .flat__line
+        .flat__divide.flat-divide
+          .flat-divide__title Общая площадь
+          .flat-divide__inputs
+            .flat-divide__input
+              input(type='text'  placeholder='от')
+            .flat-divide__input
+              input(type='text'  placeholder='до')
+              span м²
+        .flat__divide.flat-divide
+          .flat-divide__title Жилая площадь
+          .flat-divide__inputs
+            .flat-divide__input
+              input(type='text'  placeholder='от')
+            .flat-divide__input
+              input(type='text'  placeholder='до')
+              span м²
+        .flat__divide.flat-divide
+          .flat-divide__title Кухня
+          .flat-divide__inputs
+            .flat-divide__input
+              input(type='text'  placeholder='от')
+            .flat-divide__input
+              input(type='text'  placeholder='до')
+              span м²
+      .flat__line
+        .flat__divide.flat__divide_short.flat-divide
+          .flat-divide__title Этаж
+          .flat-divide__inputs
+            .flat-divide__input.flat-divide__input_long
+              input(type='text'  placeholder='с')
+            .flat-divide__input
+              input(type='text'  placeholder='по')
+
+        ul.flat__flor.sale-filter.sale-filter--page-sale 
+            - 
+              items = [
+                  {title: "Последний"},
+                  {title: "Не последний"},
+                  {title: "Не первый"},
+              ]
+            each item in items
+              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat
+                .sale-filter__title=item.title
+        //- .flat__radiobuttons
+        //-   input(type='radio' name="flor" value="Последний"  id="last")
+        //-   label(for="last") Последний
+
+        //-   input(type='radio' name="flor" value="Не последний" id="notlast")
+        //-   label(for="notlast") Не последний
+
+        //-   input(type='radio' name="flor" value="Не первый"  id="notfirst")
+        //-   label(for="notfirst") Не первый
+
+
+
+        //- .flat__divide.flat-divide.flat-divide_notitle
+        //-     .flat-divide__input
+        //-       input(type='text'  placeholder='Последний')
+        //- .flat__divide.flat-divide.flat-divide_notitle
+        //-     .flat-divide__input
+        //-       input(type='text'  placeholder='Не последний')
+        //- .flat__divide.flat-divide.flat-divide_notitle
+        //-     .flat-divide__input
+        //-       input(type='text'  placeholder='Не первый')
+      //- .flat__line
+      //-   .flat__divide.flat-divide
+      //-     .flat-divide__title В квартире
+      //-     .flat-divide__inputs
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='1 комната')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='2 комнаты')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='3 комнаты')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='4+ комнаты')
+      //-   .flat__divide.flat-divide
+      //-     .flat-divide__title Планировка
+      //-     .flat-divide__inputs
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Смежная')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Изолированная')
+
+      //- .flat__line
+      //-   .flat__divide.flat-divide
+      //-     .flat-divide__title Ремонт
+      //-     .flat-divide__inputs
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Косметический')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Дизайнерский')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Капитальный')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Нужен ремонт')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Нет ремонта')
+      //- .flat__line
+      //-   .flat__divide.flat-divide
+      //-     .flat-divide__title Тип отделки
+      //-     .flat-divide__inputs
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Черновая')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Подчистовая')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Чистовая')
+      //-   .flat__divide.flat-divide
+      //-     .flat-divide__title Апартаменты
+      //-     .flat-divide__inputs
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Апартаменты')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Нет апартаментов')
+      //-       .flat-divide__input
+      //-         input(type='text'  placeholder='Балкон/лоджия')
