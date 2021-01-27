@@ -57,7 +57,5 @@ if($(this).hasClass("act")){
 
 
 
-
-
 })
 

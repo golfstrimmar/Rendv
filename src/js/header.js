@@ -18,7 +18,7 @@ wrapper.addEventListener("click", function (event) {
     menu.classList.add("header__sidebar_act");
     // menu.appendChild(service);
     // service.classList.add("header-service_act");
-    body.classList.add("lock");
+    // body.classList.add("lock");
 
   // } else {
   // if (
@@ -35,7 +35,7 @@ wrapper.addEventListener("click", function (event) {
   }
   if (event.target == document.querySelector(".header-main__close")) {
     menu.classList.remove("header__sidebar_act");
-    body.classList.remove("lock");
+    // body.classList.remove("lock");
   }
   
 });
@@ -141,60 +141,60 @@ window.addEventListener("resize", function (event) {
 
 
          // ==скроллинг====ЯКОРЯ==============
-      $(document).ready(function (e) {
-        $('a[href^="#slider"]').click(function () {
-          var target = $(this).attr("href");
-          $("html, body").animate(
-            { scrollTop: $(target).offset().top - 60 },
-            800
-          ); //800 - длительность скроллинга в мс
-              menu.classList.remove("header__menu_act");
-              service.classList.remove("header-service_act");
-              header.appendChild(service);
-              body.style.overflow = "visible";
-          return false;
-        });
-      }),
-      $(document).ready(function (e) {
-        $('a[href^="#work"]').click(function () {
-          var target = $(this).attr("href");
-          $("html, body").animate(
-            { scrollTop: $(target).offset().top - 60 },
-            800
-          ); //800 - длительность скроллинга в мс
-              menu.classList.remove("header__menu_act");
-              service.classList.remove("header-service_act");
-              header.appendChild(service);
-              body.style.overflow = "visible";
-          return false;
-        });
-      }),
-      $(document).ready(function (e) {
-        $('a[href^="#arhi"]').click(function () {
-          var target = $(this).attr("href");
-          $("html, body").animate(
-            { scrollTop: $(target).offset().top - 60 },
-            800
-          ); //800 - длительность скроллинга в мс
-              menu.classList.remove("header__menu_act");
-              service.classList.remove("header-service_act");
-              header.appendChild(service);
-              body.style.overflow = "visible";
-          return false;
-        });
-      }),
-      $(document).ready(function (e) {
-        $('a[href^="#footer"]').click(function () {
-          var target = $(this).attr("href");
-          $("html, body").animate(
-            { scrollTop: $(target).offset().top - 60 },
-            800
-          ); //800 - длительность скроллинга в мс
-              menu.classList.remove("header__menu_act");
-              service.classList.remove("header-service_act");
-              header.appendChild(service);
-              body.style.overflow = "visible";
-          return false;
-        });
-      })
+      // $(document).ready(function (e) {
+      //   $('a[href^="#slider"]').click(function () {
+      //     var target = $(this).attr("href");
+      //     $("html, body").animate(
+      //       { scrollTop: $(target).offset().top - 60 },
+      //       800
+      //     ); //800 - длительность скроллинга в мс
+      //         menu.classList.remove("header__menu_act");
+      //         service.classList.remove("header-service_act");
+      //         header.appendChild(service);
+      //         body.style.overflow = "visible";
+      //     return false;
+      //   });
+      // }),
+      // $(document).ready(function (e) {
+      //   $('a[href^="#work"]').click(function () {
+      //     var target = $(this).attr("href");
+      //     $("html, body").animate(
+      //       { scrollTop: $(target).offset().top - 60 },
+      //       800
+      //     ); //800 - длительность скроллинга в мс
+      //         menu.classList.remove("header__menu_act");
+      //         service.classList.remove("header-service_act");
+      //         header.appendChild(service);
+      //         body.style.overflow = "visible";
+      //     return false;
+      //   });
+      // }),
+      // $(document).ready(function (e) {
+      //   $('a[href^="#arhi"]').click(function () {
+      //     var target = $(this).attr("href");
+      //     $("html, body").animate(
+      //       { scrollTop: $(target).offset().top - 60 },
+      //       800
+      //     ); //800 - длительность скроллинга в мс
+      //         menu.classList.remove("header__menu_act");
+      //         service.classList.remove("header-service_act");
+      //         header.appendChild(service);
+      //         body.style.overflow = "visible";
+      //     return false;
+      //   });
+      // }),
+      // $(document).ready(function (e) {
+      //   $('a[href^="#footer"]').click(function () {
+      //     var target = $(this).attr("href");
+      //     $("html, body").animate(
+      //       { scrollTop: $(target).offset().top - 60 },
+      //       800
+      //     ); //800 - длительность скроллинга в мс
+      //         menu.classList.remove("header__menu_act");
+      //         service.classList.remove("header-service_act");
+      //         header.appendChild(service);
+      //         body.style.overflow = "visible";
+      //     return false;
+      //   });
+      // })
      
