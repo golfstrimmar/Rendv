@@ -1,28 +1,6 @@
-//-------------.page-sale-filters--------------------------------
-.page-sale-filters
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
-  // padding: 16px 17px 0 20px
-  padding: 16px 0 0 0
-  @extend %card
-  @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    padding: 0 0 0 0
-    min-height: 100vh
 
-  @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-//---------------------------------------------
-//-------------.page-sale-filters__form--------------------------------
-.page-sale-filters__form
+//------.sale-filters--------
+.sale-filters
   // +alic
   // +jucs
   // +jucb
@@ -30,7 +8,11 @@
   // height:
   // flex: 0 1 100%
   // margin: 0 0 0 0
-  padding: 0 17px 0 20px
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @extend %card
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -40,112 +22,23 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
-//---------------------------------------------
+//-------------
 
-
-// .sale-form
-// .sale-form
-// .sale-form
-// .sale-form
-// .sale-form
-
-
-//-------------.sale-form__nav--------------------------------
-//-------------.sale-form__nav--------------------------------
-//-------------.sale-form__nav--------------------------------
-.sale-form__nav
+// filters-headerfilters-headerfilters-headerfilters-headerfilters-headerfilters-header
+.sale-filters__header
+//------.sale-filters-header--------
+.sale-filters-header
   // +alic
   // +jucs
-  // +jucb
+  +jucb
   // width:
   // height:
   // flex: 0 1 100%
   // margin: 0 0 0 0
-  // padding: 0 0 0 0
+  padding: 16px 20px  0
   // position: relative
-  @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-//---------------------------------------------
-//-------------.sale-form-nav--------------------------------
-.sale-form-nav
-  // +alic
-  +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
-  // padding: 0 0 0 0
-  // position: relative
-  @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-//---------------------------------------------
-//-------------.sale-form-nav__part--------------------------------
-.sale-form-nav__part
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
-  margin: 0 20px 0 0
-  &:last-child
-    margin: 0 0 0 0
-  // padding: 0 0 0 0
-  // position: relative
-  @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-//--------
-//------.sale-filter--form----
-.sale-filter--form
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  height: 40px
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
-  // padding: 0 0 0 0
-  // position: relative
-  @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-//---------------------------------------------
-
-//------.sale-filter__item--form--------
-.sale-filter__item--form
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
-  padding: 0 21px
-  // position: relative
+  // display: none
+  // display: flex
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -155,25 +48,72 @@
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //-------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//------.sale-filters-header__nav--------
+.sale-filters-header__nav
+  // +alic
+  +jucs
+  // +jucb
+  // width:
+  // height:
+  flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.sale-filter__item--sale-filters--------
+.sale-filter__item--sale-filters
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding: 11px 20px
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.sale-filters-header__sale-filter--------
+.sale-filters-header__sale-filter
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  margin: 0 20px 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
 //-------------.page-sale-filters__selects--------------------------------
 .page-sale-filters__selects
   // +alic
@@ -295,7 +235,7 @@
   // flex: 0 1 100%
   // margin: 0 0 0 0
   // padding: 0 0 0 0
-  +absolute( 51px, 20px, 50%,  85%,  null,0,-50%)
+  +absolute( 51px, 20px, 50%,  null, 20px,0,-50%)
   font-weight: normal
   color: $company
   @media (max-width: 1199px)
@@ -331,6 +271,29 @@
     // padding: 0 0 0 0
 //---------------------------------------------
 
+//------.sale-filters-header__data--------
+.sale-filters-header__data
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  flex: 0 1 100%
+  margin: 20px 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    padding: 0 0 0 
+// конец header конец headerконец headerконец headerконец headerконец headerконец header
+  
 
 
 
@@ -348,15 +311,161 @@
 
 
 
-//------.page-sale-filters__footer--------
-.page-sale-filters__footer
+
+  
+  // //-------------.page-sale-filters--------------------------------
+// .page-sale-filters
+//   // +alic
+//   // +jucs
+//   // +jucb
+//   // width:
+//   // height:
+//   // flex: 0 1 100%
+//   // margin: 0 0 0 0
+//   // padding: 16px 17px 0 20px
+//   padding: 16px 0 0 0
+//   @extend %card
+//   @media (max-width: 1199px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     padding: 0 0 0 0
+//     min-height: 100vh
+
+//   @media (max-width: 767px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+// //---------------------------------------------
+// //-------------.page-sale-filters__form--------------------------------
+// .page-sale-filters__form
+//   // +alic
+//   // +jucs
+//   // +jucb
+//   // width:
+//   // height:
+//   // flex: 0 1 100%
+//   // margin: 0 0 0 0
+//   padding: 0 17px 0 20px
+//   @media (max-width: 1199px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+//     display: none
+//   @media (max-width: 767px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+// //---------------------------------------------
+
+
+// // .sale-form
+// // .sale-form
+// // .sale-form
+// // .sale-form
+// // .sale-form
+
+
+// //-------------.sale-form__nav--------------------------------
+// //-------------.sale-form__nav--------------------------------
+// //-------------.sale-form__nav--------------------------------
+// .sale-form__nav
+//   // +alic
+//   // +jucs
+//   // +jucb
+//   // width:
+//   // height:
+//   // flex: 0 1 100%
+//   // margin: 0 0 0 0
+//   // padding: 0 0 0 0
+//   // position: relative
+//   @media (max-width: 1199px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+//   @media (max-width: 767px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+// //---------------------------------------------
+// //-------------.sale-form-nav--------------------------------
+// .sale-form-nav
+//   // +alic
+//   +jucs
+//   // +jucb
+//   // width:
+//   // height:
+//   // flex: 0 1 100%
+//   // margin: 0 0 0 0
+//   // padding: 0 0 0 0
+//   // position: relative
+//   @media (max-width: 1199px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+//   @media (max-width: 767px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+// //---------------------------------------------
+// //-------------.sale-form-nav__part--------------------------------
+// .sale-form-nav__part
+//   // +alic
+//   // +jucs
+//   // +jucb
+//   // width:
+//   // height:
+//   // flex: 0 1 100%
+//   margin: 0 20px 0 0
+//   &:last-child
+//     margin: 0 0 0 0
+//   // padding: 0 0 0 0
+//   // position: relative
+//   @media (max-width: 1199px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+//   @media (max-width: 767px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+// //--------
+
+
+// //------.sale-filter__item--form--------
+// .sale-filter__item--form
+//   // +alic
+//   // +jucs
+//   // +jucb
+//   // width:
+//   // height:
+//   // flex: 0 1 100%
+//   // margin: 0 0 0 0
+//   padding: 11px 21px
+//   // position: relative
+//   @media (max-width: 1199px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+//   @media (max-width: 767px)
+//     // flex: 0 1 100%
+//     // margin: 0 0 0 0
+//     // padding: 0 0 0 0
+// //-------------
+
+
+
+
+
+
+// .sale-filters__footer.sale-filters__footer.sale-filters__footer.sale-filters__footer.sale-filters__footer
+.sale-filters__footer
   // +alic
   // +jucs
   // +jucb
   // width:
   // height:
   // flex: 0 1 100%
-  // margin: 0 0 0 0
+  margin: 50px 0 0 0
   // padding: 0 0 0 0
   // position: relative
   @media (max-width: 1199px)
@@ -369,9 +478,6 @@
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //-------------
-
-
-//-------------.filters-footer--------------------------------
 .filters-footer
   +alic
   // +jucs
@@ -495,23 +601,14 @@
 //---------------------------------------------
 //-------------.filters-footer__button--------------------------------
 .filters-footer__button
-  // +alic
-  // +jucs
-  // +jucb
   width:237px
   height:38px
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
-  // padding: 0 0 0 0
+  @media (min-width: 1200px)and (max-width: 1500px)
+    flex: 0 1 350px
+    margin: 20px auto
+    
 
-  @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+
 //---------------------------------------------
 
 

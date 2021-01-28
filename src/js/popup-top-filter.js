@@ -4,26 +4,26 @@ import $ from "jquery";
 $(document).ready(function (e) {
   $(".search__button").on("click", function () {
     $(".popup-top-filter").toggleClass("popup-top-filter_active");
-    $("body").toggleClass("lock")
+    $("body").addClass("lock");
   });
 
   $(".filter-lap__close").on("click", function () {
     $(".popup-top-filter").toggleClass("popup-top-filter_active");
-    $("body").toggleClass("lock");
+      $("body").removeClass("lock");
   });
 
 
 
-  // ------------------------------------------------------------
+  // --------------выдвигаются фильтры по кнопке фильтры на lp и sm----------------------------------------------
 
   $(".sale-nav__item--filters-search").on("click", function () {
     $(".content-sale__filters").toggleClass("content-sale__filters_active");
-    $("body").toggleClass("lock");
+    $("body").addClass("lock");
   });
 
     $(".sale-form-lp__text i").on("click", function () {
       $(".content-sale__filters").toggleClass("content-sale__filters_active");
-      $("body").toggleClass("lock");
+      $("body").removeClass("lock");
     });
 
   // --------------------------------------------------------------
@@ -52,6 +52,21 @@ $(document).ready(function (e) {
 });           				
 
 
-
+$(document).ready(function (e) {
+  $(".flat-js").slideUp(1);
+  $(".rollup-js").on("click", function () {
+    if ($(this).hasClass("act")) {
+      $(".flat-js").slideUp(300);
+      $(this)
+        .removeClass("act")
+        .html("Развернуть <i class='icon-chevron-down'> </i>");
+      $(this).find("i").css("transform", "translateY(0%) rotate(0deg)");
+    } else {
+      $(this).addClass("act").html("Свернуть <i class='icon-chevron-down'> </i>");
+      $(".flat-js").slideDown(500);
+      $(this).find("i").css("transform", "translateY(0%) rotate(180deg)");
+    }
+  });
+});
 
 

@@ -129,7 +129,8 @@ button.btn.btn--light(type='button')  Реклама
                     li.social-links__link
                       a(href="#!")
                         img(src=item.title)
-=================================================================
+=============================
+//- навигационные кнопки====================================
 .sale-filter
             - 
               items = [
@@ -139,6 +140,38 @@ button.btn.btn--light(type='button')  Реклама
             each item in items
               li.sale-filter__item
                 .sale-filter__title=item.title
+
+
+.sale-filter 
+  +jucs
+  background: #FFFFFF
+  border: 1px solid #ECECEC
+  border-radius: 5px
+  &__item 
+    padding: 17px 29px 
+    border-right: 1px solid #ECECEC
+    transition: all 0.2s ease-in-out
+    &:hover
+      +bg(#DEF1D7) 
+      cursor: pointer 
+      .sale-filter__title
+        color: $dark-1
+    &:last-child
+      border-right: none
+    +center
+  &__title
+    font-weight: normal
+    line-height: 100%
+    color: $grey
+    transition: all 0.2s ease-in-out
+
+
+
+
+
+
+
+
 =================================================================
 .opinion-card
           img.opinion-card__img(src="assets/img/opin/opin-1.webp",alt="opin-1")
@@ -258,6 +291,9 @@ input(type='text'  placeholder='Адрес или ЖК')
   color: #f05650
   font-size: 20px
 =================================================================
+
+
+
 =================================================================
 =================================================================
 =================================================================
