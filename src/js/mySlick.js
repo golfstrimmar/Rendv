@@ -160,7 +160,15 @@ $(".extended-slider-1-js").slick({
       "</span></button>"
     );
   },
+
+
 });
+
+
+
+
+
+
 $(".extended-slider-2-js").slick({
   dots: true,
   arrows: true,

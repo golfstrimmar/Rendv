@@ -361,17 +361,19 @@
   // height:
   // flex: 0 1 100%
   // margin: 0 0 0 0
-  
+  border-top-left-radius: 10px
+  border-bottom-left-radius: 10px
   @extend %card
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    border-radius: 10px
+
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
-
 
 //-------------.content-sale-card__right--------------------------------
 .card-object-extended__right
@@ -382,32 +384,33 @@
   // height:
   flex: 1 1 40%
   // margin: 0 0 0 0
-  padding: 18px 86px 20px 30px
+  padding: 18px 0px 20px 30px
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    padding: 18px 30px 20px 20px
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    padding: 18px 13px 20px 
+
 //---------------------------------------------
 //-------------.content-sale-card__slider--------------------------------
 .card-object-extended__slider
   flex: 0 1 34.3%
   width: 10px
+  .slick-list,.slick-track
+    height: 100%
+  .slick-slide
+    div
+      height: 100%
+
   @media (max-width: 1199px)
+    flex: 0 1 100%
   @media (max-width: 767px)
 
-
-
-
-// .extended-slider--------------------
-// .extended-slider--------------------
-// .extended-slider--------------------
-// .extended-slider--------------------
-// .extended-slider--------------------
-// .extended-slider--------------------
 // .extended-slider--------------------
 .extended-slider-1-js,.extended-slider-2-js,.extended-slider-3-js,.extended-slider-4-js,.extended-slider-5-js
   .slick-slide
@@ -421,6 +424,7 @@
     display: inline-flex
     +absolute( 71px, 38px, null, null, 10px,0,0)
     bottom:  10px
+
 
   .slick-dots-current
     font-weight: normal
@@ -449,6 +453,8 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    .slick-active
+      display: none
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -472,6 +478,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -559,20 +566,22 @@
 //---------------------------------------------
 //-------------.extended-slider-item--------------------------------
 .extended-slider-item
-
-  padding: 0 0 107% 0
   position: relative
   background-repeat: no-repeat
   background-size: cover
-
+  border-top-left-radius: 10px
+  border-bottom-left-radius: 10px
+  +bg($active)
   @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    border-top-right-radius: 10px
+    border-bottom-left-radius: 0px
+    min-height: 200px
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    // padding: 0 0 0 0    
+    min-height: 150px
+
 //---------------------------------------------
 //-------------.extended-slider-item__bunner--------------------------------
 .extended-slider-item__bunner
@@ -587,11 +596,12 @@
   // padding: 0 0 0 0
   background: #FFFFFF
   border-radius: 10px
-
+  height: 40px!important
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -616,22 +626,35 @@
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //---------------------------------------------
-
-//---------------------------------------------
-//---------------------------------------------
-//---------------------------------------------
-//---------------------------------------------
-//---------------------------------------------
-//---------------------------------------------
-//---------------------------------------------
-//---------------------------------------------
-
-
-
-
-
-
-
+//------.extended-slider-item__chip--------
+.extended-slider-item__chip
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    padding: 5px 10px
+    background: $white
+    border-radius: 5px
+    font-weight: normal
+    font-size: 12px
+    line-height: 14px
+    +absolute( 95px, 30px, null, 10px,  null,0,0)
+    bottom: 10px
+    +center
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+// span.extended-slider-item__chip Новостройка
 //-------------.content-sale-card__right--------------------------------
 .card-object-extended__right
   // +alic
@@ -661,15 +684,46 @@
   // flex: 0 1 100%
   // margin: 0 0 0 0
   // padding: 0 0 0 0
+  padding: 0 98px 0 0
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 0 0 0 0
+    +jucs
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //---------------------------------------------
+//------.card-object-extended__flor--------
+.card-object-extended__flor
+  display: none
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    +alic
+    // +jucs
+    +jucb
+    // width:
+    // height:
+    flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // position: relative
+    
+    // display: flex
+    font-weight: normal
+    font-size: 12px
+    line-height: 14px
+    color: #9E9E9E
+  @media (max-width: 767px)
+    font-size: 14px
+    order: 1
+    margin: 6px 0 0 0
+    .icon-like-green
+      font-size: 16px
+//-------------
 //-------------.content-sale-card__header--------------------------------
 .card-object-extended__header
   // +alic
@@ -684,17 +738,17 @@
   line-height: 23px
   color: #586EB6
   @media (max-width: 1199px)
-    // flex: 0 1 100%
+    flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    margin: 0 0 8px 0
   @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    font-size: 18px
+    line-height: 21px
 //---------------------------------------------
 //-------------.content-sale-card__price--------------------------------
 .card-object-extended__price
-  // +alic
+  +alic
   // +jucs
   // +jucb
   // width:
@@ -705,14 +759,37 @@
   font-size: 20px
   line-height: 23px
   @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    font-size: 15px
+
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    font-size: 14px
 //---------------------------------------------
+//------card-object-extended__price--lp--------
+.card-object-extended__price--lp
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: flex
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
 //-------------.content-sale-card__price-per--------------------------------
 .card-object-extended__price-per
   +alic
@@ -720,19 +797,48 @@
   // +jucb
   // width:
   // height:
-  // flex: 0 1 100%
+  flex: 0 1 100%
   // margin: 0 0 0 0
   padding:  3px 0 0 0
   font-weight: normal
+
   @media (max-width: 1199px)
-    // flex: 0 1 100%
+    flex: 0 1 auto
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 0 0 0 0
+    // display: inline-flex
+    font-size: 15px
+    font-weight:500
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    font-size:14px
 //---------------------------------------------
+//------.extended-slider-item__icon-lp--------
+.extended-slider-item__icon--lp
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    margin: 0 10px 0 0
+    // padding: 0 0 0 0
+    display: flex
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    margin: 0 8px 0 0
+    // padding: 0 0 0 0
+    width: 12px
+//-------------
 //-------------.content-sale-card__adress--------------------------------
 .card-object-extended__adress
   // +alic
@@ -748,6 +854,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -755,8 +862,6 @@
 //---------------------------------------------
 //-------------.content-sale-card__properties--------------------------------
 .card-object-extended__properties
-  +alic
-  +jucs
   // +jucb
   // width:
   // height:
@@ -766,12 +871,41 @@
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    // padding: 0 0 0 0 
+    display: none
+
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //---------------------------------------------
+// .card-object-extended-properties
+//--------------
+.card-object-extended-properties
+  +alic
+  +jucs
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
 //-------------. card-object-extended-properties__property--------------------------------
 .card-object-extended-properties__property
   // +alic
@@ -787,13 +921,12 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //---------------------------------------------
-
-  
 //-------------. card-object-extended-properties__property--metro-text--------------------------------
 .card-object-extended-properties__property--metro-text
   // +alic
@@ -810,10 +943,32 @@
     // margin: 0 0 0 0
     // padding: 0 0 0 0
   @media (max-width: 767px)
+    font-size: 14px
+//---------------------------------------------
+//------.card-object-extended-properties__property--metro-icon--------
+.card-object-extended-properties__property--metro-icon
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
-//---------------------------------------------
+    width: 15px
+    height: 15px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
 //-------------. card-object-extended-properties__property--time-text--------------------------------
 .card-object-extended-properties__property--time-text
   // +alic
@@ -833,9 +988,7 @@
     // margin: 0 0 0 0
     // padding: 0 0 0 0
   @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    font-size: 14px
 //---------------------------------------------
 //-------------. card-object-extended-properties__property--count--------------------------------
 .card-object-extended-properties__property--count
@@ -871,15 +1024,17 @@
   // height:
   // flex: 0 1 100%
   // margin: 0 0 0 0
-  // padding: 0 0 0 0
+  padding: 0 87px 0 0
   font-weight: normal
   font-size: 15px
   line-height: 140%
   color: #9E9E9E
+
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -894,11 +1049,12 @@
   // height:
   // flex: 0 1 100%
   margin: 18px 0 0
-  // padding: 0 0 0 0
+  padding: 0 118px 0 0
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -997,11 +1153,12 @@
   // height:
   // flex: 0 1 100%
   // margin: 0 0 0 0
-  // padding: 0 0 0 0
+  padding-right: calc(20px + (90-20)*((100vw-1200px)/(1800-1200)))
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none 
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -1047,6 +1204,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -1091,5 +1249,147 @@
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //---------------------------------------------
-
-
+//------.card-object-extended__footer--------
+.card-object-extended__footer
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    flex: 0 1 100%
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.card-object-extended-footer--------
+.card-object-extended-footer
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    // margin: 0 0 0 0
+    +jucb
+    border-top: 1px solid #ECECEC
+    padding: 18px 20px 9px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.card-object-extended-footer__properties--------
+.card-object-extended-footer__properties
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    flex: 0 1 100%
+    margin: 0 0 11px 0
+    
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.card-object-extended-properties--------
+.card-object-extended-properties
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.card-object-extended-footer__button--------
+.card-object-extended__button-low
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: flex
+    height: 50px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.btn--card-object-extended--------
+.btn--card-object-extended
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    border-top-left-radius: 0%!important
+    border-top-right-radius: 0%!important
+    border-bottom-left-radius: 10px!important
+    border-bottom-right-radius: 10px!important
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    font-size: 14px
+    font-weight: normal
+    height: 40px
+//-------------

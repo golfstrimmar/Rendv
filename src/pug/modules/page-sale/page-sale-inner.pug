@@ -9,7 +9,6 @@ section#sale-nav.sale-nav
     i.icon-location2
     span На карте
 
-//- .content-sale__filters_active
 
 section#content-sale.content-sale
       .content-sale__body.container.container--content-page-sale
@@ -17,7 +16,12 @@ section#content-sale.content-sale
         
           .content-sale__filters
             include filters 
-
+          .sale-link-top--sm  Купить квартиру в &nbsp;
+            a(href="#!") Новосибирске
+          .sale-link-search--sm Найдено 184 квартиры
+          a(href="#!").sale-link-top  Купить 1,2-комнатную квартиру в новостройке в Новосибирской области
+            i.icon-x
+          a(href="#!").sale-link-back Назад
           .content-sale__info
             .content-sale__selector
                 select.select
@@ -31,10 +35,11 @@ section#content-sale.content-sale
             .content-sale__numbers  145 523 объявлений
           .content-sale__cards
             include card-1
+            
             include card-2
         include vidgets
       section#bunners-page-sale.bunners.bunners--page-sale
-            .container.container--sale.container--content-page-sale
+            .container--content-page-sale
               .bunners__body
                 .bunners__arrows.bunners-arrows
                   i.bunners-arrows__arrow.bunners-arrows__arrow_prev.icon-chevron-left
@@ -60,12 +65,14 @@ section#content-sale.content-sale
                     each item in items
                       .bunners__item.slider-bunners-item(style=`background-image: url(${item.url})`)
                         .slider-bunners-item__buttons
+                          //- .slider-bunners-item__buttons-empty  
                           button.slider-bunners-item__button.slider-bunners-item__button_empty.btn.button--empty(type='button') Квартиры от 2млн.<span class="icon-rouble"></span>
                           button.slider-bunners-item__button.slider-bunners-item__button_empty.btn.button--empty(type='button')  м² от 130 т.р.
                           button.slider-bunners-item__button.slider-bunners-item__button_light(type='button').btn.btn--light  Реклама
                           button.slider-bunners-item__button.slider-bunners-item__button_cross--bunners(type='button').btn.btn--cross 
                             span Скрыть
                             i.icon-x
+                          .line-small
         
                         .slider-bunners-item__small ГК «Самолёт»
                         .slider-bunners-item__title=item.title 
@@ -76,16 +83,41 @@ section#content-sale.content-sale
                         button.btn.btn--success.btn--success-icon.slider-bunners-item__button-order(type='button') 
                           span.icon-phone
                           span Заказать звонок
-
       .content-sale__body.container.container--content-page-sale
         .content-sale__left 
+
+
           .content-sale__cards
             include card-3
             include card-4
+            .content-sale__advert-average.advert-average 
+              .advert-average__body
+                img(src="assets/img/content-sale/img-6.webp",alt="img").advert-average__img
+                .advert-average__chip Реклама
+                .advert-average__footer.advert-average-footer
+                  button.btn.btn--success(type='button').advert-average-footer__button Смотреть квартиры
+                  img(src="assets/img/content-sale/pik.webp",alt="img").advert-average-footer__img
+                  .advert-average-footer__data
+                    .advert-average-footer__logo--sm ПИК группа
+                    .advert-average-footer__title ЖК Цветной Город
+                    .advert-average-footer__text от 2 млн. ₽
             include card-5
+            include card-5
+            .content-sale__advert-mortgage.advert-mortgage.delete--sm 
+              img(src="assets/img/content-sale/money.webp",alt="img").advert-mortgage__img
+              .advert-mortgage__column
+                .advert-mortgage__text Поможем вам сэкономить до <span>0,5%</span> на ставке по ипотеке
+                button.btn.btn--success(type='button').advert-mortgage__button  Рассчитать ипотеку
         .content-sale__vidgets 
-      .content-sale__body.container.container--content-page-sale
+      .content-sale__body.container.container--content-page-sale.delete--sm
         .content-sale__left 
+          .content-sale__pagination--arrows.pagination-arrows 
+            .pagination-arrows__arrows
+              .pagination-arrows__arrow.pagination-arrows__arrow_left
+                i.icon-chevron-left
+              .pagination-arrows__arrow.pagination-arrows__arrow_right
+                i.icon-chevron-right
+            button.btn.button--empty(type='button').pagination-arrows__button Показать ещё 32 объекта
           .content-sale__pagination.content-sale-pagination
               ul.content-sale-pagination__items
                 li.content-sale-pagination__item
@@ -101,4 +133,6 @@ section#content-sale.content-sale
               button.btn.btn--light(type='button').content-sale-pagination__button-next Следующая
               button.btn.btn--success.content-sale-pagination__button(type='button')  Показать еще 32 объекта
         .content-sale__vidgets
+        
+
 

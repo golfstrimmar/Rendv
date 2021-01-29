@@ -12,11 +12,12 @@
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 22px 0 0 0
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    padding: 22px 0 30px
 //---------------------------------------------
 //-------------.content-sale__body--------------------------------
 .content-sale__body
@@ -53,7 +54,7 @@
     // margin: 0 0 0 0
     // padding: 0 0 0 0
   @media (max-width: 767px)
-    // flex: 0 1 100%
+    flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //---------------------------------------------
@@ -219,15 +220,16 @@
   // height:
   // flex: 0 1 100%
   // margin: 0 0 0 0
-  padding: 47px 0 0 0
+  padding: 30px 0 0 0
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 13px 0 0 0
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 20px 0 
+
 //---------------------------------------------
 
 //---------------------------------------------
@@ -247,10 +249,12 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    color: #9E9E9E
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
 //---------------------------------------------
 
 // =================================
@@ -271,8 +275,11 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    +juca
+  @media (max-width: 800px)
+    +jucb
   @media (max-width: 767px)
-    // flex: 0 1 100%
+    flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //---------------------------------------------
@@ -285,16 +292,27 @@
   // height:
   // flex: 0 1 100%
   margin: 0 0 30px 0
+ 
   &:last-child
     margin: 0 0 0 0
   // padding: 20px 0 0 0
   @media (max-width: 1199px)
     // flex: 0 1 100%
-    // margin: 0 0 0 0
+    margin: 0 0 0 0
     // padding: 0 0 0 0
+    // flex: 0 1 48.6%
+    flex: 0 1 344px
+    // &:nth-child(2n)
+      // margin: 0 0 0 0
+    &:last-child
+      margin: 0 
+
+
   @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
+    flex: 0 1 100%
+    max-width: 300px
+
+    margin: 0 auto 15px
     // padding: 0 0 0 0
 //---------------------------------------------
 
@@ -330,11 +348,23 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    .new-select
+      color: #586EB6
   @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
+    flex: 0 1 100%
     // padding: 0 0 0 0
-//---------------------------------------------
+    margin: 0 0 0 0
+    .new-select
+      background: #ECECEC
+      width: 100%
+      font-weight: normal
+      font-size: 14px
+      line-height: 16px
+      border-radius: 5px
+      padding: 0 14px	
+      &::after
+        right: 13px
+        
 
 //-------------.bunners--page-sale--------------------------------
 .bunners--page-sale
@@ -344,18 +374,17 @@
   // width:
   // height:
   // flex: 0 1 100%
-  // margin: 0 0 20 0
-  padding: 0 0 20px 0
+  padding: 30px 0 20px 0
+  @media  (min-width: 1200px) and (max-width: 1600px)
+    padding: 30px 0 20px 0	
   @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 20px 0 !important
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
-//---------------------------------------------
-
+    padding: 0 0 20px 0!important
+    display: flex
+    order: 1
 //-------------.content-sale__pagination--------------------------------
 .content-sale__pagination
   // +alic
@@ -370,6 +399,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -532,7 +562,10 @@
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 11px 0 
+    font-size: 14px
+    i
+      font-size: 16px
 //---------------------------------------------
 //-------------.sale-nav__keep--------------------------------
 .sale-nav__item--keep
@@ -549,8 +582,623 @@
     i
       color: #f05650
   @media (max-width: 767px)
+    padding: 11px 0 
+    font-size: 14px
+    i
+      font-size: 16px
+//---------------------------------------------
+
+//------.content-sale__advert-average--------
+.content-sale__advert-average
+  // +alic
+  // +jucs
+  // +jucb
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    flex: 0 1 100%
+    margin: 20px 0
+    +jucc
+
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    margin:  0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-average__body--------
+.advert-average__body
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
-//---------------------------------------------
+    max-width: 708px
+    background: $white
+    border: 1px solid $bej
+    +jucb
+    border-top-right-radius: 10px
+    border-top-left-radius: 10px
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+    position: relative
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-average--------
+.advert-average
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    
+    // padding: 0 0 0 0
 
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+
+//------.advert-average__img--------
+.advert-average__img
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    width: 100%
+    height: 150px
+    border-top-right-radius: 10px
+    border-top-left-radius: 10px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-average__footer--------
+.advert-average__footer
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-average-footer--------
+.advert-average-footer
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    padding: 20px
+    +jucs
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    padding: 0 0 0 0
+    
+
+//-------------
+//------.advert-average-footer__button--------
+.advert-average-footer__button
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    margin: 0 20px 0 0
+    // padding: 0 0 0 0
+    width: 324px
+    height: 50px
+    background: #f05650
+    font-weight: normal
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    margin: 0 0 0 0
+    // padding: 0 0 0 0
+    width:100%
+    height: 40px
+    order: 1
+    border-top-right-radius: 0
+    border-bottom-right-radius: 10px
+    border-top-left-radius: 0
+    border-bottom-left-radius: 10px
+    margin: 17px 0 0 0
+//-------------
+//------.advert-average-footer__img--------
+.advert-average-footer__img
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    margin: 0 20px 0 0
+    // padding: 0 0 0 0
+
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: none
+//-------------
+//------.advert-average-footer__data--------
+.advert-average-footer__data
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    +fdc
+    +jucb
+
+  @media (max-width: 767px)
+    flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-average-footer__title--------
+.advert-average-footer__title
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    font-size: 20px
+    line-height: 23px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    font-size: 18px
+    color: #586EB6
+    padding: 9px 0 0 15px
+//-------------
+//------.advert-average-footer__text--------
+.advert-average-footer__text
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    font-size: 14px
+    padding: 8px 0 0 15px
+//-------------
+//------.advert-average-footer__logo--sm --------
+.advert-average-footer__logo--sm 
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: flex
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    color: #9E9E9E
+    padding: 20px 0 0 15px
+//-------------
+//------.advert-average__chip --------
+.advert-average__chip 
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    +absolute( 80px, 30px, 10px,  null,  10px,0,0)
+    background: #FFFFFF
+    border: 1px solid #ECECEC
+    font-weight: normal
+    font-size: 12px
+    line-height: 140%
+    border-radius: 5px 
+    +center 
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    top: 109px
+    right: 0
+    left: 15px
+//-------------
+
+//------.content-sale__advert-mortgage--------
+.content-sale__advert-mortgage
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-mortgage--------
+.advert-mortgage
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    padding: 6px 0  0
+    display: flex
+    flex: 0 1 100%
+    margin: 20px 0  30px
+    // padding: 0 0 0 0
+    background: $white
+    border: 1px solid $bej
+    +jucb
+    border-radius: 10px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-mortgage__img--------
+.advert-mortgage__img
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    margin: 0 0 0 20px
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-mortgage__column--------
+.advert-mortgage__column
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    +fdc
+    +jucb
+    flex: 0 1 51.7%
+    padding: 15px 84px 20px 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-mortgage__text--------
+.advert-mortgage__text
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    font-size: 20px
+    line-height: 140%
+    span
+      color:#F4814C 
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-mortgage__button--------
+.advert-mortgage__button
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    width: 242px
+    height: 50px
+    background: #F4814C
+    line-height: 140%
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.content-sale__pagination--arrows--------
+.content-sale__pagination--arrows
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: flex
+    +jucb
+
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.pagination-arrows__arrows--------
+.pagination-arrows__arrows
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    flex: 0 1 120px
+    +jucb
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.pagination-arrows__arrow--------
+.pagination-arrows__arrow
+  // +alic
+  // +jucs
+  // +jucb
+  // width:50px
+  // height:50px
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    margin: 0 20px 0 0
+    &:last-child
+      margin: 0 0 0 0
+    // padding: 0 0 0 0
+    width:50px
+    height:50px
+    border: 1px solid #7AB764
+    border-radius: 5px
+    +center
+    &:focus
+      cursor: pointer
+      background: lighten(#7AB764,  20%)
+
+    i
+      font-size: 20px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.pagination-arrows__button--------
+.pagination-arrows__button
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    width: 220px
+    height: 50px
+    font-weight: normal
+    line-height: 140%
+    color: #181818
+    border: 1px solid #7AB764
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+
+@media  (min-width: 1200px) and  (max-width:  1650px )
+  //------.content-sale__pagination--------
+  .content-sale__pagination
+    margin: 0 0 50px 0
+  //-------------
+  
