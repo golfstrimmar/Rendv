@@ -145,6 +145,11 @@ module.exports = {
       template: "src/pug/pages/sale.pug",
       filename: "./sale.html",
     }),
+    new HtmlWebpackPlugin({
+      // hash: false,
+      template: "src/pug/pages/new.pug",
+      filename: "./new.html",
+    }),
 
     new CopyWebpackPlugin({
       patterns: [

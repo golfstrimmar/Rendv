@@ -1,25 +1,128 @@
 import $ from "jquery";
 // ------------------------------------------------
- 
+ $(document).ready(function () {
 $("#test").on("click", function () {
   $.fancybox.open(
     '<div class="message"><h2>Hello!</h2><p>You are awesome!</p></div>'
   );
 });
 
-
-
-
-
-
-
-
-
-$(document).ready(function () {
 $("select").on("change", function () {
   $(this).trigger("blur");
 });
+
 });
+
+$(document).ready(function (e) {
+
+    $(".bunner-info-js").fadeOut(1);
+  $(".extended-icon-js").on("click", function () { 
+  if ($(this).hasClass("act")) {
+    $(this)
+      .removeClass("act")
+      .closest(".card-object-extended__slider")
+      .siblings(".bunner-info-js")
+      .removeClass("act")
+      .fadeOut(200);
+  } else {
+  $(this)
+    .addClass("act")
+    .closest(".card-object-extended__slider")
+    .siblings(".bunner-info-js")
+    .addClass("act")
+    .fadeIn(200);
+ }
+});
+
+
+    $(".bunner-info-eco-js").fadeOut(1);
+  $(".info-icon-eco-js").on("click", function () {
+    if ($(this).hasClass("act")) {
+      $(this)
+        .removeClass("act")
+        .closest(".card-object-extended__slider")
+        .siblings(".bunner-info-eco-js")
+        .removeClass("act")
+        .fadeOut(200);
+   
+   
+    } else {
+      $(this).addClass("act")
+        .closest(".card-object-extended__slider")
+        .siblings(".bunner-info-eco-js")
+        .addClass("act")
+        .fadeIn(200);
+    }
+  });
+
+
+    $(".bunner-info-mortgage-js").fadeOut(1);
+  $(".extended-icon-mortgage-js").on("click", function () {
+    if ($(this).hasClass("act")) {
+      $(this)
+        .removeClass("act")
+        .closest(".card-object-extended__slider")
+        .siblings(".bunner-info-mortgage-js")
+        .removeClass("act")
+        .fadeOut(200);
+    } else {
+      $(this)
+        .addClass("act")
+        .closest(".card-object-extended__slider")
+        .siblings(".bunner-info-mortgage-js")
+        .addClass("act")
+        .fadeIn(200);
+    }
+  });
+
+});             								
+
+
+ $(document).mouseup(function (e) {
+   // событие клика по веб-документу
+   var div = $(".extended-icon-js"); // тут указываем ID элемента
+   if (
+     !div.is(e.target) && // если клик был не по нашему блоку
+     div.has(e.target).length === 0
+   ) {
+     // и не по его дочерним элементам
+     $(".extended-icon-js").removeClass("act");
+     $(".bunner-info-js").addClass("act").fadeOut(200);
+   }
+ });
+
+
+ $(document).mouseup(function (e) {
+   // событие клика по веб-документу
+   var div = $(".info-icon-eco-js"); // тут указываем ID элемента
+   if (
+     !div.is(e.target) && // если клик был не по нашему блоку
+     div.has(e.target).length === 0
+   ) {
+     // и не по его дочерним элементам
+     $(".info-icon-eco-js").removeClass("act");
+     $(".bunner-info-eco-js").addClass("act").fadeOut(200);
+   }
+ });
+
+ $(document).mouseup(function (e) {
+   // событие клика по веб-документу
+   var div = $(".extended-icon-mortgage-js"); // тут указываем ID элемента
+   if (
+     !div.is(e.target) && // если клик был не по нашему блоку
+     div.has(e.target).length === 0
+   ) {
+     // и не по его дочерним элементам
+     $(".extended-icon-mortgage-js").removeClass("act");
+     $(".bunner-info-mortgage-js").addClass("act").fadeOut(200);
+   }
+ });
+
+
+
+
+
+
 
 
 $(document).ready(function (e) {

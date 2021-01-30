@@ -1,0 +1,94 @@
+section#new-nav.sale-nav
+  .sale-nav__item.sale-nav__item--filters-search 
+    i.icon-search
+    span Фильтры
+  .sale-nav__item.sale-nav__item--keep 
+    i.icon-heart1
+    span Сохранить
+  .sale-nav__item.sale-nav__item--location
+    i.icon-location2
+    span На карте
+
+
+section#content-new.content-sale
+      .content-sale__body.container.container--content-page-sale
+        .content-sale__left
+        
+          .content-sale__filters
+            include ../page-sale/filters 
+          .sale-link-top--sm  Купить квартиру в &nbsp;
+            a(href="#!") Новосибирске
+          .sale-link-search--sm Найдено 184 квартиры
+          a(href="#!").sale-link-top  Купить 1,2-комнатную квартиру в новостройке в Новосибирской области
+            i.icon-x
+          a(href="#!").sale-link-back Назад
+          .content-sale__info
+            .content-sale__selector
+                select.select
+                  option(value='По актуальности' disabled ) По актуальности
+                  option(value='По актуальности' ) По актуальности
+                  option(value='По возрастанию цены') По возрастанию цены
+                  option(value='По убыванию цены') По убыванию цены
+                  option(value='По количеству комнат') По количеству комнат
+                  option(value='Этаж') Этаж
+             
+            .content-sale__numbers  145 523 объявлений
+          .content-sale__cards
+            include card-new-1
+            include card-new-2
+            include card-new-3
+          .content-sale__advert-average.content-sale__advert-average--new.advert-average 
+              .advert-average__body.advert-average__body--new
+                img(src="assets/img/content-sale/img-6.webp",alt="img").advert-average__img.advert-average__img--new
+                img(src="assets/img/content-sale/img-6.webp",alt="img").advert-average__img.advert-average__img--new.advert-average__img.advert-average__img--new-double
+                .advert-average__chip.advert-average__chip--new Реклама
+                .advert-average__content
+                  .advert-average-footer__title.advert-average-footer__title--new ЖК Цветной Город
+                  .advert-average-footer__text.advert-average-footer__text--new от 2 млн. ₽ 
+                  .advert-average__button-block
+                    button.btn.btn--success(type='button').advert-average-footer__button.advert-average-footer__button--new Смотреть квартиры
+                    .advert-average__declaration  Проектная декларация на сайте наш.дом.рф Застройщик ООО «ПИК»
+                img(src="assets/img/content-sale/pik.webp",alt="img").advert-average-footer__img.advert-average-footer__img--new
+                .advert-average__footer.advert-average__footer--new.advert-average-footer
+                  button.btn.btn--success(type='button').advert-average-footer__button.advert-average-footer__button--new Смотреть квартиры
+                  img(src="assets/img/content-sale/pik.webp",alt="img").advert-average-footer__img.advert-average-footer__img--new
+                  .advert-average-footer__data.advert-average-footer__data--new
+                    .advert-average-footer__logo--sm.advert-average-footer__logo--new ПИК группа
+                    .advert-average-footer__title.advert-average-footer__title--new ЖК Цветной Город
+                    .advert-average-footer__text.advert-average-footer__text--new от 2 млн. ₽  
+          .content-sale__cards
+            include card-new-4
+            include card-new-5
+          .content-sale__advert-mortgage.advert-mortgage.advert-mortgage--new
+              img(src="assets/img/content-sale/money.webp",alt="img").advert-mortgage__img.advert-mortgage__img--new
+              .advert-mortgage__column.advert-mortgage__column--new
+                .advert-mortgage__text.advert-mortgage__text--new Поможем вам сэкономить до <span>0,5%</span> на ставке по ипотеке
+              button.btn.btn--success(type='button').advert-mortgage__button.advert-mortgage__button--new  Рассчитать ипотеку
+        include ../page-sale/vidgets
+      
+      .content-sale__body.container.container--content-page-sale.delete--sm
+        .content-sale__left 
+          .content-sale__pagination--arrows.pagination-arrows 
+            .pagination-arrows__arrows
+              .pagination-arrows__arrow.pagination-arrows__arrow_left
+                i.icon-chevron-left
+              .pagination-arrows__arrow.pagination-arrows__arrow_right
+                i.icon-chevron-right
+            button.btn.button--empty(type='button').pagination-arrows__button Показать ещё 32 объекта
+          .content-sale__pagination.content-sale-pagination
+              ul.content-sale-pagination__items
+                li.content-sale-pagination__item
+                  button.btn.btn--light.button-active(type='button' )  1
+                li.content-sale-pagination__item
+                  button.btn.btn--light(type='button')  2
+                li.content-sale-pagination__item
+                  button.btn.btn--light(type='button')  3
+                li.content-sale-pagination__item
+                  button.btn.btn--light(type='button')  4
+                li.content-sale-pagination__item
+                  button.btn.btn--light(type='button')  5
+              button.btn.btn--light(type='button').content-sale-pagination__button-next Следующая
+              button.btn.btn--success.content-sale-pagination__button(type='button')  Показать еще 32 объекта
+        .content-sale__vidgets
+
+

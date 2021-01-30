@@ -1,0 +1,30 @@
+extends ../layout/main
+block header
+  include ../modules/includes/header-page-sale
+  include ../modules/includes/header-sidebar
+block content
+ 
+
+  include ../modules/page-new/page-new-inner
+  include ../modules/popups/modal-enter
+  include ../modules/popups/modal-forget
+  include ../modules/popups/modal-ready
+  include ../modules/popups/modal-safe
+
+
+block footer
+  .page-sale-footer
+    include ../modules/footer
+  footer.modal-enter-footer.modal-enter-footer--sale
+            .modal-enter-footer__copy.modal-enter-footer__copy--main ©2020 RENDV.RU
+            a(href="#!").modal-enter-footer__link.modal-enter-footer__link--sale Полная версия
+            ul.modal-enter-footer__social.modal-enter-footer__social--sale
+                li.modal-enter-footer__item.modal-enter-footer__facebook--main
+                  a(href="#!").modal-enter-footer__link-social
+                    img(src="assets/img/modal-enter-main/footer-facebook.svg",alt="img")
+                li.modal-enter-footer__item
+                  a(href="#!").modal-enter-footer__link-social
+                    img(src="assets/img/modal-enter-main/insta.svg",alt="img")
+                li.modal-enter-footer__item
+                  a(href="#!").modal-enter-footer__link-social
+                    img(src="assets/img/modal-enter-main/vk-footer.svg",alt="img")

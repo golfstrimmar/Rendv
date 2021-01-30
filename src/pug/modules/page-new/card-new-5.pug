@@ -1,0 +1,36 @@
+.content-sale__card.card-object-extended.card-object-extended--new
+                .extended-slider__arrows.extended-slider-arrows
+                  i.extended-slider-arrows__arrow.extended-slider-arrows__arrow_prev.extended-slider-new-5-arrows__arrow_prev.icon-chevron-left
+                  i.extended-slider-arrows__arrow.extended-slider-arrows__arrow_next.extended-slider-new-5-arrows__arrow_next.icon-chevron-right 
+                .card-object-extended__slider.extended-slider-new.extended-slider-new-1.extended-slider-new-5-js
+                    - for (var x = 0; x < 5; x++)
+                      .extended-slider__item.extended-slider__item--new.extended-slider-item(style="background-image: url('./assets/img/new/img-5.webp')") 
+                        .extended-slider-item__bunners
+                          .extended-slider-item__bunner--new
+                            span.extended-slider-item__text-bunner  Эконом 
+                        
+                
+                .card-object-extended__right.card-object-extended__right--new
+                  .card-object-extended__head-line.card-object-extended__head-line--new
+                    .card-object-extended__header ЖК Опалиха-Village (Вилладж)
+                    img.card-object-extended__icon(src="assets/img/content-sale/Vector.svg",alt="img")
+                    .card-object-extended__price от 128 000 <span class="icon-rouble"></span>/м²
+                  .card-object-extended__delivery  Сдача в 2021г.
+                  .card-object-extended__properties.card-object-extended__properties--new.card-object-extended-properties
+                      img(src="assets/img/sale/metro.svg",alt="metro").card-object-extended-properties__property.card-object-extended-properties__property--metro-icon
+                      .card-object-extended-properties__property.card-object-extended-properties__property--metro-text Ленинский проспект
+                  .card-object-extended__adress.card-object-extended__adress--new  Видное, деревня Сапроново, ул. Центральная, д. 1
+                  
+                  ul.card-object-extended__price-list.price-list-new
+                    - 
+                      items = [
+                          { title: "Студии ",price:"от 2 млн." },
+                          { title: "1-комн. ",price:"от 2,5 млн." },
+                          { title: "2-комн. ",price:"от 5,6 млн." },
+                        ]
+                    each item in items
+                      li.price-list-new__item.price-list-new-item
+                        .price-list-new-item__title=item.title
+                        .price-list-new-item__price=item.price  
+                          <span class="icon-rouble"></span>
+
