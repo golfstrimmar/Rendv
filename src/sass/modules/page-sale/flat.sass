@@ -208,10 +208,13 @@
     flex: 1 1 42%
     border-right: none
   input
-    font-weight: normal
-    color: #9E9E9E
+
     +pro 
     border-radius: 5px 
+    &::-webkit-input-placeholder
+      font-weight: normal
+      color: #9E9E9E
+
   span
     font-weight: normal
     +absolute( 20px, 20px, 50%,  80%,  null,0,-50%)
