@@ -1,4 +1,9 @@
-.content-sale__card.card-object-extended.card-object-extended--new
+
+
+ 
+.content-sale__card
+        .card-object-extended.card-object-extended--new
+                
                 .extended-slider__arrows.extended-slider-arrows
                   i.extended-slider-arrows__arrow.extended-slider-arrows__arrow_prev.extended-slider-new-2-arrows__arrow_prev.icon-chevron-left
                   i.extended-slider-arrows__arrow.extended-slider-arrows__arrow_next.extended-slider-new-2-arrows__arrow_next.icon-chevron-right 
@@ -7,12 +12,9 @@
                       .extended-slider__item.extended-slider__item--new.extended-slider-item(style="background-image: url('./assets/img/new/img-2.webp')") 
                         .extended-slider-item__bunners
                           .extended-slider-item__bunner--new.extended-slider-item__bunner--new_lux
-                            span.extended-slider-item__text-bunner  Эконом
+                            span.extended-slider-item__text-bunner.extended-slider-item__text-bunner--new  Эконом
                           .extended-slider-item__bunner--new.extended-slider-item__bunner--new_guard.info-icon-eco-js
-                            img.extended-slider-item__icon(src="assets/img/new/guard.svg",alt="img")
-                         
-                
-                
+                            img.extended-slider-item__icon.extended-slider-item__icon--new(src="assets/img/new/guard.svg",alt="img")
                 
                 
                 .card-object-extended__bunner-info.bunner-info.bunner-info--eco.bunner-info-eco-js
@@ -25,27 +27,50 @@
                               p проверку риэлторов компании 
                               p renv.ru 
                 .card-object-extended__right.card-object-extended__right--new
+                  
                   .card-object-extended__head-line.card-object-extended__head-line--new
-                    .card-object-extended__header ЖК Ясный пень 
-                    img.card-object-extended__icon(src="assets/img/content-sale/Vector.svg",alt="img")
-                    .card-object-extended__price от 128 000 <span class="icon-rouble"></span>/м²
-                  .card-object-extended__delivery  Сдача в 2021г.
+                    .card-object-extended__header ЖК Ясный пень
+                    .card-object-extended__price от 150 000 ₽/м²
+                    span.card-object-extended__sub-price от 2 340 000 ₽, от 57 891 ₽ за м²
+                  .card-object-extended__delivery  Дом сдан
+                    i.icon-heart.icon-like-green
                   .card-object-extended__properties.card-object-extended__properties--new.card-object-extended-properties
                       img(src="assets/img/sale/metro.svg",alt="metro").card-object-extended-properties__property.card-object-extended-properties__property--metro-icon
                       .card-object-extended-properties__property.card-object-extended-properties__property--metro-text Ленинский проспект
                   .card-object-extended__adress.card-object-extended__adress--new  Москва, ул. Новодмитровская, д.2
                   .card-object-extended__text.card-object-extended__text--new   
                     | «Савёловский Сити» — уникальный квартал небоскрёбов в нью-йоркском стиле. Воплощенные в архитектурной концепции жилого комплекса свобода и легкость, энергия и страсть...
-                  ul.card-object-extended__price-list.price-list-new
-                    - 
-                      items = [
-                          { title: "Студии ",price:"от 2 млн." },
-                          { title: "1-комн. ",price:"от 2,5 млн." },
-                          { title: "4-комн. ",price:"от 13 млн." },
-                        ]
-                    each item in items
-                      li.price-list-new__item.price-list-new-item
-                        .price-list-new-item__title=item.title
-                        .price-list-new-item__price=item.price  
-                          <span class="icon-rouble"></span>
+                  .card-object-extended__price-list.card-object-extended__price-list--new.price-list-new
+                      .price-list-new__item.price-list-new-item
+                        .price-list-new-item__title Студии
+                        .price-list-new-item__price от 2 млн. ₽
+                      .price-list-new__item.price-list-new-item
+                        .price-list-new-item__title 1-комн.
+                        .price-list-new-item__price от 2,5 млн. ₽
+                      .more 
+                        span Больше 
+                        i.icon-chevron-down
+                      .price-list-new__item.price-list-new-item
+                          .price-list-new-item__title 2-комн.
+                          .price-list-new-item__price от 5,6 млн. ₽
+                  
+                  
+                  .card-object-extended__footer.card-object-extended-footer.card-object-extended-footer--new
+                    .card-object-extended-footer__properties.card-object-extended-properties
+                        img(src="assets/img/sale/metro.svg",alt="metro").card-object-extended-properties__property.card-object-extended-properties__property--metro-icon
+                        .card-object-extended-properties__property.card-object-extended-properties__property--metro-text Площадь Ленина
+                        img(src="assets/img/sale/bus.svg",alt="img").card-object-extended-properties__property.card-object-extended-properties__property--time-icon
+                        .card-object-extended-properties__property.card-object-extended-properties__property--time-text 5 мин.
+                    .card-object-extended-footer__properties.card-object-extended-properties
+                        img(src="assets/img/sale/metro.svg",alt="metro").card-object-extended-properties__property.card-object-extended-properties__property--metro-icon
+                        .card-object-extended-properties__property.card-object-extended-properties__property--metro-text Октябрьская
+                        img(src="assets/img/sale/walk.svg",alt="img").card-object-extended-properties__property.card-object-extended-properties__property--time-icon
+                        .card-object-extended-properties__property.card-object-extended-properties__property--time-text 3 мин.
+                    .card-object-extended-footer__properties.card-object-extended-properties
+                        .card-object-extended-properties__property.card-object-extended-properties__property--metro-text Улица Гоголя, 15
+                  button.btn.btn--card-object-extended.btn--success(type='button').card-object-extended__button-low.card-object-extended__button-low--new Позвонить
+                  
+                  
+
+
 

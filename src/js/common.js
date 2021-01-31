@@ -75,7 +75,58 @@ $(document).ready(function (e) {
     }
   });
 
-});             								
+  // --------------------------------------------------------------
+if ($(window).width() <= 1200) {
+  $(".more").nextAll(".price-list-new__item").css("display", "none");
+  $(".more").find("i").css("transform", "rotate(0deg)");
+
+} else {
+     $(".more").nextAll(".price-list-new__item").css("display", "block");
+     $(".more").find("i").css("transform", "rotate(0deg)");
+}
+
+
+
+$(window).resize(function () {
+  if ($(window).width() <= 1200) {
+    $(".more").nextAll(".price-list-new__item").css("display", "none");
+    $(".more").removeClass("act").find("i").css("transform", "rotate(0deg)");
+  } else {
+    $(".more").nextAll(".price-list-new__item").css("display", "block");
+    $(".more").removeClass("act").find("i").css("transform", "rotate(0deg)");
+  }
+});
+
+
+
+ $(".more").on("click", function () {
+   if ($(this).hasClass("act")) {
+     $(this).removeClass("act").nextAll(".price-list-new__item").slideUp(150);
+     $(this).find("i").css("transform", "rotate(0deg)");
+   } else {
+     $(this).addClass("act").nextAll(".price-list-new__item").slideDown(150);
+     $(this).find("i").css("transform", "rotate(180deg)");
+   }
+ });
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+  // -----------------------------------------------------------------------------------
 
 
  $(document).mouseup(function (e) {
@@ -118,13 +169,7 @@ $(document).ready(function (e) {
    }
  });
 
-
-
-
-
-
-
-
+// --------------------------------------------
 $(document).ready(function (e) {
     sliders();
 
