@@ -1,7 +1,158 @@
 
   
   
-  
+//------.extended-slider--new--------
+.extended-slider--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  .slick-dots
+    display: none!important
+
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    max-height: 150px
+    width: 100%
+    .slick-dots
+      display: block!important
+      li
+        &:not(.slick-active)
+          display: none!important
+    
+    
+    .slick-active
+      display: block!important
+      .slick-dots-button
+        +center
+        @include absolute(80px,30px,auto,auto,10px,0%,0%)
+        bottom: 10px
+        color: $white
+        border-radius: 5px
+        opacity: 0.6
+        background-color: #181818
+
+    .slick-dots-current
+      font-size: 12px
+      display: block!important
+    .slick-dots-total
+      font-size: 12px
+      display: block
+    .slick-dots-separator 
+      font-size: 10px
+      margin: 0 5px
+      display: block!important
+
+
+
+
+
+
+
+
+
+
+
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+// ========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------
   
   
 .card-object-extended--new
@@ -26,6 +177,9 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    min-height: auto
+    flex-direction: column
+
 //-------------
 //------.extended-slider-new-1--------
 .extended-slider-new-1
@@ -73,9 +227,10 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    max-height: 150px
 //-------------
 //------.extended-slider-item__bunners--------
-.extended-slider-item__bunners
+.extended-slider-item__bunners--new
   // +alic
   // +jucs
   +jucs
@@ -83,7 +238,37 @@
   height: auto!important
 
   // flex: 0 1 100%
-  padding: 10px
+  padding:  0  10px 10px 10px
+  // position: relative
+  // display: none
+  // display: flex
+  @include absolute(100%,auto,null,0,null,0%,0%)
+  bottom: 0
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    bottom: auto!important
+    @include absolute(100%,auto,158px,0,null,0%,0%)
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    padding: 0 14px
+    top: 163px
+//-------------
+
+
+
+//------.card-object-extended__header--new--------
+.card-object-extended__header--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
   // position: relative
   // display: none
   // display: flex
@@ -91,11 +276,21 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    margin: -20px 0 10px
   @media (max-width: 767px)
     // flex: 0 1 100%
-    // margin: 0 0 0 0
+    margin: 40px 0 8px 0
     // padding: 0 0 0 0
+
 //-------------
+
+
+
+
+
+
+
+
 //------.extended-slider-item__bunner--------
 .extended-slider-item__bunner--new
   +alic
@@ -107,7 +302,7 @@
   margin: 0 10px 0 0
   &:last-child
     margin: 0 0 0 0
-  padding: 11px 20px
+  padding: 9px 19px
   // position: relative
   // display: none
   // display: flex
@@ -119,8 +314,13 @@
     padding: 5px 10px
   @media (max-width: 767px)
     // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    margin: 0 9px 0 0
+    &:nth-child(1)
+      background-color: #def1d7
+    &:nth-child(2)
+      background-color: #def1d7
+    &:nth-child(3)
+      background-color: #ffdac9
 //-------------
 //------.extended-slider-item__text-bunner--new--------
 .extended-slider-item__text-bunner--new
@@ -144,6 +344,9 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    font-size: 14px
+
+
 //-------------
 //------.extended-slider-item__text-bunner--new-lp--------
 .extended-slider-item__text-bunner--new-lp
@@ -168,6 +371,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    font-size: 14px
 //-------------
 //------.extended-slider-item__icon--new--------
 .extended-slider-item__icon--new
@@ -298,7 +502,7 @@
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 0 0 38px 0
 //-------------
 
 //------.card-object-extended-footer--new--------
@@ -326,7 +530,7 @@
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 14px 15px 0 
 //-------------
 
 //------.card-object-extended__button-low--new--------
@@ -351,6 +555,8 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    @include absolute(100%,40px,auto,0,auto,0%,0%)
+    bottom: 0
 //-------------
 
 
@@ -437,7 +643,8 @@
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 13px
+
 //-------------
 //------.price-list-new-item--------
 .price-list-new-item
@@ -585,10 +792,11 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    padding: 20px 15px  0
 //-------------
 //------.card-object-extended__adress--new--------
 .card-object-extended__delivery
-  // +alic
+  +alic
   // +jucs
   // +jucb
   // width:
@@ -617,6 +825,9 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    font-size: 14px
+    order: 1
+    padding: 11px 13px  14px  15px
 //-------------
 // .card-object-extended__properties--new
 //--------------
@@ -639,9 +850,33 @@
     // padding: 0 0 0 0
   @media (max-width: 767px)
     // flex: 0 1 100%
-    // margin: 0 0 0 0
     // padding: 0 0 0 0
 //-------------
+
+//------.card-object-extended-footer__properties--new--------
+.card-object-extended-footer__properties--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    margin: 0 0 14px 0
+//-------------
+
+
 //------.card-object-extended__sub-price--------
 .card-object-extended__sub-price
   // +alic
@@ -664,6 +899,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    font-size: 14px
 //-------------
 //------.card-object-extended__adress--new--------
 .card-object-extended__adress--new
@@ -674,7 +910,7 @@
   // height:
   flex: 0 1 100%
   // margin: 0 0 0 0
-  padding: 10px 0 0 0
+  padding: 14px 0 0 0
   // position: relative
   // display: none
   // display: flex
@@ -700,7 +936,7 @@
   // position: relative
   // display: none
   // display: flex
-  padding: 18px 0 7px 30px
+  padding: 18px 0 8px 30px
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -708,7 +944,7 @@
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 0 0 0 0
 //-------------
 //------.card-object-extended__bunner-info--------
 .card-object-extended__bunner-info
@@ -729,6 +965,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    top: 31%
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -739,11 +976,10 @@
   @extend %card
   +alis
   +jucb
-
   z-index: 2000
   padding: 30px 32px 20px 31px
   flex-wrap: nowrap
-  
+  min-width: 360px
   &:after
    content: ""
    background-color: white
@@ -755,21 +991,13 @@
    z-index: 2
    transform: translate(0%,56%) rotate(45deg)
    border-radius: 5px
-   // top: 100%; 
-    // left: 100%;
-    // top: 50%; 
-    // left: 50%;
-    // right: 0%;
-    // @include anim(0.2s);
-    // @include rotate(45deg);
-    // transform: translate(-50%,-50%);
-    
-    // @include Text-Style-10;
+
     
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    padding: 20px 20px 20px 20px
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -857,6 +1085,7 @@
   // display: none
   // display: flex
   white-space:  nowrap
+
   span
     font-weight: normal
     line-height: 140%
@@ -868,6 +1097,8 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    &:last-child
+      padding: 0 0 0 0	
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -1032,7 +1263,8 @@
   // display: none
   // display: flex
   left: 97px
-  padding: 40px 32px 30px 74px
+  padding: 40px 30px 30px 74px
+  min-width: 333px
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -1069,29 +1301,7 @@
     // padding: 0 0 0 0
 //-------------
 
-//------.advert-mortgage--new--------
-.advert-mortgage--new
-  +alic
-  // +jucs
-  +jucb
-  // width:
-  
-  // flex: 0 1 100%
-  margin: 30px 0 0 0
-  padding: 0px 80px 0
-  // position: relative
-  // display: none
-  @extend %card
-  border-radius: 10px
-  @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-//-------------
+
 
 //------.advert-mortgage__button--new--------
 .advert-mortgage__button--new
@@ -1109,12 +1319,17 @@
   background: #F4814C
   @media (max-width: 1199px)
     // flex: 0 1 100%
-    // margin: 0 0 0 0
+    margin: 20px auto 0 0
     // padding: 0 0 0 0
+    display: flex
   @media (max-width: 767px)
     // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    margin: 0 0 0 0
+    font-size: 14px 
+    @include absolute(100%,40px,null,0,null,0%,0%)
+    bottom: 0
+    border-top-right-radius: 0
+    border-top-right-radius: 0
 //-------------
 
 //------.advert-mortgage__text--new--------
@@ -1124,7 +1339,7 @@
   // +jucb
   // width:
   // height:
-  // flex: 0 1 100%
+  flex: 0 1 51%
   // margin: 0 0 0 0
   // padding: 0 0 0 0
   // position: relative
@@ -1142,16 +1357,18 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    font-size: 18px
+    
 //-------------
 
 //------.advert-mortgage__column--new--------
 .advert-mortgage__column--new
-  // +alic
+  +alic
   // +jucs
-  // +jucb
+  +jucb
   // width:
   // height:
-  flex: 0 1 35%
+  flex: 0 1 69%
   margin: 0 0 0 -55px
   // padding: 0 0 0 0
   // position: relative
@@ -1161,61 +1378,45 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    +jucs
+    padding: 0px 84px 0px 0
   @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    position: relative
+    flex: 0 1 100%
+    margin: 0 0 0 0
+    padding: 17px 24px 58px
+    text-align: center
 //-------------
 
 //------.advert-mortgage__img--new--------
 .advert-mortgage__img--new
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  height:150px
   flex: 0 1 20%
-  // margin: 0 0 0 0
-  // padding: 0 0 0 0
   position: relative
-  // display: none
-  // display: flex
-  height:auto
-  // transform: scale(0.95)
+  padding: 0 0 146px 0	
+  img
+    @include absolute(auto,auto,0,0,null,0,0)
+    position: absolute
+    width: auto
+    height: auto
+    top: 0
+    left: 0
+    transform: translate(16px,-2px) scale(1.6)
   @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 0 0 163px 0	
+    img
+      transform: translate(25px,6px) scale(1.8)
   @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    margin: 0 0 0 0
+    width: 120px
+    height: 120px
+    padding: 0 0 144px 0
+    left:50%
+    img
+      transform: translate(-56%,-15px) scale(1)
+
 //-------------
 
-//------.content-sale__advert-average--new--------
-.content-sale__advert-average--new
-  // +alic
-  // +jucs
-  // +jucb
-  // width:
-  // height:
-  // flex: 0 1 100%
-  margin:  40px 0
-  // padding: 0 0 0 0
-  // position: relative
-  // display: none
-  display: flex
-  @extend %card
-  border-radius: 10px
-  @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-//-------------
+
 //------.advert-average__body--------
 .advert-average__body
   // +alic
@@ -1374,6 +1575,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -1432,19 +1634,19 @@
   // +alic
   // +jucs
   // +jucb
-  // flex: 0 1 100%
-  // margin: 0 0 0 0
+  margin: 0 0 0 0
   // padding: 0 0 0 0
   // position: relative
   // display: none
   // display: flex
+  
   width: 87px
   height: 87px
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
-    display: none
+    // display: none
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -1463,10 +1665,12 @@
   // position: relative
   // display: none
   // display: flex
-  @media (max-width: 1199px)
+
+  @media (max-width: 1500px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    +fdc
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -1505,11 +1709,13 @@
   padding: 0 0 0 23px
   // position: relative
   // display: none
-  // display: flex
-  @media (max-width: 1199px)
-    // flex: 0 1 100%
+  // display: 
+  
+  @media (max-width: 1500px)
+    flex: 0 1 44%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -1550,7 +1756,7 @@
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 15px 0
 //-------------
 
 // //------.more-js--------
@@ -1576,3 +1782,936 @@
 //     // margin: 0 0 0 0
 //     // padding: 0 0 0 0
 // //-------------
+
+//------.content-sale__cards--new--------
+.content-sale__cards--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding: 0 0 30px 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+
+//------.content-sale__vidgets--new--------
+.content-sale__vidgets--new
+  // +alic
+  // +jucs
+  // +jucb
+  max-width:298px
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  +absolute( auto, auto, 0%,  null,  0,0,0)
+
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.content-sale__left--new--------
+.content-sale__left--new
+  // +alic
+  // +jucs
+  +jucb
+  // width:
+  // height:
+  flex: 0 1 74.4%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.sale-link-top--new--------
+.sale-link-top--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+
+
+
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+// ======================order==================================
+
+//------.content-sale__filters--new--------
+.content-sale__filters--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  order: -11
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order: -13
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order:-8
+//-------------
+//------.sale-link-top--new--------
+.sale-link-top--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order:-12
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.sale-link-top--sm-new--------
+.sale-link-top--sm-new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order:-7
+//-------------
+//--------------
+.sale-link-search--sm-new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    margin: 14px 0 0 0
+    // padding: 0 0 0 0
+    order:-6
+//-------------
+//------.sale-link-back--new--------
+.sale-link-back--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  order: -10
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.content-sale__card--new-1--------
+.content-sale__card--new-1
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  order: -8
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order:-10
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order:-4
+//-------------
+//------.content-sale__card--new-2--------
+.content-sale__card--new-2
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  order: -7
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order:-9
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: none
+
+//-------------
+//------.content-sale__card--new-3--------
+.content-sale__card--new-3
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  order: -6
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order: -7
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order: -2
+//-------------
+//------.content-sale__card--new-3--------
+.content-sale__card--new-4
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  order: -4
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order: -6
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: none
+//-------------
+//------.content-sale__card--new-5--------
+.content-sale__card--new-5
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  order: -3
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order: -4
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: none
+//-------------
+//------.content-sale__card--new-6--------
+.content-sale__card--new-6
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: flex
+    order: -3
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: none
+//-------------
+
+//------.content-sale__advert-average--new--------
+.content-sale__advert-average--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  flex: 0 1 100%
+  margin:  10px 0 40px
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  display: flex
+  @extend %card
+  border-radius: 10px
+  order: -5
+  @media (max-width: 1199px)
+    display: none
+  
+//-------------
+//------.content-sale__advert-average--new-lp--------
+.content-sale__advert-average--new-lp
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    +jucb
+    display: flex
+    order: -5
+    border-radius: 10px
+    margin: 30px 0
+    position: relative
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: none
+//-------------
+
+
+//------.content-sale__advert-average--sm--------
+.content-sale__advert-average--new-sm
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    display: none
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    margin: 0 0 15px 0
+    // padding: 0 0 0 0
+    display: flex
+    order:-3
+//-------------
+
+
+
+
+
+
+
+
+//------.advert-average--lp__content--------
+.advert-average--lp__content
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    +jucb
+    +alic
+    padding: 19px 95px 20px 18px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-average--lp__img--------
+.advert-average--lp__img
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    height: 150px
+    width: 100%
+    border-top-right-radius: 10px
+    border-top-left-radius: 10px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+
+//------.advert-average--lp__button--------
+.advert-average--lp__button
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    width: 324px
+    height: 50px
+    background-color: #f05650
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-average--lp__title--------
+.advert-average--lp__title
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    margin: 0 0 9px 0
+    // padding: 0 0 0 0
+    font-size: 20px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.advert-average--lp__text--------
+.advert-average--lp__text
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//--------------
+.advert-average--lp__content-img
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    width: 50px
+    height: 50px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+
+
+
+
+//------.advert-mortgage--new--------
+.advert-mortgage--new
+  +alic
+  // +jucs
+  +jucb
+  // width:
+  
+  flex: 0 1 100%
+  padding: 0px 80px 0
+  // position: relative
+  // display: none
+  @extend %card
+  border-radius: 10px
+  order: -2
+  overflow: hidden
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    padding: 0 0 0 0
+    order: -2
+    margin: 30px 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order: -1
+//-------------
+//------.content-sale__pagination--new--------
+.content-sale__pagination--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  order: -1
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.content-sale__pagination--arrows-new--------
+.content-sale__pagination--arrows-new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order: -1
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.content-sale__info--new--------
+.content-sale__info--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding: 25px 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  order: -9
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order:-11
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order: -5
+//------//------content-sale__bunners--new--------
+.content-sale__bunners--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  display: none
+  // display: flex
+  @media (max-width: 1199px)
+    display:  flex
+    flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    min-width: 0
+    max-width: calc(100vw-60px)
+    order: -8
+    margin: 10px 0
+  @media (max-width: 767px)
+    display: none
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//---------------------
+
+
+
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+// ======================/order==================================
+
+
+
+//------.pagination-arrows__button--new--------
+.pagination-arrows__button--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    width: 255px
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+
+
+//------.sale-link-top--sm-new--------
+.sale-link-top--sm-new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    flex: 0 1 100%
+    +alic
+    order: -8
+    a
+      display: inline-block
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.sale-link-search--sm-new--------
+.sale-link-search--sm-new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    order: -7
+//-------------
+//------.news-right__img--new--------
+.news-right__img--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  width: 298px
+  height: 153px
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+
+
+
+
+//------.bunners__body--------
+.bunners__body
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    min-width: 0
+    
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.card-object-extended__icon--new--------
+.card-object-extended__icon--new
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    margin: 0 11px 0 0
+    // padding: 0 0 0 0
+    width: 11px
+//-------------

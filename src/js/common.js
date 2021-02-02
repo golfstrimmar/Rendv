@@ -15,19 +15,19 @@ $("select").on("change", function () {
 
 $(document).ready(function (e) {
 
-    $(".bunner-info-js").fadeOut(1);
+  $(".bunner-info-js").fadeOut(1);
   $(".extended-icon-js").on("click", function () { 
   if ($(this).hasClass("act")) {
     $(this)
       .removeClass("act")
-      .closest(".card-object-extended__slider")
+      .closest(".extended-slider-item__bunners")
       .siblings(".bunner-info-js")
       .removeClass("act")
       .fadeOut(200);
   } else {
   $(this)
     .addClass("act")
-    .closest(".card-object-extended__slider")
+    .closest(".extended-slider-item__bunners")
     .siblings(".bunner-info-js")
     .addClass("act")
     .fadeIn(200);
@@ -40,15 +40,16 @@ $(document).ready(function (e) {
     if ($(this).hasClass("act")) {
       $(this)
         .removeClass("act")
-        .closest(".card-object-extended__slider")
+        .closest(".extended-slider-item__bunners")
         .siblings(".bunner-info-eco-js")
         .removeClass("act")
         .fadeOut(200);
    
    
     } else {
-      $(this).addClass("act")
-        .closest(".card-object-extended__slider")
+      $(this)
+        .addClass("act")
+        .closest(".extended-slider-item__bunners")
         .siblings(".bunner-info-eco-js")
         .addClass("act")
         .fadeIn(200);
@@ -61,14 +62,14 @@ $(document).ready(function (e) {
     if ($(this).hasClass("act")) {
       $(this)
         .removeClass("act")
-        .closest(".card-object-extended__slider")
+        .closest(".extended-slider-item__bunners")
         .siblings(".bunner-info-mortgage-js")
         .removeClass("act")
         .fadeOut(200);
     } else {
       $(this)
         .addClass("act")
-        .closest(".card-object-extended__slider")
+        .closest(".extended-slider-item__bunners")
         .siblings(".bunner-info-mortgage-js")
         .addClass("act")
         .fadeIn(200);

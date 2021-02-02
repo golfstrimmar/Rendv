@@ -35,7 +35,6 @@ section#content-sale.content-sale
             .content-sale__numbers  145 523 объявлений
           .content-sale__cards
             include card-1
-            
             include card-2
         include vidgets
       section#bunners-page-sale.bunners.bunners--page-sale
@@ -88,7 +87,8 @@ section#content-sale.content-sale
 
           .content-sale__cards
             include card-3
-            include card-4
+            .content-sale__card.card-object-extended
+              include card-4
             .content-sale__advert-average.advert-average 
               .advert-average__body
                 img(src="assets/img/content-sale/img-6.webp",alt="img").advert-average__img
@@ -117,20 +117,20 @@ section#content-sale.content-sale
               .pagination-arrows__arrow.pagination-arrows__arrow_right
                 i.icon-chevron-right
             button.btn.button--empty(type='button').pagination-arrows__button Показать ещё 32 объекта
-          .content-sale__pagination.content-sale-pagination
-              ul.content-sale-pagination__items
-                li.content-sale-pagination__item
+          .content-sale__pagination.pagination
+              ul.pagination__items
+                li.pagination__item
                   button.btn.btn--light.button-active(type='button' )  1
-                li.content-sale-pagination__item
+                li.pagination__item
                   button.btn.btn--light(type='button')  2
-                li.content-sale-pagination__item
+                li.pagination__item
                   button.btn.btn--light(type='button')  3
-                li.content-sale-pagination__item
+                li.pagination__item
                   button.btn.btn--light(type='button')  4
-                li.content-sale-pagination__item
+                li.pagination__item
                   button.btn.btn--light(type='button')  5
-              button.btn.btn--light(type='button').content-sale-pagination__button-next Следующая
-              button.btn.btn--success.content-sale-pagination__button(type='button')  Показать еще 32 объекта
+              button.btn.btn--light(type='button').pagination__button-next Следующая
+              button.btn.btn--success.pagination__button(type='button')  Показать еще 32 объекта
         .content-sale__vidgets
         
 

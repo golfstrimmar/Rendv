@@ -29,6 +29,7 @@
   // flex: 0 1 100%
   // margin: 0 0 0 0
   // padding: 0 0 0 0
+  position: relative
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -58,9 +59,23 @@
     // margin: 0 0 0 0
     // padding: 0 0 0 0
 //---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //-------------.content-sale__filters--------------------------------
 .content-sale__filters
-
+  flex: 0 1 100%
   @media (max-width: 1199px)
     position: fixed
     width: 100%
@@ -84,6 +99,24 @@
     transform: translate(0,0)
   @media (max-width: 767px)
 //---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //-------------.content-sale__vidgets--------------------------------
 .content-sale__vidgets
   // +alic
@@ -218,7 +251,7 @@
   // +jucb
   // width:
   // height:
-  // flex: 0 1 100%
+  flex: 0 1 100%
   // margin: 0 0 0 0
   padding: 30px 0 0 0
   @media (max-width: 1199px)
@@ -374,11 +407,13 @@
   // width:
   // height:
   // flex: 0 1 100%
+  min-width: 1px
   padding: 30px 0 20px 0
   @media  (min-width: 1200px) and (max-width: 1600px)
     padding: 30px 0 20px 0	
   @media (max-width: 1199px)
     padding: 20px 0 !important
+    min-width: 1px
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -392,7 +427,7 @@
   // +jucb
   // width:
   // height:
-  // flex: 0 1 100%
+  flex: 0 1 100%
   // margin: 0 0 0 0
   // padding: 0 0 0 0
   @media (max-width: 1199px)
@@ -406,7 +441,7 @@
     // padding: 0 0 0 0
 //---------------------------------------------
 //-------------.content-sale-pagination--------------------------------
-.content-sale-pagination
+.pagination
   // +alic
   +jucs
   // +jucb
@@ -425,7 +460,7 @@
     // padding: 0 0 0 0
 //---------------------------------------------
 //-------------.content-sale-pagination__items--------------------------------
-.content-sale-pagination__items
+.pagination__items
   // +alic
   +jucs
   // +jucb
@@ -445,7 +480,7 @@
 //---------------------------------------------
 
 //-------------.content-sale-pagination__item--------------------------------
-.content-sale-pagination__item
+.pagination__item
   // +alic
   // +jucs
   +center
@@ -478,7 +513,7 @@
 //---------------------------------------------
 
 //-------------.content-sale-pagination__button-next--------------------------------
-.content-sale-pagination__button-next
+.pagination__button-next
   // +alic
   // +jucs
   // +jucb
@@ -502,7 +537,7 @@
 //---------------------------------------------
 
 //-------------.content-sale-pagination__button--------------------------------
-.content-sale-pagination__button
+.pagination__button
   // +alic
   // +jucs
   // +jucb
@@ -607,7 +642,7 @@
 
   @media (max-width: 767px)
     // flex: 0 1 100%
-    margin:  0
+    margin: 0 0 20px 0
     // padding: 0 0 0 0
 //-------------
 //------.advert-average__body--------
@@ -1090,7 +1125,7 @@
   // +jucb
   // width:
   // height:
-  // flex: 0 1 100%
+  flex: 0 1 100%
   // margin: 0 0 0 0
   // padding: 0 0 0 0
   // position: relative
@@ -1107,6 +1142,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    display: none
 //-------------
 //------.pagination-arrows__arrows--------
 .pagination-arrows__arrows

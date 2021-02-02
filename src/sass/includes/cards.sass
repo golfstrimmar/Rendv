@@ -388,12 +388,12 @@
   
   flex: 1 1 40%
   // margin: 0 0 0 0
-  padding: 18px 0px 20px 30px
+  padding: 18px 0px 18px 30px
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
-    padding: 18px 30px 20px 20px
+    padding: 18px 30px 18px 20px
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -579,7 +579,7 @@
   @media (max-width: 1199px)
     border-top-right-radius: 10px
     border-bottom-left-radius: 0px
-    min-height: 200px
+    min-height: 196px
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -616,7 +616,7 @@
   // +alic
   // +jucs
   // +jucb
-
+  margin: 0 10px 0 0
   // padding: 0 0 0 0
   @media (max-width: 1199px)
     // flex: 0 1 100%
@@ -651,6 +651,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    width:12px
 //-------------
 //------.extended-slider-item__chip--------
 .extended-slider-item__chip
@@ -707,7 +708,7 @@
   +jucb
   // width:
   // height:
-  // flex: 0 1 100%
+  flex: 0 1 100%
   // margin: 0 0 0 0
   // padding: 0 0 0 0
   padding: 0 98px 0 0
@@ -715,6 +716,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     padding: 0 20px
+    padding: 0 0 0 0	
     +jucs
   @media (max-width: 767px)
     // flex: 0 1 100%
@@ -767,7 +769,7 @@
     flex: 0 1 100%
     // margin: 0 0 0 0
     padding: 0
-    margin: -20px 0 10px 0
+    margin: 0px 0 10px 0
   @media (max-width: 767px)
     font-size: 18px
     line-height: 21px
@@ -786,7 +788,7 @@
   line-height: 23px
   @media (max-width: 1199px)
     font-size: 15px
-    display: none
+    
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -873,7 +875,7 @@
   // +jucb
   // width:
   // height:
-  // flex: 0 1 100%
+  flex: 0 1 100%
   // margin: 0 0 0 0
   padding: 0 0 9px 0
   font-weight: normal
@@ -965,6 +967,7 @@
   // margin: 0 0 0 0
   // padding: 0 0 0 0
   font-weight: normal
+  line-height: 1
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -1054,7 +1057,7 @@
   padding: 0 87px 0 0
   font-weight: normal
   font-size: 15px
-  line-height: 140%
+  line-height: 1.5
   color: #9E9E9E
 
   @media (max-width: 1199px)
@@ -1074,7 +1077,7 @@
   // +jucb
   // width:
   // height:
-  // flex: 0 1 100%
+  flex: 0 1 100%
   margin: 18px 0 0
   padding: 0 118px 0 0
   @media (max-width: 1199px)
@@ -1089,23 +1092,13 @@
 //---------------------------------------------
 //-------------.content-sale-card__avatar--------------------------------
 .card-object-extended__avatar
-  // +alic
-  // +jucs
-  // +jucb
   width:40px
   height:40px
   border-radius: 50%
-  // flex: 0 1 100%
   margin: 0  10px 0 0
-  // padding: 0 0 0 0
-  @media (max-width: 1199px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  @media (max-width: 767px)
-    // flex: 0 1 100%
-    // margin: 0 0 0 0
-    // padding: 0 0 0 0
+  img 
+    +pro
+    border-radius: 50%  
 //---------------------------------------------
 //-------------.content-sale-card__name--------------------------------
 .card-object-extended__name
@@ -1178,9 +1171,10 @@
   +jucb
   // width:
   // height:
-  // flex: 0 1 100%
+  flex: 0 1 100%
   // margin: 0 0 0 0
-  padding-right: calc(20px + (90-20)*((100vw-1200px)/(1800-1200)))
+  padding-right: calc(20px + 63*((100vw-1200px)/(1800-1200)))
+  // padding-right:90px
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -1224,7 +1218,7 @@
   border: 1px solid #ECECEC
   border-radius: 5px
   &:first-of-type
-    padding: 0 7px  0 5px
+    padding: 0 10px
   &:not(:first-of-type)
     padding: 0 10px	
   @media (max-width: 1199px)
@@ -1316,7 +1310,7 @@
     // margin: 0 0 0 0
     +jucb
     border-top: 1px solid #ECECEC
-    padding: 18px 20px 9px
+    padding: 20px 20px 9px
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0

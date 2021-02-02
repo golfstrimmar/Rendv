@@ -1,60 +1,105 @@
-.content-sale__card.card-object-extended.card-object-extended--new
+
+ 
+ 
+.content-sale__card
+        .card-object-extended.card-object-extended--new
+                
                 .extended-slider__arrows.extended-slider-arrows
                   i.extended-slider-arrows__arrow.extended-slider-arrows__arrow_prev.extended-slider-new-4-arrows__arrow_prev.icon-chevron-left
                   i.extended-slider-arrows__arrow.extended-slider-arrows__arrow_next.extended-slider-new-4-arrows__arrow_next.icon-chevron-right 
                 .card-object-extended__slider.extended-slider-new.extended-slider-new-1.extended-slider-new-4-js
                     - for (var x = 0; x < 5; x++)
                       .extended-slider__item.extended-slider__item--new.extended-slider-item(style="background-image: url('./assets/img/new/img-4.webp')") 
-                        .extended-slider-item__bunners
-                          .extended-slider-item__bunner--new
-                            span.extended-slider-item__text-bunner  Люкс
+                .extended-slider-item__bunners.extended-slider-item__bunners--new
+                          .extended-slider-item__bunner--new.extended-slider-item__bunner--new_lux
+                            span.extended-slider-item__text-bunner.extended-slider-item__text-bunner--new  Люкс
                           .extended-slider-item__bunner--new.extended-slider-item__bunner--new_guard.extended-icon-mortgage-js
-                            img.extended-slider-item__icon(src="assets/img/new/house.svg",alt="img")
+                            img.extended-slider-item__icon.extended-slider-item__icon--new(src="assets/img/new/house.svg",alt="img")
                           .extended-slider-item__bunner--new.extended-icon-js
-                            img.extended-slider-item__icon(src="assets/img/content-sale/Vector.svg",alt="img")
-                            span.extended-slider-item__text-bunner  -20%
-                .card-object-extended__bunner-info.bunner-info.bunner-info-js
-                          img.bunner-info__img(src="assets/img/content-sale/Vector.svg",alt="img")
-                          .bunner-info__column
-                            .bunner-info__title Скидка -20%
-                            .bunner-info__data
-                              span 4 июня
-                              span от 140 000₽/м²
-                            .bunner-info__data
-                              span 5 июня
-                              span от 128 000₽/м²
-                              span.span-info-green -12 000₽
+                            img.extended-slider-item__icon.extended-slider-item__icon--new(src="assets/img/content-sale/Vector.svg",alt="img")
+                            span.extended-slider-item__text-bunner.extended-slider-item__text-bunner--new  -20%
+                
+                
                 .card-object-extended__bunner-info.bunner-info.bunner-info--mortgage.bunner-info-mortgage-js
-                          .bunner-info__column
-                            .bunner-info__title Ипотека 5,85% по госпрограмме
-                            .bunner-info__data
-                              span Экономия до 0,5% на ставке
-                            button.btn.btn--success(type='button').bunner-info__button  Рассчитать
+                  .bunner-info__column
+                    .bunner-info__title Ипотека 5,85% по госпрограмме
+                    .bunner-info__data
+                      span Экономия до 0,5% на ставке
+                    .button.btn.btn--success(type='button').bunner-info__button Рассчитать
+                     
+
+                .card-object-extended__bunner-info.bunner-info.bunner-info-js
+                              img.bunner-info__img(src="assets/img/content-sale/Vector.svg",alt="img")
+                              .bunner-info__column
+                                .bunner-info__title Скидка -20%
+                                .bunner-info__data
+                                  span 4 июня
+                                  span от 140 000₽/м²
+                                .bunner-info__data
+                                  span 5 июня
+                                  span от 128 000₽/м²
+                                  span.span-info-green -12 000₽
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 .card-object-extended__right.card-object-extended__right--new
+                  
                   .card-object-extended__head-line.card-object-extended__head-line--new
-                    .card-object-extended__header ЖК Павелецкая Сити
-                    img.card-object-extended__icon(src="assets/img/content-sale/Vector.svg",alt="img")
-                    .card-object-extended__price от 128 000 <span class="icon-rouble"></span>/м²
-                  .card-object-extended__delivery  Сдан
+                    .card-object-extended__header.card-object-extended__header--new ЖК Павелецкая Сити
+                    .card-object-extended__price от 150 000 ₽/м²
+                    span.card-object-extended__sub-price от 2 340 000 ₽, от 57 891 ₽ за м²
+                  .card-object-extended__delivery  Cдан
+                    i.icon-heart.icon-like-green
                   .card-object-extended__properties.card-object-extended__properties--new.card-object-extended-properties
                       img(src="assets/img/sale/metro.svg",alt="metro").card-object-extended-properties__property.card-object-extended-properties__property--metro-icon
                       .card-object-extended-properties__property.card-object-extended-properties__property--metro-text Ленинский проспект
                   .card-object-extended__adress.card-object-extended__adress--new  Видное, деревня Сапроново, ул. Центральная, д. 1
                   .card-object-extended__text.card-object-extended__text--new   
-                    |«Павелецкая Сити» — это новый жилой комплекс от 9 до 46 этажей, который станет визитной карточкой и архитектурной доминантой Даниловского района. В соответствии с концепцией...
-                  ul.card-object-extended__price-list.price-list-new
-                    - 
-                      items = [
-                          { title: "Студии ",price:"от 2 млн." },
-                          { title: "1-комн. ",price:"от 2,5 млн." },
-                          { title: "2-комн. ",price:"от 5,6 млн." },
-                          { title: "3-комн. ",price:"от 9,8 млн." },
-                          { title: "4-комн. ",price:"от 13 млн." },
-                          { title: "5-комн. ",price:"от 20 млн." },
-                        ]
-                    each item in items
-                      li.price-list-new__item.price-list-new-item
-                        .price-list-new-item__title=item.title
-                        .price-list-new-item__price=item.price  
-                          <span class="icon-rouble"></span>
+                    | «Павелецкая Сити» — это новый жилой комплекс от 9 до 46 этажей, который станет визитной карточкой и архитектурной доминантой Даниловского района. В соответствии с концепцией...
+                  .card-object-extended__price-list.card-object-extended__price-list--new.price-list-new
+                      .price-list-new__item.price-list-new-item
+                        .price-list-new-item__title Студии
+                        .price-list-new-item__price от 2 млн. ₽
+                      .price-list-new__item.price-list-new-item
+                        .price-list-new-item__title 1-комн.
+                        .price-list-new-item__price от 2,5 млн. ₽
+                      .more 
+                        span Больше 
+                        i.icon-chevron-down
+                      .price-list-new__item.price-list-new-item
+                          .price-list-new-item__title 2-комн.
+                          .price-list-new-item__price от 5,6 млн. ₽
+                  
+                  
+                  .card-object-extended__footer.card-object-extended-footer.card-object-extended-footer--new
+                    .card-object-extended-footer__properties.card-object-extended-properties
+                        img(src="assets/img/sale/metro.svg",alt="metro").card-object-extended-properties__property.card-object-extended-properties__property--metro-icon
+                        .card-object-extended-properties__property.card-object-extended-properties__property--metro-text Площадь Ленина
+                        img(src="assets/img/sale/bus.svg",alt="img").card-object-extended-properties__property.card-object-extended-properties__property--time-icon
+                        .card-object-extended-properties__property.card-object-extended-properties__property--time-text 5 мин.
+                    .card-object-extended-footer__properties.card-object-extended-properties
+                        img(src="assets/img/sale/metro.svg",alt="metro").card-object-extended-properties__property.card-object-extended-properties__property--metro-icon
+                        .card-object-extended-properties__property.card-object-extended-properties__property--metro-text Октябрьская
+                        img(src="assets/img/sale/walk.svg",alt="img").card-object-extended-properties__property.card-object-extended-properties__property--time-icon
+                        .card-object-extended-properties__property.card-object-extended-properties__property--time-text 3 мин.
+                    .card-object-extended-footer__properties.card-object-extended-properties
+                        .card-object-extended-properties__property.card-object-extended-properties__property--metro-text Улица Гоголя, 15
+                  button.btn.btn--card-object-extended.btn--success(type='button').card-object-extended__button-low.card-object-extended__button-low--new Позвонить
+                  
+                  
+
+
 
