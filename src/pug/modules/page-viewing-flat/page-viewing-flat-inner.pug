@@ -1,0 +1,279 @@
+section#sale-viewing.viewing
+      .viewing__filters.container-fluid
+          .container--page-sale.sale-filters.sale-filters--viewing
+              .sale-filters__header.sale-filters__header--viewing.sale-filters-header
+                .sale-filters-header__data.sale-filters-header__data--viewing.filters-selects
+                  .filters-selects__select
+                    select.select
+                      option(value='Комнат' disabled ) Комнат
+                      option(value='1' ) 1
+                      option(value='2') 2
+                      option(value='3') 3
+                      option(value='4') 4
+                  .filters-selects__select
+                    select.select
+                      option(value='Стоимость' disabled ) Стоимость
+                      option(value='1 000 000' ) до 1 000 000
+                      option(value='5 000 000') до 5 000 000
+                      option(value='10 000 000') до 10 000 000
+                      option(value='> 10 000 000 ') выше 10 000 000
+                  .filters-selects__adress.filters-selects-adress
+                      input(type='text'  placeholder='Адрес или ЖК')
+                  .filters-selects__filters Фильтры
+                  .filters-selects__save 
+                    i.icon-heart1
+                    span Сохранить поиск
+
+                  button.btn.btn--success(type='button').filters-selects__button.filters-selects__button--viewing Показать 155 524
+      
+      .viewing__map.map 
+        .viewing__filters-map.scroll-block
+          .viewing-filters
+            .viewing-filters__text
+              | Фильтры
+              i.icon-x.viewing-filters-close
+            
+            section.flat
+                      .flat__title.flat__title--viewing Квартира 
+                      .flat__line.flat-line
+                        .flat__divide.flat__divide--viewing.flat-divide
+                          .flat-divide__title Общая площадь
+                          .flat-divide__inputs
+                            .flat-divide__input
+                              input(type='text'  placeholder='от')
+                            .flat-divide__input
+                              input(type='text'  placeholder='до')
+                              span м²
+                        .flat__divide.flat__divide--viewing.flat-divide
+                          .flat-divide__title Жилая площадь
+                          .flat-divide__inputs
+                            .flat-divide__input
+                              input(type='text'  placeholder='от')
+                            .flat-divide__input
+                              input(type='text'  placeholder='до')
+                              span м²
+                      .flat__line.flat-line
+                        .flat__divide.flat__divide--viewing.flat-divide
+                          .flat-divide__title Кухня
+                          .flat-divide__inputs
+                            .flat-divide__input
+                              input(type='text'  placeholder='от')
+                            .flat-divide__input
+                              input(type='text'  placeholder='до')
+                              span м²
+
+                      .flat__line.flat-line
+                        .flat__divide.flat__divide_short.flat__divide--viewing.flat-divide
+                          .flat-divide__title Этаж
+                          .flat-divide__inputs
+                            .flat-divide__input.flat-divide__input_long
+                              input(type='text'  placeholder='с')
+                            .flat-divide__input
+                              input(type='text'  placeholder='по')
+
+                        ul.flat__flor.sale-filter.sale-filter--form
+                            - 
+                              items = [
+                                  {title: "Последний"},
+                                  {title: "Не последний"},
+                                  {title: "Не первый"},
+                              ]
+                            each item in items
+                              li.sale-filter__item.sale-filter__item--flat.sale-filter__item--viewing
+                                .sale-filter__title=item.title
+
+                      .flat__line.flat-line
+                        .flat-line__divide
+                          .flat-line__title В квартире
+                          ul.flat__flor.sale-filter.sale-filter--form
+                            - 
+                              items = [
+                                  {title: "1 комната"},
+                                  {title: "2 комнаты"},
+                                  {title: "3 комнаты"},
+                                  {title: "4+ комнаты"},
+                              ]
+                            each item in items
+                              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat.sale-filter__item--viewing
+                                .sale-filter__title=item.title
+                      .flat__line.flat-line
+                        .flat-line__divide
+                          .flat-line__title Планировка
+                          ul.flat__flor.sale-filter.sale-filter--form 
+                            - 
+                              items = [
+                                  {title: "Смежная"},
+                                  {title: "Изолированная"},
+                              ]
+                            each item in items
+                              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat.sale-filter__item--viewing
+                                .sale-filter__title=item.title
+
+                      .flat__line.flat-line
+                        .flat-line__divide
+                          .flat-line__title Ремонт
+                          ul.flat__flor.sale-filter.sale-filter--form 
+                            - 
+                              items = [
+                                  {title: "Косметический"},
+                                  {title: "Дизайнерский"},
+                                  {title: "Капитальный"},
+                                  {title: "Нужен ремонт"},
+                                  {title: "Нет ремонта"},
+                              ]
+                            each item in items
+                              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat.sale-filter__item--viewing
+                                .sale-filter__title=item.title
+
+                      .flat__line.flat-line
+                        .flat-line__divide
+                          .flat-line__title Тип отделки
+                          ul.flat__flor.sale-filter.sale-filter--form 
+                            - 
+                              items = [
+                                  {title: "Черновая"},
+                                  {title: "Подчистовая"},
+                                  {title: "Чистовая"},
+                              ]
+                            each item in items
+                              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat.sale-filter__item--viewing
+                                .sale-filter__title=item.title
+                      .flat__line.flat-line
+                        .flat-line__divide
+                          .flat-line__title Апартаменты
+                          ul.flat__flor.sale-filter.sale-filter--form
+                            - 
+                              items = [
+                                  {title: "Апартаменты"},
+                                  {title: "Нет апартаментов"},
+                                  {title: "Балкон/лоджия"},
+                              ]
+                            each item in items
+                              li.sale-filter__item.sale-filter__item--page-sale.sale-filter__item--flat.sale-filter__item--viewing
+                                .sale-filter__title=item.title
+            section.flat.flat--viewing
+                            .flat__title.flat__title--viewing Дом 
+                            .flat__line.flat-line
+                              .flat__divide.flat-divide.flat__divide--viewing
+                                .flat-divide__title Год посторойки
+                                .flat-divide__inputs
+                                  .flat-divide__input
+                                    input(type='text'  placeholder='с')
+                                  .flat-divide__input
+                                    input(type='text'  placeholder='по')
+                              .flat__divide.flat-divide.flat__divide--viewing
+                                .flat-divide__title Количество этажей в доме
+                                .flat-divide__inputs
+                                  .flat-divide__input
+                                    input(type='text'  placeholder='от')
+                                  .flat-divide__input
+                                    input(type='text'  placeholder='до')
+
+                            .flat__line.flat-line
+                              .flat-line__divide
+                                .flat-line__title Тип дома
+                                ul.flat__flor.sale-filter.sale-filter--form
+                                  - 
+                                    items = [
+                                        {title: "Кирпичный"},
+                                        {title: "Монолитный"},
+                                        {title: "Кирпично-монолитный"},
+                                        {title: "Панельный"},
+                                        {title: "Блочный"},
+                                    ]
+                                  each item in items
+                                    li.sale-filter__item.sale-filter__item--flat.sale-filter__item--viewing
+                                      .sale-filter__title=item.title
+                            .flat__line.flat-line
+                              .flat-line__divide
+                                .flat-line__title Тип парковки
+                                ul.flat__flor.sale-filter.sale-filter--form 
+                                  - 
+                                    items = [
+                                        {title: "Открытая"},
+                                        {title: "Закрытая"},
+                                        {title: "Подземная"},
+                                    ]
+                                  each item in items
+                                    li.sale-filter__item.sale-filter__item--flat.sale-filter__item--viewing
+                                      .sale-filter__title=item.title
+                            .flat__line.flat-line
+                              .flat-line__divide
+                                .flat-line__title Класс жилья
+                                ul.flat__flor.sale-filter.sale-filter--form 
+                                  - 
+                                    items = [
+                                        {title: "Эконом"},
+                                        {title: "Комфорт"},
+                                        {title: "Бизнес"},
+                                        {title: "Премиум"},
+                                    ]
+                                  each item in items
+                                    li.sale-filter__item.sale-filter__item--flat.sale-filter__item--viewing
+                                      .sale-filter__title=item.title
+                            .flat__line.flat-line
+                              .flat-line__divide
+                                .flat-line__title Срок сдачи
+                                ul.flat__flor.sale-filter.sale-filter--form
+                                  - 
+                                    items = [
+                                        {title: "Дом сдан"},
+                                        {title: "2020г."},
+                                        {title: "2021г."},
+                                        {title: "2022г."},
+                                        {title: "2023г."},
+                                        {title: "2024г."},
+                                    ]
+                                  each item in items
+                                    li.sale-filter__item.sale-filter__item--flat.sale-filter__item--viewing
+                                      .sale-filter__title=item.title
+
+            .viewing-filters__footer
+              button.btn.btn--success(type='button').viewing-filters__button Показать 49 803 объекта
+              a(href="#!").viewing-filters__link Сбросить 2
+
+        .viewing__cards-flat.scroll-block
+          include card-flat
+          include card-flat
+          include card-flat
+          include card-flat
+          .viewing-card__close.viewing-card__close--flat  Закрыть
+        .viewing__number.viewing-number
+          .viewing-number__volume 8
+          .viewing-number__text Число квартир в доме
+
+        .viewing__list.viewing-list
+          button.btn.btn--success.btn--success-icon.viewing-list__button(type='button' tabindex='-1')
+            span.icon-location2
+            span На карте
+          .viewing-list__data
+            img.viewing-list__icon(src="assets/img/viewing/Vector.svg",alt="img")
+            .viewing-list__text Списком
+        //- .viewing__promo.viewing-promo
+        //-   .viewing-promo__title  ЖК «Фламинго»
+        //-   .viewing-promo__text Сдача II кв. 2020 — 2021 г.
+        //-   .viewing-promo__text 25 этажей
+        //-   .viewing-promo__footer
+        //-     .viewing-promo__price  от 2 000 000 ₽
+        //-     .viewing-promo__price-small  от 2 000 000 ₽
+        //- a(href="#!").viewing__location-marker.viewing__location-marker--key 
+        //-   img(src="assets/img/viewing/key.svg",alt="img")
+        //- a(href="#!").viewing__location-marker.viewing__location-marker--key-large 
+        //-   img(src="assets/img/viewing/key.svg",alt="img")
+        //- a(href="#!").viewing__location-marker.viewing__location-marker--crane 
+        //-   img(src="assets/img/viewing/crane.svg",alt="img")
+        //- a(href="#!").viewing__location-marker.viewing__location-marker--crane-large  
+        //-   img(src="assets/img/viewing/crane.svg",alt="img")
+        a(href="#!").viewing__like
+          i.icon-heart1.icon-like-green
+        a(href="#!").viewing__chip-filters
+          i.icon-search
+          span Фильтры
+        .viewing__chip-price.viewing-chip-price
+          .viewing-chip-price__number
+            .viewing-chip-price__volume 32
+          .viewing-chip-price__text от 15 000
+        .viewing__chip-price.viewing__chip-price--red.viewing-chip-price
+          .viewing-chip-price__number.viewing-chip-price__number--red
+            .viewing-chip-price__volume 32
+          .viewing-chip-price__text от 15 000

@@ -357,6 +357,38 @@ $(".extended-slider-new-6-js").slick({
 
 
 
+$(".slider-viewing-1-js").slick({
+  arrows: true,
+  slidesToShow: 1,
+  speed: 800,
+  easing: "ease",
+  cssEase: "linear",
+  centerMode: false,
+  nextArrow: $(".viewing-1__arrow_next"),
+  prevArrow: $(".viewing-1__arrow_prev"),
+  dots: true,
+  customPaging: function (slider, i) {
+    var current = i + 1;
+    current = current < 10 ? "" + current : current;
+
+    var total = slider.slideCount;
+    total = total < 10 ? "" + total : total;
+
+    return (
+      '<button type="button" role="button" tabindex="0" class="slick-dots-button">\
+  		<span class="slick-dots-current">' +
+      current +
+      '</span>\
+  		<span class="slick-dots-separator">из</span>\
+  		<span class="slick-dots-total">' +
+      total +
+      "</span></button>"
+    );
+  },
+});
+
+
+
 
 
 

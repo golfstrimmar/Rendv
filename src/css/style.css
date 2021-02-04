@@ -29,7 +29,6 @@
 
 
 
-
 .icon-twitter:before {
   content: "\ea96";
 }
@@ -114,9 +113,13 @@
 .icon-copy:before {
   content: "\e900";
 }
-.icon-email:before {
+.icon-share:before {
   content: "\e912";
 }
+.icon-email:before {
+  content: "\e913";
+}
+
 
 
 

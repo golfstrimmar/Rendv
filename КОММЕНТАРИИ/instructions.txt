@@ -104,6 +104,30 @@ each item in items
 
  .mdi.mdi-map-marker 
 
+
+------------ кастомный скрол-бар отдельного блока .scroll-block
+
+.scroll-block
+
+.scroll-block::-webkit-scrollbar-track
+  border-radius: 4px
+
+.scroll-block::-webkit-scrollbar
+  width: 10px
+
+.scroll-block::-webkit-scrollbar-thumb
+  border-radius: 4px
+  background: #f0f2f5
+
+.scroll-block:hover::-webkit-scrollbar-thumb
+  background: #ececec
+
+
+
+
+
+
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ==SASS======SASS======SASS======SASS======SASS======
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -179,8 +203,9 @@ flex: 0 0 30%
     ]
 
   each item in items
-    ............html..................
-    ..............................
+    li 
+      ............
+    
 
 ------вывод одинаковых блоков в больших количествах
 - for (var x = 0; x < 30; x++)
@@ -213,3 +238,7 @@ each item in items
 @include media-breakpoint-only(md) 
 @include media-breakpoint-only(lg) 
 @include media-breakpoint-only(xl) 
+
+=====просто знаки
+↑
+₽

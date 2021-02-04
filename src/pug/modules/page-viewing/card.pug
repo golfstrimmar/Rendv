@@ -1,0 +1,54 @@
+.viewing-card.viewing__card
+          .viewing-card__slider
+                  .viewing-card__arrows.extended-slider-arrows
+                    i.extended-slider-arrows__arrow.extended-slider-arrows__arrow--viewing.viewing__arrow_prev.viewing-1__arrow_prev.icon-chevron-left
+                    i.extended-slider-arrows__arrow.extended-slider-arrows__arrow--viewing.viewing__arrow_next.viewing-1__arrow_next.icon-chevron-right 
+                  
+                  .slider-viewing.slider-viewing-1-js
+                    - for (var x = 0; x < 5; x++)
+                      .slider-viewing__item(style="background-image: url('./assets/img/viewing/img-1.webp')") 
+
+          .viewing-card__header.viewing-header
+            .viewing-header__text Добавлено 22.05.2020
+            .viewing-header__like
+              i.icon-heart1.icon-like-green.viewing-header__icon 
+            .viewing-header__copy
+              i.icon-copy.viewing-header__icon 
+            .viewing-header__connect
+              i.icon-share.viewing-header__icon 
+          .viewing-card__info.viewing-info
+            .viewing-info__text Сдача II кв. 2022
+            .viewing-info__title  ЖК «Фламинго»
+            .viewing-info__price  от 2 000 000 ₽
+            .viewing-info__price-per  от 50 000 ₽ за м²
+            .viewing-info__data.viewing-data
+              img.viewing-data__icon(src="assets/img/content-sale/Vector.svg",alt="img")
+              .viewing-data__text от 2 340 000 ₽, от 57 891 ₽ за м²
+              .viewing-data__like.icon-heart1
+
+
+
+          .viewing-card__data.viewing-card-data
+            .viewing-card-data__properties.properties
+              .properties__property.property
+                img.property__img.property__img--metro(src='assets/img/sale/metro.svg' alt='img')
+                span.property__text Ленинский проспект
+              .properties__property.property
+                img.property__img.property__img--bus(src='assets/img/sale/bus.svg' alt='img')
+                span.property__text.property__text--bus 5 мин.
+            .viewing-card-data__properties.properties.properties__property--viewing
+              .properties__property.property
+                img.property__img.property__img--metro(src='assets/img/sale/metro.svg' alt='img')
+                span.property__text Нарымский проспект
+              .properties__property.property
+                img.property__img.property__img--bus(src='assets/img/sale/bus.svg' alt='img')
+                span.property__text.property__text--bus 5 мин.
+         
+            .viewing-card-data__adress Видное, деревня Сапроново, ул. Центральная, д. 1
+
+            
+          button.btn.btn--success.btn--success-icon.viewing-card__button.button-bottom-lp(type='button' tabindex='-1')
+            span.delete--sm.icon-phone
+            span.delete--sm +7 (913) 834-22-45
+            span.visible--sm Позвонить
+          .viewing-card__close  Закрыть

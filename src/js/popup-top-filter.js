@@ -26,6 +26,34 @@ $(document).ready(function (e) {
       $("body").removeClass("lock");
     });
 
+  // ---------------------фильтры на страницы поиска новостройки   карта-----------------------------------------
+
+});
+$(document).ready(function (e) {
+  $(".viewing__chip-filters").on("click", function () {
+    $(".viewing__filters-map").toggleClass("viewing__filters-map_active");
+    $("body").addClass("lock");
+  });
+
+  $(".viewing-filters-close").on("click", function () {
+    $(".viewing__filters-map").toggleClass("viewing__filters-map_active");
+    $("body").removeClass("lock");
+  });
+
+
+
+  // --------------выдвигаются фильтры по кнопке фильтры на lp и sm----------------------------------------------
+
+  $(".sale-nav__item--filters-search").on("click", function () {
+    $(".content-sale__filters").toggleClass("content-sale__filters_active");
+    $("body").addClass("lock");
+  });
+
+    $(".sale-form-lp__text i").on("click", function () {
+      $(".content-sale__filters").toggleClass("content-sale__filters_active");
+      $("body").removeClass("lock");
+    });
+
   // --------------------------------------------------------------
 
 });

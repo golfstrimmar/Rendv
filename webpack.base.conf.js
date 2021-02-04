@@ -150,6 +150,16 @@ module.exports = {
       template: "src/pug/pages/new.pug",
       filename: "./new.html",
     }),
+    new HtmlWebpackPlugin({
+      // hash: false,
+      template: "src/pug/pages/viewing.pug",
+      filename: "./viewing.html",
+    }),
+    new HtmlWebpackPlugin({
+      // hash: false,
+      template: "src/pug/pages/viewing-flat.pug",
+      filename: "./viewing-flat.html",
+    }),
 
     new CopyWebpackPlugin({
       patterns: [
